@@ -1,0 +1,79 @@
+@page "/levels/{LevelId:guid}"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+
+<PageTitle>Modules — English Architect AI</PageTitle>
+
+@if (_loading)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else if (_level is null)
+{
+    <MudAlert Severity="Severity.Error">Level not found.</MudAlert>
+}
+else
+{
+    <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
+    <MudText Typo="Typo.h5" GutterBottom="true">@_level.Code — @_level.Name</MudText>
+    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+        Complete each module in order to progress through the level.
+    </MudText>
+
+    @if (_modules.Count == 0)
+    {
+        <MudAlert Severity="Severity.Info">No modules available yet for this level.</MudAlert>
+    }
+    else
+    {
+        <MudTimeline TimelinePosition="TimelinePosition.Start">
+            @foreach (var (mod, idx) in _modules.Select((m, i) => (m, i)))
+            {
+                <MudTimelineItem Color="Color.Primary" Size="Size.Small">
+                    <MudCard Elevation="2" Style="cursor:pointer" @onclick="@(() => Nav.NavigateTo($"/modules/{mod.Id}"))">
+                        <MudCardContent>
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <div>
+                                    <MudText Typo="Typo.overline" Color="Color.Secondary">Module @(idx + 1)</MudText>
+                                    <MudText Typo="Typo.h6">@mod.Title</MudText>
+                                    <MudText Typo="Typo.body2" Color="Color.Secondary">@mod.Description</MudText>
+                                </div>
+                                <MudStack Spacing="1" AlignItems="AlignItems.End">
+                                    <MudChip T="string" Icon="@Icons.Material.Filled.Schedule" Size="Size.Small">
+                                        @mod.EstimatedHours h
+                                    </MudChip>
+                                    <MudIconButton Icon="@Icons.Material.Filled.ArrowForward"
+                                                   Color="Color.Primary" Size="Size.Small" />
+                                </MudStack>
+                            </MudStack>
+                        </MudCardContent>
+                    </MudCard>
+                </MudTimelineItem>
+            }
+        </MudTimeline>
+    }
+}
+
+@code {
+    [Parameter] public Guid LevelId { get; set; }
+
+    private bool _loading = true;
+    private EA.Client.Services.LevelDto? _level;
+    private List<EA.Client.Services.ModuleDto> _modules = [];
+    private List<BreadcrumbItem> _breadcrumbs = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        _level = await Api.GetLevelByIdAsync(LevelId);
+        if (_level is not null)
+            _modules = await Api.GetModulesByLevelAsync(LevelId) ?? [];
+
+        _breadcrumbs =
+        [
+            new("My Path", "/levels"),
+            new(_level?.Code ?? "Level", null, disabled: true),
+        ];
+        _loading = false;
+    }
+}

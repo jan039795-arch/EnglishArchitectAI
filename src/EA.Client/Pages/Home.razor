@@ -1,0 +1,21 @@
+@page "/"
+@attribute [AllowAnonymous]
+
+<PageTitle>English Architect AI</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-8">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">
+        Welcome to English Architect AI
+    </MudText>
+    <MudText Typo="Typo.subtitle1" Align="Align.Center" Class="mb-8">
+        Your AI-powered path to English mastery — from A1 to C2.
+    </MudText>
+    <MudStack Row="true" Justify="Justify.Center" Spacing="3">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/register" Size="Size.Large">
+            Get Started
+        </MudButton>
+        <MudButton Variant="Variant.Outlined" Color="Color.Primary" Href="/login" Size="Size.Large">
+            Sign In
+        </MudButton>
+    </MudStack>
+</MudContainer>

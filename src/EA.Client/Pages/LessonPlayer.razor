@@ -1,0 +1,192 @@
+@page "/lessons/{LessonId:guid}"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+@inject ISnackbar Snackbar
+
+<PageTitle>Lesson — English Architect AI</PageTitle>
+
+@if (_state == State.Loading)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else if (_state == State.NoExercises)
+{
+    <MudAlert Severity="Severity.Info" Class="mt-4">
+        This lesson has no exercises yet. Check back soon!
+    </MudAlert>
+    <MudButton Class="mt-4" Href="/levels" Variant="Variant.Text">← Back to My Path</MudButton>
+}
+else if (_state == State.Complete)
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-10" Style="text-align:center">
+        <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" Style="font-size:5rem" />
+        <MudText Typo="Typo.h5" Class="mt-4">Lesson Complete!</MudText>
+        <MudText Color="Color.Secondary" Class="mt-2 mb-2">
+            Score: <b>@_correctCount / @_exercises.Count</b>
+        </MudText>
+        <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mb-6">
+            Flashcards for missed exercises have been added to your review deck.
+        </MudText>
+        <MudStack Row="true" Justify="Justify.Center" Spacing="3">
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" Href="/review">
+                Review Cards Now
+            </MudButton>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/levels">
+                Continue
+            </MudButton>
+        </MudStack>
+    </MudContainer>
+}
+else if (_state == State.Playing && Current is not null)
+{
+    <!-- Progress bar -->
+    <MudProgressLinear Value="@ExerciseProgress" Color="Color.Primary" Rounded="true" Class="mb-2" />
+    <MudStack Row="true" Justify="Justify.SpaceBetween" Class="mb-5">
+        <MudText Typo="Typo.caption">@_lesson?.Title</MudText>
+        <MudText Typo="Typo.caption">@(_currentIdx + 1) / @_exercises.Count</MudText>
+    </MudStack>
+
+    <MudPaper Elevation="3" Class="pa-6 mb-5" Style="border-radius:12px">
+        <!-- Exercise type badge -->
+        <MudChip T="string" Size="Size.Small" Color="Color.Secondary" Class="mb-4">
+            @Current.Type
+        </MudChip>
+
+        <MudText Typo="Typo.h6" Class="mb-6">@Current.Prompt</MudText>
+
+        @if (Current.Type == "MultipleChoice" && Current.Options.Count > 0)
+        {
+            <!-- Multiple choice -->
+            <MudRadioGroup @bind-Value="_answer" T="string" Disabled="@_answered">
+                @foreach (var opt in Current.Options)
+                {
+                    var optId = opt.Id.ToString();
+                    <div class="mb-3">
+                        <MudRadio Value="@opt.Text" Color="@OptionColor(opt.Text)"
+                                  Dense="false">
+                            @opt.Text
+                        </MudRadio>
+                    </div>
+                }
+            </MudRadioGroup>
+        }
+        else
+        {
+            <!-- Free text / fill blank / error correction -->
+            <MudTextField @bind-Value="_answer" Label="Your answer" Variant="Variant.Outlined"
+                          Disabled="@_answered" FullWidth="true" Immediate="true"
+                          spellcheck="false" autocomplete="off" />
+        }
+
+        @if (_answered)
+        {
+            <MudAlert Severity="@(_lastCorrect ? Severity.Success : Severity.Error)" Class="mt-4">
+                @(_lastCorrect ? "Correct! Well done." : "Not quite — this exercise has been added to your review deck so you can practice it again.")
+            </MudAlert>
+        }
+    </MudPaper>
+
+    @if (!_answered)
+    {
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+                   OnClick="CheckAnswer" Disabled="@string.IsNullOrWhiteSpace(_answer)"
+                   Size="Size.Large">
+            Check Answer
+        </MudButton>
+    }
+    else
+    {
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+                   OnClick="Next" Size="Size.Large">
+            @(_currentIdx < _exercises.Count - 1 ? "Next Exercise" : "Finish Lesson")
+        </MudButton>
+    }
+}
+
+@code {
+    [Parameter] public Guid LessonId { get; set; }
+
+    private enum State { Loading, NoExercises, Playing, Complete }
+
+    private State _state = State.Loading;
+    private EA.Client.Services.LessonDetailDto? _lesson;
+    private List<ExerciseVm> _exercises = [];
+    private int _currentIdx;
+    private string? _answer;
+    private bool _answered;
+    private bool _lastCorrect;
+    private int _correctCount;
+    private DateTime _exerciseStarted;
+
+    private ExerciseVm? Current => _currentIdx < _exercises.Count ? _exercises[_currentIdx] : null;
+    private double ExerciseProgress => (_currentIdx + 1.0) / _exercises.Count * 100;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _lesson = await Api.GetLessonByIdAsync(LessonId);
+        var apiExercises = await Api.GetExercisesByLessonAsync(LessonId) ?? [];
+
+        _exercises = apiExercises.Select(e => new ExerciseVm(e)).ToList();
+
+        _state = _exercises.Count == 0 ? State.NoExercises : State.Playing;
+        _exerciseStarted = DateTime.UtcNow;
+    }
+
+    private async Task CheckAnswer()
+    {
+        if (Current is null || string.IsNullOrWhiteSpace(_answer)) return;
+
+        var timeTaken = (int)(DateTime.UtcNow - _exerciseStarted).TotalSeconds;
+        var result = await Api.SubmitResponseAsync(Current.Id, _answer, timeTaken);
+
+        _lastCorrect = result?.IsCorrect ?? false;
+        if (_lastCorrect) _correctCount++;
+        _answered = true;
+    }
+
+    private async Task Next()
+    {
+        if (_currentIdx >= _exercises.Count - 1)
+        {
+            await FinishLesson();
+            return;
+        }
+        _currentIdx++;
+        _answer = null;
+        _answered = false;
+        _exerciseStarted = DateTime.UtcNow;
+    }
+
+    private async Task FinishLesson()
+    {
+        var score = (int)Math.Round(_correctCount * 100.0 / _exercises.Count);
+        var totalSeconds = _exercises.Count * 60; // estimate
+        await Api.CompleteLessonAsync(LessonId, score, totalSeconds);
+        _state = State.Complete;
+    }
+
+    private Color OptionColor(string optText)
+    {
+        if (!_answered) return Color.Default;
+        if (_lastCorrect && optText == _answer) return Color.Success;
+        if (!_lastCorrect && optText == _answer) return Color.Error;
+        return Color.Default;
+    }
+
+    private class ExerciseVm
+    {
+        public Guid Id { get; }
+        public string Type { get; }
+        public string Prompt { get; }
+        public List<EA.Client.Services.ExerciseOptionDto> Options { get; }
+
+        public ExerciseVm(EA.Client.Services.ExerciseDto dto)
+        {
+            Id = dto.Id;
+            Type = dto.Type;
+            Prompt = dto.Prompt;
+            Options = dto.Options;
+        }
+    }
+}

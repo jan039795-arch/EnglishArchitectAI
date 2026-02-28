@@ -1,0 +1,123 @@
+@page "/review"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject ISnackbar Snackbar
+
+<PageTitle>Review Cards — English Architect AI</PageTitle>
+
+<MudText Typo="Typo.h5" GutterBottom="true">Spaced Repetition Review</MudText>
+
+@if (_loading)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else if (_done)
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-10" Style="text-align:center">
+        <MudIcon Icon="@Icons.Material.Filled.DoneAll" Color="Color.Success" Style="font-size:5rem" />
+        <MudText Typo="Typo.h5" Class="mt-4">All done for today!</MudText>
+        <MudText Color="Color.Secondary" Class="mt-2 mb-6">
+            Reviewed <b>@_reviewed</b> card@(_reviewed == 1 ? "" : "s"). Come back tomorrow for more.
+        </MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/levels">
+            Back to My Path
+        </MudButton>
+    </MudContainer>
+}
+else if (_cards.Count == 0)
+{
+    <MudAlert Severity="Severity.Success" Class="mt-4">
+        No cards due right now. Keep studying to build your review deck!
+    </MudAlert>
+    <MudButton Class="mt-4" Href="/levels" Variant="Variant.Text">← Back to My Path</MudButton>
+}
+else
+{
+    var card = _cards[_currentIdx];
+
+    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-4">
+        Card @(_currentIdx + 1) of @_cards.Count
+    </MudText>
+    <MudProgressLinear Value="@(_currentIdx * 100.0 / _cards.Count)" Color="Color.Primary" Rounded="true" Class="mb-6" />
+
+    <!-- Flashcard -->
+    <MudPaper Elevation="4" Class="pa-8 mb-6" Style="border-radius:16px;min-height:160px">
+        <MudChip T="string" Size="Size.Small" Color="Color.Secondary" Class="mb-4">@card.ExerciseType</MudChip>
+        <MudText Typo="Typo.h6">@card.ExercisePrompt</MudText>
+        @if (_revealed)
+        {
+            <MudDivider Class="my-4" />
+            <MudText Typo="Typo.body2" Color="Color.Secondary">
+                How well did you recall this? Rate your answer below.
+            </MudText>
+        }
+    </MudPaper>
+
+    @if (!_revealed)
+    {
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+                   Size="Size.Large" OnClick="@(() => _revealed = true)">
+            Show Answer
+        </MudButton>
+    }
+    else
+    {
+        <MudText Typo="Typo.subtitle2" Class="mb-3">How well did you know this?</MudText>
+        <MudGrid Spacing="2">
+            @foreach (var (label, quality, color) in _qualityButtons)
+            {
+                var q = quality;
+                <MudItem xs="4">
+                    <MudButton Variant="Variant.Filled" Color="@color" FullWidth="true"
+                               OnClick="@(() => RateAsync(q))">
+                        @label
+                    </MudButton>
+                </MudItem>
+            }
+        </MudGrid>
+        <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mt-3 d-block" Style="text-align:center">
+            Blackout · Familiar · Good · Easy
+        </MudText>
+    }
+}
+
+@code {
+    private bool _loading = true;
+    private bool _done;
+    private bool _revealed;
+    private int _currentIdx;
+    private int _reviewed;
+    private List<EA.Client.Services.SpacedRepetitionCardDto> _cards = [];
+
+    // SM-2 quality ratings: (label, quality, color)
+    private static readonly (string Label, int Quality, Color Color)[] _qualityButtons =
+    [
+        ("Blackout", 0, Color.Error),
+        ("Familiar", 2, Color.Warning),
+        ("Good", 4, Color.Success),
+        ("Easy", 5, Color.Primary),
+    ];
+
+    protected override async Task OnInitializedAsync()
+    {
+        _cards = await Api.GetDueCardsAsync(20) ?? [];
+        _loading = false;
+    }
+
+    private async Task RateAsync(int quality)
+    {
+        var card = _cards[_currentIdx];
+        await Api.ReviewCardAsync(card.Id, quality);
+        _reviewed++;
+
+        if (_currentIdx < _cards.Count - 1)
+        {
+            _currentIdx++;
+            _revealed = false;
+        }
+        else
+        {
+            _done = true;
+        }
+    }
+}

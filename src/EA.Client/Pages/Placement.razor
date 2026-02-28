@@ -1,0 +1,171 @@
+@page "/placement"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<PageTitle>Placement Test — English Architect AI</PageTitle>
+
+@if (_done)
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-10" Style="text-align:center">
+        <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Color="Color.Warning" Style="font-size:5rem" />
+        <MudText Typo="Typo.h4" Class="mt-4">Your Level: <b>@_assignedLevel</b></MudText>
+        <MudText Typo="Typo.body1" Color="Color.Secondary" Class="mt-2 mb-6">@_levelDescription</MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Href="/levels">
+            Go to My Learning Path
+        </MudButton>
+    </MudContainer>
+}
+else if (_submitting)
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-16" Style="text-align:center">
+        <MudProgressCircular Indeterminate="true" Color="Color.Primary" Size="Size.Large" />
+        <MudText Class="mt-4">Analyzing your results…</MudText>
+    </MudContainer>
+}
+else
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-6">
+        <MudText Typo="Typo.h5" GutterBottom="true">Placement Test</MudText>
+        <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-4">
+            Answer honestly — this helps us find your starting level (A1–C2).
+        </MudText>
+
+        <MudProgressLinear Value="@Progress" Color="Color.Primary" Rounded="true" Class="mb-2" />
+        <MudText Typo="Typo.caption" Class="mb-5 d-block">
+            Question @(_current + 1) of @_questions.Count
+        </MudText>
+
+        <MudPaper Elevation="3" Class="pa-6" Style="border-radius:12px">
+            <MudText Typo="Typo.subtitle1" Class="mb-5">@_questions[_current].Prompt</MudText>
+            <MudRadioGroup @bind-Value="_selectedOption" T="string">
+                @foreach (var opt in _questions[_current].Options)
+                {
+                    <div style="margin-bottom:8px">
+                        <MudRadio Value="@opt" Color="Color.Primary">@opt</MudRadio>
+                    </div>
+                }
+            </MudRadioGroup>
+        </MudPaper>
+
+        <MudStack Row="true" Justify="Justify.SpaceBetween" Class="mt-6">
+            <MudButton Variant="Variant.Text" OnClick="Previous" Disabled="@(_current == 0)">
+                Back
+            </MudButton>
+            @if (_current < _questions.Count - 1)
+            {
+                <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                           OnClick="Next" Disabled="@(_selectedOption is null)">
+                    Next
+                </MudButton>
+            }
+            else
+            {
+                <MudButton Variant="Variant.Filled" Color="Color.Success"
+                           OnClick="Submit" Disabled="@(_selectedOption is null)">
+                    Submit Test
+                </MudButton>
+            }
+        </MudStack>
+    </MudContainer>
+}
+
+@code {
+    private int _current;
+    private string? _selectedOption;
+    private bool _submitting;
+    private bool _done;
+    private string _assignedLevel = "";
+    private string _levelDescription = "";
+    private readonly Dictionary<int, string> _answers = new();
+
+    private double Progress => (_current + 1.0) / _questions.Count * 100;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var status = await Api.GetPlacementStatusAsync();
+        if (status?.Completed == true)
+            Nav.NavigateTo("/levels");
+    }
+
+    private void Next()
+    {
+        if (_selectedOption is not null) _answers[_current] = _selectedOption;
+        _current++;
+        _selectedOption = _answers.TryGetValue(_current, out var prev) ? prev : null;
+    }
+
+    private void Previous()
+    {
+        if (_selectedOption is not null) _answers[_current] = _selectedOption;
+        _current--;
+        _selectedOption = _answers.TryGetValue(_current, out var prev) ? prev : null;
+    }
+
+    private async Task Submit()
+    {
+        if (_selectedOption is not null) _answers[_current] = _selectedOption;
+        _submitting = true;
+
+        var placementAnswers = _questions.Select((q, i) =>
+        {
+            var chosen = _answers.TryGetValue(i, out var a) ? a : "";
+            return new EA.Client.Services.PlacementAnswer(q.Id, chosen, chosen == q.Correct);
+        }).ToList();
+
+        var level = await Api.SubmitPlacementTestAsync(placementAnswers);
+        _assignedLevel = level ?? "B1";
+        await LocalStorage.SetItemAsStringAsync("assignedLevel", _assignedLevel);
+
+        _levelDescription = _assignedLevel switch
+        {
+            "A1" => "Beginner — you're just starting your English journey.",
+            "A2" => "Elementary — you handle everyday expressions well.",
+            "B1" => "Intermediate — you communicate in familiar situations.",
+            "B2" => "Upper Intermediate — you engage with complex topics.",
+            "C1" => "Advanced — you express yourself fluently and precisely.",
+            "C2" => "Proficient — near-native mastery of English.",
+            _ => ""
+        };
+        _submitting = false;
+        _done = true;
+    }
+
+    private record PlacementQuestion(Guid Id, string Prompt, List<string> Options, string Correct);
+
+    private readonly List<PlacementQuestion> _questions =
+    [
+        // A1
+        new(Guid.NewGuid(), "What color is the sky on a clear day?",
+            ["Blue", "Red", "Green", "Black"], "Blue"),
+        new(Guid.NewGuid(), "How do you greet someone in the morning?",
+            ["Good morning", "Good night", "Good evening", "Goodbye"], "Good morning"),
+        // A2
+        new(Guid.NewGuid(), "Which sentence is grammatically correct?",
+            ["She goes to school every day.", "She go to school.", "She going to school.", "She goed."],
+            "She goes to school every day."),
+        new(Guid.NewGuid(), "Yesterday I _____ to the store.",
+            ["go", "going", "went", "gone"], "went"),
+        // B1
+        new(Guid.NewGuid(), "I _____ here for three years.",
+            ["am", "was", "have been", "had been"], "have been"),
+        new(Guid.NewGuid(), "If I had more money, I _____ travel the world.",
+            ["will", "can", "would", "shall"], "would"),
+        // B2
+        new(Guid.NewGuid(), "The report must be _____ by Friday.",
+            ["finish", "finishing", "finished", "to finish"], "finished"),
+        new(Guid.NewGuid(), "Despite _____ tired, she continued working.",
+            ["be", "been", "being", "to be"], "being"),
+        // C1
+        new(Guid.NewGuid(), "The policy has had far-_____ consequences.",
+            ["reach", "reaching", "reached", "reaches"], "reaching"),
+        new(Guid.NewGuid(), "He spoke in such a _____ manner that nobody could follow.",
+            ["convoluted", "confused", "confusing", "complicated"], "convoluted"),
+        // C2
+        new(Guid.NewGuid(), "The critic's review was _____ in its condemnation.",
+            ["scathing", "frightening", "burning", "strong"], "scathing"),
+        new(Guid.NewGuid(), "Her _____ knowledge of the subject left the panel speechless.",
+            ["encyclopedic", "educational", "elaborate", "extended"], "encyclopedic"),
+    ];
+}

@@ -1,0 +1,80 @@
+@inherits LayoutComponentBase
+@inject NavigationManager Nav
+@inject EA.Client.Auth.JwtAuthStateProvider AuthProvider
+
+<MudThemeProvider Theme="_theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<AuthorizeView>
+    <Authorized>
+        <MudLayout>
+            <MudAppBar Elevation="1" Color="Color.Primary">
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit"
+                               Edge="Edge.Start" OnClick="@ToggleDrawer" />
+                <MudText Typo="Typo.h6" Class="ms-2">English Architect AI</MudText>
+                <MudSpacer />
+                <MudTooltip Text="Spaced Repetition Review">
+                    <MudIconButton Icon="@Icons.Material.Filled.AutoAwesome" Color="Color.Inherit"
+                                   Href="/review" />
+                </MudTooltip>
+                <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit"
+                               OnClick="Logout" />
+            </MudAppBar>
+
+            <MudDrawer @bind-Open="_drawerOpen" Elevation="2" ClipMode="DrawerClipMode.Always">
+                <MudDrawerHeader>
+                    <MudText Typo="Typo.subtitle1" Class="mt-2"><b>My Learning</b></MudText>
+                </MudDrawerHeader>
+                <NavMenu />
+            </MudDrawer>
+
+            <MudMainContent>
+                <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pt-6 pb-10">
+                    @Body
+                </MudContainer>
+            </MudMainContent>
+        </MudLayout>
+    </Authorized>
+    <NotAuthorized>
+        <MudLayout>
+            <MudAppBar Elevation="1" Color="Color.Primary">
+                <MudText Typo="Typo.h6" Class="ms-3">English Architect AI</MudText>
+                <MudSpacer />
+                <MudButton Color="Color.Inherit" Href="/login">Sign In</MudButton>
+                <MudButton Variant="Variant.Outlined" Color="Color.Inherit" Href="/register" Class="ms-2">
+                    Get Started
+                </MudButton>
+            </MudAppBar>
+            <MudMainContent>
+                <MudContainer MaxWidth="MaxWidth.Large" Class="pt-10">
+                    @Body
+                </MudContainer>
+            </MudMainContent>
+        </MudLayout>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private bool _drawerOpen = true;
+
+    private readonly MudTheme _theme = new()
+    {
+        PaletteLight = new PaletteLight
+        {
+            Primary = "#5C6BC0",
+            Secondary = "#26A69A",
+            AppbarBackground = "#5C6BC0",
+            Background = "#F5F5F5",
+            Surface = "#FFFFFF",
+        }
+    };
+
+    private void ToggleDrawer() => _drawerOpen = !_drawerOpen;
+
+    private async Task Logout()
+    {
+        await AuthProvider.NotifyUserLoggedOut();
+        Nav.NavigateTo("/login");
+    }
+}

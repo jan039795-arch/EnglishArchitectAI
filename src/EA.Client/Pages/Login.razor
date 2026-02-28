@@ -1,0 +1,76 @@
+@page "/login"
+@attribute [AllowAnonymous]
+@inject EA.Client.Auth.JwtAuthStateProvider AuthProvider
+@inject NavigationManager Nav
+@inject HttpClient Http
+
+<PageTitle>Sign In — English Architect AI</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-8">
+    <MudPaper Class="pa-6">
+        <MudText Typo="Typo.h5" Class="mb-4">Sign In</MudText>
+        <EditForm Model="_model" OnValidSubmit="HandleLogin">
+            <DataAnnotationsValidator />
+            <MudTextField @bind-Value="_model.Email" Label="Email" InputType="InputType.Email"
+                          Variant="Variant.Outlined" Class="mb-3" />
+            <MudTextField @bind-Value="_model.Password" Label="Password" InputType="InputType.Password"
+                          Variant="Variant.Outlined" Class="mb-4" />
+            @if (!string.IsNullOrEmpty(_error))
+            {
+                <MudAlert Severity="Severity.Error" Class="mb-3">@_error</MudAlert>
+            }
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary"
+                       FullWidth="true" Disabled="_loading">
+                @(_loading ? "Signing in..." : "Sign In")
+            </MudButton>
+        </EditForm>
+        <MudText Class="mt-3" Align="Align.Center">
+            Don't have an account? <MudLink Href="/register">Register</MudLink>
+        </MudText>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    private readonly LoginModel _model = new();
+    private string? _error;
+    private bool _loading;
+
+    private async Task HandleLogin()
+    {
+        _loading = true;
+        _error = null;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/auth/login", _model);
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<TokenResponse>();
+                if (result?.Token is not null)
+                {
+                    await AuthProvider.NotifyUserAuthenticated(result.Token);
+                    Nav.NavigateTo("/levels");
+                }
+            }
+            else
+            {
+                _error = "Invalid email or password.";
+            }
+        }
+        catch
+        {
+            _error = "Connection error. Please try again.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+
+    private record TokenResponse(string Token);
+}

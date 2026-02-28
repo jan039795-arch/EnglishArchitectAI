@@ -1,0 +1,125 @@
+@page "/register"
+@attribute [AllowAnonymous]
+@inject NavigationManager Nav
+@inject HttpClient Http
+@inject EA.Client.Auth.JwtAuthStateProvider AuthProvider
+
+<PageTitle>Register — English Architect AI</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-8">
+    <MudPaper Class="pa-6">
+        <MudText Typo="Typo.h5" Class="mb-4">Create Account</MudText>
+        <EditForm Model="_model" OnValidSubmit="HandleRegister">
+            <DataAnnotationsValidator />
+            <MudTextField @bind-Value="_model.Email" Label="Email" InputType="InputType.Email"
+                          Variant="Variant.Outlined" Class="mb-3" spellcheck="false" autocomplete="email" />
+            <MudTextField @bind-Value="_model.Username" Label="Username" Variant="Variant.Outlined"
+                          Class="mb-3" autocomplete="username" />
+            <MudTextField @bind-Value="_model.Password" Label="Password" InputType="InputType.Password"
+                          Variant="Variant.Outlined" Class="mb-3" autocomplete="new-password" />
+            <MudTextField @bind-Value="_model.ConfirmPassword" Label="Confirm Password"
+                          InputType="InputType.Password" Variant="Variant.Outlined" Class="mb-4" />
+            @if (!string.IsNullOrEmpty(_error))
+            {
+                <MudAlert Severity="Severity.Error" Class="mb-3">@_error</MudAlert>
+            }
+            @if (_success)
+            {
+                <MudAlert Severity="Severity.Success" Class="mb-3">Account created! Redirecting...</MudAlert>
+            }
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary"
+                       FullWidth="true" Disabled="_loading">
+                @(_loading ? "Creating account..." : "Register")
+            </MudButton>
+        </EditForm>
+        <MudText Class="mt-3" Align="Align.Center">
+            Already have an account? <MudLink Href="/login">Sign In</MudLink>
+        </MudText>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    private readonly RegisterModel _model = new();
+    private string? _error;
+    private bool _loading;
+    private bool _success;
+
+    private async Task HandleRegister()
+    {
+        if (_model.Password != _model.ConfirmPassword)
+        {
+            _error = "Passwords do not match.";
+            return;
+        }
+
+        _loading = true;
+        _error = null;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/auth/register", _model);
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<TokenResponse>();
+                if (result?.Token is not null)
+                    await AuthProvider.NotifyUserAuthenticated(result.Token);
+                _success = true;
+                await Task.Delay(800);
+                Nav.NavigateTo("/placement");
+            }
+            else
+            {
+                _error = await ParseErrorsAsync(response) ?? "Registration failed. Please check your details.";
+            }
+        }
+        catch
+        {
+            _error = "Connection error. Please try again.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private class RegisterModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Username { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
+    }
+
+    private static async Task<string?> ParseErrorsAsync(HttpResponseMessage response)
+    {
+        try
+        {
+            var body = await response.Content.ReadAsStringAsync();
+            using var doc = System.Text.Json.JsonDocument.Parse(body);
+            if (!doc.RootElement.TryGetProperty("errors", out var errors)) return null;
+            var msgs = new System.Collections.Generic.List<string>();
+            // Identity/flat format: ["msg1","msg2"]
+            // FluentValidation format: [{"field":"f","message":"m"}]
+            // ASP.NET format: {"Email":["msg"]}
+            if (errors.ValueKind == System.Text.Json.JsonValueKind.Array)
+            {
+                foreach (var item in errors.EnumerateArray())
+                {
+                    if (item.ValueKind == System.Text.Json.JsonValueKind.String)
+                        msgs.Add(item.GetString()!);
+                    else if (item.TryGetProperty("message", out var msg))
+                        msgs.Add(msg.GetString()!);
+                }
+            }
+            else if (errors.ValueKind == System.Text.Json.JsonValueKind.Object)
+            {
+                foreach (var prop in errors.EnumerateObject())
+                    foreach (var msg in prop.Value.EnumerateArray())
+                        msgs.Add(msg.GetString()!);
+            }
+            return msgs.Count > 0 ? string.Join(" ", msgs) : null;
+        }
+        catch { return null; }
+    }
+
+    private record TokenResponse(string Token);
+}

@@ -1,0 +1,126 @@
+@page "/levels"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject ISnackbar Snackbar
+
+<PageTitle>My Learning Path — English Architect AI</PageTitle>
+
+<MudText Typo="Typo.h5" GutterBottom="true">My Learning Path</MudText>
+<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+    Select your level to start studying. Your assigned level is highlighted.
+</MudText>
+
+@if (_loading)
+{
+    <MudGrid>
+        @for (int i = 0; i < 6; i++)
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <MudSkeleton Height="160px" Animation="Animation.Wave" />
+            </MudItem>
+        }
+    </MudGrid>
+}
+else
+{
+    <MudGrid>
+        @foreach (var level in _displayLevels)
+        {
+            var isAssigned = level.Code == _userLevel;
+            var isLocked = IsLocked(level.Code);
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard Elevation="@(isAssigned ? 6 : 2)"
+                         Style="@(isAssigned ? "border:2px solid #5C6BC0;cursor:pointer" : isLocked ? "opacity:.55;cursor:not-allowed" : "cursor:pointer")"
+                         @onclick="@(() => OpenLevel(level, isLocked))">
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                                <MudChip T="string" Color="@LevelColor(level.Code)" Size="Size.Small">
+                                    @level.Code
+                                </MudChip>
+                                @if (isAssigned)
+                                {
+                                    <MudChip T="string" Color="Color.Primary" Size="Size.Small"
+                                             Icon="@Icons.Material.Filled.Star">Your Level</MudChip>
+                                }
+                                @if (isLocked)
+                                {
+                                    <MudIcon Icon="@Icons.Material.Filled.Lock"
+                                             Size="Size.Small" Color="Color.Default" />
+                                }
+                            </MudStack>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">@level.Name</MudText>
+                    </MudCardContent>
+                    @if (!isLocked)
+                    {
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary"
+                                       EndIcon="@Icons.Material.Filled.ArrowForward">
+                                Study
+                            </MudButton>
+                        </MudCardActions>
+                    }
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+}
+
+@code {
+    private bool _loading = true;
+    private string _userLevel = "A1";
+    private List<LevelDisplay> _displayLevels = [];
+
+    private static readonly string[] LevelOrder = ["A1", "A2", "B1", "B2", "C1", "C2"];
+
+    protected override async Task OnInitializedAsync()
+    {
+        var stored = await LocalStorage.GetItemAsStringAsync("assignedLevel");
+        if (!string.IsNullOrEmpty(stored)) _userLevel = stored;
+
+        var levels = await Api.GetLevelsAsync();
+
+        _displayLevels = levels?.Count > 0
+            ? levels.OrderBy(l => l.Order)
+                    .Select(l => new LevelDisplay(l.Id, l.Code, l.Name))
+                    .ToList()
+            : [
+                new(Guid.Empty, "A1", "Beginner"),
+                new(Guid.Empty, "A2", "Elementary"),
+                new(Guid.Empty, "B1", "Intermediate"),
+                new(Guid.Empty, "B2", "Upper Intermediate"),
+                new(Guid.Empty, "C1", "Advanced"),
+                new(Guid.Empty, "C2", "Proficient"),
+              ];
+
+        _loading = false;
+    }
+
+    private bool IsLocked(string code)
+    {
+        var userIdx = Array.IndexOf(LevelOrder, _userLevel);
+        var codeIdx = Array.IndexOf(LevelOrder, code);
+        return codeIdx > userIdx;
+    }
+
+    private void OpenLevel(LevelDisplay level, bool locked)
+    {
+        if (locked) { Snackbar.Add($"Complete {_userLevel} first to unlock {level.Code}.", Severity.Warning); return; }
+        if (level.Id == Guid.Empty) { Snackbar.Add("No content yet — add seed data to the database.", Severity.Info); return; }
+        Nav.NavigateTo($"/levels/{level.Id}");
+    }
+
+    private static Color LevelColor(string code) => code switch
+    {
+        "A1" or "A2" => Color.Success,
+        "B1" or "B2" => Color.Warning,
+        _ => Color.Error
+    };
+
+    private record LevelDisplay(Guid Id, string Code, string Name);
+}

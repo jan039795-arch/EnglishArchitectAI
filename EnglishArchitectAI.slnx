@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EA.Admin/EA.Admin.csproj" />
+    <Project Path="src/EA.API/EA.API.csproj" />
+    <Project Path="src/EA.Application/EA.Application.csproj" />
+    <Project Path="src/EA.Client/EA.Client.csproj" />
+    <Project Path="src/EA.Domain/EA.Domain.csproj" />
+    <Project Path="src/EA.Infrastructure/EA.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EA.IntegrationTests/EA.IntegrationTests.csproj" />
+    <Project Path="tests/EA.UnitTests/EA.UnitTests.csproj" />
+  </Folder>
+</Solution>

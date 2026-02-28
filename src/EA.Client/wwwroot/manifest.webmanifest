@@ -1,0 +1,26 @@
+{
+  "name": "English Architect AI",
+  "short_name": "EnglishAI",
+  "id": "./",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "prefer_related_applications": false,
+  "description": "AI-powered English learning platform from A1 to C2",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

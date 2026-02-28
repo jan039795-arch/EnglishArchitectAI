@@ -1,0 +1,123 @@
+@page "/modules/{ModuleId:guid}"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+
+<PageTitle>Lessons — English Architect AI</PageTitle>
+
+@if (_loading)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else
+{
+    <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
+    <MudText Typo="Typo.h5" GutterBottom="true">@_moduleTitle</MudText>
+    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+        Complete lessons in order. Each lesson unlocks the next.
+    </MudText>
+
+    @if (_lessons.Count == 0)
+    {
+        <MudAlert Severity="Severity.Info">No lessons available yet for this module.</MudAlert>
+    }
+    else
+    {
+        <MudList T="EA.Client.Services.LessonDto" Dense="false">
+            @foreach (var (lesson, idx) in _lessons.Select((l, i) => (l, i)))
+            {
+                var completed = _completedIds.Contains(lesson.Id);
+                var isNext = !completed && idx == _nextIdx;
+                <MudListItem>
+                    <MudCard Elevation="@(isNext ? 4 : 1)"
+                             Style="@(isNext ? "border-left:4px solid #5C6BC0;cursor:pointer" : completed ? "opacity:.7;cursor:pointer" : "opacity:.5;cursor:not-allowed")"
+                             @onclick="@(() => OpenLesson(lesson, idx))">
+                        <MudCardContent>
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="3">
+                                    <MudAvatar Color="@(completed ? Color.Success : isNext ? Color.Primary : Color.Default)"
+                                               Size="Size.Medium">
+                                        @if (completed)
+                                        {
+                                            <MudIcon Icon="@Icons.Material.Filled.Check" />
+                                        }
+                                        else
+                                        {
+                                            <span>@(idx + 1)</span>
+                                        }
+                                    </MudAvatar>
+                                    <div>
+                                        <MudText Typo="Typo.subtitle1">@lesson.Title</MudText>
+                                        <MudStack Row="true" Spacing="1">
+                                            <MudChip T="string" Size="Size.Small" Color="Color.Secondary">
+                                                @lesson.SkillType
+                                            </MudChip>
+                                            @if (lesson.IsAIGenerated)
+                                            {
+                                                <MudChip T="string" Size="Size.Small" Icon="@Icons.Material.Filled.AutoAwesome">
+                                                    AI
+                                                </MudChip>
+                                            }
+                                        </MudStack>
+                                    </div>
+                                </MudStack>
+                                @if (isNext)
+                                {
+                                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+                                        Start
+                                    </MudButton>
+                                }
+                                else if (completed)
+                                {
+                                    <MudButton Variant="Variant.Text" Color="Color.Default" Size="Size.Small">
+                                        Review
+                                    </MudButton>
+                                }
+                            </MudStack>
+                        </MudCardContent>
+                    </MudCard>
+                </MudListItem>
+            }
+        </MudList>
+    }
+}
+
+@code {
+    [Parameter] public Guid ModuleId { get; set; }
+
+    private bool _loading = true;
+    private string _moduleTitle = "Module";
+    private List<EA.Client.Services.LessonDto> _lessons = [];
+    private HashSet<Guid> _completedIds = [];
+    private int _nextIdx = 0;
+    private List<BreadcrumbItem> _breadcrumbs = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        var lessonsTask = Api.GetLessonsByModuleAsync(ModuleId);
+        var progressTask = Api.GetUserProgressAsync();
+
+        await Task.WhenAll(lessonsTask, progressTask);
+
+        _lessons = await lessonsTask ?? [];
+        var progress = await progressTask ?? [];
+        _completedIds = progress.Select(p => p.LessonId).ToHashSet();
+
+        _nextIdx = _lessons.FindIndex(l => !_completedIds.Contains(l.Id));
+        if (_nextIdx < 0) _nextIdx = _lessons.Count;
+
+        _breadcrumbs =
+        [
+            new("My Path", "/levels"),
+            new("Module", null, disabled: true),
+        ];
+        _loading = false;
+    }
+
+    private void OpenLesson(EA.Client.Services.LessonDto lesson, int idx)
+    {
+        var completed = _completedIds.Contains(lesson.Id);
+        if (!completed && idx > _nextIdx) return; // locked
+        Nav.NavigateTo($"/lessons/{lesson.Id}");
+    }
+}

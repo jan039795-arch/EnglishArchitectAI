@@ -1,0 +1,35 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+*.swp
+
+## Publish
+publish/
+**/publish/
+
+## EF Migrations (keep migrations, ignore snapshots if needed)
+# Uncomment to ignore: **/Migrations/
+
+## Secrets / env
+appsettings.*.json
+!appsettings.json
+secrets.json
+.env
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+logs/
+
+## Test results
+TestResults/
+coverage/
+*.trx
+*.coveragexml
