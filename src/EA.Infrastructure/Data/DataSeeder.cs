@@ -20,13 +20,10 @@ public static class DataSeeder
 
         if (await context.Levels.AnyAsync())
         {
-            if (await context.Lessons.AnyAsync(l => l.ContentJson == null))
-            {
-                logger.LogInformation("Backfilling lesson content...");
-                BackfillContent(context);
-                await context.SaveChangesAsync();
-                logger.LogInformation("Content backfill complete.");
-            }
+            logger.LogInformation("Updating lesson content with latest videos...");
+            BackfillContent(context);
+            await context.SaveChangesAsync();
+            logger.LogInformation("Content update complete.");
             return;
         }
 
