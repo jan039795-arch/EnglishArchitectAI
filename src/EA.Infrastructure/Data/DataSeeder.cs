@@ -177,17 +177,29 @@ public static class DataSeeder
     {
         var m1 = G("a2010000-0000-0000-0000-000000000001");
         var m2 = G("a2020000-0000-0000-0000-000000000002");
+        var m3 = G("a2030000-0000-0000-0000-000000000003");
+        var m4 = G("a2040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Present Simple", "Master everyday actions and habits.", 1, 3));
         ctx.Modules.Add(NewModule(m2, levelId, "Past Simple", "Talk about finished events in the past.", 2, 3));
+        ctx.Modules.Add(NewModule(m3, levelId, "Adjectives & Possession", "Describe with adjectives, comparatives, and possessives.", 3, 3));
+        ctx.Modules.Add(NewModule(m4, levelId, "Continuous Tenses", "Master the Present Continuous for current actions.", 4, 3));
 
         var l1 = G("a2b10000-0000-0000-0000-000000000001");
         var l2 = G("a2b20000-0000-0000-0000-000000000002");
         var l3 = G("a2b30000-0000-0000-0000-000000000003");
         var l4 = G("a2b40000-0000-0000-0000-000000000004");
+        var l5 = G("a2b50000-0000-0000-0000-000000000005");
+        var l6 = G("a2b60000-0000-0000-0000-000000000006");
+        var l7 = G("a2b70000-0000-0000-0000-000000000007");
+        var l8 = G("a2b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Third Person Singular", SkillType.Writing, 1, A2L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Negatives & Questions", SkillType.Writing, 2, A2L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Regular Past Verbs", SkillType.Writing, 1, A2L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Irregular Past Verbs", SkillType.Writing, 2, A2L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Adjectives", SkillType.Reading, 1, A2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Comparatives & Superlatives", SkillType.Reading, 2, A2L6()));
+        ctx.Lessons.Add(NewLesson(l7, m3, "Possessive Adjectives", SkillType.Reading, 3, A2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Present Continuous", SkillType.Writing, 1, A2L8()));
 
         AddExercises(ctx, l1, "a2e1",
             MC("She ___ to school every day.", "goes", "go", "going", "goed", "present-simple,third-person"),
@@ -212,6 +224,30 @@ public static class DataSeeder
             MC("She ___ to Paris last summer.", "went", "go", "gone", "goes", "past-simple,irregular"),
             MC("We ___ dinner together.", "had", "have", "has", "having", "past-simple,irregular"),
             FB("I ___ up early this morning. (get)", "got", "past-simple,irregular"));
+
+        AddExercises(ctx, l5, "a2e5",
+            MC("She has a ___ red car.", "beautiful", "beautifuly", "beautifully", "beautifull", "adjectives"),
+            MC("The water is very ___.", "cold", "colds", "coldly", "colder", "adjectives"),
+            MC("He is ___ and kind.", "tall", "tallly", "more tall", "taller", "adjectives"),
+            FB("This is a very ___ book. (interesting)", "interesting", "adjectives"));
+
+        AddExercises(ctx, l6, "a2e6",
+            MC("My house is ___ than yours.", "bigger", "big", "more bigger", "biggest", "comparative"),
+            MC("This is the ___ film I've ever seen.", "best", "better", "good", "more better", "superlative"),
+            MC("Winter is ___ than autumn.", "colder", "more cold", "coldest", "cold", "comparative"),
+            FB("She is the ___ student in the class. (smart)", "smartest", "superlative"));
+
+        AddExercises(ctx, l7, "a2e7",
+            MC("___ house is next to ours.", "Their", "Theirs", "There", "They", "possessive"),
+            MC("Is this book ___? — No, it's hers.", "yours", "your", "mine", "his", "possessive-pronoun"),
+            MC("The cat lost ___ toy.", "its", "it's", "its'", "it is", "possessive,its-vs-its"),
+            FB("___ car is in the garage. (my)", "My", "possessive"));
+
+        AddExercises(ctx, l8, "a2e8",
+            MC("She ___ a book right now.", "is reading", "reads", "read", "reading", "present-continuous"),
+            MC("They ___ in the park.", "are playing", "play", "is playing", "plays", "present-continuous"),
+            MC("I ___ on a project this week.", "am working", "work", "works", "is working", "present-continuous"),
+            FB("He ___ the phone. (use)", "is using", "present-continuous"));
     }
 
     private static void BuildB1Modules(ApplicationDbContext ctx, Guid levelId)
@@ -498,6 +534,46 @@ public static class DataSeeder
         "Write a paragraph about a memorable day or event. Use at least 6 different irregular past verbs. You can write about a birthday, trip, special meal, or a memorable moment.",
         "'Read' looks the same in present and past but sounds different: REED (present) vs RED (past). 'Thought' is pronounced THAWT — the 'ough' is silent.",
         [("Irregular Past Tense Verbs", "Papa English", null), ("Irregular Verbs in Past Simple", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string A2L5() => C(
+        "Adjectives describe nouns and make your English more colorful and descriptive. In English, adjectives ALWAYS go BEFORE the noun (opposite to Spanish). Word order matters: if you have multiple adjectives, follow a specific order (size, color, material). The British Council emphasizes the importance of adjective placement.",
+        ["Adjectives come BEFORE the noun: a beautiful house (not 'a house beautiful')", "Common adjectives: big/small, good/bad, beautiful, ugly, happy, sad, cold, hot", "Adjective order: opinion/size/color/material — a beautiful red car, a small blue house", "Adverbs of extent before adjectives: very, quite, really — 'very happy', 'quite difficult'", "Comparative adjectives: -ER or MORE: big→bigger, beautiful→more beautiful"],
+        [("beautiful", "hermoso/a", "She has a beautiful garden."), ("big", "grande", "That is a big house."), ("small", "pequeño/a", "We live in a small apartment."), ("happy", "feliz", "The children are very happy."), ("cold", "frío", "The water is very cold."), ("interesting", "interesante", "This is a really interesting book.")],
+        [("She has a big yellow house.", "Adjective + color"), ("He is tall and handsome.", "Multiple adjectives"), ("The food is delicious and hot.", "Describing with multiple adjectives"), ("It was a beautiful sunny day.", "Positive adjectives in context")],
+        "Describe a room in your house or a person you know using at least 5 adjectives. Write 6 sentences following the correct adjective order.",
+        "'Beautiful' is pronounced BYOO-ti-ful (3 syllables). 'Interesting' — IN-trus-ting or IN-ter-esting (3 syllables). Stress falls on the first syllable.",
+        [("English Adjectives", "Learn English with Papa English", null), ("Word Order with Adjectives", "English Speeches", null), ("Describing People and Things", "Cambridge English", null)]
+    );
+
+    private static string A2L6() => C(
+        "Comparative adjectives (-ER or MORE) compare two things, while superlative adjectives (-EST or MOST) identify the extreme in a group. These form the foundation for making descriptions more precise and comparing options. The British Council highlights their frequency in everyday English.",
+        ["Comparatives: -ER (big→bigger) or MORE (beautiful→more beautiful) + THAN", "Superlatives: -EST (big→biggest) or MOST (beautiful→most beautiful)", "One syllable: big→bigger→biggest, fast→faster→fastest", "Two syllables (varies): happy→happier→happiest, modern→more modern→most modern", "Irregular: good→better→best, bad→worse→worst, far→further/farther→furthest"],
+        [("bigger", "más grande", "Your house is bigger than mine."), ("happier", "más feliz", "She is happier now."), ("best", "mejor/lo mejor", "This is the best film I've ever seen."), ("worse", "peor", "The weather is worse today."), ("fastest", "más rápido", "He is the fastest runner in the team.")],
+        [("My car is bigger than yours.", "Comparing two things"), ("January is colder than December in my country.", "Comparative in context"), ("This is the most expensive restaurant in the city.", "Superlative"), ("She is the best teacher at the school.", "Superlative with 'the'")],
+        "Write 6 sentences comparing two people, places, or things you know. Use at least 3 comparatives and 3 superlatives.",
+        "Comparative '-ER' sounds like 'ur' at the end: bigger is BIG-ur. Superlative '-EST' is pronounced as a separate syllable: biggest is BIG-ist. Stress patterns change with suffixes.",
+        [("Comparative and Superlative Adjectives", "Papa English", null), ("English Comparatives and Superlatives", "Learn English Kids", null), ("Comparing Adjectives in English", "Cambridge English", null)]
+    );
+
+    private static string A2L7() => C(
+        "Possessive adjectives (my, your, his, her, its, our, their) show ownership or relationship. They are different from possessive pronouns (mine, yours, his, hers, ours, theirs). These words are essential for talking about people, objects, and relationships in everyday conversation.",
+        ["Possessive adjectives: my, your, his, her, its, our, their — always come BEFORE the noun", "My book, your car, his phone, her bag, our house, their children", "Possessive pronouns: mine, yours, his, hers, ours, theirs — stand ALONE", "My book vs. mine: 'This is my book' vs. 'This book is mine'", "Its (possessive) vs. it's (it is): 'The cat lost its toy' vs. 'It's very cold'"],
+        [("my", "mi", "This is my phone."), ("your", "tu/su", "What is your name?"), ("his", "su (de él)", "His car is red."), ("her", "su (de ella)", "Her sister is a doctor."), ("our", "nuestro/a", "This is our house."), ("their", "su (de ellos)", "Their children are very clever.")],
+        [("My mother is a teacher and her sister is a nurse.", "Multiple possessives"), ("Is this your bag or mine?", "Possessive adjective vs. pronoun"), ("Their house is bigger than ours.", "Possessive pronouns in comparison"), ("The bird lost its feathers.", "Its = possessive (not it's)")],
+        "Write 8 sentences about your family and possessions using possessive adjectives and pronouns. Include at least 3 different possessive forms.",
+        "'Its' (possessive) and 'it's' (it is) sound identical — THIS is the most common mistake in English. Remember: 'its' = 'of it' (possessive), 'it's' = 'it is'.",
+        [("Possessive Adjectives in English", "Learn English with Papa English", null), ("Possessive Pronouns and Adjectives", "English Speeches", null), ("My, Mine, Your, Yours - Possessive Words", "Cambridge English", null)]
+    );
+
+    private static string A2L8() => C(
+        "The Present Continuous describes actions happening RIGHT NOW (I am working) or temporary situations (He is living in London this year). It is formed with: am/is/are + verb-ING. This tense is crucial for talking about what you see around you and temporary situations.",
+        ["Form: Subject + am/is/are + verb-ING", "I am working, you are reading, he is sleeping, we are playing", "NOW actions: 'She is talking on the phone.'", "Temporary situations: 'He is staying with us this week.'", "Double final consonant: stop→stopping, run→running, but not: open→opening, visit→visiting"],
+        [("am working", "estoy trabajando", "I am working on a project."), ("is sleeping", "está durmiendo", "The baby is sleeping right now."), ("are playing", "están jugando", "The children are playing in the park."), ("is living", "está viviendo", "She is living in Barcelona this year."), ("am studying", "estoy estudiando", "I am studying English.")],
+        [("Look! The birds are flying.", "Right now action"), ("She is reading a book at the moment.", "Current action"), ("They are building a new house in our street.", "Temporary situation"), ("I am learning English. — How long? — For two years.", "Duration of current action")],
+        "Write 8 sentences: 4 about things happening right now in your location, and 4 about temporary situations in your life.",
+        "'Present Continuous' is pronounced: PREZ-ent CON-tin-you-us. The ING ending is one syllable: 'running' is RUN-ning (2 syllables, not 3).",
+        [("Present Continuous Tense", "Papa English", null), ("English Present Continuous", "Learn English with EnglishClass101.com", null), ("BE + ING Form English Grammar", "English Speeches", null)]
     );
 
     private static string B1L1() => C(
