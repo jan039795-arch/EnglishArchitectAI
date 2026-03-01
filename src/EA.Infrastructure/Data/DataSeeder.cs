@@ -1125,7 +1125,7 @@ public static class DataSeeder
         (string s, string n)[]? examples = null,
         string? writingPrompt = null,
         string? pronunciationTip = null,
-        (string title, string channel, string videoId)[]? videos = null) =>
+        (string title, string channel, string? videoId)[]? videos = null) =>
         JsonSerializer.Serialize(new
         {
             explanation,
@@ -1166,7 +1166,7 @@ public static class DataSeeder
         for (int i = 0; i < exercises.Length; i++)
         {
             var (type, prompt, correct, others, tags) = exercises[i];
-            var exId = G($"{idPrefix}{i + 1:00}00-0000-0000-0000-000000000001");
+            var exId = Guid.NewGuid();
             ctx.Exercises.Add(new Exercise
             {
                 Id = exId, LessonId = lessonId, Type = type, Prompt = prompt,
@@ -1181,7 +1181,7 @@ public static class DataSeeder
                 for (int j = 0; j < shuffled.Length; j++)
                     ctx.ExerciseOptions.Add(new ExerciseOption
                     {
-                        Id = G($"{idPrefix}{i + 1:00}{j + 1:0}0-0000-0000-0000-000000000001"),
+                        Id = Guid.NewGuid(),
                         ExerciseId = exId, Text = shuffled[j],
                         IsCorrect = shuffled[j] == correct,
                         Explanation = shuffled[j] == correct ? "Correct!" : null
