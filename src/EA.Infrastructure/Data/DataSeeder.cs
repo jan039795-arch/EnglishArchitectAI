@@ -485,17 +485,29 @@ public static class DataSeeder
     {
         var m1 = G("c2010000-0000-0000-0000-000000000001");
         var m2 = G("c2020000-0000-0000-0000-000000000002");
+        var m3 = G("c2030000-0000-0000-0000-000000000003");
+        var m4 = G("c2040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Nuanced Expression", "Achieve near-native register and style.", 1, 8));
         ctx.Modules.Add(NewModule(m2, levelId, "Academic Writing", "Master hedging, argumentation, and critical analysis.", 2, 8));
+        ctx.Modules.Add(NewModule(m3, levelId, "Advanced Communication", "Paraphrasing, pragmatics, and context mastery.", 3, 8));
+        ctx.Modules.Add(NewModule(m4, levelId, "Native Proficiency", "Stylistic mastery and authentic native features.", 4, 8));
 
         var l1 = G("c2b10000-0000-0000-0000-000000000001");
         var l2 = G("c2b20000-0000-0000-0000-000000000002");
         var l3 = G("c2b30000-0000-0000-0000-000000000003");
         var l4 = G("c2b40000-0000-0000-0000-000000000004");
+        var l5 = G("c2b50000-0000-0000-0000-000000000005");
+        var l6 = G("c2b60000-0000-0000-0000-000000000006");
+        var l7 = G("c2b70000-0000-0000-0000-000000000007");
+        var l8 = G("c2b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Register & Formal Style", SkillType.Writing, 1, C2L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Idiomatic Mastery", SkillType.Reading, 2, C2L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Hedging Language", SkillType.Writing, 1, C2L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Critical Analysis", SkillType.Reading, 2, C2L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Paraphrasing & Summarization", SkillType.Writing, 1, C2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Pragmatics & Implicature", SkillType.Reading, 2, C2L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Stylistic Variation", SkillType.Writing, 1, C2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Native Speaker Features", SkillType.Reading, 2, C2L8()));
 
         AddExercises(ctx, l1, "c2e1",
             MC("Which is the most formal equivalent of 'ask for'?", "solicit", "demand", "request", "inquire", "register,formal,vocabulary"),
@@ -520,6 +532,30 @@ public static class DataSeeder
             MC("'Equivocal' describes a statement that is:", "ambiguous", "crystal clear", "misleading intentionally", "factually incorrect", "vocabulary,critical-analysis"),
             MC("Which word means 'talking around the point'?", "circumlocution", "elaboration", "amplification", "clarification", "vocabulary,critical-analysis"),
             FB("The data is ___ — it supports more than one interpretation. (ambiguous, formal)", "equivocal", "vocabulary"));
+
+        AddExercises(ctx, l5, "c2e5",
+            MC("Paraphrasing means:", "restating using different words and structure", "simply changing a few words", "condensing to key points", "translating to another language", "paraphrasing,writing-skills"),
+            MC("Which is the best summary of a long article?", "The essential findings in 1-2 sentences", "Every detail in new words", "A shorter version with all details", "The author's opinion restated", "summarization"),
+            MC("'To recapitulate' means:", "to summarize the key points", "to elaborate further", "to provide more examples", "to criticize the argument", "vocabulary,summarization"),
+            FB("A ___ of the chapter provides a brief overview. (summary)", "synopsis", "summarization"));
+
+        AddExercises(ctx, l6, "c2e6",
+            MC("An implicature is:", "an implied meaning beyond literal words", "a grammatical mistake", "a formal speech pattern", "a written statement", "pragmatics,vocabulary"),
+            MC("'It's cold in here' might imply:", "Close the window/Please leave", "The temperature is low", "It is winter", "I like the cold", "pragmatics,implicature"),
+            MC("A presupposition in 'Stop eating cake' is:", "You are eating cake", "I want you to stop", "Cake is delicious", "You should eat less", "pragmatics"),
+            FB("The ___ of his comment is that she is not performing well. (implied meaning)", "implicature", "pragmatics"));
+
+        AddExercises(ctx, l7, "c2e7",
+            MC("Which sentence demonstrates stylistic variation (informal)?", "Hey, your idea rocks!", "The proposed concept presents merit.", "It is suggested that...", "The methodology is rigorous.", "style,register"),
+            MC("'Eloquent' speech is:", "expressive and persuasive", "unclear and confusing", "brief and curt", "technical and jargon-heavy", "vocabulary,style"),
+            MC("Which rhetorical device is demonstrated: 'He was cold, calculating, and cruel'?", "Alliteration", "Metaphor", "Irony", "Paradox", "literary-devices"),
+            FB("The baroque prose was difficult to ___. (understand/interpret)", "parse", "style,vocabulary"));
+
+        AddExercises(ctx, l8, "c2e8",
+            MC("Elision in English is:", "omitting sounds in informal speech", "adding extra syllables", "changing word order", "inventing new words", "native-features,pronunciation"),
+            MC("'Gonna' is an example of:", "elision (gonna = going to)", "assimilation", "hesitation", "code-switching", "native-features"),
+            MC("Prosody refers to:", "intonation, stress, and rhythm in speech", "grammatical structure", "vocabulary choice", "formal register", "pronunciation,native-features"),
+            FB("'___ he was totally confused, you know?' — Native discourse pattern", "Like", "native-features,discourse"));
     }
 
     // ── LESSON CONTENT ────────────────────────────────────────────────────────
@@ -962,6 +998,46 @@ public static class DataSeeder
         "Find a news article or opinion piece. Write a critical analysis paragraph (8–10 sentences) identifying at least 2 argumentative strengths and 2 logical weaknesses. Use vocabulary from this lesson.",
         "'Non sequitur' is Latin: non-SEK-wi-ter. 'Ad hominem' is ad-HOM-in-em. Academic Latin phrases are pronounced the English way, not classical Latin. Both 3 syllables, stress on 2nd.",
         [("Logical Fallacies Explained", "TED-Ed", null), ("Critical Thinking and Logical Fallacies", "Paul Graham", null), ("How to Analyze Arguments", "Cambridge English", null)]
+    );
+
+    private static string C2L5() => C(
+        "Paraphrasing and summarization at C2 level requires maintaining nuance while changing structure. You reformulate complex ideas without losing meaning. Summarization condenses information while retaining key points. Essential for academic and professional communication.",
+        ["Paraphrasing: restate using different words/structures but same meaning", "Avoid simply replacing words — change sentence structure completely", "Summarization: distil key points from longer text into essential information", "Signal phrases: 'To put it another way...', 'In other words...', 'Essentially...'", "Maintain accuracy — paraphrasing is NOT interpretation or commentary"],
+        [("paraphrase", "parafrasear", "Let me paraphrase that for clarity."), ("distil", "destilar / extraer lo esencial", "The report distils complex data into actionable insights."), ("synopsis", "sinopsis / resumen", "A synopsis of the chapter is provided below."), ("recapitulate", "recapitular / resumir", "To recapitulate, the main findings are..."), ("consolidate", "consolidar / resumir", "The analysis consolidates evidence from multiple sources.")],
+        [("Original: 'The data indicates a positive correlation.' / Paraphrase: 'Evidence points to a relationship between variables.'", "Basic paraphrasing"), ("Summarizing: 'The 300-page report concludes that climate policy must prioritize renewable energy.'", "Condensing to essential points"), ("The author's argument, stripped to essentials, is that innovation drives progress.", "Paraphrasing while summarizing"), ("To recapitulate, three key challenges emerge from this analysis.", "Summarization signal phrase")],
+        "Find a complex paragraph from an academic article. Paraphrase it (3–4 sentences) maintaining all nuance, then summarize it (1–2 sentences) to its essential message.",
+        "'Paraphrase' is PAR-uh-fraze (stress 1st). 'Consolidate' is con-SOL-i-date (stress 2nd). 'Recapitulate' is re-kuh-PIT-choo-late (stress 3rd). In speech, paraphrasing flows naturally — it is not word-by-word substitution.",
+        [("Paraphrasing Strategies", "Academic English", null), ("Summarizing Skills for C2", "Cambridge English", null), ("Advanced Paraphrasing Techniques", "English Speeches", null)]
+    );
+
+    private static string C2L6() => C(
+        "Pragmatics examines what is MEANT beyond literal words. Implicature refers to implied meaning. Native speakers understand 'Can you pass the salt?' as a request, not a question about ability. Mastering pragmatics makes your English genuinely native-like.",
+        ["Implicature: implied meaning beyond literal words", "'It's cold in here' might mean 'Close the window' or 'Please leave'", "Presupposition: what is assumed to be true. 'Stop eating cake' presupposes you ARE eating cake", "Speech acts: performative verbs that do something (promise, apologize, request, warn)", "Context determines meaning — the same sentence has different meanings in different situations"],
+        [("implicature", "implicatura / significado implícito", "The implicature of that comment is that she disagrees."), ("presupposition", "presuposición / asunción implícita", "The presupposition here is that he was late."), ("pragmatic", "pragmático / práctico contextualmente", "The pragmatic meaning differs from the literal."), ("felicitous", "apropiado / conveniente", "That remark is hardly felicitous in formal settings."), ("infelicitous", "inapropiado / fuera de lugar", "The comment was infelicitous — it offended the audience.")],
+        [("'You could do better' → Implicature: you are not doing well enough", "Implied criticism"), ("'Have you finished?' asked at 5 PM → Presupposition: you should be done by now", "Presupposition in context"), ("'I promise to be on time' → Speech act: making a commitment", "Performative verb"), ("Literal: 'The door is open.' Pragmatic: 'You can enter.' or 'It's windy here.'", "Context-dependent pragmatics")],
+        "Select 5 sentences that have implicit meaning beyond literal words. Explain the implicature and the context in which each is said.",
+        "'Pragmatic' is prag-MAT-ic (3 syllables, stress 2nd). 'Implicature' is IM-pli-kuh-chur (4 syllables, stress 1st). 'Presupposition' — stress 3rd syllable: pre-sup-o-ZI-shun.",
+        [("Pragmatics in English", "Academic English", null), ("Implicature and Indirect Speech Acts", "Cambridge English", null), ("Context and Meaning in English", "English Speeches", null)]
+    );
+
+    private static string C2L7() => C(
+        "Stylistic variation — the ability to shift register, tone, and style based on context — distinguishes near-native from native speakers. C2 mastery involves conscious control of style for effect. Literary devices create impact; clarity requires simplicity. Style is a signature.",
+        ["Register shift: formal ↔ informal based on audience", "Tone: humorous, serious, ironic, compassionate, clinical, passionate", "Sentence variety: simple, compound, complex structures for rhythm and emphasis", "Rhetorical devices: alliteration, parallelism, repetition, contrast for effect", "Clarity vs. complexity: know when to simplify and when complexity adds nuance"],
+        [("eloquent", "elocuente / expresivo", "Her eloquent speech moved the audience."), ("terse", "conciso / breve", "His terse reply indicated displeasure."), ("baroque", "barroco / muy ornamentado", "The baroque prose is difficult to parse."), ("understated", "subestimado / discreto", "The understated humor appeals to sophisticated audiences."), ("prosaic", "prosaico / ordinario", "The prosaic description lacks emotional impact.")],
+        [("Register shift: 'The defendant unlawfully appropriated funds.' (formal) vs. 'He stole the money.' (direct)", "Formal to direct"), ("Tone in one sentence: 'Your argument, while creative, lacks empirical support.' (constructive but firm)", "Balanced critical tone"), ("Alliteration for effect: 'The bitter, bleak, barren landscape...'", "Stylistic device"), ("Parallelism: 'It was the best of times, it was the worst of times.'", "Rhetorical device")],
+        "Rewrite the same information in 3 different styles: 1) Scientific/clinical, 2) Journalistic/accessible, 3) Literary/creative. Show how style shapes meaning.",
+        "Eloquent is e-KWAH-went (stress 1st). Baroque is buh-ROHK (stress 2nd). When shifting styles, your intonation and pace change — formal speech is slower and more precise.",
+        [("Stylistic Variation in Writing", "Cambridge English", null), ("Register and Style in English", "Academic English", null), ("Literary Devices and Rhetoric", "English Speeches", null)]
+    );
+
+    private static string C2L8() => C(
+        "Native speaker features include: elision (omitting sounds), assimilation (sound changes), prosody (rhythm/intonation), and discourse patterns. At C2, you understand how native speakers really speak — not textbook English, but authentic variation.",
+        ["Elision: 'going to' → 'gonna', 'want to' → 'wanna' (in informal speech)", "Assimilation: 'handbag' → /hæm'bæg/, 'that' → /ðət/ before certain sounds", "Prosody: intonation rising for questions, stress on content words, rhythm patterns", "Discourse patterns: turn-taking, back-channeling ('mm', 'yeah'), fillers ('like', 'you know')", "Variation: native speakers code-switch, use colloquialisms, break grammar rules intentionally"],
+        [("elision", "elisión / omisión", "Elision is common in rapid, informal speech."), ("assimilation", "asimilación / cambio de sonido", "Assimilation affects pronunciation in connected speech."), ("prosody", "prosodia / entonación y ritmo", "Native-like prosody requires extensive listening."), ("colloquial", "coloquial / informal", "Colloquial expressions mark native speech."), ("discourse marker", "marcador del discurso", "Discourse markers like 'you know' signal native speech patterns.")],
+        [("I'm gonna go to the store. / I'm going to go to the store.", "Elision in informal speech"), ("Handbag pronounced /hæm'bæg/ due to assimilation", "Sound change in connected speech"), ("Rising intonation on 'You're coming?' signals question", "Prosodic patterns"), ("'Like, he was totally confused, you know?' — Native informal pattern", "Discourse features")],
+        "Record yourself or find a native speaker interview. Transcribe 2–3 minutes and identify: elisions, assimilations, discourse markers, and prosodic patterns used.",
+        "'Elision' is i-LIZH-un (stress 2nd). 'Assimilation' is uh-sim-uh-LAY-shun (stress 3rd). 'Prosody' is PRAH-suh-dee (stress 1st). Native speech flows — stress and intonation carry meaning more than individual words.",
+        [("Native English Pronunciation Patterns", "Papa English", null), ("Connected Speech in English", "Cambridge English", null), ("How Native Speakers Really Talk", "English Speeches", null)]
     );
 
     // ── Helpers ───────────────────────────────────────────────────────────────
