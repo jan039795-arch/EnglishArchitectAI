@@ -354,7 +354,7 @@ public static class DataSeeder
         [("Good morning! How are you?", "Greeting in the morning"), ("Fine, thank you. And you?", "Responding to 'How are you?'"), ("Nice to meet you!", "Meeting someone for the first time"), ("Goodbye! See you later.", "Saying farewell")],
         "Write a short dialogue (4–6 lines) between two people meeting for the first time. Use at least 3 different greetings.",
         "The 'h' in 'hello' and 'hi' is always pronounced. Say it with a clear breath — HEH-loh, not EH-loh.",
-        [("English Greetings for Beginners", "EnglishClass101", "4x7yy0HtzYI"), ("How to Greet People in English", "BBC Learning English", "RB0LuScVu0s")]
+        [("English Greetings for Beginners", "EnglishClass101", "ozT4MI_oHFc"), ("How to Greet People in English", "BBC Learning English", "oJx2iH0VJQA")]
     );
 
     private static string A1L2() => C(
@@ -364,7 +364,7 @@ public static class DataSeeder
         [("I have three cats and two dogs.", "Using small numbers"), ("She is fifteen years old.", "Talking about age"), ("There are twelve students in the class.", "Counting people"), ("My phone number is five-five-three, two-one-four-zero.", "Reading phone numbers")],
         "Write 5 sentences using different numbers: your age, people in your family, your address number, phone digits, and how many hours you sleep.",
         "Stress the '-TEEN': thirTEEN, fourTEEN. Compare: THIRty, FOURty (stress on first syllable for the tens).",
-        [("English Numbers 1-20", "EnglishClass101", "pHM9yPRjEkg"), ("How to Pronounce English Numbers", "BBC Learning English", "qqRnwxdFpVg")]
+        [("English Numbers 1-20", "EnglishClass101", "5Fn4r0gMUFM"), ("Numbers 1-100 in English", "Learn English with Papa English", "92BdANvnwh4")]
     );
 
     private static string A1L3() => C(
@@ -374,7 +374,7 @@ public static class DataSeeder
         [("The sky is blue on a clear day.", "Describing nature"), ("I have a red umbrella.", "Color before noun"), ("She is wearing a green dress.", "Describing clothes"), ("What is your favorite color? — My favorite color is purple.", "Asking preferences")],
         "Look around you right now. Describe 6 objects using colors. Example: 'My notebook is blue. My pen is black.'",
         "'Orange' is pronounced OR-inj (two syllables). 'White' — the 'wh' sounds like a regular 'w' in modern English.",
-        [("Colors in English", "EnglishClass101", "YVkbjfQWxiI"), ("English Colors", "British Council", "Kt6p8TYaEqI")]
+        [("Learn Colors in English", "Learn English Kids", "U_8dO7WcHUE"), ("English Vocabulary: Colors", "Papa English", "cKGPRrFT-zU")]
     );
 
     private static string A1L4() => C(
@@ -384,7 +384,7 @@ public static class DataSeeder
         [("Take out a pen and a piece of paper.", "Following classroom instructions"), ("The book is on the desk.", "Describing location"), ("There are thirty chairs in the room.", "Counting classroom objects"), ("Open your book and go to page twelve.", "Teacher instruction")],
         "Describe your study area. Write 6 sentences: what objects are there, their colors, and how many. Example: 'I have two blue pens on my desk.'",
         "In American English: 'eraser'. In British English: 'rubber'. Both are correct — just know your context.",
-        [("Classroom Objects in English", "EnglishClass101", "J6qWgGMDNgE"), ("School Objects Vocabulary", "BBC Learning English", "4qJ3KrHvWYE")]
+        [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI")]
     );
 
     private static string A2L1() => C(
@@ -394,7 +394,7 @@ public static class DataSeeder
         [("She plays tennis every Saturday.", "Regular verb with -s"), ("He watches TV after dinner.", "Verb ending in -ch adds -es"), ("My sister studies medicine at university.", "Consonant+y → -ies"), ("The train arrives at platform 3.", "Third person in context")],
         "Write 6 sentences about what a family member or friend does in their daily routine. Use he/she with correct third person singular forms.",
         "The final -s/-es has 3 sounds: /s/ (works, eats), /z/ (plays, lives), /ɪz/ (watches, teaches — after -sh, -ch, -x, -s, -z).",
-        [("English Present Simple Tense", "EngVid", "7h-SBqXqb3w"), ("Third Person Singular", "EnglishClass101", "VPhWEOLPkCo")]
+        [("Present Simple - Third Person Singular -s/-es", "Learn English with Papa English", "m3FfULhEcvE"), ("Present Simple Tense", "English Speeches", "v8_3WvX4Q6k")]
     );
 
     private static string A2L2() => C(
@@ -431,7 +431,7 @@ public static class DataSeeder
         [("I have never eaten sushi.", "Life experience with 'never'"), ("Have you ever been to London?", "Life experience question"), ("She has just finished her homework.", "Recent action with 'just'"), ("They haven't arrived yet.", "Expected action with 'yet'")],
         "Write 6 Present Perfect sentences: 2 with 'ever/never', 2 with 'just/already', and 2 with 'yet'.",
         "In spoken English, 'have' contracts: I've, you've, she's, he's, we've, they've. 'I have never' → 'I've never'. These contractions are essential for natural speech.",
-        [("Present Perfect Tense", "EngVid", "gI0QUfGb74o"), ("Have You Ever...?", "EnglishClass101", "xLiO-gVvJ2I")]
+        [("Present Perfect Tense Explained", "Learn English with EnglishClass101.com", "dj-iEPfFqlI"), ("Present Perfect Grammar Lesson", "English Addict with Mr. Duncan", "fHYrBa-jaPo")]
     );
 
     private static string B1L2() => C(
