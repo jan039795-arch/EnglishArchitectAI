@@ -331,17 +331,29 @@ public static class DataSeeder
     {
         var m1 = G("b2010000-0000-0000-0000-000000000001");
         var m2 = G("b2020000-0000-0000-0000-000000000002");
+        var m3 = G("b2030000-0000-0000-0000-000000000003");
+        var m4 = G("b2040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Passive Voice", "Shift focus from agent to action.", 1, 5));
         ctx.Modules.Add(NewModule(m2, levelId, "Reported Speech", "Report what others said accurately.", 2, 5));
+        ctx.Modules.Add(NewModule(m3, levelId, "Unreal Situations & Emphasis", "Express wishes and add emphasis with cleft sentences.", 3, 5));
+        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Structures & Vocabulary", "Phrasal verbs, quantifiers, and precise expression.", 4, 5));
 
         var l1 = G("b2b10000-0000-0000-0000-000000000001");
         var l2 = G("b2b20000-0000-0000-0000-000000000002");
         var l3 = G("b2b30000-0000-0000-0000-000000000003");
         var l4 = G("b2b40000-0000-0000-0000-000000000004");
+        var l5 = G("b2b50000-0000-0000-0000-000000000005");
+        var l6 = G("b2b60000-0000-0000-0000-000000000006");
+        var l7 = G("b2b70000-0000-0000-0000-000000000007");
+        var l8 = G("b2b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Present & Past Passive", SkillType.Writing, 1, B2L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Passive with Modals", SkillType.Writing, 2, B2L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Reporting Statements", SkillType.Writing, 1, B2L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Reporting Questions", SkillType.Writing, 2, B2L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Wish & If Only", SkillType.Writing, 1, B2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Cleft Sentences", SkillType.Writing, 2, B2L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Advanced Phrasal Verbs", SkillType.Reading, 1, B2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Quantifiers & Articles", SkillType.Reading, 2, B2L8()));
 
         AddExercises(ctx, l1, "b2e1",
             MC("The letter ___ yesterday.", "was written", "wrote", "is written", "has written", "passive,past"),
@@ -366,6 +378,30 @@ public static class DataSeeder
             MC("She wanted to know if I ___ Spanish.", "spoke", "speak", "am speaking", "had spoke", "reported-speech,questions"),
             MC("They asked what time it ___.", "was", "is", "were", "has been", "reported-speech,questions"),
             FB("He asked me if I ___ help. (need, report)", "needed", "reported-speech"));
+
+        AddExercises(ctx, l5, "b2e5",
+            MC("I ___ I lived in a sunny country.", "wish", "wishes", "would wish", "wished", "wish,unreal"),
+            MC("If only I ___ studied harder when I had the chance.", "had", "have", "would have", "had had", "wish,past"),
+            MC("She wishes he ___ spend more time with the family.", "would", "will", "can", "could", "wish,future"),
+            FB("I ___ I could turn back time. (wish, present)", "wish", "wish,unreal"));
+
+        AddExercises(ctx, l6, "b2e6",
+            MC("___ John who won the competition, not Michael.", "It was", "It is", "It were", "It had", "cleft,emphasis"),
+            MC("___ impressed me was his dedication and hard work.", "What", "That", "Which", "Who", "cleft,what"),
+            MC("It ___ last summer that we met for the first time.", "was", "is", "were", "has been", "cleft,time"),
+            FB("It ___ her honesty that I love most about her. (cleft)", "is", "cleft"));
+
+        AddExercises(ctx, l7, "b2e7",
+            MC("I can't ___ with his constant negativity.", "put up", "put on", "put off", "put out", "phrasal-verbs"),
+            MC("She ___ a new strategy to improve sales.", "came up with", "came across", "came into", "came over", "phrasal-verbs"),
+            MC("We need to ___ unnecessary expenses.", "cut down on", "cut off", "cut out", "cut through", "phrasal-verbs"),
+            FB("I ___ an old friend at the supermarket yesterday. (phrasal verb)", "ran into", "phrasal-verbs"));
+
+        AddExercises(ctx, l8, "b2e8",
+            MC("There are ___ people who would agree with that opinion.", "many", "much", "a great deal of", "a little", "quantifiers"),
+            MC("She has ___ experience in this field.", "much", "many", "several", "a few", "quantifiers"),
+            MC("___ student in the class participated in the discussion.", "Each", "Every", "All", "Some", "quantifiers,articles"),
+            FB("I don't want ___ sugar in my tea. (quantifier)", "any", "quantifiers"));
     }
 
     private static void BuildC1Modules(ApplicationDbContext ctx, Guid levelId)
@@ -730,6 +766,46 @@ public static class DataSeeder
         "Write 5 reported questions. Imagine someone asked you these things at a job interview or on a first date. Use different reporting phrases.",
         "'Whether' is pronounced WETH-er — exactly like 'weather'. They are homophones. In writing: 'whether' for reported questions, 'weather' for climate.",
         [("Reported Questions", "Papa English", null), ("Reported Questions in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L5() => C(
+        "'Wish' and 'if only' express regret about situations in the present or past, or aspirations for the future. These structures use past tenses for present/past wishes (not reflecting actual past) and 'would' for future. Essential for expressing unreal situations.",
+        ["Present wish (unreal now): wish + Past Simple. 'I wish I lived in Paris' (but I don't)", "Past wish (unreal yesterday): wish + Past Perfect. 'I wish I had studied harder' (but I didn't)", "Future wish: wish + would. 'I wish you would help me' or 'I wish I would win the lottery'", "'If only' = 'wish' but more emphatic: 'If only I had known!'", "Common mistake: 'I wish I would learn' — use Present Simple 'I wish I learned' for present wishes"],
+        [("I wish I could", "Ojalá pudiera", "I wish I could speak fluent Spanish."), ("I wish I had", "Ojalá hubiera", "I wish I had taken that job opportunity."), ("If only I knew", "Si al menos supiera", "If only I knew the answer!"), ("I wish you would", "Desearía que", "I wish you would be more honest with me.")],
+        [("I wish I were taller.", "Present unreal situation"), ("If only I had listened to my parents.", "Regret about past"), ("I wish I could go back in time.", "Impossible aspiration"), ("She wishes he would apologize.", "Wanting someone else to do something")],
+        "Write 7 sentences using 'wish' and 'if only': 2 expressing present regrets, 2 about past regrets, 2 about future wishes, and 1 about someone else's action.",
+        "'I wish I were' (subjunctive) is formal; 'I wish I was' is common in spoken English. Both are acceptable, but 'were' sounds more educated. In reporting: 'I wish I had known' — stress 'HAD' and 'KNOWN'.",
+        [("Wish and If Only English Grammar", "Papa English", null), ("Expressing Regrets with Wish", "Learn English with EnglishClass101.com", null), ("If Only and Wish Structures", "Cambridge English", null)]
+    );
+
+    private static string B2L6() => C(
+        "Cleft sentences reorganize information for emphasis by splitting a sentence into two parts. They focus on WHO did something ('It was X who...') or WHAT happened ('It was X that...'). Common in formal writing, journalism, and persuasive speech.",
+        ["It + be + X + that/who + clause: 'It was Sarah who won the prize'", "'What' cleft: 'What I love about you is your honesty'", "The cleft structure emphasizes the part between 'be' and the relative pronoun", "Pseudo-cleft: 'What you said was untrue' = 'Your statement was untrue'", "Contrastive cleft for heavy emphasis: 'It wasn't the money that mattered; it was the respect.'"],
+        [("It was... who", "Fue... quien", "It was the teacher who explained the concept clearly."), ("It was... that", "Fue... que", "It was last year that I moved here."), ("What... is/was", "Lo que... es/era", "What impressed me was her dedication."), ("It's not... but...", "No es... sino...", "It's not the destination that matters; it's the journey.")],
+        [("It was the internet that changed everything.", "Emphasis on cause"), ("What really matters is your health.", "Pseudo-cleft to emphasize value"), ("It was at the conference where I met him.", "Emphasis on location"), ("It is discipline, not talent, that leads to success.", "Contrastive emphasis")],
+        "Rewrite 6 sentences using cleft structures to emphasize different parts: 2 'it was... who' sentences, 2 'what... is' sentences, and 2 contrasting clefts.",
+        "The emphasis comes AFTER 'be': 'It WAS Sarah who won' or 'It was SARAH who won' — both are correct depending on what you want to emphasize. Stress shifts the focus.",
+        [("Cleft Sentences in English", "Papa English", null), ("It Cleft Sentences", "Learn English with EnglishClass101.com", null), ("Emphasis with Cleft Structures", "Cambridge English", null)]
+    );
+
+    private static string B2L7() => C(
+        "Phrasal verbs (verb + particle combinations) are central to natural English. Advanced phrasal verbs convey complex meanings concisely. Understanding the particle (up, down, in, out, on, off, etc.) helps predict meaning. Essential for fluent, native-like English.",
+        ["Separable: 'pick up' — 'pick the keys up' or 'pick up the keys'", "Inseparable: 'look into' — NEVER 'look the matter into'", "Transitive (need object): 'carry out' vs Intransitive (no object): 'break down'", "Common advanced: put up with, come across, run into, see through, bring about, cut down on", "Context matters: 'put up' = construct/tolerate/increase price — meaning depends on context"],
+        [("put up with", "aguantar", "I can't put up with this behavior anymore."), ("come across", "encontrarse con", "I came across an interesting article yesterday."), ("run into", "encontrarse con", "I ran into an old friend at the supermarket."), ("see through", "ver la verdad", "She finally saw through his lies."), ("bring about", "causar/provocar", "The new policy brought about significant changes.")],
+        [("I had to carry out the project despite obstacles.", "Perform/execute"), ("The situation calls for cutting down on expenses.", "Reduce consumption"), ("He looked into the matter thoroughly.", "Investigate"), ("The scandal came out last week.", "Be revealed"), ("We need to face up to our mistakes.", "Acknowledge and accept")],
+        "Write 8 sentences using different advanced phrasal verbs. Create a narrative about overcoming challenges or a business scenario.",
+        "Stress in phrasal verbs: the PARTICLE typically gets the stress: 'PUT up WITH', 'COME a-CROSS', 'RUN IN-to'. This distinguishes them from regular verbs with prepositions.",
+        [("Advanced Phrasal Verbs", "Papa English", null), ("Phrasal Verbs in English", "Learn English with EnglishClass101.com", null), ("Phrasal Verbs for Upper Intermediate", "English Speeches", null)]
+    );
+
+    private static string B2L8() => C(
+        "Quantifiers and articles at B2 level require nuanced understanding. Use 'some' vs 'any', 'much' vs 'many' vs 'a lot of', and articles with generics. Mastering these structures prevents common intermediate errors and enables precise expression.",
+        ["Countable: many, a few, several, a large number of | Uncountable: much, a little, a great deal of", "'Some' in positive statements, 'any' in negatives/questions — but 'some' in offers: 'Would you like some tea?'", "'The' with specific things, no article with generics: 'Dogs are loyal' vs 'The dogs in the park were friendly'", "'A/an' with professions/singular: 'She is a teacher' | Zero article with plurals: 'They are teachers'", "Context shapes meaning: 'all the time' (specific) vs 'all time' (general, rare)"],
+        [("a few / a little", "unos pocos / un poco", "A few people attended the event. I have a little experience."), ("several / a number of", "varios / varios de", "Several options are available."), ("each / every", "cada / cada", "Each student received a certificate. Every day is important."), ("the / no article", "el/la/los/las / -", "The president announced new policies. Presidents face tough decisions.")],
+        [("There are many opportunities in this field.", "Many with countable plural"), ("I have much respect for her work.", "Much with uncountable"), ("Some students prefer morning classes.", "Some in positive statement"), ("I don't want any sugar in my coffee.", "Any in negative"), ("The information provided was accurate.", "The with specific information")],
+        "Write 8 sentences using quantifiers and articles correctly. Write about a topic of interest: travel, education, hobbies, or workplace.",
+        "Quantifiers are often weak/unstressed: 'a few STUDENTS', 'much RESPect'. The noun after gets the stress. Articles are completely unstressed: 'ə BOOK', 'ðə BOOK'.",
+        [("Quantifiers and Determiners", "Learn English with Papa English", null), ("Articles A An The in English", "Cambridge English", null), ("Countable and Uncountable Nouns", "English Speeches", null)]
     );
 
     private static string C1L1() => C(
