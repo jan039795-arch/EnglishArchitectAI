@@ -3,6 +3,7 @@
 @inject EA.Client.Services.ApiService Api
 @inject NavigationManager Nav
 @inject ISnackbar Snackbar
+@using System.Text.Json
 
 <PageTitle>Lesson — English Architect AI</PageTitle>
 
@@ -17,38 +18,184 @@ else if (_state == State.NoExercises)
     </MudAlert>
     <MudButton Class="mt-4" Href="/levels" Variant="Variant.Text">← Back to My Path</MudButton>
 }
-else if (_state == State.Complete)
+
+else if (_state == State.Theory && _content is not null)
 {
-    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-10" Style="text-align:center">
-        <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" Style="font-size:5rem" />
-        <MudText Typo="Typo.h5" Class="mt-4">Lesson Complete!</MudText>
-        <MudText Color="Color.Secondary" Class="mt-2 mb-2">
-            Score: <b>@_correctCount / @_exercises.Count</b>
-        </MudText>
-        <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mb-6">
-            Flashcards for missed exercises have been added to your review deck.
-        </MudText>
-        <MudStack Row="true" Justify="Justify.Center" Spacing="3">
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" Href="/review">
-                Review Cards Now
-            </MudButton>
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/levels">
-                Continue
-            </MudButton>
-        </MudStack>
-    </MudContainer>
+    <!-- Phase header -->
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Class="mb-4">
+        <MudText Typo="Typo.caption" Color="Color.Secondary">@_lesson?.Title</MudText>
+        <MudChip T="string" Color="Color.Info" Size="Size.Small">Aprende</MudChip>
+    </MudStack>
+
+    <!-- Phase progress pills -->
+    <MudStack Row="true" Spacing="1" Class="mb-6">
+        <MudChip T="string" Color="Color.Primary" Size="Size.Small" Variant="Variant.Filled">1 · Aprende</MudChip>
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">2 · Practica</MudChip>
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">3 · Quiz</MudChip>
+    </MudStack>
+
+    <!-- Explanation -->
+    <MudPaper Elevation="2" Class="pa-5 mb-4" Style="border-radius:12px;border-left:4px solid var(--mud-palette-primary)">
+        <MudText Typo="Typo.subtitle1" Class="mb-2" Color="Color.Primary"><b>Explicación</b></MudText>
+        <MudText>@_content.Explanation</MudText>
+    </MudPaper>
+
+    <!-- Videos -->
+    @if (_content.Videos.Length > 0)
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-4" Style="border-radius:12px">
+            <MudText Typo="Typo.subtitle1" Class="mb-3"><b>Videos recomendados</b></MudText>
+            <MudStack Spacing="3">
+                @foreach (var video in _content.Videos)
+                {
+                    <MudStack Spacing="2">
+                        <MudText Typo="Typo.body2"><b>@video.Title</b> (@video.Channel)</MudText>
+                        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px">
+                            <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/@video.VideoId" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </MudStack>
+                }
+            </MudStack>
+        </MudPaper>
+    }
+
+    <!-- Key points -->
+    @if (_content.KeyPoints.Length > 0)
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-4" Style="border-radius:12px">
+            <MudText Typo="Typo.subtitle1" Class="mb-3"><b>Puntos clave</b></MudText>
+            <MudList T="string" Dense="true">
+                @foreach (var kp in _content.KeyPoints)
+                {
+                    <MudListItem Icon="@Icons.Material.Filled.CheckCircleOutline" IconColor="Color.Success">
+                        @kp
+                    </MudListItem>
+                }
+            </MudList>
+        </MudPaper>
+    }
+
+    <!-- Vocabulary table -->
+    @if (_content.Vocabulary.Length > 0)
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-4" Style="border-radius:12px">
+            <MudText Typo="Typo.subtitle1" Class="mb-3"><b>Vocabulario</b></MudText>
+            <MudSimpleTable Hover="true" Striped="true" Dense="true">
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Español</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var v in _content.Vocabulary)
+                    {
+                        <tr>
+                            <td><b>@v.Word</b></td>
+                            <td>@v.Translation</td>
+                            <td><i>@v.Example</i></td>
+                        </tr>
+                    }
+                </tbody>
+            </MudSimpleTable>
+        </MudPaper>
+    }
+
+    <!-- Examples -->
+    @if (_content.Examples.Length > 0)
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-6" Style="border-radius:12px">
+            <MudText Typo="Typo.subtitle1" Class="mb-3"><b>Ejemplos</b></MudText>
+            @foreach (var ex in _content.Examples)
+            {
+                <MudPaper Elevation="0" Class="pa-3 mb-2" Style="background:var(--mud-palette-background-grey);border-radius:8px">
+                    <MudText><b>@ex.Sentence</b></MudText>
+                    @if (!string.IsNullOrEmpty(ex.Note))
+                    {
+                        <MudText Typo="Typo.caption" Color="Color.Secondary">@ex.Note</MudText>
+                    }
+                </MudPaper>
+            }
+        </MudPaper>
+    }
+
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Size="Size.Large"
+               OnClick="AdvanceFromTheory">
+        Continuar a Práctica →
+    </MudButton>
 }
+
+else if (_state == State.Practice && _content is not null)
+{
+    <!-- Phase header -->
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Class="mb-4">
+        <MudText Typo="Typo.caption" Color="Color.Secondary">@_lesson?.Title</MudText>
+        <MudChip T="string" Color="Color.Warning" Size="Size.Small">Practica</MudChip>
+    </MudStack>
+
+    <!-- Phase progress pills -->
+    <MudStack Row="true" Spacing="1" Class="mb-6">
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">1 · Aprende</MudChip>
+        <MudChip T="string" Color="Color.Warning" Size="Size.Small" Variant="Variant.Filled">2 · Practica</MudChip>
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">3 · Quiz</MudChip>
+    </MudStack>
+
+    <!-- Writing practice -->
+    @if (!string.IsNullOrEmpty(_content.WritingPrompt))
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-4" Style="border-radius:12px;border-left:4px solid var(--mud-palette-warning)">
+            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Class="mb-3">
+                <MudIcon Icon="@Icons.Material.Filled.Edit" Color="Color.Warning" />
+                <MudText Typo="Typo.subtitle1"><b>Escritura</b></MudText>
+            </MudStack>
+            <MudText Class="mb-4">@_content.WritingPrompt</MudText>
+            <MudTextField @bind-Value="_practiceAnswer" Label="Tu respuesta" Variant="Variant.Outlined"
+                          Lines="4" FullWidth="true" spellcheck="true" />
+        </MudPaper>
+    }
+
+    <!-- Pronunciation tip -->
+    @if (!string.IsNullOrEmpty(_content.PronunciationTip))
+    {
+        <MudPaper Elevation="2" Class="pa-5 mb-6" Style="border-radius:12px;border-left:4px solid var(--mud-palette-info)">
+            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Class="mb-3">
+                <MudIcon Icon="@Icons.Material.Filled.RecordVoiceOver" Color="Color.Info" />
+                <MudText Typo="Typo.subtitle1"><b>Pronunciación</b></MudText>
+            </MudStack>
+            <MudText>@_content.PronunciationTip</MudText>
+        </MudPaper>
+    }
+
+    <MudButton Variant="Variant.Filled" Color="Color.Warning" FullWidth="true" Size="Size.Large"
+               OnClick="StartQuiz">
+        Ir al Quiz →
+    </MudButton>
+}
+
 else if (_state == State.Playing && Current is not null)
 {
-    <!-- Progress bar -->
-    <MudProgressLinear Value="@ExerciseProgress" Color="Color.Primary" Rounded="true" Class="mb-2" />
+    <!-- Phase header -->
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Class="mb-2">
+        <MudText Typo="Typo.caption" Color="Color.Secondary">@_lesson?.Title</MudText>
+        <MudChip T="string" Color="Color.Success" Size="Size.Small">Quiz</MudChip>
+    </MudStack>
+
+    <!-- Phase progress pills -->
+    <MudStack Row="true" Spacing="1" Class="mb-4">
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">1 · Aprende</MudChip>
+        <MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">2 · Practica</MudChip>
+        <MudChip T="string" Color="Color.Success" Size="Size.Small" Variant="Variant.Filled">3 · Quiz</MudChip>
+    </MudStack>
+
+    <!-- Exercise progress bar -->
+    <MudProgressLinear Value="@ExerciseProgress" Color="Color.Success" Rounded="true" Class="mb-2" />
     <MudStack Row="true" Justify="Justify.SpaceBetween" Class="mb-5">
-        <MudText Typo="Typo.caption">@_lesson?.Title</MudText>
-        <MudText Typo="Typo.caption">@(_currentIdx + 1) / @_exercises.Count</MudText>
+        <MudText Typo="Typo.caption">Pregunta @(_currentIdx + 1) de @_exercises.Count</MudText>
+        <MudText Typo="Typo.caption">@_correctCount correctas</MudText>
     </MudStack>
 
     <MudPaper Elevation="3" Class="pa-6 mb-5" Style="border-radius:12px">
-        <!-- Exercise type badge -->
         <MudChip T="string" Size="Size.Small" Color="Color.Secondary" Class="mb-4">
             @Current.Type
         </MudChip>
@@ -57,14 +204,11 @@ else if (_state == State.Playing && Current is not null)
 
         @if (Current.Type == "MultipleChoice" && Current.Options.Count > 0)
         {
-            <!-- Multiple choice -->
             <MudRadioGroup @bind-Value="_answer" T="string" Disabled="@_answered">
                 @foreach (var opt in Current.Options)
                 {
-                    var optId = opt.Id.ToString();
                     <div class="mb-3">
-                        <MudRadio Value="@opt.Text" Color="@OptionColor(opt.Text)"
-                                  Dense="false">
+                        <MudRadio Value="@opt.Text" Color="@OptionColor(opt.Text)" Dense="false">
                             @opt.Text
                         </MudRadio>
                     </div>
@@ -73,7 +217,6 @@ else if (_state == State.Playing && Current is not null)
         }
         else
         {
-            <!-- Free text / fill blank / error correction -->
             <MudTextField @bind-Value="_answer" Label="Your answer" Variant="Variant.Outlined"
                           Disabled="@_answered" FullWidth="true" Immediate="true"
                           spellcheck="false" autocomplete="off" />
@@ -82,38 +225,64 @@ else if (_state == State.Playing && Current is not null)
         @if (_answered)
         {
             <MudAlert Severity="@(_lastCorrect ? Severity.Success : Severity.Error)" Class="mt-4">
-                @(_lastCorrect ? "Correct! Well done." : "Not quite — this exercise has been added to your review deck so you can practice it again.")
+                @(_lastCorrect
+                    ? "¡Correcto! Muy bien."
+                    : "No del todo — este ejercicio se agregó a tu mazo de repaso.")
             </MudAlert>
         }
     </MudPaper>
 
     @if (!_answered)
     {
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+        <MudButton Variant="Variant.Filled" Color="Color.Success" FullWidth="true"
                    OnClick="CheckAnswer" Disabled="@string.IsNullOrWhiteSpace(_answer)"
                    Size="Size.Large">
-            Check Answer
+            Verificar respuesta
         </MudButton>
     }
     else
     {
-        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true"
+        <MudButton Variant="Variant.Filled" Color="Color.Success" FullWidth="true"
                    OnClick="Next" Size="Size.Large">
-            @(_currentIdx < _exercises.Count - 1 ? "Next Exercise" : "Finish Lesson")
+            @(_currentIdx < _exercises.Count - 1 ? "Siguiente ejercicio →" : "Finalizar lección")
         </MudButton>
     }
+}
+
+else if (_state == State.Complete)
+{
+    <MudContainer MaxWidth="MaxWidth.Small" Class="mt-10" Style="text-align:center">
+        <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" Style="font-size:5rem" />
+        <MudText Typo="Typo.h5" Class="mt-4">¡Lección completada!</MudText>
+        <MudText Color="Color.Secondary" Class="mt-2 mb-2">
+            Puntaje: <b>@_correctCount / @_exercises.Count</b>
+        </MudText>
+        <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mb-6">
+            Los ejercicios incorrectos se agregaron a tu mazo de repaso.
+        </MudText>
+        <MudStack Row="true" Justify="Justify.Center" Spacing="3">
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" Href="/review">
+                Repasar tarjetas
+            </MudButton>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/levels">
+                Continuar
+            </MudButton>
+        </MudStack>
+    </MudContainer>
 }
 
 @code {
     [Parameter] public Guid LessonId { get; set; }
 
-    private enum State { Loading, NoExercises, Playing, Complete }
+    private enum State { Loading, NoExercises, Theory, Practice, Playing, Complete }
 
     private State _state = State.Loading;
     private EA.Client.Services.LessonDetailDto? _lesson;
+    private LessonContent? _content;
     private List<ExerciseVm> _exercises = [];
     private int _currentIdx;
     private string? _answer;
+    private string? _practiceAnswer;
     private bool _answered;
     private bool _lastCorrect;
     private int _correctCount;
@@ -126,11 +295,43 @@ else if (_state == State.Playing && Current is not null)
     {
         _lesson = await Api.GetLessonByIdAsync(LessonId);
         var apiExercises = await Api.GetExercisesByLessonAsync(LessonId) ?? [];
-
         _exercises = apiExercises.Select(e => new ExerciseVm(e)).ToList();
 
-        _state = _exercises.Count == 0 ? State.NoExercises : State.Playing;
+        _content = ParseContent(_lesson?.ContentJson);
+
+        if (_content is not null)
+            _state = State.Theory;
+        else if (_exercises.Count == 0)
+            _state = State.NoExercises;
+        else
+            _state = State.Playing;
+
         _exerciseStarted = DateTime.UtcNow;
+    }
+
+    private void AdvanceFromTheory()
+    {
+        // Go to Practice only if there is a writing prompt or pronunciation tip
+        if (_content is not null &&
+            (!string.IsNullOrEmpty(_content.WritingPrompt) || !string.IsNullOrEmpty(_content.PronunciationTip)))
+        {
+            _state = State.Practice;
+        }
+        else
+        {
+            StartQuiz();
+        }
+    }
+
+    private void StartQuiz()
+    {
+        if (_exercises.Count == 0)
+            _state = State.NoExercises;
+        else
+        {
+            _state = State.Playing;
+            _exerciseStarted = DateTime.UtcNow;
+        }
     }
 
     private async Task CheckAnswer()
@@ -160,8 +361,10 @@ else if (_state == State.Playing && Current is not null)
 
     private async Task FinishLesson()
     {
-        var score = (int)Math.Round(_correctCount * 100.0 / _exercises.Count);
-        var totalSeconds = _exercises.Count * 60; // estimate
+        var score = _exercises.Count > 0
+            ? (int)Math.Round(_correctCount * 100.0 / _exercises.Count)
+            : 100;
+        var totalSeconds = _exercises.Count * 60;
         await Api.CompleteLessonAsync(LessonId, score, totalSeconds);
         _state = State.Complete;
     }
@@ -173,6 +376,66 @@ else if (_state == State.Playing && Current is not null)
         if (!_lastCorrect && optText == _answer) return Color.Error;
         return Color.Default;
     }
+
+    private static LessonContent? ParseContent(string? json)
+    {
+        if (string.IsNullOrWhiteSpace(json)) return null;
+        try
+        {
+            using var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
+
+            var explanation = root.TryGetProperty("explanation", out var e) ? e.GetString() ?? "" : "";
+            if (string.IsNullOrEmpty(explanation)) return null;
+
+            var keyPoints = root.TryGetProperty("keyPoints", out var kps)
+                ? kps.EnumerateArray().Select(k => k.GetString() ?? "").Where(s => s.Length > 0).ToArray()
+                : Array.Empty<string>();
+
+            var vocab = root.TryGetProperty("vocabulary", out var vs)
+                ? vs.EnumerateArray().Select(v => new VocabItem(
+                    v.TryGetProperty("word", out var w) ? w.GetString() ?? "" : "",
+                    v.TryGetProperty("translation", out var t) ? t.GetString() ?? "" : "",
+                    v.TryGetProperty("example", out var ex) ? ex.GetString() ?? "" : ""))
+                  .ToArray()
+                : Array.Empty<VocabItem>();
+
+            var examples = root.TryGetProperty("examples", out var exs)
+                ? exs.EnumerateArray().Select(x => new ExampleItem(
+                    x.TryGetProperty("sentence", out var s) ? s.GetString() ?? "" : "",
+                    x.TryGetProperty("note", out var n) ? n.GetString() ?? "" : ""))
+                  .ToArray()
+                : Array.Empty<ExampleItem>();
+
+            var videos = root.TryGetProperty("videos", out var vs2)
+                ? vs2.EnumerateArray().Select(v => new VideoItem(
+                    v.TryGetProperty("title", out var title) ? title.GetString() ?? "" : "",
+                    v.TryGetProperty("channel", out var channel) ? channel.GetString() ?? "" : "",
+                    v.TryGetProperty("videoId", out var vid) ? vid.GetString() ?? "" : ""))
+                  .Where(v => !string.IsNullOrEmpty(v.VideoId))
+                  .ToArray()
+                : Array.Empty<VideoItem>();
+
+            var writingPrompt = root.TryGetProperty("writingPrompt", out var wp) ? wp.GetString() : null;
+            var pronunciationTip = root.TryGetProperty("pronunciationTip", out var pt) ? pt.GetString() : null;
+
+            return new LessonContent(explanation, keyPoints, vocab, examples, writingPrompt, pronunciationTip, videos);
+        }
+        catch { return null; }
+    }
+
+    private record LessonContent(
+        string Explanation,
+        string[] KeyPoints,
+        VocabItem[] Vocabulary,
+        ExampleItem[] Examples,
+        string? WritingPrompt,
+        string? PronunciationTip,
+        VideoItem[] Videos);
+
+    private record VocabItem(string Word, string Translation, string Example);
+    private record ExampleItem(string Sentence, string Note);
+    private record VideoItem(string Title, string Channel, string VideoId);
 
     private class ExerciseVm
     {
