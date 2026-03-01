@@ -100,17 +100,29 @@ public static class DataSeeder
     {
         var m1 = G("a1010000-0000-0000-0000-000000000001");
         var m2 = G("a1020000-0000-0000-0000-000000000002");
+        var m3 = G("a1030000-0000-0000-0000-000000000003");
+        var m4 = G("a1040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Greetings & Introductions", "Learn how to say hello and introduce yourself.", 1, 2));
         ctx.Modules.Add(NewModule(m2, levelId, "Colors & Everyday Objects", "Learn basic vocabulary for daily life.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Family & Pronouns", "Describe your family and master essential pronouns and 'to be'.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Time & Food", "Learn days, months, and basic food vocabulary.", 4, 2));
 
         var l1 = G("a1b10000-0000-0000-0000-000000000001");
         var l2 = G("a1b20000-0000-0000-0000-000000000002");
         var l3 = G("a1b30000-0000-0000-0000-000000000003");
         var l4 = G("a1b40000-0000-0000-0000-000000000004");
+        var l5 = G("a1b50000-0000-0000-0000-000000000005");
+        var l6 = G("a1b60000-0000-0000-0000-000000000006");
+        var l7 = G("a1b70000-0000-0000-0000-000000000007");
+        var l8 = G("a1b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Basic Greetings", SkillType.Listening, 1, A1L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Numbers 1–20", SkillType.Reading, 2, A1L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Colors", SkillType.Reading, 1, A1L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Classroom Objects", SkillType.Reading, 2, A1L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Family Members", SkillType.Reading, 1, A1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Pronouns & 'To Be'", SkillType.Reading, 2, A1L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Days & Months", SkillType.Reading, 1, A1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Food & Drinks", SkillType.Reading, 2, A1L8()));
 
         AddExercises(ctx, l1, "a1e1",
             MC("The correct response to 'How are you?' is:", "Fine, thank you.", "I am hungry.", "Yesterday.", "She is tall.", "greetings,responses"),
@@ -135,6 +147,30 @@ public static class DataSeeder
             MC("You sit on a ___.", "chair", "pencil", "book", "door", "vocabulary,objects"),
             MC("Which is a classroom object?", "book", "cloud", "river", "mountain", "vocabulary,objects"),
             FB("Open your ___. (the thing you study from)", "book", "vocabulary"));
+
+        AddExercises(ctx, l5, "a1e5",
+            MC("Your mother's brother is your ___.", "uncle", "cousin", "father", "nephew", "family"),
+            MC("A girl's female sibling is her ___.", "sister", "mother", "cousin", "aunt", "family"),
+            MC("Your grandparents are your ___ parents.", "parents'", "mothers", "fathers", "grandparents", "family"),
+            FB("I have two ___ and one sister. (male siblings)", "brothers", "family"));
+
+        AddExercises(ctx, l6, "a1e6",
+            MC("Which is the correct sentence?", "She is a teacher.", "She are a teacher.", "She am a teacher.", "She be a teacher.", "pronouns,to-be"),
+            MC("Complete: I ___ a student.", "am", "are", "is", "be", "pronouns,to-be"),
+            MC("What is the contraction of 'you are'?", "you're", "youre", "your", "yore", "pronouns,contractions"),
+            FB("They ___ very happy. (use 'to be')", "are", "pronouns,to-be"));
+
+        AddExercises(ctx, l7, "a1e7",
+            MC("Which day comes after Tuesday?", "Wednesday", "Thursday", "Monday", "Friday", "time,days"),
+            MC("How many days are in a week?", "seven", "five", "six", "eight", "time,days"),
+            MC("Which month has only 28 days (or 29 in a leap year)?", "February", "January", "March", "April", "time,months"),
+            FB("I go to school on ___. (first day of work week)", "Monday", "time,days"));
+
+        AddExercises(ctx, l8, "a1e8",
+            MC("Which is a drink?", "coffee", "bread", "carrot", "potato", "food,vocabulary"),
+            MC("What is the first meal of the day?", "breakfast", "lunch", "dinner", "supper", "food,meals"),
+            MC("Which is a vegetable?", "carrot", "apple", "orange", "banana", "food,vegetables"),
+            FB("We have ___ and vegetables for dinner.", "rice", "food,vocabulary"));
     }
 
     private static void BuildA2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -382,6 +418,46 @@ public static class DataSeeder
         "Describe your study area. Write 6 sentences: what objects are there, their colors, and how many. Example: 'I have two blue pens on my desk.'",
         "In American English: 'eraser'. In British English: 'rubber'. Both are correct — just know your context.",
         [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI")]
+    );
+
+    private static string A1L5() => C(
+        "Family vocabulary helps you talk about the people closest to you. Learning family words is one of the first steps in language learning, as you constantly refer to family in daily conversation. Perfect English Grammar emphasizes the importance of mastering these foundational words.",
+        ["Mother (mom) — your female parent", "Father (dad) — your male parent", "Brother — male sibling", "Sister — female sibling", "Grandmother and grandfather — your parents' parents", "Son and daughter — your children"],
+        [("mother / mom", "madre / mamá", "My mother is a doctor."), ("father / dad", "padre / papá", "My dad works in an office."), ("brother", "hermano", "I have two brothers."), ("sister", "hermana", "My sister is younger than me."), ("grandmother / grandma", "abuela / abuelita", "My grandmother is eighty years old."), ("grandfather / grandpa", "abuelo / abuelito", "My grandfather lives with us.")],
+        [("I have a big family with two brothers and one sister.", "Talking about family size"), ("My mother is a teacher and my father is an engineer.", "Describing family occupations"), ("I live with my parents and my grandmother.", "Describing who you live with"), ("My brother is five years older than me.", "Comparing ages")],
+        "Draw your family tree or write about your family. Use at least 8 sentences describing who is in your family, what they do, and how old they are.",
+        "'Family' rhymes with 'jam' — FAM-i-lee (3 syllables). 'Sister' — SIS-ter (2 syllables). 'Brother' — BRUH-ther (2 syllables). Stress the first syllable in all family words.",
+        [("Family Members Vocabulary", "Learn English Kids", null), ("English Family Words", "EnglishClass101", null), ("How to Talk About Your Family", "Papa English", null)]
+    );
+
+    private static string A1L6() => C(
+        "Personal pronouns and the verb 'to be' are the foundation of English grammar. You cannot construct a single sentence without them. These 8 pronouns (I, you, he, she, it, we, you, they) are the most important words in English, and 'to be' is the most used verb in the language.",
+        ["I, you, he, she, it, we, they — the 8 personal pronouns", "Verb 'to be' in present: am (I), are (you/we/they), is (he/she/it)", "Contraction: I'm, you're, he's, she's, it's, we're, they're", "Negative: I'm not, you're not (you aren't), he's not (he isn't)", "Question word order: 'Are you a student?' — Subject and 'to be' swap places"],
+        [("I", "yo", "I am a student."), ("you", "tú", "You are my friend."), ("he / she / it", "él / ella / eso", "He is a teacher. She is happy. It is big."), ("we", "nosotros", "We are in the class."), ("they", "ellos", "They are my friends."), ("to be", "ser/estar", "I am happy. You are kind.")],
+        [("I am from Spain.", "Talking about origin"), ("You are a good friend.", "Describing others"), ("She is a doctor and he is a nurse.", "Describing occupations"), ("We are in the park.", "Describing location"), ("They are very nice people.", "Describing group")],
+        "Write 10 sentences about yourself and people around you using different pronouns. Example: 'I am happy. You are smart. She is my teacher.'",
+        "'I am' contracts to 'I'm' (I'm, not Iam). 'You are' → 'You're'. 'He is' → 'He's'. These contractions are very common in spoken English.",
+        [("English Pronouns: I, You, He, She, It", "Learn English with Papa English", null), ("The Verb 'To Be' in English", "English Speeches", null), ("Personal Pronouns and Present 'To Be'", "Cambridge English", null)]
+    );
+
+    private static string A1L7() => C(
+        "Days of the week and months of the year are essential for discussing schedules, plans, and dates. Capitalizing day and month names is a key rule in English — always capitalize them. The British Council emphasizes the importance of this distinction for written accuracy.",
+        ["Days of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday", "Months of the year: January, February, March, April, May, June, July, August, September, October, November, December", "ALWAYS capitalize days and months — this is a key grammar rule", "Abbreviations: Mon., Tues., Wed., etc. — Saturday and Sunday shorten to Sat. and Sun.", "On + day: 'On Monday', 'On Friday' — on is the correct preposition"],
+        [("Monday", "lunes", "I have English class on Monday."), ("Friday", "viernes", "We play football on Friday."), ("January", "enero", "My birthday is in January."), ("December", "diciembre", "Christmas is in December."), ("week", "semana", "There are seven days in a week."), ("month", "mes", "There are twelve months in a year.")],
+        [("I work on Mondays and Wednesdays.", "Discussing weekly schedule"), ("My birthday is in July.", "Talking about birth month"), ("The meeting is on Friday at 10 o'clock.", "Planning a specific day"), ("January is cold but February is colder.", "Comparing months")],
+        "Create a weekly schedule. Write where you are or what you do on each day of the week. Example: 'On Monday, I go to school. On Wednesday, I have English class.'",
+        "'Tuesday' is tricky — TUE-s-day or CHOOS-day. 'Thursday' — THURS-day (sounds like 'Thursday', not 'Thurday'). Practice the difficult days: Tuesday, Wednesday, Thursday.",
+        [("Days of the Week in English", "Learn English Kids", null), ("English Months and Seasons", "Papa English", null), ("Days of the Week and Months", "Cambridge English", null)]
+    );
+
+    private static string A1L8() => C(
+        "Food and drinks vocabulary opens conversations about eating habits, preferences, and meals. These words are used in daily life constantly — asking what someone ate, what they like, or ordering food. The British Council highlights the social importance of food vocabulary for real-world interaction.",
+        ["Meals: breakfast (morning), lunch (midday), dinner/supper (evening)", "Drinks: water, milk, juice, tea, coffee, soda", "Fruits: apple, banana, orange, strawberry, grape", "Vegetables: carrot, potato, tomato, broccoli, lettuce", "Other foods: bread, rice, meat, chicken, fish, egg"],
+        [("apple", "manzana", "An apple a day keeps the doctor away."), ("bread", "pan", "I eat bread for breakfast."), ("coffee", "café", "My dad drinks coffee every morning."), ("chicken", "pollo", "We have chicken for dinner."), ("water", "agua", "Drink plenty of water."), ("rice", "arroz", "I like rice with vegetables.")],
+        [("I like apples and oranges.", "Talking about food preferences"), ("She drinks coffee in the morning.", "Describing eating habits"), ("What do you have for lunch?", "Asking about meals"), ("We eat chicken and rice for dinner.", "Describing meals"), ("Do you like vegetables?", "Asking preferences")],
+        "Describe your favorite meal. Write 8 sentences about what you eat, what you drink, which foods you like and dislike, and when you eat it.",
+        "'Breakfast' — BREAK-fast (2 syllables). 'Dinner' — DIN-er (2 syllables). 'Vegetables' — VEJ-uh-tulz (3 syllables). Many words have stress on the first syllable.",
+        [("Food Vocabulary in English", "Learn English with Papa English", null), ("English Food and Drinks", "English Speeches", null), ("Meals and Food Vocabulary", "Cambridge English", null)]
     );
 
     private static string A2L1() => C(
