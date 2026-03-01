@@ -254,17 +254,29 @@ public static class DataSeeder
     {
         var m1 = G("b1010000-0000-0000-0000-000000000001");
         var m2 = G("b1020000-0000-0000-0000-000000000002");
+        var m3 = G("b1030000-0000-0000-0000-000000000003");
+        var m4 = G("b1040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Present Perfect", "Connect past experiences to the present.", 1, 4));
         ctx.Modules.Add(NewModule(m2, levelId, "Conditional Sentences", "Explore real and hypothetical situations.", 2, 4));
+        ctx.Modules.Add(NewModule(m3, levelId, "Continuous & Perfect Tenses", "Master complex tenses for nuanced expression.", 3, 4));
+        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Grammar & Structures", "Relative clauses and reported speech for sophistication.", 4, 4));
 
         var l1 = G("b1b10000-0000-0000-0000-000000000001");
         var l2 = G("b1b20000-0000-0000-0000-000000000002");
         var l3 = G("b1b30000-0000-0000-0000-000000000003");
         var l4 = G("b1b40000-0000-0000-0000-000000000004");
+        var l5 = G("b1b50000-0000-0000-0000-000000000005");
+        var l6 = G("b1b60000-0000-0000-0000-000000000006");
+        var l7 = G("b1b70000-0000-0000-0000-000000000007");
+        var l8 = G("b1b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Have/Has + Past Participle", SkillType.Writing, 1, B1L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "For vs Since", SkillType.Writing, 2, B1L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "First Conditional", SkillType.Writing, 1, B1L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Second Conditional", SkillType.Writing, 2, B1L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Present Perfect Continuous", SkillType.Writing, 1, B1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Past Perfect", SkillType.Writing, 2, B1L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Relative Clauses", SkillType.Reading, 1, B1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Reported Speech", SkillType.Writing, 2, B1L8()));
 
         AddExercises(ctx, l1, "b1e1",
             MC("I ___ here for three years.", "have lived", "am living", "live", "lived", "present-perfect,duration"),
@@ -289,6 +301,30 @@ public static class DataSeeder
             MC("She would travel more if she ___ more time.", "had", "has", "would have", "having", "second-conditional"),
             MC("If I were you, I ___ accept the offer.", "would", "will", "should", "could", "second-conditional"),
             FB("If he ___ harder, he would succeed. (work)", "worked", "second-conditional"));
+
+        AddExercises(ctx, l5, "b1e5",
+            MC("How long ___ you ___ at this job?", "have-been working", "are working", "have worked", "are", "present-perfect-continuous"),
+            MC("She ___ her book for three hours.", "has been writing", "has written", "writes", "is write", "present-perfect-continuous"),
+            MC("They ___ football all afternoon.", "have been playing", "have played", "are playing", "plays", "present-perfect-continuous"),
+            FB("I ___ English for 5 years. (study)", "have been studying", "present-perfect-continuous"));
+
+        AddExercises(ctx, l6, "b1e6",
+            MC("Before they arrived, I ___ the dishes.", "had finished", "finished", "have finished", "was finishing", "past-perfect"),
+            MC("She ___ that book before.", "had never read", "has never read", "never read", "was reading", "past-perfect"),
+            MC("By the time he called, we ___ already ___.", "had-left", "left", "have left", "was leaving", "past-perfect"),
+            FB("When she arrived, he ___ for an hour. (wait)", "had been waiting", "past-perfect"));
+
+        AddExercises(ctx, l7, "b1e7",
+            MC("The woman ___ taught me is kind.", "who", "that", "which", "where", "relative-clauses,who"),
+            MC("The book ___ I read was excellent.", "that", "which", "who", "where", "relative-clauses,that-which"),
+            MC("The café ___ we met is closed.", "where", "who", "that", "when", "relative-clauses,where"),
+            FB("I know someone ___ speaks five languages. (relative pronoun)", "who", "relative-clauses"));
+
+        AddExercises(ctx, l8, "b1e8",
+            MC("She said she ___ tired.", "was", "is", "were", "am", "reported-speech,tense-shift"),
+            MC("He asked if I ___ to the party.", "was going", "am going", "go", "will go", "reported-speech,questions"),
+            MC("They told me they ___ finished.", "had", "have", "has", "will have", "reported-speech,tense-shift"),
+            FB("She asked what time it ___. (be)", "was", "reported-speech,questions"));
     }
 
     private static void BuildB2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -614,6 +650,46 @@ public static class DataSeeder
         "Write 5 second conditional sentences: 2 imaginary 'what if' scenarios, 1 piece of advice using 'If I were you...', and 2 hypothetical preferences.",
         "'Would' is pronounced WOOD — the 'l' is silent. In fast speech it sounds just like 'wood'. Contractions: I'd, you'd, she'd — the 'd' is barely audible.",
         [("Second Conditional Sentences", "Papa English", null), ("If Clauses - Second Conditional", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B1L5() => C(
+        "The Present Perfect Continuous emphasizes the duration of an action that started in the past and continues NOW. It answers 'How long have you been...?' We use it for activities, work, or states that are ongoing. This tense bridges past and present naturally.",
+        ["Form: have/has + been + verb-ING", "'Have you been waiting long?' — Yes, I have been waiting for 20 minutes", "Duration: 'How long' → Present Perfect Continuous", "Complete action: 'How many?' → Present Perfect Simple", "Can omit 'been': 'I have been working' vs 'I have worked' (slightly different meaning)", "Common: 'I've been living here for 5 years' (still here) vs 'I've lived in 10 countries' (complete)"],
+        [("have been working", "he estado trabajando", "I have been working on this project for weeks."), ("has been studying", "ha estado estudiando", "She has been studying English for 3 years."), ("have been living", "he estado viviendo", "We have been living in Barcelona since 2020."), ("has been waiting", "ha estado esperando", "He has been waiting for an hour.")],
+        [("How long have you been learning English? — For two years.", "Duration question"), ("She has been working here since she graduated.", "Ongoing work situation"), ("They have been playing football all afternoon.", "Activity in progress"), ("I have been trying to call you all day.", "Repeated or continuous attempts")],
+        "Write 6 Present Perfect Continuous sentences about your life: work, studies, hobbies, or projects. Include 'how long' in at least 2 sentences.",
+        "The ING ending adds a syllable: 'study' (1) → 'studying' (3). 'Have been' flows together: 'have-BIN'. The stress falls on 'studying': 'I have been STUDying.'",
+        [("Present Perfect Continuous Tense", "Papa English", null), ("How Long Have You Been...", "Learn English with EnglishClass101.com", null), ("Present Perfect Continuous Grammar", "English Speeches", null)]
+    );
+
+    private static string B1L6() => C(
+        "The Past Perfect (Pluperfect) shows which event happened FIRST when discussing two past events. It uses had + past participle. This tense is crucial for storytelling, narrating complex past situations, and clarifying sequence in narratives.",
+        ["Form: had + past participle (worked, gone, eaten, finished)", "Use: to show the earlier of two past events", "'Before they arrived, I had already finished the dinner' — finished happened first", "Time expressions: after, before, when, by the time, by + noun", "Common mistake: mixing Past Simple and Past Perfect incorrectly"],
+        [("had finished", "había terminado", "Before the concert started, she had finished her homework."), ("had eaten", "había comido", "By the time he arrived, we had already eaten."), ("had never seen", "nunca había visto", "I had never seen snow before that day."), ("had left", "había salido", "When they called, I had already left the house.")],
+        [("She had studied French before she moved to Paris.", "Earlier event → later event"), ("By the time I woke up, everyone had left.", "Clear sequence with 'by the time'"), ("He realized he had forgotten his passport.", "Past realization about earlier action"), ("After she had finished university, she traveled the world.", "Completed past action before another past action")],
+        "Write 5 Past Perfect sentences about your life, telling stories where one event happened before another. Use time expressions like 'before', 'after', 'by the time'.",
+        "'Had' is pronounced HAD (one syllable). In rapid speech, it's often just: 'I'd finished', 'she'd eaten' (with contractions). The stress falls on the past participle: 'I had FINished'.",
+        [("Past Perfect Tense Explained", "Papa English", null), ("Had vs Did - Past Perfect", "Learn English with EnglishClass101.com", null), ("When to Use Past Perfect", "English Speeches", null)]
+    );
+
+    private static string B1L7() => C(
+        "Relative clauses (also called adjective clauses) give extra information about a noun using relative pronouns: WHO (people), THAT/WHICH (things), WHOSE (possession), WHERE (place), WHEN (time). They make sentences more sophisticated and are essential for advanced English.",
+        ["WHO: for people — 'The woman who taught me is kind'", "THAT/WHICH: for things — 'The car that I bought is blue' or 'The car, which I bought, is blue'", "WHOSE: for possession — 'The girl whose phone was stolen reported it'", "WHERE: for places — 'The café where we met is closed'", "WHEN: for time — 'The day when we arrived was sunny'", "Defining clause (no commas): 'Students who study hard pass' — ESSENTIAL info", "Non-defining clause (with commas): 'John, who is 25, is my brother' — EXTRA info"],
+        [("who", "quien/que (persona)", "The doctor who helped me was excellent."), ("that/which", "que (cosa)", "The book which I read was fascinating."), ("whose", "cuyo/a/os/as", "The student whose essay won the prize is here."), ("where", "donde/en el que", "The restaurant where we ate was expensive."), ("when", "cuando/en el que", "The time when I was happiest was my childhood.")],
+        [("I know someone who speaks five languages.", "Relative clause with who"), ("The house that we bought is very old.", "Relative clause with that"), ("She is the woman whose son is a doctor.", "Relative clause with whose"), ("That is the café where we first met.", "Relative clause with where")],
+        "Write 7 sentences using different relative pronouns (who, that, which, whose, where, when). Mix defining and non-defining clauses.",
+        "When 'that' is a relative pronoun, it's unstressed: 'The book THAT I read' — 'that' is quick and light. In 'the time when I was happy', 'when' is also unstressed.",
+        [("Relative Clauses in English", "Papa English", null), ("WHO THAT WHICH WHOSE - Relative Pronouns", "Learn English Kids", null), ("Defining and Non-Defining Relative Clauses", "Cambridge English", null)]
+    );
+
+    private static string B1L8() => C(
+        "Reported Speech (Indirect Speech) allows you to communicate what someone said without using their exact words. Rules change for verb tenses, pronouns, time words, and place references. This is essential for speaking naturally about what others said.",
+        ["Direct: 'I like ice cream,' he said. → Reported: He said he liked ice cream.", "Tense shift: Present → Past, Past → Past Perfect, will → would", "Pronouns shift: I → he/she, you → me/him/her, my → his/her, this → that", "Time shifts: now → then, today → that day, tomorrow → the next day, here → there", "Yes/No questions: ask + if/whether; WH questions: ask what/where/why/who"],
+        [("said that", "dijo que", "She said that she was tired."), ("asked if", "preguntó si", "He asked if we wanted to go."), ("told me", "me dijo", "She told me she would be late."), ("asked what", "preguntó qué", "He asked what I was doing.")],
+        [("Direct: 'I am happy.' → Reported: She said she was happy.", "Present → Past"), ("Direct: 'Will you help?' → Reported: He asked if I would help.", "Yes/No question"), ("Direct: 'Where is the station?' → Reported: He asked where the station was.", "WH question"), ("Direct: 'I have finished my homework.' → Reported: She said she had finished her homework.", "Present Perfect → Past Perfect")],
+        "Rewrite 6 sentences from direct to reported speech. Include 2 statements, 2 yes/no questions, and 2 WH questions. Pay attention to tense changes, pronouns, and time expressions.",
+        "'Said' is pronounced SED (rhymes with 'bed'). 'Asked' is pronounced ASKT. In reported speech, these helper verbs are often unstressed: 'She SAID she was going' — 'said' is quick.",
+        [("Reported Speech - Indirect Speech", "Papa English", null), ("Direct and Indirect Speech", "Learn English with EnglishClass101.com", null), ("Reported Speech Rules and Examples", "Cambridge English", null)]
     );
 
     private static string B2L1() => C(
