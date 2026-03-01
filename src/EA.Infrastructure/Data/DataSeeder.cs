@@ -408,17 +408,29 @@ public static class DataSeeder
     {
         var m1 = G("c1010000-0000-0000-0000-000000000001");
         var m2 = G("c1020000-0000-0000-0000-000000000002");
+        var m3 = G("c1030000-0000-0000-0000-000000000003");
+        var m4 = G("c1040000-0000-0000-0000-000000000004");
         ctx.Modules.Add(NewModule(m1, levelId, "Advanced Grammar", "Master inversion, emphasis, and mixed conditionals.", 1, 6));
         ctx.Modules.Add(NewModule(m2, levelId, "Advanced Vocabulary", "Expand academic and idiomatic language.", 2, 6));
+        ctx.Modules.Add(NewModule(m3, levelId, "Writing Sophistication", "Nominalization, discourse markers, and cohesion for advanced writing.", 3, 6));
+        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Structures", "Master ellipsis, subjunctive mood, and modal perfection.", 4, 6));
 
         var l1 = G("c1b10000-0000-0000-0000-000000000001");
         var l2 = G("c1b20000-0000-0000-0000-000000000002");
         var l3 = G("c1b30000-0000-0000-0000-000000000003");
         var l4 = G("c1b40000-0000-0000-0000-000000000004");
+        var l5 = G("c1b50000-0000-0000-0000-000000000005");
+        var l6 = G("c1b60000-0000-0000-0000-000000000006");
+        var l7 = G("c1b70000-0000-0000-0000-000000000007");
+        var l8 = G("c1b80000-0000-0000-0000-000000000008");
         ctx.Lessons.Add(NewLesson(l1, m1, "Inversion for Emphasis", SkillType.Writing, 1, C1L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Mixed Conditionals", SkillType.Writing, 2, C1L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Academic & Formal Language", SkillType.Reading, 1, C1L3()));
         ctx.Lessons.Add(NewLesson(l4, m2, "Collocations & Idioms", SkillType.Reading, 2, C1L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Nominalization", SkillType.Writing, 1, C1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Discourse Markers & Cohesion", SkillType.Writing, 2, C1L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Ellipsis & Substitution", SkillType.Reading, 1, C1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Subjunctive & Modal Perfection", SkillType.Writing, 2, C1L8()));
 
         AddExercises(ctx, l1, "c1e1",
             MC("Not only ___ he win the race, but he broke the record.", "did", "had", "was", "has", "inversion,advanced-grammar"),
@@ -443,6 +455,30 @@ public static class DataSeeder
             MC("He was ___ with joy when he heard the news.", "beside himself", "above himself", "behind himself", "beyond himself", "idioms"),
             MC("'A blessing in disguise' means:", "something good that seemed bad", "a curse in hiding", "unexpected danger", "a literal blessing", "idioms"),
             FB("The negotiations hit a ___; no progress was made. (impasse word)", "deadlock", "vocabulary,idioms"));
+
+        AddExercises(ctx, l5, "c1e5",
+            MC("'Analyze' becomes a nominalization:", "analysis", "analyzing", "analyzed", "analytical", "nominalization,vocabulary"),
+            MC("Which is a nominalization of 'develop'?", "development", "developing", "developed", "developer", "nominalization"),
+            MC("The sentence 'His judgment was sound' uses nominalization from:", "judge", "judging", "judgement", "judiciary", "nominalization"),
+            FB("The ___ of the project took longer than expected. (implement, nominalization)", "implementation", "nominalization"));
+
+        AddExercises(ctx, l6, "c1e6",
+            MC("Which discourse marker shows contrast?", "nevertheless", "furthermore", "consequently", "moreover", "discourse-markers"),
+            MC("'Due to the delay, sales declined.' Which marker could replace 'due to'?", "Consequently", "Furthermore", "Conversely", "Additionally", "discourse-markers"),
+            MC("The correct discourse marker for cause-effect is:", "consequently", "conversely", "concurrently", "conjointly", "discourse-markers"),
+            FB("The evidence is unclear. ___,  the pattern is discernible. (discourse marker for contrast)", "Nevertheless", "discourse-markers"));
+
+        AddExercises(ctx, l7, "c1e7",
+            MC("'Which office is he in? The one John is in.' This demonstrates:", "ellipsis", "substitution", "repetition", "emphasis", "ellipsis"),
+            MC("'Do you like coffee?' 'Yes, I do.' The 'do' is:", "substitution", "ellipsis", "repetition", "auxiliary", "substitution"),
+            MC("'He passed; she did not' uses:", "substitution", "ellipsis", "inversion", "nominalization", "substitution"),
+            FB("John went to London; Sarah to Paris. (___of 'went')", "ellipsis", "ellipsis-substitution"));
+
+        AddExercises(ctx, l8, "c1e8",
+            MC("'I insist that she be present.' This uses:", "subjunctive", "conditional", "subjunctive mood", "imperative", "subjunctive,advanced-grammar"),
+            MC("Which sentence is correct subjunctive?", "It is vital that he arrive on time.", "It is vital that he arrives on time.", "It is vital that he will arrive.", "It is vital that he arrived.", "subjunctive"),
+            MC("'She could have succeeded if she'd tried.' This perfect modal expresses:", "regret", "permission", "ability", "obligation", "perfect-modals"),
+            FB("I suggest that the policy ___ reviewed. (be, subjunctive)", "be", "subjunctive"));
     }
 
     private static void BuildC2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -846,6 +882,46 @@ public static class DataSeeder
         "Write a short paragraph (6–8 sentences) about a challenging situation. Use at least 3 collocations and 2 idioms from this lesson. The situation can be real or invented.",
         "Idioms are spoken as fixed chunks — 'blessing in disguise' flows as one unit: BLESS-ing-in-dis-GIZE. Do not pause between words. The rhythm is key.",
         [("English Collocations and Idioms", "Papa English", null), ("Common Idioms in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L5() => C(
+        "Nominalization transforms verbs and adjectives into nouns, making language more formal and academic. 'He analyzed the data' becomes 'His analysis of the data...'. This technique is essential for sophisticated writing in English.",
+        ["Verb → Noun: analyze/analysis, develop/development, argue/argument, review/review, judge/judgment", "Adjective → Noun: able/ability, possible/possibility, difficult/difficulty, significant/significance", "Benefits: saves words, adds formality, creates logical flow", "Overuse nominalization creates dense, hard-to-read prose — balance is key", "Common pattern: possessive + nominalization: 'His analysis showed...' (more sophisticated than 'He analyzed')"],
+        [("analysis", "análisis", "The analysis revealed unexpected findings."), ("development", "desarrollo / evolución", "The development of the technology took years."), ("judgment", "juicio / criterio", "In my judgment, the proposal is sound."), ("implementation", "implementación / ejecución", "Implementation of the plan begins next week."), ("achievement", "logro / realización", "The achievement of our goals requires cooperation.")],
+        [("Rather than: 'We discovered that the system was inefficient.' / Better: 'Our discovery revealed systemic inefficiency.'", "Nominalization for sophistication"), ("The development of new strategies led to improved outcomes.", "Development as nominalization"), ("His analysis of the problem demonstrated considerable insight.", "Possessive + nominalization"), ("The implementation of the policy faced significant resistance.", "Nominalization in formal context")],
+        "Rewrite these sentences using nominalization: 1) The researchers examined the data carefully. 2) We developed three solutions. 3) The company transformed its approach. 4) The government approved the bill. 5) She contributed significantly to the project.",
+        "Nominalizations shift stress: 'development' is DEV-elop-ment (stress 1st syllable). 'Discovery' is dis-KUV-er-ee. The stress often differs from the verb form.",
+        [("Nominalization in Academic Writing", "Papa English", null), ("Transform Verbs to Nouns", "Learn English with EnglishClass101.com", null), ("Advanced Nominalizations", "Cambridge English", null)]
+    );
+
+    private static string C1L6() => C(
+        "Discourse markers (furthermore, nevertheless, meanwhile, notwithstanding) signal logical relationships between ideas. They guide the reader through your argument. Cohesion devices create smooth, professional English. Essential for C1 writing proficiency.",
+        ["Addition/Agreement: furthermore, moreover, additionally, in addition to, as well as", "Contrast/Disagreement: nevertheless, notwithstanding, however, conversely, by contrast", "Cause/Effect: consequently, as a result, due to, as a consequence, resulting in", "Time/Order: meanwhile, subsequently, eventually, henceforth, in due course", "Emphasis/Conclusion: notably, in particular, in fact, in conclusion, to summarize"],
+        [("nevertheless", "sin embargo / no obstante", "The evidence is inconclusive; nevertheless, findings suggest a pattern."), ("notwithstanding", "a pesar de / sin embargo", "Notwithstanding these challenges, progress continues."), ("resultantly", "como resultado / en consecuencia", "The delay exacerbated problems; resultantly, costs increased."), ("furthermore", "además / por otra parte", "The project is delayed. Furthermore, the budget is exhausted."), ("conversely", "por el contrario / inversamente", "Some argue for expansion; conversely, others seek consolidation.")],
+        [("The data are inconclusive; nevertheless, the trend is evident.", "Discourse marker: nevertheless"), ("Due to the recession, sales declined. Consequently, staff were reduced.", "Cause-effect link"), ("The evidence supports this view. Moreover, recent findings confirm it.", "Addition marker"), ("In the first case, investment was high. Conversely, returns were minimal.", "Contrast between cases")],
+        "Write a 10-12 sentence paragraph on a topic of your choice. Use at least 6 different discourse markers to link your ideas logically. Aim for sophisticated connections.",
+        "Discourse markers are typically unstressed: 'nev-ER-the-less' — 'nonetheless' flows as a bridge between ideas. 'Consequently' is CON-se-quent-ly — the emphasis is on the thought-connection, not the word.",
+        [("Discourse Markers and Connectors", "Papa English", null), ("Advanced Linking Words and Phrases", "Cambridge English", null), ("Cohesion in Academic Writing", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L7() => C(
+        "Ellipsis (omitting words understood from context) and substitution (using pronouns or 'do') create natural, concise English. Native speakers use these constantly to avoid repetition. Essential for fluent, authentic English.",
+        ["Ellipsis: 'John went to Paris; Sarah to Rome' (ellipsis of 'went')", "Substitution: 'Do you like coffee?' 'Yes, I do.' (do = like coffee)", "'So' and 'not' substitutes: 'Is she coming?' 'I think so.' / 'I hope not.'", "Comparative ellipsis: 'His score was higher than hers (was).'", "Stranding prepositions: 'Which conference did you go to?' (not 'to which')"],
+        [("ellipsis", "elipsis / omisión", "He went to London; she to Berlin. (ellipsis of 'went')"), ("substitution", "sustitución", "Do you want tea? I do. (do replaces 'want tea')"), ("do-substitution", "sustitución con 'do'", "You don't play chess like he does."), ("so-substitution", "sustitución con 'so'", "Is that true? I think so.")],
+        [("'I like chocolate.' 'So do I.' (substitution)", "Do-substitution in agreement"), ("He visited three countries; she four.", "Ellipsis in comparative"), ("'Which office are you in?' / 'It's the one John is in.' (stranding)", "Preposition stranding"), ("Some students passed; others did not.", "Substitution with 'did'")],
+        "Rewrite these sentences using ellipsis or substitution where appropriate: 1) John bought a car; Mary bought a car. 2) Do you want to join us? I want to join you. 3) She's more experienced than he is experienced. 4) Which research did you rely on? 5) Some agree with the policy; some don't agree.",
+        "Ellipsis creates rhythm in speech: 'John went to Paris; Sarah to Rome.' The second clause is faster and lighter because words are omitted. This mirrors natural pauses.",
+        [("Ellipsis in English Grammar", "Papa English", null), ("Substitution and Ellipsis", "Cambridge English", null), ("Advanced Pronoun Substitution", "English Speeches", null)]
+    );
+
+    private static string C1L8() => C(
+        "The subjunctive mood expresses wishes, recommendations, and unreal situations. In formal English, it appears in 'I suggest that he BE present' (not 'is'). Modal structures (could, might, may) express possibility, permission, and hypothetical situations with precision.",
+        ["Subjunctive: 'I suggest that she be informed.' 'It is crucial that he arrive on time.' (NOT 'arrives')", "After verbs: recommend, insist, demand, propose, suggest", "After expressions: It is important that..., It is essential that..., It is vital that...", "Modal precision: can (present ability), could (past ability or possibility), might (possibility), may (formal permission)", "Perfect modals: should have, could have, might have express regret, criticism, speculation"],
+        [("subjunctive mood", "modo subjuntivo", "The subjunctive mood is used after 'insist that'."), ("recommend that", "recomendar que", "I recommend that she be informed."), ("essential that", "esencial que", "It is essential that standards be maintained."), ("could have", "habría podido / podría haber", "She could have succeeded if she had tried."), ("should have", "debería haber / habría debido", "He should have known better.")],
+        [("The company insists that all employees be trained thoroughly.", "Subjunctive in business context"), ("It is essential that these standards be maintained.", "Formal requirement"), ("He should have known better.", "Perfect modal: criticism"), ("She might have taken a different approach.", "Perfect modal: speculation"), ("I recommend that this policy be reconsidered.", "Subjunctive in formal proposal")],
+        "Write 8 sentences: 4 using subjunctive (insist, recommend, it is essential that, it is vital that) and 4 using perfect modals (should have, could have, might have, may have) to express regret, criticism, or speculation.",
+        "The subjunctive is often not pronounced differently from the indicative, but formal speech emphasizes the 'be': 'I insist that she BE present' — the 'be' sounds deliberate.",
+        [("Subjunctive Mood in English", "Papa English", null), ("Perfect Modal Verbs", "Cambridge English", null), ("Advanced Modal Structures", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C2L1() => C(
