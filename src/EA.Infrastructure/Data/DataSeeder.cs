@@ -395,30 +395,33 @@ public static class DataSeeder
     );
 
     private static string A2L2() => C(
-        "To make negatives and questions in Present Simple, we need a helper verb: DO for I/you/we/they and DOES for he/she/it. The main verb ALWAYS stays in its base form after don't/doesn't/do/does.",
+        "To make negatives and questions in Present Simple, we need a helper verb: DO for I/you/we/they and DOES for he/she/it. The main verb ALWAYS stays in its base form after don't/doesn't/do/does. This is fundamental for daily English conversation.",
         ["Negative: Subject + don't/doesn't + base verb", "He/she/it uses DOESN'T — not 'don't'", "Question: Do/Does + subject + base verb?", "After doesn't/does: main verb has NO -s (she doesn't work, does she work?)", "Short answers: Yes, she does. / No, she doesn't."],
         [("don't (do not)", "no + verbo", "I don't like coffee."), ("doesn't (does not)", "no + verbo (él/ella)", "She doesn't eat meat."), ("Do you...?", "¿Tú...?", "Do you speak Spanish?"), ("Does he/she...?", "¿Él/ella...?", "Does she work here?")],
         [("I don't like spicy food.", "Negative — I/you/we/they"), ("She doesn't speak French.", "Negative — he/she/it"), ("Do you have a car?", "Yes/No question"), ("Does he live nearby? — Yes, he does.", "Question with short answer")],
         "Write 3 negative sentences and 3 questions about your daily routine or lifestyle. Include at least one he/she example.",
-        "'Doesn't' is pronounced DUZ-ent. In spoken English, contractions (don't, doesn't) are far more common than the full forms (do not, does not)."
+        "'Doesn't' is pronounced DUZ-ent. In spoken English, contractions (don't, doesn't) are far more common than the full forms (do not, does not).",
+        [("Present Simple Questions and Negatives", "Papa English", null), ("Do Does Present Simple", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string A2L3() => C(
-        "Regular verbs in the Past Simple are formed by adding -ED to the base form. This form is the SAME for ALL subjects — I, you, he, she, we, they. Only ONE form to learn!",
+        "Regular verbs in the Past Simple are formed by adding -ED to the base form. This form is the SAME for ALL subjects — I, you, he, she, we, they. Only ONE form to learn! Perfect English Grammar emphasizes this simple, consistent rule.",
         ["Base verb + ED: walk → walked, play → played, watch → watched", "Verb ending in -E: add only -D: live → lived, like → liked", "Short vowel + single consonant → double it: stop → stopped, plan → planned", "Consonant + Y → change to -IED: study → studied, try → tried", "Negative: didn't + base verb | Question: Did + subject + base verb?"],
         [("walked", "caminó/caminé", "I walked to school."), ("studied", "estudió/estudié", "She studied all night."), ("stopped", "paró/paré", "The car stopped suddenly."), ("lived", "vivió/viví", "They lived in Paris for a year.")],
         [("I walked to the park yesterday.", "Regular past — base + ed"), ("She studied for the exam last night.", "Y → ied"), ("They stopped at a café for coffee.", "Double consonant"), ("He didn't call me. / Did you finish?", "Negative and question forms")],
         "Write a short paragraph (5–7 sentences) about what you did yesterday or last weekend. Use at least 5 different regular past verbs.",
-        "-ED has 3 sounds: /t/ after voiceless consonants (worked, stopped), /d/ after voiced sounds (played, called), /ɪd/ after t/d (wanted, needed)."
+        "-ED has 3 sounds: /t/ after voiceless consonants (worked, stopped), /d/ after voiced sounds (played, called), /ɪd/ after t/d (wanted, needed).",
+        [("Past Simple Regular Verbs", "Papa English", null), ("Regular Past Tense", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string A2L4() => C(
-        "Many of the most common English verbs are irregular — they do NOT follow the -ED rule. Their past forms must be memorized. Negatives and questions still use 'did' + base verb.",
+        "Many of the most common English verbs are irregular — they do NOT follow the -ED rule. Their past forms must be memorized. Negatives and questions still use 'did' + base verb. These are essential for fluent English.",
         ["Common: go→went, have→had, see→saw, come→came, give→gave", "More: eat→ate, drink→drank, write→wrote, read→read, say→said", "More: take→took, make→made, know→knew, think→thought, buy→bought", "Negatives: I didn't go, she didn't have (base verb!)", "Questions: Did you see? Did he come? (base verb!)"],
         [("went (go)", "fue/fui", "I went to the cinema last night."), ("had (have)", "tuvo/tuve", "She had a great time."), ("saw (see)", "vio/vi", "We saw a great film."), ("ate (eat)", "comió/comí", "They ate pizza for dinner."), ("wrote (write)", "escribió/escribí", "He wrote a long email.")],
         [("I went to the beach last summer.", "go → went"), ("She had coffee and toast for breakfast.", "have → had"), ("They saw the new film yesterday.", "see → saw"), ("He wrote her a letter but she didn't reply.", "write → wrote + negative")],
         "Write a paragraph about a memorable day or event. Use at least 6 different irregular past verbs. You can write about a birthday, trip, special meal, or a memorable moment.",
-        "'Read' looks the same in present and past but sounds different: REED (present) vs RED (past). 'Thought' is pronounced THAWT — the 'ough' is silent."
+        "'Read' looks the same in present and past but sounds different: REED (present) vs RED (past). 'Thought' is pronounced THAWT — the 'ough' is silent.",
+        [("Irregular Past Tense Verbs", "Papa English", null), ("Irregular Verbs in Past Simple", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L1() => C(
@@ -432,111 +435,123 @@ public static class DataSeeder
     );
 
     private static string B1L2() => C(
-        "'For' and 'since' both describe duration, but differently. FOR tells us the period of time; SINCE tells us the starting point. Both are used with the Present Perfect.",
+        "'For' and 'since' both describe duration, but differently. FOR tells us the period of time; SINCE tells us the starting point. Both are used with the Present Perfect. British Council provides excellent explanations of this distinction.",
         ["FOR + a period of time: for two hours, for a week, for six months, for ten years", "SINCE + a starting point: since Monday, since 2015, since I was a child", "Quick test: 'how long?' → FOR. 'Starting from when?' → SINCE", "Common error: 'I live here since 5 years' — wrong! Use Present Perfect: 'I have lived here for 5 years'"],
         [("for two hours", "durante dos horas", "I have been waiting for two hours."), ("for a long time", "desde hace mucho tiempo", "We haven't talked for a long time."), ("since Monday", "desde el lunes", "She has been ill since Monday."), ("since last year", "desde el año pasado", "He has worked here since last year.")],
         [("I have worked here for three years.", "FOR + duration"), ("She has been a teacher since 2018.", "SINCE + starting point"), ("He hasn't eaten since this morning.", "SINCE + time of day"), ("We have known each other for a very long time.", "FOR in a longer statement")],
         "Write 6 Present Perfect sentences: 3 with 'for' and 3 with 'since'. Talk about your hobbies, home, work, friendships, or habits.",
-        "'Since' is pronounced SINTS (one syllable). 'For' in fast speech often sounds like 'fer' — that is normal and native."
+        "'Since' is pronounced SINTS (one syllable). 'For' in fast speech often sounds like 'fer' — that is normal and native.",
+        [("Present Perfect For vs Since", "Papa English", null), ("For vs Since with Present Perfect", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L3() => C(
-        "The First Conditional describes real, possible situations in the future and their likely results. If the condition happens, the result will follow.",
+        "The First Conditional describes real, possible situations in the future and their likely results. If the condition happens, the result will follow. This is essential for discussing everyday predictions and plans.",
         ["Structure: IF + Present Simple, WILL + base verb", "The IF clause can come first or second: 'If I study, I will pass' = 'I will pass if I study'", "Use a comma only when the IF clause comes first", "Can also use: might, may, can, could instead of will", "Compare: First = possible future; Second = unlikely/imaginary"],
         [("If ... will", "Si ... va a / irá", "If it rains, I will take an umbrella."), ("Unless", "A menos que / Si no", "Unless you hurry, you will miss the bus."), ("might / may", "podría / puede que", "If you study, you might pass.")],
         [("If it rains tomorrow, I will stay home.", "Basic first conditional"), ("You'll miss the bus if you don't leave now.", "IF clause at the end"), ("If she calls, tell her I'm busy.", "First conditional as instruction"), ("If you eat too much sugar, you might feel ill.", "Using 'might'")],
         "Write 5 first conditional sentences about your week ahead. Think about: the weather, your studies, your plans. Use 'will', 'might', and 'might not'.",
-        "'Will' contracts in spoken English: I'll, you'll, she'll, he'll, we'll, they'll. 'I will go' → 'I'll go'. Practice until contractions feel natural."
+        "'Will' contracts in spoken English: I'll, you'll, she'll, he'll, we'll, they'll. 'I will go' → 'I'll go'. Practice until contractions feel natural.",
+        [("First Conditional Sentences", "Papa English", null), ("If Clauses - First Conditional", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L4() => C(
-        "The Second Conditional describes unreal, hypothetical, or unlikely situations. It imagines 'What if...?' scenarios that are not currently true.",
+        "The Second Conditional describes unreal, hypothetical, or unlikely situations. It imagines 'What if...?' scenarios that are not currently true. Perfect English Grammar emphasizes the importance of mastering this tense.",
         ["Structure: IF + Past Simple, WOULD + base verb", "'If I were' is preferred to 'If I was' (formal writing)", "Compare: First = 'If I win the lottery' (possible) vs Second = 'If I won' (unlikely dream)", "Use for: advice ('If I were you, I would...'), imaginary situations", "'Would' contracts: I'd, you'd, she'd, he'd, we'd, they'd"],
         [("If I were", "Si yo fuera", "If I were taller, I'd play basketball."), ("If I had", "Si tuviera", "If I had more time, I would travel."), ("would", "haría/iría (condicional)", "I would live in Italy if I could."), ("If I were you", "Yo que tú / En tu lugar", "If I were you, I would apologize.")],
         [("If I had more money, I would travel the world.", "Imaginary situation"), ("She would be happier if she lived near the sea.", "Hypothetical preference"), ("If I were you, I would accept the job offer.", "Giving advice"), ("What would you do if you lost your phone?", "Second conditional question")],
         "Write 5 second conditional sentences: 2 imaginary 'what if' scenarios, 1 piece of advice using 'If I were you...', and 2 hypothetical preferences.",
-        "'Would' is pronounced WOOD — the 'l' is silent. In fast speech it sounds just like 'wood'. Contractions: I'd, you'd, she'd — the 'd' is barely audible."
+        "'Would' is pronounced WOOD — the 'l' is silent. In fast speech it sounds just like 'wood'. Contractions: I'd, you'd, she'd — the 'd' is barely audible.",
+        [("Second Conditional Sentences", "Papa English", null), ("If Clauses - Second Conditional", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B2L1() => C(
-        "The passive voice shifts the focus from the person doing the action to the action itself. It is used when the agent is unknown, unimportant, or obvious.",
+        "The passive voice shifts the focus from the person doing the action to the action itself. It is used when the agent is unknown, unimportant, or obvious. British Council and academic writing frequently use passive voice.",
         ["Present passive: am/is/are + past participle", "Past passive: was/were + past participle", "Agent introduced with 'by': 'The novel was written by Hemingway'", "Omit 'by' when agent is unknown or unimportant: 'The window was broken'", "Active: 'Someone stole my bag.' → Passive: 'My bag was stolen.'"],
         [("is made", "es hecho/fabricado", "This car is made in Germany."), ("was written", "fue escrito", "The report was written yesterday."), ("are sold", "se venden", "These products are sold online."), ("is spoken", "se habla", "English is spoken worldwide.")],
         [("English is spoken all over the world.", "Present passive — general fact"), ("The letter was written by the CEO.", "Past passive — agent specified"), ("My phone was stolen on the subway.", "Past passive — unknown agent"), ("These shoes are made in Italy.", "Present passive — origin")],
         "Write 6 passive sentences: 3 in present passive and 3 in past passive. Write about products you use, famous buildings, historical events, or things that happened to you.",
-        "In passive sentences, the past participle carries main stress: 'The letter WAS WRITten'. Practice the rhythm: was/were are unstressed, the participle is stressed."
+        "In passive sentences, the past participle carries main stress: 'The letter WAS WRITten'. Practice the rhythm: was/were are unstressed, the participle is stressed.",
+        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B2L2() => C(
-        "Modals combine with passive voice to express obligation, recommendation, possibility, or permission without specifying who performs the action.",
+        "Modals combine with passive voice to express obligation, recommendation, possibility, or permission without specifying who performs the action. This is essential for formal communication and professional writing.",
         ["Structure: modal + BE + past participle (same for ALL subjects)", "Must be done, should be submitted, can be found, might be cancelled", "Compare active: 'You must submit it' → Passive: 'It must be submitted'", "Perfect modal passive: should have been done, could have been avoided", "Very common in formal writing, rules, instructions, and announcements"],
         [("must be + pp", "debe ser", "The form must be signed."), ("should be + pp", "debería ser", "Errors should be corrected."), ("can be + pp", "puede ser", "The meeting can be rescheduled."), ("might be + pp", "podría ser", "The event might be cancelled.")],
         [("All homework must be submitted by Friday.", "Obligation — must be"), ("Mistakes should be corrected before submission.", "Recommendation — should be"), ("The report can be found on the website.", "Possibility — can be"), ("The flight might be delayed due to weather.", "Uncertainty — might be")],
         "Write 5 passive sentences with modals. Write rules or guidelines for a real situation: workplace policy, school rules, or environmental regulations.",
-        "'Should be' sounds like 'SHUD-bee'. 'Must be' sounds like 'MUST-bee'. The passive 'be' is unstressed — focus on the modal and participle."
+        "'Should be' sounds like 'SHUD-bee'. 'Must be' sounds like 'MUST-bee'. The passive 'be' is unstressed — focus on the modal and participle.",
+        [("Passive Voice with Modals", "Papa English", null), ("Modal Verbs with Passive Voice", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B2L3() => C(
-        "Reported speech is used to report what someone said without quoting their exact words. Verb tenses 'shift back' (backshift), and pronouns and time expressions change.",
+        "Reported speech is used to report what someone said without quoting their exact words. Verb tenses 'shift back' (backshift), and pronouns and time expressions change. Essential for narrative writing and formal communication.",
         ["Present Simple → Past Simple: 'I work' → he said he worked", "Present Continuous → Past Continuous: 'I'm working' → she said she was working", "Will → Would: 'I will call' → she said she would call", "Can → Could: 'I can help' → he said he could help", "Pronouns change: I → he/she, we → they, my → his/her"],
         [("said (that)", "dijo (que)", "She said that she was tired."), ("told me (that)", "me dijo (que)", "He told me that he knew the answer."), ("explained that", "explicó que", "She explained that she was busy."), ("mentioned that", "mencionó que", "He mentioned that he was leaving soon.")],
         [("Direct: 'I love English.' → She said she loved English.", "Present → Past"), ("Direct: 'We are leaving.' → They said they were leaving.", "Continuous → Past Continuous"), ("Direct: 'I will call you.' → He said he would call me.", "Will → Would"), ("Direct: 'I can swim.' → She said she could swim.", "Can → Could")],
         "Think of a recent conversation. Report 5 things that were said using 'said that', 'told me that', 'mentioned that', or 'explained that'.",
-        "'Said' is pronounced SED (rhymes with 'bed') — not 'sayd'. 'Told' is TOHLD. These are the most common reporting verbs — correct pronunciation matters."
+        "'Said' is pronounced SED (rhymes with 'bed') — not 'sayd'. 'Told' is TOHLD. These are the most common reporting verbs — correct pronunciation matters.",
+        [("Reported Speech", "Papa English", null), ("Reported Speech in English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B2L4() => C(
-        "Reported questions do NOT use question word order (no inversion). They use statement order (subject + verb). Yes/No questions use 'if' or 'whether'; Wh- questions keep their question word.",
+        "Reported questions do NOT use question word order (no inversion). They use statement order (subject + verb). Yes/No questions use 'if' or 'whether'; Wh- questions keep their question word. Critical for advanced communication.",
         ["Wh- questions: keep question word, use statement order", "'Where do you live?' → He asked me where I lived.", "Yes/No questions: use 'if' or 'whether'", "'Are you tired?' → She asked if/whether I was tired.", "No question marks! No inverted word order! Tense backshift still applies"],
         [("asked where/when/why/how", "preguntó dónde/cuándo/por qué/cómo", "She asked where I worked."), ("asked if / whether", "preguntó si", "He asked if I was ready."), ("wanted to know", "quería saber", "She wanted to know what time it was.")],
         [("'Where do you work?' → He asked me where I worked.", "Wh- question reported"), ("'Are you coming?' → She asked if I was coming.", "Yes/No → 'if'"), ("'Do you speak Spanish?' → She wanted to know whether I spoke Spanish.", "Using 'whether'")],
         "Write 5 reported questions. Imagine someone asked you these things at a job interview or on a first date. Use different reporting phrases.",
-        "'Whether' is pronounced WETH-er — exactly like 'weather'. They are homophones. In writing: 'whether' for reported questions, 'weather' for climate."
+        "'Whether' is pronounced WETH-er — exactly like 'weather'. They are homophones. In writing: 'whether' for reported questions, 'weather' for climate.",
+        [("Reported Questions", "Papa English", null), ("Reported Questions in English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C1L1() => C(
-        "Inversion places the auxiliary verb BEFORE the subject after certain negative or limiting adverbials. It creates strong emphasis and is a key feature of formal, literary, and sophisticated English.",
+        "Inversion places the auxiliary verb BEFORE the subject after certain negative or limiting adverbials. It creates strong emphasis and is a key feature of formal, literary, and sophisticated English. Perfect English Grammar emphasizes this advanced technique.",
         ["Trigger words: Never, Rarely, Seldom, Hardly, Barely, Scarcely, No sooner, Not only, Not until, Only when, Little", "Structure: Negative adverb + AUXILIARY + subject + main verb", "'Never I have seen' is WRONG → 'Never have I seen' is CORRECT", "'Not only did she win, but she also broke the record.'", "Common in formal speeches, literary texts, journalism, and advanced writing"],
         [("Never have I...", "Nunca he...", "Never have I witnessed such courage."), ("Rarely does...", "Raramente...", "Rarely does he make a mistake."), ("Hardly had... when...", "Apenas había... cuando...", "Hardly had she arrived when it started raining."), ("Not only... but also...", "No solo... sino también...", "Not only did he lie, but he also stole.")],
         [("Never have I seen such dedication.", "Never + inversion"), ("Not only did she pass, but she got the highest score.", "Not only + inversion"), ("Hardly had I sat down when the phone rang.", "Hardly + had + inversion"), ("Rarely does the committee agree on anything.", "Rarely + does + inversion")],
         "Rewrite these 5 sentences using inversion for emphasis: 1) I have never worked so hard. 2) She rarely makes mistakes. 3) I had barely fallen asleep when the alarm went off. 4) He not only failed the test but also lost his scholarship. 5) You will only understand when you experience it yourself.",
-        "Inversion creates a dramatic, authoritative tone in speech. Drop your pitch at the end rather than rising. 'Never HAVE I seen...' — stress the auxiliary."
+        "Inversion creates a dramatic, authoritative tone in speech. Drop your pitch at the end rather than rising. 'Never HAVE I seen...' — stress the auxiliary.",
+        [("Inversion for Emphasis", "Papa English", null), ("Advanced Inversion in English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C1L2() => C(
-        "Mixed conditionals combine different time frames. The most common type uses a past condition (3rd conditional) with a present result (2nd conditional), showing how a past event still affects the present.",
+        "Mixed conditionals combine different time frames. The most common type uses a past condition (3rd conditional) with a present result (2nd conditional), showing how a past event still affects the present. Essential for C1 proficiency.",
         ["Type A — Past condition, present result: IF + Past Perfect → WOULD + base verb", "'If I had studied medicine (past), I would be a doctor now (present).'", "Type B — Present condition, past result: IF + Past Simple → WOULD HAVE + past participle", "'If she were more organized (now), she would have finished on time (then).'", "These mark C1/C2 level proficiency — essential for advanced communication"],
         [("If I had + pp ... would + base", "Si hubiera... sería/estaría", "If I had moved there, I would speak the language now."), ("If I were ... would have + pp", "Si fuera... habría", "If I were braver, I would have spoken up.")],
         [("If I had taken that job, I would be living in New York now.", "Past condition → present result"), ("If she were more patient, she would have handled it better.", "Present trait → past result"), ("He would be a millionaire now if he hadn't sold those shares.", "Inverted order")],
         "Write 4 mixed conditional sentences about your own life. Think about: a past choice and how it affects your present; or a character trait you have and how it affected a past situation.",
-        "'Would have' in fast speech sounds like 'would've' (WOOD-uv) or 'woulda'. 'Should have' → 'should've' (SHUD-uv). Essential for listening comprehension."
+        "'Would have' in fast speech sounds like 'would've' (WOOD-uv) or 'woulda'. 'Should have' → 'should've' (SHUD-uv). Essential for listening comprehension.",
+        [("Mixed Conditionals", "Papa English", null), ("Mixed Conditional Sentences", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C1L3() => C(
-        "Academic and formal language uses precise vocabulary to convey complex ideas with nuance. At C1 level, you replace informal words with formal equivalents and use nominalizations for a sophisticated style.",
+        "Academic and formal language uses precise vocabulary to convey complex ideas with nuance. At C1 level, you replace informal words with formal equivalents and use nominalizations for a sophisticated style. British Council and academic institutions emphasize this skill.",
         ["Prefer formal: commence (start), obtain (get), demonstrate (show), require (need), endeavour (try)", "Nominalizations: 'analyze' → 'analysis', 'develop' → 'development', 'argue' → 'argument'", "Avoid contractions in formal writing: cannot (not can't), do not (not don't)", "Qualify claims with hedging: 'it appears that', 'evidence suggests', 'it is worth noting'", "Cohesion: furthermore, nevertheless, consequently, notwithstanding"],
         [("ubiquitous", "ubicuo / presente en todas partes", "Smartphones are now ubiquitous."), ("exacerbate", "agravar / empeorar", "The delay exacerbated the problem."), ("ameliorate", "mejorar / aliviar", "The policy aims to ameliorate inequality."), ("laconic", "lacónico / conciso", "His laconic reply revealed little."), ("verbose", "verboso / palabrero", "The report is verbose and needs editing.")],
         [("The study demonstrates a significant correlation between diet and health.", "Formal verb 'demonstrates'"), ("The situation was further exacerbated by the lack of resources.", "Formal adjective + nominalization"), ("The analysis reveals several key findings.", "Nominalization: analyze → analysis"), ("It is worth noting that these results may not be generalizable.", "Hedging + formal vocabulary")],
         "Rewrite these informal sentences in formal style: 1) The problem got worse because of the weather. 2) We need to look at this more carefully. 3) The results show that our idea was right. 4) They're trying to make things better for poor people. 5) Nobody knows why this happens.",
-        "In formal spoken English (presentations, interviews), avoid 'gonna', 'wanna', 'kinda'. Say 'going to', 'want to', 'kind of'. Formal speech is clearer and more deliberate."
+        "In formal spoken English (presentations, interviews), avoid 'gonna', 'wanna', 'kinda'. Say 'going to', 'want to', 'kind of'. Formal speech is clearer and more deliberate.",
+        [("Formal Academic English", "Papa English", null), ("Academic Vocabulary", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C1L4() => C(
-        "Collocations are word partnerships that native speakers use naturally. Idioms are fixed expressions with meanings different from their literal words. Mastering both makes your English genuinely fluent.",
+        "Collocations are word partnerships that native speakers use naturally. Idioms are fixed expressions with meanings different from their literal words. Mastering both makes your English genuinely fluent and natural-sounding.",
         ["Strong verb collocations: MAKE a decision, DO homework, TAKE a risk, GIVE a presentation, REACH a conclusion", "Adjective collocations: deeply committed, highly unlikely, firmly believe, utterly exhausted", "Idioms: 'a blessing in disguise' = something good that seemed bad at first", "Idioms: 'burn bridges' = destroy relationships permanently, 'hit a deadlock' = reach a total impasse", "Collocations cannot be changed: 'make a decision' — NOT 'do a decision'"],
         [("photographic memory", "memoria fotográfica", "She has a photographic memory — recalls every detail."), ("beside yourself", "fuera de sí (con emoción)", "He was beside himself with excitement."), ("a blessing in disguise", "un mal que por bien viene", "Losing that job was a blessing in disguise."), ("hit a deadlock", "llegar a un punto muerto", "Negotiations hit a deadlock."), ("burn bridges", "quemar puentes", "Don't burn bridges — you may need them later.")],
         [("She gave an outstanding presentation that left everyone speechless.", "Collocation: give a presentation"), ("He was beside himself with joy when he passed the exam.", "Idiom: beside yourself"), ("Losing the contract turned out to be a blessing in disguise.", "Idiom in context"), ("The committee reached a deadlock and adjourned the meeting.", "Collocation + formal vocabulary")],
         "Write a short paragraph (6–8 sentences) about a challenging situation. Use at least 3 collocations and 2 idioms from this lesson. The situation can be real or invented.",
-        "Idioms are spoken as fixed chunks — 'blessing in disguise' flows as one unit: BLESS-ing-in-dis-GIZE. Do not pause between words. The rhythm is key."
+        "Idioms are spoken as fixed chunks — 'blessing in disguise' flows as one unit: BLESS-ing-in-dis-GIZE. Do not pause between words. The rhythm is key.",
+        [("English Collocations and Idioms", "Papa English", null), ("Common Idioms in English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C2L1() => C(
-        "Register is the level of formality in language. C2 speakers switch effortlessly between formal, neutral, and informal registers. Understanding register means knowing when something sounds too formal, too casual, or just right.",
+        "Register is the level of formality in language. C2 speakers switch effortlessly between formal, neutral, and informal registers. Understanding register means knowing when something sounds too formal, too casual, or just right. This is native-level proficiency.",
         ["Formal: 'I would like to enquire about...' / Informal: 'I want to ask about...'", "Subjunctive in formal writing: 'I suggest that he be present' (not 'is')", "Avoid filler words in formal contexts: 'basically', 'you know', 'like', 'sort of'", "Use hedging for academic precision: 'It appears that...', 'Evidence suggests...'", "Nominalizations elevate register: 'develop' → 'development', 'solve' → 'solution'"],
         [("solicit", "solicitar / pedir formalmente", "I would like to solicit your expert opinion."), ("ratify", "ratificar", "The treaty was ratified by all members."), ("promulgate", "promulgar", "The new law was promulgated last year."), ("ameliorate", "mejorar / aliviar", "Measures were taken to ameliorate the situation."), ("commence", "comenzar / iniciar", "The ceremony will commence at 9 AM.")],
         [("I would like to enquire about the position advertised on your website.", "Formal opening for a letter"), ("I suggest that the committee be given more time to deliberate.", "Subjunctive mood"), ("The board ratified the proposal with immediate effect.", "Formal vocabulary in a business context")],
         "Rewrite this casual email in formal register: 'Hey, I wanted to ask about your job. I think I'd be really good at it and I want to know more stuff about what it involves. Can you send me some info? Thanks.'",
-        "In formal spoken English, your speech should be clear, measured, and deliberate. Maintain full vowels — do not reduce them as in casual speech."
+        "In formal spoken English, your speech should be clear, measured, and deliberate. Maintain full vowels — do not reduce them as in casual speech.",
+        [("Register and Formality in English", "Papa English", null), ("Formal vs Informal English", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C2L2() => C(
@@ -545,7 +560,8 @@ public static class DataSeeder
         [("pyrrhic victory", "victoria pírrica", "Their market dominance was a pyrrhic victory."), ("penultimate", "penúltimo", "The penultimate episode was the best."), ("cogent", "convincente / sólido", "She presented a cogent case for reform."), ("circumlocution", "circunloquio / rodeos", "Stop the circumlocution — just say what you mean."), ("equivocal", "equívoco / ambiguo", "His equivocal answer raised more questions.")],
         [("The company's Pyrrhic victory left it with no resources to compete further.", "Pyrrhic victory in business"), ("In the penultimate chapter, the mystery is finally unraveled.", "Penultimate as literary term"), ("Her argument was so cogent that no one could find a flaw.", "Cogent in academic context"), ("His equivocal response only deepened suspicions.", "Equivocal in political context")],
         "Write a paragraph (7–9 sentences) using all five vocabulary items from this lesson in natural, connected prose. You can write about a fictional character, a historical event, or a scenario from your professional life.",
-        "'Penultimate' is pen-UL-ti-mate (5 syllables, stress 2nd). 'Equivocal' is eh-KWIV-oh-kal (4 syllables, stress 2nd). 'Cogent' is KOH-jent. 'Circumlocution' is sir-kum-loh-KYOO-shun."
+        "'Penultimate' is pen-UL-ti-mate (5 syllables, stress 2nd). 'Equivocal' is eh-KWIV-oh-kal (4 syllables, stress 2nd). 'Cogent' is KOH-jent. 'Circumlocution' is sir-kum-loh-KYOO-shun.",
+        [("English Idioms C2 Level", "English Speeches", null), ("Pyrrhic Victory Meaning", "English Academy", null), ("Advanced English Vocabulary", "Cambridge English", null)]
     );
 
     private static string C2L3() => C(
@@ -554,7 +570,8 @@ public static class DataSeeder
         [("It could be argued that", "Se podría argumentar que", "It could be argued that inequality drives conflict."), ("Evidence suggests", "La evidencia sugiere", "Evidence suggests a causal link."), ("It appears / It seems", "Parece que", "It appears that demand is declining."), ("tend to", "tiende a", "Students tend to perform better with feedback."), ("ostensibly", "aparentemente / en apariencia", "Ostensibly, the policy aims to reduce poverty.")],
         [("The data suggest a possible correlation between sleep and productivity.", "Hedging with 'suggest'"), ("It could be argued that economic inequality exacerbates social tensions.", "Phrase hedge"), ("The results appear to indicate a significant improvement.", "Hedge with 'appear'"), ("Ostensibly, the measure was introduced for public safety reasons.", "Adverb hedge")],
         "Rewrite these definitive sentences with appropriate hedging: 1) Climate change causes wars. 2) Social media makes teenagers depressed. 3) Early education determines success in life. 4) Exercise cures anxiety. 5) Technology will replace all human workers.",
-        "'Ostensibly' is os-TEN-si-blee (5 syllables). 'Apparently' is a-PAR-ent-lee (4 syllables). In speech, pause slightly before a hedge — it signals deliberate, careful thought."
+        "'Ostensibly' is os-TEN-si-blee (5 syllables). 'Apparently' is a-PAR-ent-lee (4 syllables). In speech, pause slightly before a hedge — it signals deliberate, careful thought.",
+        [("Academic Writing Hedging Language", "Academic English", null), ("How to Use Modal Verbs for Hedging", "English Speeches", null), ("Cautious Language in Essays", "Cambridge English", null)]
     );
 
     private static string C2L4() => C(
@@ -563,7 +580,8 @@ public static class DataSeeder
         [("non sequitur", "conclusión que no se sigue", "That is a non sequitur — it does not follow."), ("ad hominem", "ataque personal", "That ad hominem adds nothing to the debate."), ("cogent", "sólido / convincente", "The paper makes a cogent, well-evidenced argument."), ("equivocal", "equívoco / ambiguo", "The data is equivocal on this point."), ("circumlocution", "circunloquio / rodeos", "His circumlocution masked a lack of substance.")],
         [("The argument is cogent and supported by robust empirical evidence.", "Positive critical evaluation"), ("This is a classic non sequitur — growth does not automatically reduce poverty.", "Identifying a logical flaw"), ("The author resorts to ad hominem attacks rather than engaging with the argument.", "Identifying ad hominem"), ("The data remain equivocal, pointing in different directions depending on methodology.", "Acknowledging uncertainty")],
         "Find a news article or opinion piece. Write a critical analysis paragraph (8–10 sentences) identifying at least 2 argumentative strengths and 2 logical weaknesses. Use vocabulary from this lesson.",
-        "'Non sequitur' is Latin: non-SEK-wi-ter. 'Ad hominem' is ad-HOM-in-em. Academic Latin phrases are pronounced the English way, not classical Latin. Both 3 syllables, stress on 2nd."
+        "'Non sequitur' is Latin: non-SEK-wi-ter. 'Ad hominem' is ad-HOM-in-em. Academic Latin phrases are pronounced the English way, not classical Latin. Both 3 syllables, stress on 2nd.",
+        [("Logical Fallacies Explained", "TED-Ed", null), ("Critical Thinking and Logical Fallacies", "Paul Graham", null), ("How to Analyze Arguments", "Cambridge English", null)]
     );
 
     // ── Helpers ───────────────────────────────────────────────────────────────
