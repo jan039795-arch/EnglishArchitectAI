@@ -487,10 +487,14 @@ public static class DataSeeder
         var m2 = G("c2020000-0000-0000-0000-000000000002");
         var m3 = G("c2030000-0000-0000-0000-000000000003");
         var m4 = G("c2040000-0000-0000-0000-000000000004");
+        var m5 = G("c2050000-0000-0000-0000-000000000005");
+        var m6 = G("c2060000-0000-0000-0000-000000000006");
         ctx.Modules.Add(NewModule(m1, levelId, "Nuanced Expression", "Achieve near-native register and style.", 1, 8));
         ctx.Modules.Add(NewModule(m2, levelId, "Academic Writing", "Master hedging, argumentation, and critical analysis.", 2, 8));
         ctx.Modules.Add(NewModule(m3, levelId, "Advanced Communication", "Paraphrasing, pragmatics, and context mastery.", 3, 8));
         ctx.Modules.Add(NewModule(m4, levelId, "Native Proficiency", "Stylistic mastery and authentic native features.", 4, 8));
+        ctx.Modules.Add(NewModule(m5, levelId, "Meaning & Context", "Master subtle nuances and discourse analysis.", 5, 8));
+        ctx.Modules.Add(NewModule(m6, levelId, "Culture & Expression", "Navigate allusions, ambiguity, and sophistication.", 6, 8));
 
         var l1 = G("c2b10000-0000-0000-0000-000000000001");
         var l2 = G("c2b20000-0000-0000-0000-000000000002");
@@ -500,6 +504,10 @@ public static class DataSeeder
         var l6 = G("c2b60000-0000-0000-0000-000000000006");
         var l7 = G("c2b70000-0000-0000-0000-000000000007");
         var l8 = G("c2b80000-0000-0000-0000-000000000008");
+        var l9 = G("c2b90000-0000-0000-0000-000000000009");
+        var l10 = G("c2ba0000-0000-0000-0000-000000000010");
+        var l11 = G("c2bb0000-0000-0000-0000-000000000011");
+        var l12 = G("c2bc0000-0000-0000-0000-000000000012");
         ctx.Lessons.Add(NewLesson(l1, m1, "Register & Formal Style", SkillType.Writing, 1, C2L1()));
         ctx.Lessons.Add(NewLesson(l2, m1, "Idiomatic Mastery", SkillType.Reading, 2, C2L2()));
         ctx.Lessons.Add(NewLesson(l3, m2, "Hedging Language", SkillType.Writing, 1, C2L3()));
@@ -508,6 +516,10 @@ public static class DataSeeder
         ctx.Lessons.Add(NewLesson(l6, m3, "Pragmatics & Implicature", SkillType.Reading, 2, C2L6()));
         ctx.Lessons.Add(NewLesson(l7, m4, "Stylistic Variation", SkillType.Writing, 1, C2L7()));
         ctx.Lessons.Add(NewLesson(l8, m4, "Native Speaker Features", SkillType.Reading, 2, C2L8()));
+        ctx.Lessons.Add(NewLesson(l9, m5, "Subtle Nuance & Precision", SkillType.Writing, 1, C2L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Discourse Analysis", SkillType.Reading, 2, C2L10()));
+        ctx.Lessons.Add(NewLesson(l11, m6, "Cultural References & Allusions", SkillType.Reading, 1, C2L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Mastery of Ambiguity", SkillType.Writing, 2, C2L12()));
 
         AddExercises(ctx, l1, "c2e1",
             MC("Which is the most formal equivalent of 'ask for'?", "solicit", "demand", "request", "inquire", "register,formal,vocabulary"),
@@ -556,6 +568,30 @@ public static class DataSeeder
             MC("'Gonna' is an example of:", "elision (gonna = going to)", "assimilation", "hesitation", "code-switching", "native-features"),
             MC("Prosody refers to:", "intonation, stress, and rhythm in speech", "grammatical structure", "vocabulary choice", "formal register", "pronunciation,native-features"),
             FB("'___ he was totally confused, you know?' — Native discourse pattern", "Like", "native-features,discourse"));
+
+        AddExercises(ctx, l9, "c2e9",
+            MC("'Frugal' vs 'stingy' — the difference is:", "connotation (both mean money-conscious but differ in approval)", "synonyms with identical meaning", "formal vs informal register only", "American vs British spelling", "nuance,vocabulary"),
+            MC("Which near-synonym carries the most negative connotation?", "stingy", "thrifty", "economical", "frugal", "connotation,vocabulary"),
+            MC("'Error' differs from 'mistake' in that:", "error is more formal; mistake is more general", "error is intentional, mistake is not", "error is only written; mistake is only spoken", "they have no difference", "nuance,vocabulary"),
+            FB("The ___ between 'angry' and 'furious' is that furious expresses more intense emotion. (subtle difference)", "nuance", "nuance,vocabulary"));
+
+        AddExercises(ctx, l10, "c2e10",
+            MC("Thematic progression in discourse refers to:", "how given and new information are organized to guide readers", "the main theme of a text", "repetition of the same word", "transition words between sentences", "discourse-analysis"),
+            MC("Which discourse marker signals cause-effect?", "therefore", "however", "moreover", "conversely", "discourse-markers,cohesion"),
+            MC("'Problem-solution' is an example of:", "rhetorical structure that organizes extended text", "a grammar rule", "a vocabulary strategy", "a pronunciation pattern", "discourse-analysis"),
+            FB("___ helps readers follow arguments by linking sentences and ideas. (Text connection)", "Cohesion", "discourse-analysis"));
+
+        AddExercises(ctx, l11, "c2e11",
+            MC("'Orwellian' refers to:", "dystopian surveillance (from George Orwell's 1984)", "British English", "agricultural societies", "romantic poetry", "allusions,cultural-references"),
+            MC("'Kafkaesque' describes situations that are:", "absurdly bureaucratic and nightmarish", "romantic and whimsical", "simple and straightforward", "humorous and entertaining", "allusions,cultural-references"),
+            MC("Understanding allusions requires:", "cultural and literary knowledge", "only grammar skills", "only vocabulary", "memorizing all possible references", "cultural-references"),
+            FB("The phrase '____ moment' alludes to a doomed, inevitable outcome. (Titanic)", "Titanic", "allusions,cultural-references"));
+
+        AddExercises(ctx, l12, "c2e12",
+            MC("Lexical ambiguity occurs when:", "a word has multiple meanings (e.g., 'bank' = financial or river)", "a sentence structure is unclear", "an author is being sarcastic", "grammar is incorrect", "ambiguity,vocabulary"),
+            MC("'I saw the man with the telescope' demonstrates:", "syntactic ambiguity (unclear who has the telescope)", "lexical ambiguity", "phonetic confusion", "misused punctuation", "ambiguity"),
+            MC("'That's interesting' might mean:", "genuine interest or subtle criticism (pragmatic ambiguity)", "always genuine praise", "always dismissal", "simple, single meaning", "ambiguity,pragmatics"),
+            FB("A ___ is a play on words using double meaning for humorous effect. (wordplay, single word)", "pun", "ambiguity,wordplay"));
     }
 
     // ── LESSON CONTENT ────────────────────────────────────────────────────────
@@ -1038,6 +1074,46 @@ public static class DataSeeder
         "Record yourself or find a native speaker interview. Transcribe 2–3 minutes and identify: elisions, assimilations, discourse markers, and prosodic patterns used.",
         "'Elision' is i-LIZH-un (stress 2nd). 'Assimilation' is uh-sim-uh-LAY-shun (stress 3rd). 'Prosody' is PRAH-suh-dee (stress 1st). Native speech flows — stress and intonation carry meaning more than individual words.",
         [("Native English Pronunciation Patterns", "Papa English", null), ("Connected Speech in English", "Cambridge English", null), ("How Native Speakers Really Talk", "English Speeches", null)]
+    );
+
+    private static string C2L9() => C(
+        "Subtle nuance and precision distinguish C2 mastery. This means understanding shades of meaning, using words with exact precision, and recognizing when near-synonyms carry different implications. English has many near-synonyms that differ in register, connotation, or subtle meaning.",
+        ["'Mistake' vs 'error' vs 'blunder': mistake is unintentional; error is more formal; blunder is a serious mistake", "'Angry' vs 'furious' vs 'irate': angry is general; furious is intense emotion; irate is formal/archaic", "'Small' vs 'tiny' vs 'diminutive': small is neutral; tiny emphasizes unusually small; diminutive is formal/literary", "Connotation matters: 'frugal' (positive) vs 'stingy' (negative), both mean money-conscious", "Precision is power: choosing exact words elevates writing and shows native competence"],
+        [("nuance", "matiz / sutileza", "The nuance of this distinction is important."), ("subtlety", "sutileza", "Subtlety is lost in translation."), ("connotation", "connotación / matiz", "The connotation of the word is pejorative."), ("pedantic", "pedante / muy formal", "Avoiding pedantic language keeps writing accessible."), ("discernment", "discernimiento / buen juicio", "Discernment in word choice separates native from non-native writers.")],
+        [("A blunder (serious mistake) vs a simple slip", "Distinguishing severity levels"), ("Frugal (approved thriftiness) vs stingy (disapproved miserliness)", "Connotation differences"), ("The nuance between 'I believe' (personal opinion) and 'I know' (certainty)", "Epistemic precision"), ("Subtle differences shape meaning: 'reluctant' vs 'unwilling'", "Near-synonym precision")],
+        "Find 3 pairs of near-synonyms in a formal text. Explain why the author chose one over the other. What would change if they used the alternative?",
+        "'Nuance' is NOO-ahns (stress 1st). 'Connotation' is kuh-no-TAY-shun (stress 3rd). 'Pedantic' is puh-DAN-tik (stress 2nd). Precision is pronounced PRIH-SIZH-un.",
+        [("Subtle Differences in English Vocabulary", "Papa English", null), ("Near Synonyms and Precision", "Cambridge English", null), ("Connotation in Advanced English", "English Speeches", null)]
+    );
+
+    private static string C2L10() => C(
+        "Discourse analysis examines how language functions beyond individual sentences — how texts are organized, how arguments develop, how writers persuade. C2 proficiency includes understanding text structure, cohesion devices, and rhetorical patterns that shape meaning at macro level.",
+        ["Discourse markers organize ideas: 'however' signals contrast, 'moreover' adds ideas, 'therefore' shows cause-effect", "Thematic progression: given information (what we know) → new information (what's new) shapes flow", "Rhetorical structure: problem-solution, chronological, cause-effect, comparison organize extended texts", "Presuppositions shape discourse: what is assumed vs. explicitly stated", "Register shift within discourse: formal introduction, informal middle section, formal conclusion"],
+        [("discourse analysis", "análisis del discurso", "Discourse analysis reveals how texts persuade."), ("cohesion", "cohesión / conexión", "Strong cohesion guides readers through arguments."), ("thematic", "temático / relacionado al tema", "Thematic progression makes texts coherent."), ("presupposition", "presuposición / asunción", "Presuppositions shape how readers interpret text."), ("rhetorical", "retórico / persuasivo", "The rhetorical structure strengthens the argument.")],
+        [("'First, we observe the problem. Next, we examine causes. Finally, solutions emerge.' (Explicit organization)", "Discourse structure"), ("Given: 'She is a doctor.' New: 'She specializes in cardiology.'", "Thematic progression"), ("Problem (inequality exists) → Solution (policy change needed)", "Rhetorical pattern"), ("'Some argue that... However, evidence suggests...' (Discourse markers signaling contrast)", "Cohesion across sentences")],
+        "Analyze a 1-2 page article. Map its discourse structure: what is given vs. new information, what rhetorical pattern organizes it (problem-solution, comparison, etc.), and what discourse markers guide readers.",
+        "'Discourse' is DIS-korse (stress 1st). 'Cohesion' is ko-HEE-zhun (stress 2nd). 'Rhetorical' is ruh-TOR-i-kal (stress 2nd). Pronounce these words precisely — they are academic register markers.",
+        [("Discourse Analysis in English Texts", "Academic English", null), ("How Texts are Organized", "Cambridge English", null), ("Analyzing Text Structure", "English Speeches", null)]
+    );
+
+    private static string C2L11() => C(
+        "Cultural references and allusions enrich language but require cultural knowledge to fully understand. Native English includes references to literature, history, film, and shared cultural experiences. Understanding and using these marks sophisticated, culturally integrated English.",
+        ["Literary allusions: 'Orwellian' (from George Orwell → dystopian), 'Kafkaesque' (from Kafka → absurd bureaucracy)", "Historical references: 'Titanic moment' (doomed inevitability), 'Shakespearean tragedy' (noble downfall)", "Film/pop culture: 'Mission Impossible' (seemingly impossible task), 'Star Wars moment' (good vs evil confrontation)", "Proverbs and idioms embed cultural wisdom: 'Don't count chickens before they hatch' (don't assume success)", "Understanding context-dependent meaning: same phrase means differently to different cultures"],
+        [("Orwellian", "orwelliano / distópico", "The government's surveillance was Orwellian in scale."), ("Kafkaesque", "kafkiano / absurdo burocrático", "Navigating the bureaucracy felt Kafkaesque."), ("Shakespearean", "shakespeariano / trágico", "Their romance had a Shakespearean quality."), ("allude", "aludir / hacer referencia", "The author alludes to classical mythology."), ("metaphorical", "metafórico / figurado", "His language was highly metaphorical and cultural.")],
+        [("'That's an Orwellian nightmare' — understood by those familiar with 1984", "Literary allusion"), ("'A Titanic moment was inevitable' — understood as doomed", "Historical reference"), ("Cultural allusions assume shared knowledge", "Context-dependent meaning"), ("'Don't put all your eggs in one basket' — embedded cultural wisdom", "Proverb understanding")],
+        "Find 5 allusions in English literature, film, or news. Explain the cultural reference and its meaning. What would be lost if the allusion were not understood?",
+        "'Orwellian' is or-WEL-ee-an (4 syllables, stress 2nd). 'Kafkaesque' is kah-ka-ESKE (3 syllables, stress 3rd). 'Allude' is uh-LOOD (2 syllables, stress 2nd). Cultural references are pronounced distinctively to signal sophistication.",
+        [("English Allusions and References", "Papa English", null), ("Literary and Cultural References", "Cambridge English", null), ("Understanding Allusions in English", "English Speeches", null)]
+    );
+
+    private static string C2L12() => C(
+        "Mastery of ambiguity means understanding that English embraces multiple meanings intentionally. Puns, wordplay, irony, and deliberate vagueness are tools for sophisticated communication. C2 proficiency includes producing ambiguous language when appropriate and recognizing layers of meaning.",
+        ["Ambiguity can be intentional: poets use it for depth, advertisers for memorable messaging, speakers for diplomacy", "Lexical ambiguity: 'bank' (financial institution vs. riverbank), 'light' (illumination vs. weight)", "Syntactic ambiguity: 'I saw the man with the telescope' — who has the telescope?", "Pragmatic ambiguity: 'That's interesting' can be genuine interest OR subtle criticism", "Recognizing and using ambiguity marks native sophistication — not confusion, but intentional layering"],
+        [("ambiguity", "ambigüedad / falta de claridad", "The ambiguity in the statement allows multiple interpretations."), ("wordplay", "juego de palabras", "The poet uses wordplay for humorous effect."), ("irony", "ironía", "Her ironic comment masked genuine concern."), ("pun", "juego de palabras / calambur", "The pun relies on double meaning."), ("equivocal", "equívoco / ambiguo", "His equivocal response left everyone confused.")],
+        [("'That's a brilliant idea!' — Could be genuine praise OR sarcastic criticism (pragmatic ambiguity)", "Intentional ambiguity"), ("'Light' can mean brightness OR lack of weight (lexical ambiguity)", "Multiple meanings"), ("'I saw the boy with the binoculars' — Who has them? (syntactic ambiguity)", "Sentence structure creates ambiguity"), ("Poetry intentionally uses ambiguity to create multiple layers of meaning", "Artistic ambiguity")],
+        "Write a short paragraph (4–6 sentences) that intentionally uses ambiguity at least 3 times. The meaning should be clear in context but allow for alternative interpretations. Then explain where the ambiguity lies.",
+        "'Ambiguity' is am-BIG-yoo-i-tee (5 syllables, stress 2nd). 'Equivocal' is eh-KWIV-uh-kal (4 syllables, stress 2nd). 'Irony' is EYE-ruh-nee (3 syllables, stress 1st). These words are pronounced distinctly — they signal advanced discourse.",
+        [("Ambiguity in English Language", "Academic English", null), ("Intentional Ambiguity in Literature", "Cambridge English", null), ("Playing with Meaning in English", "English Speeches", null)]
     );
 
     // ── Helpers ───────────────────────────────────────────────────────────────
