@@ -21,10 +21,10 @@ public class AssessmentsController : BaseApiController
     public async Task<IActionResult> SubmitResult([FromBody] SubmitAssessmentResultRequest request)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-        var command = new SubmitAssessmentResultCommand(userId, request.AssessmentId, request.Score);
+        var command = new SubmitAssessmentResultCommand(userId, request.AssessmentId, request.Answers);
         var id = await Mediator.Send(command);
         return Ok(new { id });
     }
 }
 
-public record SubmitAssessmentResultRequest(Guid AssessmentId, int Score);
+public record SubmitAssessmentResultRequest(Guid AssessmentId, List<AssessmentAnswer> Answers);

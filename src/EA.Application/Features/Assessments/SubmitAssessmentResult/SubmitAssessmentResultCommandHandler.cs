@@ -20,12 +20,33 @@ public class SubmitAssessmentResultCommandHandler : IRequestHandler<SubmitAssess
             .FirstOrDefaultAsync(a => a.Id == request.AssessmentId, cancellationToken)
             ?? throw new InvalidOperationException($"Assessment {request.AssessmentId} not found.");
 
+        // Validate answers against the database
+        var exerciseIds = request.Answers.Select(a => a.ExerciseId).ToList();
+        var exercises = await _context.Exercises
+            .Where(e => exerciseIds.Contains(e.Id))
+            .ToListAsync(cancellationToken);
+
+        var totalAnswers = request.Answers.Count;
+        var correctAnswers = 0;
+
+        foreach (var answer in request.Answers)
+        {
+            var exercise = exercises.FirstOrDefault(e => e.Id == answer.ExerciseId);
+            var isCorrect = exercise != null &&
+                           string.Equals(exercise.CorrectAnswer, answer.Answer, StringComparison.OrdinalIgnoreCase);
+
+            if (isCorrect) correctAnswers++;
+        }
+
+        // Calculate score as percentage
+        var score = totalAnswers == 0 ? 0 : (correctAnswers * 100) / totalAnswers;
+
         var result = new AssessmentResult
         {
             UserId = request.UserId,
             AssessmentId = request.AssessmentId,
-            Score = request.Score,
-            IsPassed = request.Score >= assessment.PassScore,
+            Score = score,
+            IsPassed = score >= assessment.PassScore,
             CompletedAt = DateTime.UtcNow
         };
 

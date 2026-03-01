@@ -8,6 +8,6 @@ public class SubmitAssessmentResultCommandValidator : AbstractValidator<SubmitAs
     {
         RuleFor(x => x.UserId).NotEmpty();
         RuleFor(x => x.AssessmentId).NotEmpty();
-        RuleFor(x => x.Score).GreaterThanOrEqualTo(0);
+        RuleFor(x => x.Answers).NotEmpty().WithMessage("At least one answer is required.");
     }
 }
