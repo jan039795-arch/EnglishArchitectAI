@@ -179,10 +179,19 @@ public static class DataSeeder
         var m2 = G("a2020000-0000-0000-0000-000000000002");
         var m3 = G("a2030000-0000-0000-0000-000000000003");
         var m4 = G("a2040000-0000-0000-0000-000000000004");
-        ctx.Modules.Add(NewModule(m1, levelId, "Present Simple", "Master everyday actions and habits.", 1, 3));
-        ctx.Modules.Add(NewModule(m2, levelId, "Past Simple", "Talk about finished events in the past.", 2, 3));
-        ctx.Modules.Add(NewModule(m3, levelId, "Adjectives & Possession", "Describe with adjectives, comparatives, and possessives.", 3, 3));
-        ctx.Modules.Add(NewModule(m4, levelId, "Continuous Tenses", "Master the Present Continuous for current actions.", 4, 3));
+        var m5 = G("a2050000-0000-0000-0000-000000000005");
+        var m6 = G("a2060000-0000-0000-0000-000000000006");
+        var m7 = G("a2070000-0000-0000-0000-000000000007");
+        var m8 = G("a2080000-0000-0000-0000-000000000008");
+
+        ctx.Modules.Add(NewModule(m1, levelId, "Module 1: am/is/are (Essential Grammar Unit 1)", "Master the verb 'to be' in present tense — the foundation of English.", 1, 3));
+        ctx.Modules.Add(NewModule(m2, levelId, "Module 2: Present Continuous (Units 3-4)", "Learn current actions and ongoing processes with -ing forms.", 2, 3));
+        ctx.Modules.Add(NewModule(m3, levelId, "Module 3: Present Simple (Units 5-6)", "Master regular routines and habitual actions.", 3, 3));
+        ctx.Modules.Add(NewModule(m4, levelId, "Module 4: Have/Got & Past was/were (Units 9-10)", "Express possession and describe the past.", 4, 3));
+        ctx.Modules.Add(NewModule(m5, levelId, "Module 5: Past Simple (Units 11-12)", "Tell stories about finished events with regular and irregular verbs.", 5, 3));
+        ctx.Modules.Add(NewModule(m6, levelId, "Module 6: Modals: can/could (Units 29-30)", "Express ability, permission, and possibility.", 6, 3));
+        ctx.Modules.Add(NewModule(m7, levelId, "Module 7: Modals: should/must (Units 31-32)", "Give advice and express obligation.", 7, 3));
+        ctx.Modules.Add(NewModule(m8, levelId, "Module 8: Questions & Negatives (Units 44-48)", "Form questions and negative sentences correctly.", 8, 3));
 
         var l1 = G("a2b10000-0000-0000-0000-000000000001");
         var l2 = G("a2b20000-0000-0000-0000-000000000002");
@@ -192,62 +201,150 @@ public static class DataSeeder
         var l6 = G("a2b60000-0000-0000-0000-000000000006");
         var l7 = G("a2b70000-0000-0000-0000-000000000007");
         var l8 = G("a2b80000-0000-0000-0000-000000000008");
-        ctx.Lessons.Add(NewLesson(l1, m1, "Third Person Singular", SkillType.Writing, 1, A2L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "Negatives & Questions", SkillType.Writing, 2, A2L2()));
-        ctx.Lessons.Add(NewLesson(l3, m2, "Regular Past Verbs", SkillType.Writing, 1, A2L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Irregular Past Verbs", SkillType.Writing, 2, A2L4()));
-        ctx.Lessons.Add(NewLesson(l5, m3, "Adjectives", SkillType.Reading, 1, A2L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Comparatives & Superlatives", SkillType.Reading, 2, A2L6()));
-        ctx.Lessons.Add(NewLesson(l7, m3, "Possessive Adjectives", SkillType.Reading, 3, A2L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Present Continuous", SkillType.Writing, 1, A2L8()));
+        var l9 = G("a2b90000-0000-0000-0000-000000000009");
+        var l10 = G("a2b10000-0000-0000-0000-000000000010");
+        var l11 = G("a2b11000-0000-0000-0000-000000000011");
+        var l12 = G("a2b12000-0000-0000-0000-000000000012");
+        var l13 = G("a2b13000-0000-0000-0000-000000000013");
+        var l14 = G("a2b14000-0000-0000-0000-000000000014");
+        var l15 = G("a2b15000-0000-0000-0000-000000000015");
+        var l16 = G("a2b16000-0000-0000-0000-000000000016");
 
+        // Module 1: am/is/are
+        ctx.Lessons.Add(NewLesson(l1, m1, "I am / You are / He/She is", SkillType.Reading, 1, A2L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "Negatives: I'm not / isn't / aren't", SkillType.Writing, 2, A2L2()));
+
+        // Module 2: Present Continuous
+        ctx.Lessons.Add(NewLesson(l3, m2, "What are you doing right now?", SkillType.Listening, 1, A2L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "Present Continuous: am/is/are + -ing", SkillType.Writing, 2, A2L4()));
+
+        // Module 3: Present Simple
+        ctx.Lessons.Add(NewLesson(l5, m3, "I work, you work, he/she works", SkillType.Reading, 1, A2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Do you? / Does he? / Do they?", SkillType.Writing, 2, A2L6()));
+
+        // Module 4: Have/Got & was/were
+        ctx.Lessons.Add(NewLesson(l7, m4, "I have got / Have you got?", SkillType.Reading, 1, A2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "I was / You were / He was", SkillType.Writing, 2, A2L8()));
+
+        // Module 5: Past Simple
+        ctx.Lessons.Add(NewLesson(l9, m5, "I worked / I went / I saw", SkillType.Reading, 1, A2L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Did you? / What did you do?", SkillType.Writing, 2, A2L10()));
+
+        // Module 6: can/could
+        ctx.Lessons.Add(NewLesson(l11, m6, "I can... / You can't... / Can you?", SkillType.Reading, 1, A2L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Could = past ability", SkillType.Writing, 2, A2L12()));
+
+        // Module 7: should/must
+        ctx.Lessons.Add(NewLesson(l13, m7, "You should / You must / You mustn't", SkillType.Reading, 1, A2L13()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "I shouldn't / Should I?", SkillType.Writing, 2, A2L14()));
+
+        // Module 8: Questions & Negatives
+        ctx.Lessons.Add(NewLesson(l15, m8, "Forming questions: word order", SkillType.Reading, 1, A2L15()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Negative sentences: don't / doesn't / didn't", SkillType.Writing, 2, A2L16()));
+
+        // Module 1: am/is/are
         AddExercises(ctx, l1, "a2e1",
-            MC("She ___ to school every day.", "goes", "go", "going", "goed", "present-simple,third-person"),
-            MC("He ___ coffee every morning.", "drinks", "drink", "drinked", "drinking", "present-simple,third-person"),
-            MC("The train ___ at 9 o'clock.", "arrives", "arrive", "arrived", "arriving", "present-simple,third-person"),
-            FB("My brother ___ in London. (live)", "lives", "present-simple"));
+            MC("I ___ a student.", "am", "are", "is", "be", "be-am-is-are"),
+            MC("She ___ a teacher.", "is", "am", "are", "be", "be-am-is-are"),
+            MC("You ___ happy.", "are", "am", "is", "be", "be-am-is-are"),
+            FB("They ___ friends. (plural)", "are", "be-am-is-are"));
 
         AddExercises(ctx, l2, "a2e2",
-            MC("___ you like pizza?", "Do", "Does", "Is", "Are", "present-simple,questions"),
-            MC("She ___ not speak French.", "does", "do", "is", "has", "present-simple,negatives"),
-            MC("He doesn't ___ early.", "wake up", "wakes up", "woke up", "waking up", "present-simple,negatives"),
-            FB("___ she work here? (auxiliary)", "Does", "present-simple,questions"));
+            MC("I ___ not tired.", "am", "are", "is", "be", "negatives-be"),
+            MC("She ___ not at home.", "is", "am", "are", "be", "negatives-be"),
+            MC("You ___ not late.", "are", "am", "is", "be", "negatives-be"),
+            FB("He ___ not a doctor. (negative)", "is", "negatives-be"));
 
+        // Module 2: Present Continuous
         AddExercises(ctx, l3, "a2e3",
-            MC("Yesterday I ___ to the park.", "walked", "walk", "walking", "walks", "past-simple,regular"),
-            MC("She ___ the dishes after dinner.", "washed", "wash", "washing", "washes", "past-simple,regular"),
-            MC("We ___ our homework on time.", "finished", "finish", "finishing", "finishes", "past-simple,regular"),
-            FB("He ___ for two hours. (work)", "worked", "past-simple"));
+            MC("What ___ you ___? (doing right now)", "are-doing", "am doing", "is doing", "are do", "present-continuous"),
+            MC("She ___ a book now.", "is reading", "are reading", "am reading", "reads", "present-continuous"),
+            MC("They ___ football at the moment.", "are playing", "is playing", "am playing", "plays", "present-continuous"),
+            FB("I ___ English. (study)", "am studying", "present-continuous"));
 
         AddExercises(ctx, l4, "a2e4",
-            MC("I ___ a great film last week.", "saw", "see", "seen", "sees", "past-simple,irregular"),
-            MC("She ___ to Paris last summer.", "went", "go", "gone", "goes", "past-simple,irregular"),
-            MC("We ___ dinner together.", "had", "have", "has", "having", "past-simple,irregular"),
-            FB("I ___ up early this morning. (get)", "got", "past-simple,irregular"));
+            MC("He ___ not ___ing right now.", "is-work", "am working", "are working", "works", "present-continuous-negative"),
+            MC("We ___ not sleeping.", "are", "am", "is", "be", "present-continuous-negative"),
+            MC("She ___ eating lunch.", "is", "am", "are", "be", "present-continuous,negative"),
+            FB("___ you watching TV? (question)", "Are", "present-continuous,questions"));
 
+        // Module 3: Present Simple
         AddExercises(ctx, l5, "a2e5",
-            MC("She has a ___ red car.", "beautiful", "beautifuly", "beautifully", "beautifull", "adjectives"),
-            MC("The water is very ___.", "cold", "colds", "coldly", "colder", "adjectives"),
-            MC("He is ___ and kind.", "tall", "tallly", "more tall", "taller", "adjectives"),
-            FB("This is a very ___ book. (interesting)", "interesting", "adjectives"));
+            MC("He ___ to school every day.", "goes", "go", "going", "went", "present-simple"),
+            MC("I ___ coffee in the morning.", "drink", "drinks", "drinking", "drank", "present-simple"),
+            MC("They ___ football on weekends.", "play", "plays", "playing", "played", "present-simple"),
+            FB("She ___ in London. (live)", "lives", "present-simple"));
 
         AddExercises(ctx, l6, "a2e6",
-            MC("My house is ___ than yours.", "bigger", "big", "more bigger", "biggest", "comparative"),
-            MC("This is the ___ film I've ever seen.", "best", "better", "good", "more better", "superlative"),
-            MC("Winter is ___ than autumn.", "colder", "more cold", "coldest", "cold", "comparative"),
-            FB("She is the ___ student in the class. (smart)", "smartest", "superlative"));
+            MC("___ he like pizza?", "Does", "Do", "Is", "Are", "present-simple,questions"),
+            MC("I ___ not like spicy food.", "do", "does", "am", "have", "present-simple,negatives"),
+            MC("She ___ not speak Italian.", "does", "do", "is", "has", "present-simple,negatives"),
+            FB("___ you work here? (question)", "Do", "present-simple"));
 
+        // Module 4: Have/Got & was/were
         AddExercises(ctx, l7, "a2e7",
-            MC("___ house is next to ours.", "Their", "Theirs", "There", "They", "possessive"),
-            MC("Is this book ___? — No, it's hers.", "yours", "your", "mine", "his", "possessive-pronoun"),
-            MC("The cat lost ___ toy.", "its", "it's", "its'", "it is", "possessive,its-vs-its"),
-            FB("___ car is in the garage. (my)", "My", "possessive"));
+            MC("I ___ a car.", "have got", "has got", "am got", "be got", "have-got"),
+            MC("She ___ two brothers.", "has got", "have got", "am got", "are got", "have-got"),
+            MC("___ you got a pen?", "Have", "Has", "Are", "Do", "have-got,questions"),
+            FB("They ___ got three children. (present)", "have", "have-got"));
 
         AddExercises(ctx, l8, "a2e8",
-            MC("She ___ a book right now.", "is reading", "reads", "read", "reading", "present-continuous"),
-            MC("They ___ in the park.", "are playing", "play", "is playing", "plays", "present-continuous"),
-            MC("I ___ on a project this week.", "am working", "work", "works", "is working", "present-continuous"),
-            FB("He ___ the phone. (use)", "is using", "present-continuous"));
+            MC("I ___ at home yesterday.", "was", "were", "am", "be", "was-were"),
+            MC("She ___ in the office.", "was", "were", "is", "be", "was-were"),
+            MC("You ___ late for class.", "were", "was", "are", "be", "was-were"),
+            FB("They ___ happy. (past)", "were", "was-were"));
+
+        // Module 5: Past Simple
+        AddExercises(ctx, l9, "a2e9",
+            MC("Yesterday I ___ to the park.", "went", "go", "going", "goes", "past-simple,irregular"),
+            MC("She ___ a beautiful dress.", "wore", "wear", "wearing", "wears", "past-simple,irregular"),
+            MC("We ___ an excellent film.", "saw", "see", "seeing", "sees", "past-simple,irregular"),
+            FB("He ___ his car. (lose)", "lost", "past-simple,regular"));
+
+        AddExercises(ctx, l10, "a2e10",
+            MC("___ she go to school yesterday?", "Did", "Does", "Do", "Will", "past-simple,questions"),
+            MC("What ___ you do last weekend?", "did", "do", "does", "will", "past-simple,questions"),
+            MC("___ they at home?", "Were", "Was", "Are", "Is", "past-simple,was-were"),
+            FB("___ you enjoy the party? (question)", "Did", "past-simple"));
+
+        // Module 6: can/could
+        AddExercises(ctx, l11, "a2e11",
+            MC("I ___ speak English.", "can", "can't", "could", "cans", "modal-can"),
+            MC("She ___ swim very well.", "can", "cans", "cannot", "can't", "modal-can"),
+            MC("___ you drive a car?", "Can", "Can't", "Could", "Cans", "modal-can,questions"),
+            FB("They ___ not play tennis. (ability)", "can", "modal-can"));
+
+        AddExercises(ctx, l12, "a2e12",
+            MC("When I was young, I ___ climb trees easily.", "could", "can", "cans", "couldn't", "modal-could,ability"),
+            MC("He ___ not swim when he was a child.", "could", "can", "cans", "could't", "modal-could"),
+            MC("___ you ride a bike when you were five?", "Could", "Can", "Would", "Did", "modal-could,questions"),
+            FB("She ___ speak French in her youth. (ability)", "could", "modal-could"));
+
+        // Module 7: should/must
+        AddExercises(ctx, l13, "a2e13",
+            MC("You ___ eat vegetables.", "should", "must", "can", "could", "modal-should"),
+            MC("She ___ see a doctor about her cough.", "should", "can", "could", "will", "modal-should"),
+            MC("You ___ not stay up too late.", "should", "must", "can", "will", "modal-should,negatives"),
+            FB("I ___ study harder for the exam. (advice)", "should", "modal-should"));
+
+        AddExercises(ctx, l14, "a2e14",
+            MC("You ___ wear a seatbelt in the car.", "must", "should", "can", "could", "modal-must"),
+            MC("Students ___ not use their phones in class.", "must", "should", "can", "will", "modal-must,negatives"),
+            MC("___ I wear formal clothes?", "Must", "Should", "Can", "Will", "modal-must,questions"),
+            FB("You ___ arrive on time. (obligation)", "must", "modal-must"));
+
+        // Module 8: Questions & Negatives
+        AddExercises(ctx, l15, "a2e15",
+            MC("___ does she work?", "Where", "What", "When", "How", "questions,word-order"),
+            MC("___ old are you?", "How", "What", "Where", "When", "questions,word-order"),
+            MC("What time ___ they arrive?", "do", "does", "are", "did", "questions,word-order"),
+            FB("___ he like ice cream? (yes/no)", "Does", "questions"));
+
+        AddExercises(ctx, l16, "a2e16",
+            MC("I ___ not like coffee.", "don't", "doesn't", "didn't", "don't like", "negatives,present-simple"),
+            MC("She ___ not come to the party.", "doesn't", "don't", "didn't", "isn't", "negatives,present-simple"),
+            MC("They ___ not go to school yesterday.", "didn't", "don't", "doesn't", "aren't", "negatives,past-simple"),
+            FB("We ___ not want to go. (negative)", "don't", "negatives"));
     }
 
     private static void BuildB1Modules(ApplicationDbContext ctx, Guid levelId)
@@ -754,6 +851,86 @@ public static class DataSeeder
         "Write 8 sentences: 4 about things happening right now in your location, and 4 about temporary situations in your life.",
         "'Present Continuous' is pronounced: PREZ-ent CON-tin-you-us. The ING ending is one syllable: 'running' is RUN-ning (2 syllables, not 3).",
         [("Present Continuous Tense", "Papa English", null), ("English Present Continuous", "Learn English with EnglishClass101.com", null), ("BE + ING Form English Grammar", "English Speeches", null)]
+    );
+
+    private static string A2L9() => C(
+        "Past Simple describes completed actions in the past. Regular verbs add -ED (worked, played), while irregular verbs have unique forms (went, saw, ate). Use it for finished events, life stories, and historical facts.",
+        ["Regular: base + -ED (work→worked, play→played, walk→walked)", "Irregular: unique forms (go→went, see→saw, eat→ate, have→had, be→was/were)", "Time markers: yesterday, last week, in 1990, ago, when...", "All subjects use the same form: I went, he went, they went", "Negatives: did not (didn't) + base verb"],
+        [("went", "fui", "I went to the park yesterday."), ("saw", "vi", "She saw him last week."), ("ate", "comí", "They ate pizza for dinner."), ("worked", "trabajé", "He worked here for 5 years."), ("had", "tuve", "We had a great time.")],
+        [("I went to London last summer.", "Simple past action"), ("She saw an interesting film.", "Completed action"), ("They worked hard yesterday.", "Regular past verb"), ("We had dinner at 7pm.", "Irregular past verb")],
+        "Write 8 sentences about your last holiday or important past event using past simple.",
+        "Irregular verbs are common: go/went, see/saw, eat/ate, get/got, have/had. Memorizing 20 common irregular verbs helps enormously.",
+        [("Past Simple Tense", "Papa English", null), ("English Past Simple", "Learn English with EnglishClass101.com", null), ("Past Simple Grammar", "English Speeches", null)]
+    );
+
+    private static string A2L10() => C(
+        "Form questions in past simple with: Did + subject + base verb? 'Did you go?' For 'be', use: Was/Were + subject? 'Were they at home?'",
+        ["Yes/No questions: Did you...? / Were you...?", "WH- questions: What did you do? Where were they? When did she arrive?", "Wh-words: What, Where, When, Why, Who, How, Which", "Short answers: Yes, I did. / No, I didn't. | Yes, he was. / No, she wasn't.", "Subject + auxiliary: 'What did she say?' NOT 'What she did say?'"],
+        [("Did you go?", "¿Fuiste?", "Did you go to the party?"), ("Where were you?", "¿Dónde estabas?", "Where were you yesterday?"), ("What did she do?", "¿Qué hizo ella?", "What did she do last weekend?"), ("When did they arrive?", "¿Cuándo llegaron?", "When did they arrive?"), ("Was it good?", "¿Fue bueno?", "Was it good?")],
+        [("Did you enjoy the film? — Yes, I did.", "Yes/no question"), ("What did he say? — He said hello.", "Wh- question"), ("Were they happy? — No, they weren't.", "Was/were question"), ("Who did you meet? — I met my friend.", "Who question")],
+        "Write 10 past simple questions: 5 yes/no questions and 5 wh- questions.",
+        "In questions, the auxiliary (did/was/were) comes BEFORE the subject. Wrong: 'What you did?' Correct: 'What did you do?'",
+        [("Asking Questions in Past Simple", "Learn English with EnglishClass101.com", null), ("Past Simple Questions", "English Speeches", null)]
+    );
+
+    private static string A2L11() => C(
+        "CAN expresses ability: 'I can swim.' Negatives: 'I can't (cannot) swim.' Questions: 'Can you swim?' Use CAN for present ability; COULD for past ability.",
+        ["Present: can (I can) / can't (I cannot) / can he?", "Past: could (I could) / couldn't (I could not) / could he?", "Meaning: ability, permission, possibility", "No -s: 'He CAN swim' — NOT 'He cans swim'", "Informal: 'Can I...?' for permission. Formal: 'May I...?'"],
+        [("can", "poder (ability)", "I can play guitar."), ("can't", "no poder", "She can't drive yet."), ("could", "pude/podía (past)", "He could swim when he was young."), ("couldn't", "no pude", "I couldn't open the door."), ("Can you?", "¿Puedes?", "Can you help me?")],
+        [("I can cook Italian food.", "Present ability"), ("She can't speak German.", "Negative ability"), ("Could you swim as a child?", "Past ability"), ("I couldn't find my keys.", "Negative past ability")],
+        "Write 6 sentences: 3 about present abilities and 3 about past abilities using can/could.",
+        "CAN is pronounced with a short stress: CAN (strong form) vs. can (weak form in 'I can go' = 'I kən go').",
+        [("Modal Verb: CAN", "Papa English", null), ("Can and Could English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string A2L12() => C(
+        "COULD for past ability: 'He could run fast when he was young.' Form: could + base verb. Negatives: couldn't. Questions: Could you...?",
+        ["COULD = past ability or past permission", "Regular form for all subjects: I could, you could, he could", "Negatives: couldn't (could not)", "Questions: Could you play football?", "Note: 'could' also means possibility in present (might): 'It could rain tomorrow'"],
+        [("could", "podía/pude", "I could dance well as a child."), ("couldn't", "no podía", "She couldn't speak English before."), ("Could you?", "¿Podías?", "Could you ride a bike?"), ("might", "podría (possibility)", "It could rain tomorrow."), ("was able to", "pude lograr", "He was able to finish the race.")],
+        [("When I was younger, I could climb trees.", "Past ability"), ("She couldn't cook when she was 15.", "Negative past ability"), ("Could he swim? — Yes, he could.", "Question and short answer"), ("I couldn't understand the lecture.", "Negative past ability")],
+        "Write about 5 things you COULD do as a child but can't do now, and 5 things you COULDN'T do but CAN do now.",
+        "COULD is the past form of CAN. When talking about past events, always use COULD for ability: 'When I was 5, I could...' NOT 'I can...'",
+        [("Could - Past Tense of Can", "Learn English with EnglishClass101.com", null), ("Modals of Ability", "English Speeches", null)]
+    );
+
+    private static string A2L13() => C(
+        "SHOULD gives advice: 'You should see a doctor.' Negatives: 'You shouldn't smoke.' Questions: 'Should I...?' Use SHOULD for recommendations and good ideas.",
+        ["Form: should + base verb", "All subjects same form: I should, you should, he should", "Meaning: advice, good ideas, recommendations", "Negatives: shouldn't (should not)", "Common: 'You should...', 'I think you should...', 'They shouldn't...'"],
+        [("should", "debería", "You should drink more water."), ("shouldn't", "no debería", "She shouldn't work so hard."), ("should I?", "¿Debería?", "Should I call him?"), ("advice", "consejo", "Can you give me some advice?"), ("recommend", "recomendar", "I recommend you see that film.")],
+        [("You should eat more vegetables.", "Health advice"), ("She shouldn't stay up so late.", "Negative advice"), ("Should we go home now?", "Advice question"), ("I think you should apologize.", "Polite advice")],
+        "Give advice: Write 8 sentences with SHOULD/SHOULDN'T to advise a friend on health, study, work, and relationships.",
+        "SHOULD is about good ideas and advice. Don't confuse with MUST (obligation). 'You should exercise' = good idea. 'You must work' = obligation.",
+        [("Modal: SHOULD", "Papa English", null), ("Should vs Must", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string A2L14() => C(
+        "SHOULD in questions and negatives: 'Should I...?' / 'You shouldn't...' Use for seeking advice or suggesting against something.",
+        ["Questions: Should I...? / Should he...? / Should we...?", "Negatives: shouldn't (should not)", "Responses: 'Yes, you should.' / 'No, you shouldn't.'", "Variations: 'I think you should...' / 'Maybe you should...'", "Difference from MUST: SHOULD = advice; MUST = obligation or necessity"],
+        [("Should I?", "¿Debería?", "Should I wear a coat?"), ("shouldn't", "no debería", "You shouldn't be rude."), ("think", "creer", "I think you should rest."), ("maybe", "quizá", "Maybe you should call him."), ("ought to", "deberías", "You ought to try harder.")],
+        [("Should I study tonight? — Yes, you should.", "Advice question"), ("You shouldn't forget your appointment.", "Negative advice"), ("Should we help them? — Yes, we should.", "Group advice question"), ("She shouldn't drive tired.", "Safety advice")],
+        "Seek and give advice: Write 10 should/shouldn't questions and answers about common situations.",
+        "In American English, 'I should' sounds like 'I shud' /ʃəd/. In British English, it's more clearly pronounced.",
+        [("Should Questions", "Learn English with EnglishClass101.com", null), ("Giving Advice with SHOULD", "English Speeches", null)]
+    );
+
+    private static string A2L15() => C(
+        "Form questions with correct word order. For YES/NO questions: Auxiliary + subject + verb? 'Do you like tea?' For WH- questions: WH- word + auxiliary + subject + verb? 'Where do you live?'",
+        ["YES/NO: Do you...? / Does he...? / Did they...? / Can you...? / Will you...?", "WH- questions: Where do you...? / What did he...? / Why can't she...? / Who is...?", "With 'be': Are you...? / Is he...? / Were they...? / Will you be...?", "Inversion: Subject and auxiliary swap positions", "No auxiliary with 'be': 'Are you happy?' NOT 'Do you are happy?'"],
+        [("Where do you live?", "¿Dónde vives?", "Where do you live? — In Madrid."), ("What did you do?", "¿Qué hiciste?", "What did you do yesterday?"), ("Can you help?", "¿Puedes ayudar?", "Can you help me please?"), ("Is she here?", "¿Está aquí?", "Is she here yet?"), ("Why did they leave?", "¿Por qué se fueron?", "Why did they leave early?")],
+        [("Do you like pizza? — Yes, I do.", "Yes/no with DO"), ("Where is your house?", "WH- with BE"), ("What time does the train arrive?", "WH- with auxiliary"), ("Can you swim? — No, I can't.", "Question with modal")],
+        "Write 15 questions: 5 yes/no questions, 5 WH- questions, and 5 modal questions.",
+        "Question word order is critical. Wrong: 'Where you live?' Right: 'Where do you live?' The auxiliary/verb comes before the subject.",
+        [("English Question Formation", "Papa English", null), ("Question Words in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string A2L16() => C(
+        "Form negatives correctly. Present simple: don't/doesn't + base verb. Past simple: didn't + base verb. 'I don't like coffee.' 'She doesn't work here.' 'They didn't come yesterday.'",
+        ["Present: don't (I, you, we, they) / doesn't (he, she, it) + base verb", "Past: didn't + base verb (all subjects same form)", "With 'be': I'm not, he isn't, they aren't, I wasn't, they weren't", "Double negative WRONG: 'I don't want nothing' → use 'I don't want anything'", "Contractions: don't = do not, doesn't = does not, didn't = did not"],
+        [("don't", "no", "I don't like spicy food."), ("doesn't", "no (3ª person)", "He doesn't work here."), ("didn't", "no (pasado)", "They didn't come yesterday."), ("isn't", "no es", "She isn't happy."), ("weren't", "no eran", "They weren't at home.")],
+        [("I don't speak French.", "Present negative"), ("She doesn't have a car.", "Present negative - 3rd person"), ("We didn't see the film.", "Past negative"), ("He isn't a teacher.", "Negative with be"), ("They weren't late.", "Negative was/were")],
+        "Write 12 negative sentences: 4 present simple negatives, 4 past simple negatives, and 4 negatives with 'be'.",
+        "Don't use double negatives in English. Say 'I don't want anything' NOT 'I don't want nothing.' This is a common mistake from Spanish speakers.",
+        [("Negative Sentences in English", "Learn English with EnglishClass101.com", null), ("English Negatives", "English Speeches", null)]
     );
 
     private static string B1L1() => C(
