@@ -536,10 +536,19 @@ public static class DataSeeder
         var m2 = G("b2020000-0000-0000-0000-000000000002");
         var m3 = G("b2030000-0000-0000-0000-000000000003");
         var m4 = G("b2040000-0000-0000-0000-000000000004");
-        ctx.Modules.Add(NewModule(m1, levelId, "Passive Voice", "Shift focus from agent to action.", 1, 5));
-        ctx.Modules.Add(NewModule(m2, levelId, "Reported Speech", "Report what others said accurately.", 2, 5));
-        ctx.Modules.Add(NewModule(m3, levelId, "Unreal Situations & Emphasis", "Express wishes and add emphasis with cleft sentences.", 3, 5));
-        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Structures & Vocabulary", "Phrasal verbs, quantifiers, and precise expression.", 4, 5));
+        var m5 = G("b2050000-0000-0000-0000-000000000005");
+        var m6 = G("b2060000-0000-0000-0000-000000000006");
+        var m7 = G("b2070000-0000-0000-0000-000000000007");
+        var m8 = G("b2080000-0000-0000-0000-000000000008");
+
+        ctx.Modules.Add(NewModule(m1, levelId, "Module 1: -ing and To-infinitive (Units 53-60)", "Master -ing forms and their uses in various contexts.", 1, 2));
+        ctx.Modules.Add(NewModule(m2, levelId, "Module 2: To-infinitive and -ing vs To (Units 61-68)", "Understand the differences and uses of to-infinitive and -ing.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Module 3: Articles and Nouns (Units 69-81)", "Master articles (a, an, the) and noun countability.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Module 4: Pronouns (Units 82-91)", "Use personal, possessive, reflexive, and relative pronouns correctly.", 4, 2));
+        ctx.Modules.Add(NewModule(m5, levelId, "Module 5: Relative Clauses & Adjectives (Units 92-112)", "Form complex sentences with relative clauses and adjectives.", 5, 2));
+        ctx.Modules.Add(NewModule(m6, levelId, "Module 6: Adverbs & Conjunctions (Units 98-120)", "Master adverb placement and coordinating conjunctions.", 6, 2));
+        ctx.Modules.Add(NewModule(m7, levelId, "Module 7: Prepositions Part 1 (Units 121-128)", "Understand complex prepositions and their uses.", 7, 2));
+        ctx.Modules.Add(NewModule(m8, levelId, "Module 8: Prepositions Part 2 & Phrasal Verbs (Units 129-136+)", "Advanced prepositions and productive phrasal verbs.", 8, 2));
 
         var l1 = G("b2b10000-0000-0000-0000-000000000001");
         var l2 = G("b2b20000-0000-0000-0000-000000000002");
@@ -549,62 +558,150 @@ public static class DataSeeder
         var l6 = G("b2b60000-0000-0000-0000-000000000006");
         var l7 = G("b2b70000-0000-0000-0000-000000000007");
         var l8 = G("b2b80000-0000-0000-0000-000000000008");
-        ctx.Lessons.Add(NewLesson(l1, m1, "Present & Past Passive", SkillType.Writing, 1, B2L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "Passive with Modals", SkillType.Writing, 2, B2L2()));
-        ctx.Lessons.Add(NewLesson(l3, m2, "Reporting Statements", SkillType.Writing, 1, B2L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Reporting Questions", SkillType.Writing, 2, B2L4()));
-        ctx.Lessons.Add(NewLesson(l5, m3, "Wish & If Only", SkillType.Writing, 1, B2L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Cleft Sentences", SkillType.Writing, 2, B2L6()));
-        ctx.Lessons.Add(NewLesson(l7, m4, "Advanced Phrasal Verbs", SkillType.Reading, 1, B2L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Quantifiers & Articles", SkillType.Reading, 2, B2L8()));
+        var l9 = G("b2b90000-0000-0000-0000-000000000009");
+        var l10 = G("b2b10000-0000-0000-0000-000000000010");
+        var l11 = G("b2b11000-0000-0000-0000-000000000011");
+        var l12 = G("b2b12000-0000-0000-0000-000000000012");
+        var l13 = G("b2b13000-0000-0000-0000-000000000013");
+        var l14 = G("b2b14000-0000-0000-0000-000000000014");
+        var l15 = G("b2b15000-0000-0000-0000-000000000015");
+        var l16 = G("b2b16000-0000-0000-0000-000000000016");
 
+        // Module 1: -ing and To-infinitive basics
+        ctx.Lessons.Add(NewLesson(l1, m1, "-ing forms and their uses", SkillType.Reading, 1, B2L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "-ing after verbs and prepositions", SkillType.Writing, 2, B2L2()));
+
+        // Module 2: To-infinitive and -ing vs To
+        ctx.Lessons.Add(NewLesson(l3, m2, "To-infinitive uses and structures", SkillType.Reading, 1, B2L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "-ing vs To-infinitive: choosing correctly", SkillType.Writing, 2, B2L4()));
+
+        // Module 3: Articles and Nouns
+        ctx.Lessons.Add(NewLesson(l5, m3, "Articles: a/an/the and zero article", SkillType.Reading, 1, B2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Countable and uncountable nouns", SkillType.Writing, 2, B2L6()));
+
+        // Module 4: Pronouns
+        ctx.Lessons.Add(NewLesson(l7, m4, "Personal and possessive pronouns", SkillType.Reading, 1, B2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Reflexive and relative pronouns", SkillType.Writing, 2, B2L8()));
+
+        // Module 5: Relative Clauses & Adjectives
+        ctx.Lessons.Add(NewLesson(l9, m5, "Defining and non-defining relative clauses", SkillType.Reading, 1, B2L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Adjectives and adverb patterns", SkillType.Writing, 2, B2L10()));
+
+        // Module 6: Adverbs & Conjunctions
+        ctx.Lessons.Add(NewLesson(l11, m6, "Adverb placement and formation", SkillType.Reading, 1, B2L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Coordinating and subordinating conjunctions", SkillType.Writing, 2, B2L12()));
+
+        // Module 7: Prepositions Part 1
+        ctx.Lessons.Add(NewLesson(l13, m7, "Prepositions of time, place, and movement", SkillType.Reading, 1, B2L13()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "Complex prepositions and prepositional phrases", SkillType.Writing, 2, B2L14()));
+
+        // Module 8: Prepositions Part 2 & Phrasal Verbs
+        ctx.Lessons.Add(NewLesson(l15, m8, "Advanced prepositions and uses", SkillType.Reading, 1, B2L15()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Phrasal verbs: advanced patterns and meanings", SkillType.Writing, 2, B2L16()));
+
+        // Module 1: -ing and To-infinitive basics
         AddExercises(ctx, l1, "b2e1",
-            MC("The letter ___ yesterday.", "was written", "wrote", "is written", "has written", "passive,past"),
-            MC("This bridge ___ every year.", "is inspected", "inspects", "was inspecting", "has inspected", "passive,present"),
-            MC("The report must be ___ by Friday.", "submitted", "submit", "submitting", "submits", "passive,modals"),
-            FB("The homework ___ by all students. (must + do, passive)", "must be done", "passive"));
+            MC("___ is my favorite hobby.", "Swimming", "Swim", "To swim", "Swims", "-ing-forms"),
+            MC("I enjoy ___ books in my free time.", "reading", "read", "to read", "reads", "-ing-after-verbs"),
+            MC("She is interested in ___ abroad.", "studying", "study", "to study", "studied", "-ing-after-verbs"),
+            FB("He started ___ piano at age five. (learn)", "learning", "-ing-forms"));
 
         AddExercises(ctx, l2, "b2e2",
-            MC("All complaints ___ in writing.", "should be made", "should make", "must make", "are making", "passive,modals"),
-            MC("The results ___ before Thursday.", "must be analyzed", "must analyze", "analyzed", "are analyzed", "passive,modals"),
-            MC("The package ___ on time.", "was delivered", "delivered", "has deliver", "is deliver", "passive,past"),
-            FB("The decision ___ by the board. (make, past passive)", "was made", "passive"));
+            MC("I'm responsible for ___ the project.", "managing", "manage", "to manage", "managed", "-ing-after-prepositions"),
+            MC("Before ___, check your work.", "leaving", "leave", "to leave", "left", "-ing-after-prepositions"),
+            MC("What's the advantage of ___ early?", "leaving", "leave", "to leave", "left", "-ing-after-prepositions"),
+            FB("After ___ the meeting, we had coffee. (attend)", "attending", "-ing-after-prepositions"));
 
+        // Module 2: To-infinitive and -ing vs To
         AddExercises(ctx, l3, "b2e3",
-            MC("She said she ___ tired.", "was", "is", "were", "had", "reported-speech,statements"),
-            MC("He told me he ___ the answer.", "knew", "knows", "know", "had know", "reported-speech,statements"),
-            MC("They said they ___ going to the party.", "were", "are", "will be", "had", "reported-speech,statements"),
-            FB("She said she ___ the film. (like, report)", "liked", "reported-speech"));
+            MC("She went to the store ___ milk.", "to buy", "buying", "buy", "bought", "to-infinitive-purpose"),
+            MC("My aim is ___ a successful career.", "to build", "building", "build", "built", "to-infinitive"),
+            MC("It's important ___ healthy.", "to stay", "staying", "stay", "stayed", "to-infinitive-important"),
+            FB("We use ___ to go to the beach every summer. (use)", "to", "to-infinitive"));
 
         AddExercises(ctx, l4, "b2e4",
-            MC("He asked me where I ___.", "lived", "live", "am living", "had live", "reported-speech,questions"),
-            MC("She wanted to know if I ___ Spanish.", "spoke", "speak", "am speaking", "had spoke", "reported-speech,questions"),
-            MC("They asked what time it ___.", "was", "is", "were", "has been", "reported-speech,questions"),
-            FB("He asked me if I ___ help. (need, report)", "needed", "reported-speech"));
+            MC("I prefer ___ rather than driving.", "walking", "to walk", "walk", "walked", "-ing-vs-to"),
+            MC("She avoided ___ during the presentation.", "speaking", "to speak", "speak", "spoke", "-ing-vs-to"),
+            MC("Would you like ___ for dinner tonight?", "to eat out", "eating out", "eat out", "ate out", "-ing-vs-to"),
+            FB("I promise ___ on time. (arrive)", "to arrive", "-ing-vs-to"));
 
+        // Module 3: Articles and Nouns
         AddExercises(ctx, l5, "b2e5",
-            MC("I ___ I lived in a sunny country.", "wish", "wishes", "would wish", "wished", "wish,unreal"),
-            MC("If only I ___ studied harder when I had the chance.", "had", "have", "would have", "had had", "wish,past"),
-            MC("She wishes he ___ spend more time with the family.", "would", "will", "can", "could", "wish,future"),
-            FB("I ___ I could turn back time. (wish, present)", "wish", "wish,unreal"));
+            MC("She is ___ doctor.", "a", "an", "the", "-", "articles"),
+            MC("I need ___ advice about my career.", "a", "an", "the", "-", "articles,uncountable"),
+            MC("___ sun rises in the east.", "A", "An", "The", "-", "articles,definite"),
+            FB("He plays ___ guitar very well. (article)", "the", "articles"));
 
         AddExercises(ctx, l6, "b2e6",
-            MC("___ John who won the competition, not Michael.", "It was", "It is", "It were", "It had", "cleft,emphasis"),
-            MC("___ impressed me was his dedication and hard work.", "What", "That", "Which", "Who", "cleft,what"),
-            MC("It ___ last summer that we met for the first time.", "was", "is", "were", "has been", "cleft,time"),
-            FB("It ___ her honesty that I love most about her. (cleft)", "is", "cleft"));
+            MC("There are three ___ in the box.", "boxes", "box", "boxs", "box's", "countable-nouns"),
+            MC("I need some ___ for the cake.", "information", "informations", "inform", "informationing", "uncountable-nouns"),
+            MC("How many ___ do you have?", "children", "child", "childs", "childes", "countable-nouns"),
+            FB("The ___ is delicious. (advice)", "advice", "uncountable"));
 
+        // Module 4: Pronouns
         AddExercises(ctx, l7, "b2e7",
-            MC("I can't ___ with his constant negativity.", "put up", "put on", "put off", "put out", "phrasal-verbs"),
-            MC("She ___ a new strategy to improve sales.", "came up with", "came across", "came into", "came over", "phrasal-verbs"),
-            MC("We need to ___ unnecessary expenses.", "cut down on", "cut off", "cut out", "cut through", "phrasal-verbs"),
-            FB("I ___ an old friend at the supermarket yesterday. (phrasal verb)", "ran into", "phrasal-verbs"));
+            MC("___ and ___ are good friends.", "Me and him", "He and I", "Him and me", "Me and he", "pronouns-personal"),
+            MC("This book is ___.", "mine", "my", "me", "I'm", "pronouns-possessive"),
+            MC("The children enjoyed ___.", "themselves", "themself", "themselves", "theirselves", "pronouns-reflexive"),
+            FB("The woman ___ I met was kind. (relative)", "who", "pronouns-relative"));
 
         AddExercises(ctx, l8, "b2e8",
-            MC("There are ___ people who would agree with that opinion.", "many", "much", "a great deal of", "a little", "quantifiers"),
-            MC("She has ___ experience in this field.", "much", "many", "several", "a few", "quantifiers"),
-            MC("___ student in the class participated in the discussion.", "Each", "Every", "All", "Some", "quantifiers,articles"),
-            FB("I don't want ___ sugar in my tea. (quantifier)", "any", "quantifiers"));
+            MC("___ responsibility is theirs, not ___.", "Their / ours", "There / ours", "Their / hours", "There / hours", "pronouns-possessive"),
+            MC("The student ___ won the prize is talented.", "who", "which", "whose", "what", "pronouns-relative"),
+            MC("I hurt ___.", "myself", "me", "I", "mine", "pronouns-reflexive"),
+            FB("___ is a problem. (this)", "This", "pronouns"));
+
+        // Module 5: Relative Clauses & Adjectives
+        AddExercises(ctx, l9, "b2e9",
+            MC("The book ___ I bought is excellent.", "which", "who", "whose", "where", "relative-clauses"),
+            MC("The woman ___ son is a doctor lives next door.", "whose", "who", "which", "where", "relative-clauses"),
+            MC("I visited the city ___ I was born.", "where", "which", "who", "whose", "relative-clauses"),
+            FB("The person ___ helped me was very kind. (who)", "who", "relative-clauses"));
+
+        AddExercises(ctx, l10, "b2e10",
+            MC("She is a ___ person.", "successful", "success", "successfully", "succeed", "adjectives"),
+            MC("He drives ___.", "carefully", "careful", "care", "cared", "adverbs"),
+            MC("The weather was ___ cold.", "extremely", "extreme", "extremes", "extremed", "adverbs-intensifiers"),
+            FB("This is an ___ opportunity. (excel)", "excellent", "adjectives"));
+
+        // Module 6: Adverbs & Conjunctions
+        AddExercises(ctx, l11, "b2e11",
+            MC("___ she didn't know the answer.", "Probably", "Perhaps", "Likely", "Maybe", "adverbs-modality"),
+            MC("He exercises regularly ___ stay healthy.", "to", "for", "in order to", "so as to", "adverbs-purpose"),
+            MC("The package was delivered ___.", "yesterday", "yesterdaying", "yesterdayed", "yesterdayed", "adverbs-time"),
+            FB("She speaks English ___. (fluent)", "fluently", "adverbs"));
+
+        AddExercises(ctx, l12, "b2e12",
+            MC("He is intelligent, ___ he is lazy.", "but", "because", "although", "so", "conjunctions-coordinating"),
+            MC("I will wait here ___ you return.", "until", "unless", "while", "if", "conjunctions-subordinating"),
+            MC("She was sick; ___, she came to work.", "however", "because", "therefore", "so", "conjunctions-cohesion"),
+            FB("We went to the beach ___ it was sunny. (because)", "because", "conjunctions"));
+
+        // Module 7: Prepositions Part 1
+        AddExercises(ctx, l13, "b2e13",
+            MC("I was born ___ 1990.", "in", "on", "at", "during", "prepositions-time"),
+            MC("The meeting is ___ 3 PM.", "at", "in", "on", "during", "prepositions-time"),
+            MC("The book is ___ the table.", "on", "in", "at", "under", "prepositions-place"),
+            FB("She ran ___ the room. (into)", "into", "prepositions-movement"));
+
+        AddExercises(ctx, l14, "b2e14",
+            MC("He is responsible ___ the project.", "for", "of", "in", "on", "prepositions-complex"),
+            MC("I am interested ___ learning languages.", "in", "on", "at", "of", "prepositions-complex"),
+            MC("She is afraid ___ spiders.", "of", "from", "in", "for", "prepositions-complex"),
+            FB("The solution depends ___ the situation. (on)", "on", "prepositions"));
+
+        // Module 8: Prepositions Part 2 & Phrasal Verbs
+        AddExercises(ctx, l15, "b2e15",
+            MC("I'm looking forward ___ the holidays.", "to", "for", "at", "in", "prepositions-advanced"),
+            MC("He is capable ___ doing difficult work.", "of", "for", "in", "to", "prepositions-advanced"),
+            MC("She is proud ___ her achievements.", "of", "for", "in", "about", "prepositions-advanced"),
+            FB("This company specializes ___ software. (in)", "in", "prepositions"));
+
+        AddExercises(ctx, l16, "b2e16",
+            MC("I ___ the important information in the email.", "picked up", "picked on", "picked out", "picked off", "phrasal-verbs"),
+            MC("We need to ___ this project as soon as possible.", "carry out", "carry on", "carry over", "carry through", "phrasal-verbs"),
+            MC("The meeting ___ until next week.", "put off", "put on", "put down", "put up", "phrasal-verbs"),
+            FB("I ___ with my friend after the argument. (make)", "made up", "phrasal-verbs"));
     }
 
     private static void BuildC1Modules(ApplicationDbContext ctx, Guid levelId)
@@ -1237,6 +1334,86 @@ public static class DataSeeder
         "Write 8 sentences using quantifiers and articles correctly. Write about a topic of interest: travel, education, hobbies, or workplace.",
         "Quantifiers are often weak/unstressed: 'a few STUDENTS', 'much RESPect'. The noun after gets the stress. Articles are completely unstressed: 'ə BOOK', 'ðə BOOK'.",
         [("Quantifiers and Determiners", "Learn English with Papa English", null), ("Articles A An The in English", "Cambridge English", null), ("Countable and Uncountable Nouns", "English Speeches", null)]
+    );
+
+    private static string B2L9() => C(
+        "Relative clauses add information about a noun, making sentences more sophisticated. Defining clauses (no commas) provide essential info; non-defining clauses (with commas) provide extra info. Mastering both creates complex, fluent English.",
+        ["Defining (restrictive): no commas, essential info — 'The person who helped me was kind'", "Non-defining (non-restrictive): commas, extra info — 'John, who is my friend, helped me'", "Relative pronouns: WHO (people), THAT/WHICH (things), WHOSE (possession), WHERE (place), WHEN (time)", "In defining clauses, 'that' is often preferred to 'which': 'The book that I bought...'", "Prepositions at the end (stranded): 'The person I spoke to' NOT 'to whom I spoke'"],
+        [("who", "quien", "The teacher who explained this is excellent."), ("which", "que / cual", "The report which arrived today is important."), ("whose", "cuyo/a", "The student whose project won was talented."), ("where", "donde", "The café where we met is closed."), ("when", "cuando", "The year when I graduated was 2020.")],
+        [("I know someone who speaks five languages.", "Defining with who"), ("Sarah, who is my colleague, gave the presentation.", "Non-defining with who"), ("The book that I read was fascinating.", "Defining with that"), ("The restaurant, which is very popular, is fully booked.", "Non-defining with which"), ("The reason why they left is unclear.", "Relative adverb: why")],
+        "Write 10 sentences: 5 with defining relative clauses and 5 with non-defining relative clauses. Mix different relative pronouns.",
+        "In defining clauses, 'that' is stressed if it's important: 'THE PERSON THAT helped me...' In non-defining clauses with commas, the relative pronoun is lighter.",
+        [("Defining vs Non-defining Clauses", "Papa English", null), ("Relative Clauses in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L10() => C(
+        "Adjectives describe nouns; adverbs describe verbs, adjectives, or other adverbs. Many adverbs are formed by adding -ly to adjectives, but some are irregular. Correct placement and formation are essential for fluent English.",
+        ["Most adverbs: adjective + -ly (quick → quickly, happy → happily)", "Irregular: good → well, fast → fast, hard → hard, late → late", "Adverbs of manner: slowly, carefully, beautifully, 'She spoke gently'", "Adverbs of frequency: always, usually, often, sometimes, rarely, never", "Placement: end of clause (usually), before verb (frequency adverbs), or before adjective (adverbs of degree)"],
+        [("quickly", "rápidamente", "She walked quickly to the station."), ("well", "bien", "He plays the piano well."), ("carefully", "cuidadosamente", "Handle the package carefully."), ("frequently", "frecuentemente", "They visit frequently."), ("extremely", "extremadamente", "The weather was extremely cold.")],
+        [("She drives carefully.", "Adverb of manner at end"), ("I usually arrive early.", "Frequency adverb before verb"), ("This cake is extremely delicious.", "Adverb of degree before adjective"), ("He works hard.", "Adjective/adverb homonyms")],
+        "Write 10 sentences using different types of adverbs: 3 of manner, 3 of frequency, 2 of degree, and 2 irregular adverbs.",
+        "Adverb stress: -ly adverbs are usually unstressed: 'She walked QUICK-ly' — the root syllable gets main stress. Some adverbs have irregular stress: 'FREquent-ly' (stress 1st).",
+        [("Adverbs of Manner", "Papa English", null), ("Adverb Placement in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L11() => C(
+        "Conjunctions connect clauses and sentences. Coordinating conjunctions (and, but, or) join equal clauses. Subordinating conjunctions (because, if, when) join a dependent clause to an independent clause. Mastering them creates smooth, logical writing.",
+        ["Coordinating: and, but, or, nor, so, yet (FANBOYS)", "Subordinating: because, if, when, while, although, unless, before, after, so that, in case", "Dependent clause needs main clause: 'WHEN YOU ARRIVE, call me.' ← dependent + main", "Use commas wisely: after introductory dependent clause, before 'but' (in complex ideas), around non-defining information", "Conjunctive adverbs (however, therefore, moreover) connect ideas between sentences"],
+        [("although", "aunque", "Although it rained, we continued the journey."), ("unless", "a menos que", "Unless you study, you won't pass."), ("so that", "para que / de modo que", "Speak clearly so that everyone understands."), ("in case", "en caso de que", "I'll bring a jacket in case it gets cold."), ("moreover", "además / por otra parte", "The project is delayed. Moreover, costs have increased.")],
+        [("She is smart, but she doesn't work hard.", "Coordinating: contrast"), ("Because it was raining, we stayed inside.", "Subordinating: reason"), ("I will wait here unless you tell me to leave.", "Subordinating: condition"), ("He studied hard; therefore, he passed.", "Conjunctive adverb: result")],
+        "Write 8 sentences: 3 with coordinating conjunctions, 3 with subordinating conjunctions, and 2 with conjunctive adverbs.",
+        "Conjunctions often carry little stress — they're 'glue' words. 'I'll go AND you'll stay' — 'and' is light. But 'although' in an introductory clause gets slight emphasis.",
+        [("Conjunctions in English Grammar", "Papa English", null), ("Subordinating and Coordinating Conjunctions", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L12() => C(
+        "Prepositions express relationships of place, time, direction, and manner. Some prepositions combine with specific verbs (phrasal verbs), while others have multiple meanings depending on context. Understanding prepositions is essential for natural English.",
+        ["Place: in (the box), on (the table), at (home), under (the bridge), between (two people)", "Time: in (2025), on (Monday), at (3 PM), during (the meeting), before (Friday)", "Direction: to, from, towards, into, out of, across, through, along", "Complex: apart from, instead of, because of, with regard to, in addition to", "Some prepositions have multiple meanings: 'at the station' (place), 'at noon' (time), 'at my best' (condition)"],
+        [("in the morning", "por la mañana", "I prefer to exercise in the morning."), ("on time", "a tiempo", "The train arrived on time."), ("at the corner", "en la esquina", "Meet me at the corner."), ("by next week", "para la próxima semana", "The report will be finished by next week."), ("throughout", "durante todo", "The project continued throughout the year.")],
+        [("She was sitting at the cafe.", "Place: at"), ("We'll meet on Friday at 3 PM.", "Time: on + at"), ("The cat jumped onto the table.", "Direction: onto"), ("Instead of complaining, take action.", "Alternative: instead of"), ("Apart from the cost, it's a great idea.", "Exclusion: apart from")],
+        "Write 8 sentences using different prepositions of place, time, and direction. Then write 2 sentences using complex prepositions.",
+        "Prepositions are usually unstressed: 'I'm IN the house' — 'in' is light. But in poetic or emphatic speech, you can stress them: 'It's IN the house, not ON it.'",
+        [("Prepositions of Time, Place, Movement", "Papa English", null), ("English Prepositions", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L13() => C(
+        "Advanced prepositions and multi-word prepositions (in spite of, on account of, by means of) add sophistication to writing. These structures are common in academic and formal English. Mastering them marks B2/C1 level proficiency.",
+        ["With nouns/pronouns: despite/in spite of (+ noun), according to (+ person), owing to (+ reason)", "With gerunds (-ing): in addition to, in order to, as well as, instead of, without", "Time: during, throughout, pending, prior to, subsequent to, following", "Expressions: in view of, in light of, given that, seeing that, considering that", "Formal writing: as to, in regard to, on the subject of, with respect to, in the matter of"],
+        [("in spite of", "a pesar de", "In spite of the rain, the event continued."), ("according to", "según", "According to the report, sales increased."), ("in view of", "en vista de / considerando", "In view of the circumstances, the decision was justified."), ("in order to", "para / a fin de", "I studied hard in order to pass."), ("owing to", "debido a / por", "Owing to the delay, we arrived late.")],
+        [("Despite his youth, he was very mature.", "Despite + noun"), ("In addition to English, she speaks French.", "Multi-word preposition with noun"), ("According to recent statistics, unemployment is falling.", "According to + authority"), ("In view of the evidence, we must reconsider.", "Formal preposition in writing"), ("She succeeded without any help.", "Preposition with -ing form")],
+        "Write 10 sentences using advanced prepositions, particularly multi-word prepositions. Use contexts: academic writing, formal communication, news reports.",
+        "Multi-word prepositions are typically unstressed: 'in SPITE of the rain' — the stress falls on the noun, not the preposition phrase.",
+        [("Advanced Prepositions in English", "Papa English", null), ("Multi-word Prepositions", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L14() => C(
+        "Phrasal verbs combine a verb with an adverb or preposition particle, creating meanings often impossible to guess from the individual words. Advanced phrasal verbs are essential for natural, native-like English across all registers.",
+        ["Separable: look up (information), pick up, hand in, put off, carry out", "Inseparable: look after, come across, run into, look into, put up with", "Transitive: 'I carried out the project' (needs object). Intransitive: 'The car broke down' (no object)", "Particles change meaning: 'put up' (construct/tolerate), 'put on' (wear/perform), 'put off' (postpone/switch off)", "Three-word phrasal verbs: look forward to, run out of, cut down on, look up to, deal with"],
+        [("come across", "encontrarse con", "I came across an old friend at the supermarket."), ("put up with", "aguantar / tolerar", "I can't put up with this behavior."), ("look forward to", "esperar con entusiasmo", "We look forward to hearing from you."), ("run out of", "quedarse sin", "We've run out of coffee."), ("carry out", "realizar / llevar a cabo", "The team carried out the project successfully.")],
+        [("I had to call off the meeting.", "Separate: call + off"), ("She's looking after her sister.", "Inseparable: look after"), ("I'm looking forward to the vacation.", "Three-word phrasal verb"), ("We came across some interesting research.", "Inseparable: come across"), ("He ran into his ex-girlfriend at the store.", "Inseparable: run into")],
+        "Write 10 sentences using a variety of phrasal verbs: 3 separable, 3 inseparable, 2 transitive, and 2 three-word phrasal verbs. Create a coherent narrative about work or study.",
+        "Stress in phrasal verbs: the PARTICLE gets the stress, not the verb: 'CARRY out' (not 'carry OUT'). This distinguishes them from regular verb + preposition.",
+        [("Phrasal Verbs List B2", "Papa English", null), ("Advanced Phrasal Verbs", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L15() => C(
+        "Collocations are word combinations that sound natural to native speakers. Understanding common collocations prevents errors like 'do a mistake' (correct: 'make a mistake'). Mastering collocations marks the difference between non-native and native-like English.",
+        ["Verb collocations: make a decision, take a risk, do homework, have a conversation, reach a conclusion", "Adjective collocations: deeply committed, highly unlikely, firmly believe, utterly exhausted, strongly opposed", "Noun collocations: a dull ache, a bitter end, a blind rage, a cold shoulder, a wild goose chase", "Adverb + adjective: widely known, commonly accepted, deeply sorry, fully qualified, partly responsible", "Collocation errors: NOT 'do a decision' (make), NOT 'take homework' (do), NOT 'have a risk' (take)"],
+        [("make a decision", "tomar una decisión", "She made a difficult decision to leave her job."), ("take a risk", "arriesgarse / asumir un riesgo", "Don't take unnecessary risks."), ("strongly oppose", "oponerserotundamente", "I strongly oppose this proposal."), ("widely known", "ampliamente conocido", "The author is widely known for his novels."), ("bitter end", "fin amargo / hasta el final", "They fought to the bitter end.")],
+        [("We reached a compromise after long discussions.", "Collocation: reach + compromise"), ("She is deeply committed to her work.", "Collocation: deeply + committed"), ("Making a hasty decision often leads to regret.", "Collocation: hasty + decision"), ("The policy faced strong opposition from the public.", "Collocation: strong + opposition"), ("I have a burning desire to travel the world.", "Collocation: burning + desire")],
+        "Write a paragraph (8-10 sentences) using at least 8 different collocations. Choose a topic: a career goal, a personal achievement, or a difficult life decision.",
+        "Collocations flow naturally as units: 'make-a-decision' sounds like one phrase. 'Do a decision' sounds wrong because it breaks the natural rhythm native speakers expect.",
+        [("Common English Collocations", "Papa English", null), ("Verb + Noun Collocations", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B2L16() => C(
+        "Register and style involve choosing appropriate vocabulary, grammar, and tone for your audience and context. Formal English differs from casual English in verb choice, vocabulary, sentence complexity, and contraction use. Mastering register is key to sophisticated communication.",
+        ["Formal: 'I would appreciate your assistance' vs Informal: 'Can you help me?'", "Avoid contractions in formal writing: cannot (not can't), will not (not won't), I have (not I've)", "Formal vocabulary: commence (start), obtain (get), demonstrate (show), require (need), endeavor (try)", "Formal sentences: complex with subordination. Informal: shorter, simpler, more direct.", "Tone: formal (impersonal, objective), neutral (balanced), informal (personal, friendly, casual)"],
+        [("commence", "comenzar / iniciar", "The meeting will commence at 9 AM."), ("obtain", "obtener / conseguir", "You can obtain further information from the website."), ("endeavor", "esforzarse / intentar", "We endeavor to provide excellent service."), ("hereby", "por este medio / por la presente", "I hereby declare this session open."), ("furthermore", "además / por otra parte", "Furthermore, the cost is prohibitive.")],
+        [("Formal: 'I would like to express my gratitude.' / Informal: 'Thanks so much.'", "Register contrast"), ("This matter requires our urgent attention.", "Formal register in business"), ("The project aims to facilitate community development.", "Formal + nominalization"), ("Can you send me the files? — Yeah, sure.", "Informal register")],
+        "Rewrite these informal sentences in formal register: 1) Hey, I want to ask about the job. 2) We can't do it because we don't have enough money. 3) The results show that our plan is good. 4) You gotta be careful with this stuff. 5) Basically, everyone thinks this is not a good idea.",
+        "In formal speech, your pace should be measured and deliberate. Avoid 'um', 'uh', 'like', 'basically', 'you know'. Maintain full, clear vowel pronunciation.",
+        [("Formal vs Informal English", "Papa English", null), ("Register in English Communication", "Cambridge English", null)]
     );
 
     private static string C1L1() => C(
