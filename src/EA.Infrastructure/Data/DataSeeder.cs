@@ -715,14 +715,14 @@ public static class DataSeeder
         var m7 = G("c1070000-0000-0000-0000-000000000007");
         var m8 = G("c1080000-0000-0000-0000-000000000008");
 
-        ctx.Modules.Add(NewModule(m1, levelId, "Module 1: Perfect Continuous Tenses (Units 1-4)", "Master present/past perfect continuous for nuanced temporal expression.", 1, 2));
-        ctx.Modules.Add(NewModule(m2, levelId, "Module 2: Future Forms (Units 9-14)", "Express future with will, going to, future continuous/perfect, and be to.", 2, 2));
-        ctx.Modules.Add(NewModule(m3, levelId, "Module 3: Advanced Modals (Units 15-20)", "Master can/could, must/have to, should/ought to in complex contexts.", 3, 2));
-        ctx.Modules.Add(NewModule(m4, levelId, "Module 4: Passive Voice & Questions (Units 21-27)", "Advanced passives, wh-questions, and linking verbs.", 4, 2));
-        ctx.Modules.Add(NewModule(m5, levelId, "Module 5: Reported Speech (Units 32-39)", "Master tense shifts, reporting verbs, and subjunctive in reported clauses.", 5, 2));
-        ctx.Modules.Add(NewModule(m6, levelId, "Module 6: Relative Clauses (Units 53-59)", "Participle clauses, reduced relative clauses, and adverbial meaning.", 6, 2));
-        ctx.Modules.Add(NewModule(m7, levelId, "Module 7: Adjectives & Adverbs (Units 66-78)", "Gradable adjectives, position of adverbs, comment adverbs for sophistication.", 7, 2));
-        ctx.Modules.Add(NewModule(m8, levelId, "Module 8: Prepositions & Emphasis (Units 88-94)", "Complex prepositions, inversion for emphasis, and mixed structures.", 8, 2));
+        ctx.Modules.Add(NewModule(m1, levelId, "Tiempos Verbales Avanzados I: Present & Past Perfect Continuous (Units 1-6)", "Master present/past perfect continuous for extended duration and antecedent actions.", 1, 2));
+        ctx.Modules.Add(NewModule(m2, levelId, "Tiempos Verbales Avanzados II: Future Forms & Backshift (Units 7-12)", "Express future: continuous, perfect, be-to, and mixed tenses in context.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Modales Deductivos I: Must, Can't, Might Certainty (Units 15-20)", "Master deduction modals for certainty levels and perfect speculations.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Modales Deductivos II: Had to, Could, Semi-modals (Units 21-25)", "Obligation, deduction modals, and semi-modal verbs for advanced nuance.", 4, 2));
+        ctx.Modules.Add(NewModule(m5, levelId, "Pasiva y Reportados I: Causatives & Advanced Passive (Units 26-33)", "Causative structures and passive voice with infinitives and reporting verbs.", 5, 2));
+        ctx.Modules.Add(NewModule(m6, levelId, "Pasiva y Reportados II: Reporting Verbs & Patterns (Units 34-40)", "Master reporting verbs (claim, maintain, concede) and verb pattern selection.", 6, 2));
+        ctx.Modules.Add(NewModule(m7, levelId, "Condicionales I: Mixed & Unless Conditionals (Units 41-45)", "Mixed conditionals (past→present), unless, as long as, and variants.", 7, 2));
+        ctx.Modules.Add(NewModule(m8, levelId, "Condicionales II: Inverted & Hypothetical (Units 46-50)", "Inverted conditionals (Had I..., Should you...) and wish/regret structures.", 8, 2));
 
         var l1 = G("c1b10000-0000-0000-0000-000000000001");
         var l2 = G("c1b20000-0000-0000-0000-000000000002");
@@ -741,141 +741,149 @@ public static class DataSeeder
         var l15 = G("c1b15000-0000-0000-0000-000000000015");
         var l16 = G("c1b16000-0000-0000-0000-000000000016");
 
-        // Module 1: Perfect Continuous Tenses
-        ctx.Lessons.Add(NewLesson(l1, m1, "Present Perfect Continuous: extended duration", SkillType.Reading, 1, C1L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "Past Perfect Continuous: antecedent actions", SkillType.Writing, 2, C1L2()));
+        // Module 1: Tiempos Verbales Avanzados I
+        ctx.Lessons.Add(NewLesson(l1, m1, "Present Perfect Continuous: duration and relevance (Units 1-3)", SkillType.Reading, 1, C1L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "Past Perfect Continuous: antecedent ongoing actions (Units 4-6)", SkillType.Writing, 2, C1L2()));
 
-        // Module 2: Future Forms
-        ctx.Lessons.Add(NewLesson(l3, m2, "Future Continuous & Perfect: advanced temporal expression", SkillType.Reading, 1, C1L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Be to, about to, on the point of: scheduled/imminent futures", SkillType.Writing, 2, C1L4()));
+        // Module 2: Tiempos Verbales Avanzados II
+        ctx.Lessons.Add(NewLesson(l3, m2, "Future Continuous & Future Perfect: temporal expressions (Units 7-9)", SkillType.Reading, 1, C1L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "Backshift and mixed future tenses in context (Units 10-12)", SkillType.Writing, 2, C1L4()));
 
-        // Module 3: Advanced Modals
-        ctx.Lessons.Add(NewLesson(l5, m3, "Modal deduction: must, can't, might (certainty levels)", SkillType.Reading, 1, C1L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Modal perfects: should have, could have, might have (speculation)", SkillType.Writing, 2, C1L6()));
+        // Module 3: Modales Deductivos I
+        ctx.Lessons.Add(NewLesson(l5, m3, "Modal deduction: must/can't/might for certainty levels (Units 15-17)", SkillType.Reading, 1, C1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Modal deduction: could, might, may in continuous and perfect (Units 18-20)", SkillType.Writing, 2, C1L6()));
 
-        // Module 4: Passive Voice & Questions
-        ctx.Lessons.Add(NewLesson(l7, m4, "Passive with infinitives, -ing forms, and get-passive", SkillType.Reading, 1, C1L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Wh- questions with complex structures and inversion", SkillType.Writing, 2, C1L8()));
+        // Module 4: Modales Deductivos II
+        ctx.Lessons.Add(NewLesson(l7, m4, "Had to (obligation/deduction) and didn't have to vs needn't have (Units 21-23)", SkillType.Reading, 1, C1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Semi-modals: used to, be used to, get used to, would (habits) (Units 24-25)", SkillType.Writing, 2, C1L8()));
 
-        // Module 5: Reported Speech
-        ctx.Lessons.Add(NewLesson(l9, m5, "Reporting structures: say, tell, ask, wonder, admit", SkillType.Reading, 1, C1L9()));
-        ctx.Lessons.Add(NewLesson(l10, m5, "Reported speech: tense shifts, reporting subjunctive", SkillType.Writing, 2, C1L10()));
+        // Module 5: Pasiva y Reportados I
+        ctx.Lessons.Add(NewLesson(l9, m5, "Causative structures: have/get something done (Units 26-28)", SkillType.Reading, 1, C1L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Advanced passive: infinitive passive, get-passive, passive with reporting verbs (Units 29-33)", SkillType.Writing, 2, C1L10()));
 
-        // Module 6: Relative Clauses
-        ctx.Lessons.Add(NewLesson(l11, m6, "Participle clauses: reducing relative clauses", SkillType.Reading, 1, C1L11()));
-        ctx.Lessons.Add(NewLesson(l12, m6, "Adverbial meaning in relative clauses and clausal phrases", SkillType.Writing, 2, C1L12()));
+        // Module 6: Pasiva y Reportados II
+        ctx.Lessons.Add(NewLesson(l11, m6, "Reporting verbs in depth: claim, maintain, assert, concede (Units 34-36)", SkillType.Reading, 1, C1L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Verb patterns: to-infinitive vs -ing after reporting verbs (Units 37-40)", SkillType.Writing, 2, C1L12()));
 
-        // Module 7: Adjectives & Adverbs
-        ctx.Lessons.Add(NewLesson(l13, m7, "Gradable vs ungradable adjectives and intensifiers", SkillType.Reading, 1, C1L13()));
-        ctx.Lessons.Add(NewLesson(l14, m7, "Adverb position and comment adverbs for sophistication", SkillType.Writing, 2, C1L14()));
+        // Module 7: Condicionales I
+        ctx.Lessons.Add(NewLesson(l13, m7, "Mixed conditionals (past condition → present result) (Units 41-43)", SkillType.Reading, 1, C1L13()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "Unless, as long as, provided that, in case (Units 44-45)", SkillType.Writing, 2, C1L14()));
 
-        // Module 8: Prepositions & Emphasis
-        ctx.Lessons.Add(NewLesson(l15, m8, "Complex prepositions and prepositional nuance", SkillType.Reading, 1, C1L15()));
-        ctx.Lessons.Add(NewLesson(l16, m8, "Inversion structures, clefts, and emphasis techniques", SkillType.Writing, 2, C1L16()));
+        // Module 8: Condicionales II
+        ctx.Lessons.Add(NewLesson(l15, m8, "Inverted conditionals: Had I known..., Should you need... (Units 46-48)", SkillType.Reading, 1, C1L15()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Hypothetical wish/regret: wish, if only, it's time, would rather (Units 49-50)", SkillType.Writing, 2, C1L16()));
 
-        // Module 1: Perfect Continuous
+        // Module 1 Exercises: Present Perfect Continuous
         AddExercises(ctx, l1, "c1e1",
             MC("They ___ on this project for six months now.", "have been working", "have worked", "are working", "are being working", "perfect-continuous"),
-            MC("How long ___ you ___ at this university?", "have-been studying", "have studied", "are studying", "are being studying", "perfect-continuous"),
+            MC("How long ___ you ___ at this university?", "have been studying", "have studied", "are studying", "are being studying", "perfect-continuous"),
             MC("She ___ constantly about this issue.", "has been complaining", "has complained", "is complaining", "was complaining", "perfect-continuous"),
             FB("The machinery ___ since 5 AM this morning. (run)", "has been running", "perfect-continuous"));
 
+        // Module 1 Exercises: Past Perfect Continuous
         AddExercises(ctx, l2, "c1e2",
             MC("Before the meeting started, they ___ for three hours.", "had been discussing", "had discussed", "were discussing", "were being discussed", "past-perfect-continuous"),
             MC("When I arrived, the children ___ all afternoon.", "had been playing", "had played", "were playing", "were being played", "past-perfect-continuous"),
             MC("By the time she resigned, she ___ for the company for 20 years.", "had been working", "had worked", "was working", "was being worked", "past-perfect-continuous"),
             FB("He realized he ___ about the wrong issue all along. (worry)", "had been worrying", "past-perfect-continuous"));
 
-        // Module 2: Future Forms
+        // Module 2 Exercises: Future Continuous & Perfect
         AddExercises(ctx, l3, "c1e3",
             MC("At this time next week, we ___ our final exams.", "will be taking", "will take", "are taking", "have been taking", "future-continuous"),
-            MC("By the end of the year, she ___ on this project for eighteen months.", "will have been working", "will work", "will have worked", "has been working", "future-perfect"),
+            MC("By the end of the year, she ___ on this project for eighteen months.", "will have been working", "will work", "will have worked", "has been working", "future-perfect-continuous"),
             MC("Next summer, they ___ in that house for five years.", "will have been living", "will live", "will have lived", "are living", "future-perfect-continuous"),
             FB("When you arrive tomorrow, I ___ the preparations. (finish)", "will have finished", "future-perfect"));
 
+        // Module 2 Exercises: Backshift & Future Forms
         AddExercises(ctx, l4, "c1e4",
             MC("The president ___ to the parliament next month about these reforms.", "is to present", "is presenting", "will present", "has to present", "be-to-future"),
             MC("The meeting ___ at 3 PM tomorrow.", "is to commence", "is commencing", "will commence", "has to commence", "be-to-future"),
-            MC("She ___ to be promoted within the next quarter.", "is", "has", "will be", "is about", "future-structures"),
-            FB("The ceremony ___ to take place on Friday. (be supposed)", "is", "be-to-future"));
+            MC("He said the ceremony ___ to take place on Friday.", "was", "is", "has been", "would be", "backshift,be-to-future"),
+            FB("The agreement ___ on next Monday. (supposed to be signed)", "is to be signed", "be-to-future"));
 
-        // Module 3: Advanced Modals
+        // Module 3 Exercises: Deduction Modals (must, can't, might)
         AddExercises(ctx, l5, "c1e5",
             MC("She ___ be in the office — I just saw her.", "must", "might", "could", "can't", "modal-deduction"),
             MC("He ___ have missed the train; it's nearly midnight.", "must", "might", "could", "can't", "modal-deduction"),
             MC("The letter ___ be from the government — the envelope is official.", "must", "might", "could", "can't", "modal-deduction"),
             FB("They ___ have understood the instructions — they're doing it wrong. (modal: negative certainty)", "can't", "modal-deduction"));
 
+        // Module 3 Exercises: Modal Deduction with Continuous & Perfect
         AddExercises(ctx, l6, "c1e6",
-            MC("You ___ told her the truth earlier.", "should have", "would have", "might have", "could have", "modal-perfect,regret"),
-            MC("He ___ passed the exam if he'd studied.", "could have", "should have", "might have", "would have", "modal-perfect"),
-            MC("She ___ known about the cancellation, but I'm not sure.", "might have", "should have", "would have", "must have", "modal-perfect,speculation"),
-            FB("They ___ arrived hours ago. (regret/criticism: should)", "should have", "modal-perfect"));
+            MC("She ___ working late—the office lights are still on.", "must be", "might be", "can't be", "could be", "modal-deduction,continuous"),
+            MC("He ___ lost the keys; they're not in his pocket.", "could have", "might have", "should have", "must have", "modal-perfect"),
+            MC("They ___ been aware of this situation.", "can't have", "shouldn't have", "wouldn't have", "mightn't have", "modal-perfect,certainty"),
+            FB("She ___ working on this project for weeks—she's very tired. (must, continuous)", "must have been", "modal-perfect,continuous"));
 
-        // Module 4: Passive Voice & Questions
+        // Module 4 Exercises: Had to, Didn't have to, Needn't have
         AddExercises(ctx, l7, "c1e7",
-            MC("The work needs ___ by Friday.", "to be completed", "to complete", "being completed", "be completed", "passive,infinitive"),
-            MC("I want my car ___.", "serviced", "to service", "to be serviced", "being serviced", "passive,infinitive"),
-            MC("The proposal is likely ___.", "to be rejected", "to reject", "being rejected", "be rejected", "passive,infinitive"),
-            FB("The presentation is worth ___ twice. (worth, listen)", "listening to", "passive,-ing"));
+            MC("I ___ attend the meeting, but I chose to.", "had to", "didn't have to", "needn't have", "must have", "obligation,past"),
+            MC("She ___ worried about the deadline—the boss extended it.", "didn't have to", "needn't have", "wouldn't have", "shouldn't have", "unnecessary-action"),
+            MC("They ___ pay the full amount; a discount was available.", "could have", "might have", "needn't have", "had to", "unnecessary-past-action"),
+            FB("You ___ apologized, but it was appreciated. (unnecessary regret)", "needn't have", "unnecessary-action"));
 
+        // Module 4 Exercises: Semi-modals
         AddExercises(ctx, l8, "c1e8",
-            MC("___ was it that you discovered this?", "Why", "When", "How", "Which", "wh-questions,inversion"),
-            MC("___ haven't they informed the authorities about this?", "Why", "When", "How long", "How many", "wh-questions"),
-            MC("___ long had you known before you told anyone?", "How", "How long", "How much", "How many", "wh-questions"),
-            FB("___ were you when the accident happened? (wh-question)", "Where", "wh-questions"));
+            MC("He ___ smoking when he was young.", "used to", "is used to", "gets used to", "would used to", "semi-modal,habit"),
+            MC("She ___ loud noises now after working in a factory.", "used to", "is used to", "got used to", "would have used to", "semi-modal,habituated"),
+            MC("They're gradually ___ the new software.", "using to", "getting used to", "used to", "would be", "semi-modal,adjustment"),
+            FB("He ___ work here before he moved abroad. (past habit)", "used to", "semi-modal,habit"));
 
-        // Module 5: Reported Speech
+        // Module 5 Exercises: Causatives
         AddExercises(ctx, l9, "c1e9",
-            MC("She mentioned that she ___ moving to another city.", "was", "is", "has been", "will be", "reported-speech,tense-shift"),
-            MC("He told me he ___ never seen such a beautiful place.", "had", "has", "would have", "might have", "reported-speech,tense-shift"),
-            MC("They admitted that they ___ made a mistake.", "had", "have", "would have", "should have", "reported-speech,tense-shift"),
-            FB("She said she ___ going to resign. (was, reported speech)", "was", "reported-speech"));
+            MC("I will ___ the car ___ before I sell it.", "have-serviced", "have-service", "get-serviced", "get-service", "causative"),
+            MC("She ___ her house painted last month.", "had", "has", "have", "gets", "causative,past"),
+            MC("We should ___ the roof repaired before winter.", "have it", "get it", "make it", "let it", "causative"),
+            FB("They're going to ___ new uniforms made for the team. (causative)", "have", "causative"));
 
+        // Module 5 Exercises: Advanced Passive
         AddExercises(ctx, l10, "c1e10",
-            MC("He asked whether I ___ interested in the position.", "was", "am", "have been", "would be", "reported-questions,tense-shift"),
-            MC("They wondered why we ___ refused their offer.", "had", "have", "would have", "might have", "reported-questions"),
-            MC("I asked him what he ___ doing here.", "was", "is", "has been", "would be", "reported-questions"),
-            FB("She inquired when the meeting ___ to start. (was, reported speech)", "was", "reported-questions"));
+            MC("The work needs ___ by Friday.", "to be completed", "to complete", "being completed", "be completed", "passive,infinitive"),
+            MC("The proposal is known ___.", "to be flawed", "to be flaws", "being flawed", "be flawed", "passive,infinitive"),
+            MC("The decision got ___ by the board yesterday.", "approved", "approving", "to approve", "approve", "get-passive"),
+            FB("These issues are worth ___ carefully. (examine)", "examining", "passive,-ing"));
 
-        // Module 6: Relative Clauses
+        // Module 6 Exercises: Reporting Verbs
         AddExercises(ctx, l11, "c1e11",
-            MC("The woman ___ across the street is my teacher.", "walking", "walked", "who walks", "that walked", "participle-clauses"),
-            MC("The report ___ last week contains important data.", "submitted", "submitting", "that submitted", "who submitting", "participle-clauses"),
-            MC("The issue ___ is complex and requires careful analysis.", "discussing", "discussed", "that discuss", "being discussed", "participle-clauses"),
-            FB("The documents ___ the new policy are now available. (outline)", "outlining", "participle-clauses"));
+            MC("The scientists ___ that their findings were revolutionary.", "claimed", "told", "asked", "wondered", "reporting-verbs"),
+            MC("She ___ maintaining her innocence throughout the trial.", "insisted on", "suggested", "admitted", "denied", "reporting-verbs"),
+            MC("They ___ that the policy needed reform.", "asserted", "suggested", "claimed", "conceded", "reporting-verbs"),
+            FB("He ___ that the plan had some merit, though not ideal. (partially agreed)", "conceded", "reporting-verbs"));
 
+        // Module 6 Exercises: Verb Patterns after Reporting
         AddExercises(ctx, l12, "c1e12",
-            MC("He graduated in 2020, ___ his career in finance.", "starting", "started", "to start", "start", "participle-adverbial"),
-            MC("The manager spoke clearly, ___ no room for misunderstanding.", "leaving", "left", "to leave", "leave", "participle-adverbial"),
-            MC("We worked through the night, ___ to complete the project.", "determined", "determining", "to determine", "determine", "participle-adverbial"),
-            FB("Having received the news, he ___ immediately. (leave)", "left", "participle-adverbial"));
+            MC("The manager recommended ___ the project immediately.", "starting", "to start", "start", "be starting", "verb-pattern,reporting"),
+            MC("He insisted on ___ the meeting himself.", "leading", "to lead", "lead", "be leading", "verb-pattern,reporting"),
+            MC("She denied ___ the allegations.", "making", "to make", "make", "have made", "verb-pattern,reporting"),
+            FB("They agreed ___ the new contract terms. (to-infinitive)", "to accept", "verb-pattern,reporting"));
 
-        // Module 7: Adjectives & Adverbs
+        // Module 7 Exercises: Mixed Conditionals
         AddExercises(ctx, l13, "c1e13",
-            MC("'Beautiful' is a ___ adjective.", "gradable", "ungradable", "non-gradable", "absolute", "gradable-adjectives"),
-            MC("Which of these is NOT a gradable adjective?", "unique", "beautiful", "cold", "interesting", "gradable-adjectives"),
-            MC("We can say 'very ___ ' but not 'very unique'.", "interesting", "absolute", "unique", "perfect", "gradable-adjectives"),
-            FB("You can say 'extremely ___' but not 'extremely dead'. (ungradable example)", "alive", "gradable"));
+            MC("If I ___ medicine, I ___ a doctor now.", "had studied - would be", "studied - would be", "had studied - will be", "study - would be", "mixed-conditional"),
+            MC("If she ___ there, she ___ the accident.", "were - could have prevented", "had been - could have prevented", "was - could have prevented", "is - would prevent", "mixed-conditional"),
+            MC("If they ___ differently, ___ better off.", "acted - they would be", "had acted - they would be", "act - they would be", "had acted - they are", "mixed-conditional"),
+            FB("If I ___ the opportunity, I ___ yes immediately. (mixed: past hypothetical, present result)", "had had - would say", "mixed-conditional"));
 
+        // Module 7 Exercises: Unless, As long as, Provided that
         AddExercises(ctx, l14, "c1e14",
-            MC("___, the decision was controversial.", "Frankly", "Frankly speaking", "Speaking frank", "Frank", "comment-adverbs"),
-            MC("She ___ didn't approve of the plan.", "Clearly", "Clear", "Clearing", "Clearly speaking", "adverb-position"),
-            MC("___, we need to reconsider our strategy.", "Honestly speaking", "Honestly", "Honest", "Honesty", "comment-adverbs"),
-            FB("___,this matter requires our attention. (Obviously, comment adverb)", "Obviously", "comment-adverbs"));
+            MC("You can go out ___ you finish your homework.", "unless", "as long as", "provided", "if not", "conditional-variant"),
+            MC("The project will proceed ___ funding is approved.", "unless", "as long as", "provided that", "if", "conditional-variant"),
+            MC("___ you have the required documents, the process is simple.", "Unless", "As long as", "Provided", "If not", "conditional-variant"),
+            FB("We'll accept the proposal ___ you reduce the budget by 10%. (on condition that)", "provided that", "conditional-variant"));
 
-        // Module 8: Prepositions & Emphasis
+        // Module 8 Exercises: Inverted Conditionals
         AddExercises(ctx, l15, "c1e15",
-            MC("The decision was made ___ pressure from the board.", "under", "from", "with", "by", "prepositions,complex"),
-            MC("The research is still ___ investigation.", "under", "in", "on", "at", "prepositions"),
-            MC("We acted ___ the assumption that all were aware.", "on", "at", "in", "under", "prepositions,complex"),
-            FB("The plan proceeded ___ plan despite objections. (as planned)", "as", "prepositions"));
+            MC("___ I known the truth, I would have acted differently.", "Had", "Should", "Would", "If", "inverted-conditional"),
+            MC("___ you need further assistance, please contact us.", "Should", "Had", "Would", "Might", "inverted-conditional"),
+            MC("___ the project been completed earlier, we would have shipped on time.", "Had", "Should", "Would", "Might", "inverted-conditional"),
+            FB("___ I in your position, I would accept the offer. (were)", "Were", "inverted-conditional"));
 
+        // Module 8 Exercises: Wish, If only, Hypothetical
         AddExercises(ctx, l16, "c1e16",
-            MC("___ John who won the award, not his colleague.", "It was", "It is", "That was", "What was", "inversion,emphasis"),
-            MC("Not only ___ he study hard, but he also mentored others.", "did", "does", "had", "has", "inversion"),
-            MC("Never ___ I heard such nonsense.", "have", "had", "has", "do", "inversion,emphasis"),
-            FB("Only after ___ his mistake did he apologize. (realize)", "realizing", "inversion"));
+            MC("I wish I ___ more time to finish this project.", "had", "have", "would have", "had had", "wish,present-regret"),
+            MC("If only he ___ about the meeting!", "knew", "had known", "knows", "would know", "wish,past-regret"),
+            MC("It's time they ___ their responsibilities seriously.", "took", "take", "would take", "had taken", "it's-time"),
+            FB("I'd rather you ___ me the truth. (wouldn't have to, past hypothetical)", "had told", "would-rather"));
     }
 
     private static void BuildC2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -886,12 +894,16 @@ public static class DataSeeder
         var m4 = G("c2040000-0000-0000-0000-000000000004");
         var m5 = G("c2050000-0000-0000-0000-000000000005");
         var m6 = G("c2060000-0000-0000-0000-000000000006");
-        ctx.Modules.Add(NewModule(m1, levelId, "Nuanced Expression", "Achieve near-native register and style.", 1, 8));
-        ctx.Modules.Add(NewModule(m2, levelId, "Academic Writing", "Master hedging, argumentation, and critical analysis.", 2, 8));
-        ctx.Modules.Add(NewModule(m3, levelId, "Advanced Communication", "Paraphrasing, pragmatics, and context mastery.", 3, 8));
-        ctx.Modules.Add(NewModule(m4, levelId, "Native Proficiency", "Stylistic mastery and authentic native features.", 4, 8));
-        ctx.Modules.Add(NewModule(m5, levelId, "Meaning & Context", "Master subtle nuances and discourse analysis.", 5, 8));
-        ctx.Modules.Add(NewModule(m6, levelId, "Culture & Expression", "Navigate allusions, ambiguity, and sophistication.", 6, 8));
+        var m7 = G("c2070000-0000-0000-0000-000000000007");
+        var m8 = G("c2080000-0000-0000-0000-000000000008");
+        ctx.Modules.Add(NewModule(m1, levelId, "Cláusulas Relativas I: Non-defining (Units 51-58)", "Advanced relative clauses: which, whose, where with sophistication.", 1, 2));
+        ctx.Modules.Add(NewModule(m2, levelId, "Cláusulas Relativas II: Reduced & Cleft (Units 59-65)", "Participle clauses and cleft sentences for emphasis.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Nominalización y Enfoque I: Nominalization & Fronting (Units 66-72)", "Transform verbs to nouns and move constituents for emphasis.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Nominalización y Enfoque II: Inversion & Focus (Units 73-80)", "Negative/degree inversion and focus adverbs for native precision.", 4, 2));
+        ctx.Modules.Add(NewModule(m5, levelId, "Preposiciones y Phrasals I: Complex Noun Phrases (Units 81-88)", "Pre- and post-modification in noun phrases.", 5, 2));
+        ctx.Modules.Add(NewModule(m6, levelId, "Preposiciones y Phrasals II: Idiomatic Prepositions (Units 89-95)", "Fixed expressions and phrasal verbs in context.", 6, 2));
+        ctx.Modules.Add(NewModule(m7, levelId, "Conectores Discursivos I: Discourse Markers (Units 96-100)", "Additive, contrastive, causal, and sequential markers.", 7, 2));
+        ctx.Modules.Add(NewModule(m8, levelId, "Conectores Discursivos II: Ellipsis & Substitution (Units 101-105)", "Ellipsis and substitution for native fluency and cohesion.", 8, 2));
 
         var l1 = G("c2b10000-0000-0000-0000-000000000001");
         var l2 = G("c2b20000-0000-0000-0000-000000000002");
@@ -905,90 +917,122 @@ public static class DataSeeder
         var l10 = G("c2ba0000-0000-0000-0000-000000000010");
         var l11 = G("c2bb0000-0000-0000-0000-000000000011");
         var l12 = G("c2bc0000-0000-0000-0000-000000000012");
-        ctx.Lessons.Add(NewLesson(l1, m1, "Register & Formal Style", SkillType.Writing, 1, C2L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "Idiomatic Mastery", SkillType.Reading, 2, C2L2()));
-        ctx.Lessons.Add(NewLesson(l3, m2, "Hedging Language", SkillType.Writing, 1, C2L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Critical Analysis", SkillType.Reading, 2, C2L4()));
-        ctx.Lessons.Add(NewLesson(l5, m3, "Paraphrasing & Summarization", SkillType.Writing, 1, C2L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Pragmatics & Implicature", SkillType.Reading, 2, C2L6()));
-        ctx.Lessons.Add(NewLesson(l7, m4, "Stylistic Variation", SkillType.Writing, 1, C2L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Native Speaker Features", SkillType.Reading, 2, C2L8()));
-        ctx.Lessons.Add(NewLesson(l9, m5, "Subtle Nuance & Precision", SkillType.Writing, 1, C2L9()));
-        ctx.Lessons.Add(NewLesson(l10, m5, "Discourse Analysis", SkillType.Reading, 2, C2L10()));
-        ctx.Lessons.Add(NewLesson(l11, m6, "Cultural References & Allusions", SkillType.Reading, 1, C2L11()));
-        ctx.Lessons.Add(NewLesson(l12, m6, "Mastery of Ambiguity", SkillType.Writing, 2, C2L12()));
+        var l13 = G("c2bd0000-0000-0000-0000-000000000013");
+        var l14 = G("c2be0000-0000-0000-0000-000000000014");
+        var l15 = G("c2bf0000-0000-0000-0000-000000000015");
+        var l16 = G("c2c00000-0000-0000-0000-000000000016");
+        ctx.Lessons.Add(NewLesson(l1, m1, "Non-defining relative clauses: which/whose/where (Units 51-54)", SkillType.Reading, 1, C2L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "Sentential relative clauses and relative adverbs (Units 55-58)", SkillType.Writing, 2, C2L2()));
+        ctx.Lessons.Add(NewLesson(l3, m2, "Reduced relatives: participle clauses (Units 59-62)", SkillType.Reading, 1, C2L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "Cleft sentences: it-clefts and wh-clefts (Units 63-65)", SkillType.Writing, 2, C2L4()));
+        ctx.Lessons.Add(NewLesson(l5, m3, "Nominalization: from verbs/adjectives to nouns (Units 66-69)", SkillType.Reading, 1, C2L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Fronting: moving constituents for emphasis (Units 70-72)", SkillType.Writing, 2, C2L6()));
+        ctx.Lessons.Add(NewLesson(l7, m4, "Negative and degree inversion (Units 73-76)", SkillType.Reading, 1, C2L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Focus adverbs: even, only, so, such, neither/nor (Units 77-80)", SkillType.Writing, 2, C2L8()));
+        ctx.Lessons.Add(NewLesson(l9, m5, "Complex noun phrases: pre- and post-modification (Units 81-85)", SkillType.Reading, 1, C2L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Idiomatic prepositions: at, by, in, on in fixed expressions (Units 86-88)", SkillType.Writing, 2, C2L10()));
+        ctx.Lessons.Add(NewLesson(l11, m6, "Advanced phrasal verbs: transitive/intransitive patterns (Units 89-92)", SkillType.Reading, 1, C2L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Collocations and idiomatic prepositional phrases (Units 93-95)", SkillType.Writing, 2, C2L12()));
+        ctx.Lessons.Add(NewLesson(l13, m7, "Discourse markers: additive, contrastive, causal, sequential (Units 96-98)", SkillType.Reading, 1, C2L13()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "Cohesive devices: reference, substitution, conjunction (Units 99-100)", SkillType.Writing, 2, C2L14()));
+        ctx.Lessons.Add(NewLesson(l15, m8, "Ellipsis: verbal, nominal, clausal omission (Units 101-102)", SkillType.Reading, 1, C2L15()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Substitution: do/so/not replacing clauses (Units 103-105)", SkillType.Writing, 2, C2L16()));
 
         AddExercises(ctx, l1, "c2e1",
-            MC("Which is the most formal equivalent of 'ask for'?", "solicit", "demand", "request", "inquire", "register,formal,vocabulary"),
-            MC("The word 'ameliorate' means:", "to improve", "to worsen", "to ignore", "to delay", "vocabulary,formal"),
-            MC("Which sentence uses the subjunctive correctly?", "I suggest that he be present.", "I suggest that he is present.", "I suggest that he will be present.", "I suggest that he was present.", "subjunctive,advanced-grammar"),
-            FB("The treaty was ___ with great ceremony. (formally ratified)", "ratified", "vocabulary,formal"));
+            MC("In 'The students who submitted late received penalties,' the clause is:", "defining (restricts meaning)", "non-defining", "reduced", "cleft", "relative-clauses"),
+            MC("'Whose' in relative clauses shows:", "possession", "location", "time", "reason", "relative-clauses,possessive"),
+            MC("Which sentence uses a non-defining relative clause correctly?", "The book, which was published last year, became a bestseller.", "The book which was published last year became a bestseller.", "The book that was published last year became a bestseller.", "All are correct.", "relative-clauses,non-defining"),
+            FB("The laboratory ___ the research was conducted is now closed. (in which)", "in which", "relative-clauses,preposition"));
 
         AddExercises(ctx, l2, "c2e2",
-            MC("'Pyrrhic victory' means:", "a win at too great a cost", "an easy victory", "a false victory", "an unexpected win", "idioms,vocabulary"),
-            MC("Which phrase means 'from the very beginning'?", "from scratch", "from the top", "from ground zero", "from the start", "idioms"),
-            MC("'Penultimate' means:", "second to last", "the very last", "the very first", "second from the beginning", "vocabulary"),
-            FB("His argument was so ___ that no one could refute it. (well-constructed, logical)", "cogent", "vocabulary,academic"));
+            MC("'He admitted the error, which surprised everyone' — this 'which' refers to:", "the entire previous clause", "the word 'error'", "the word 'admitted'", "an implied noun", "sentential-relative"),
+            MC("Which is a sentential relative clause?", "He lost the game, which devastated him.", "He lost the game that devastated him.", "He lost which was the game.", "All correct.", "relative-clauses"),
+            MC("The reason why he left is not clear' — 'why' is:", "a relative adverb", "a regular adverb", "a conjunction", "a preposition", "relative-adverbs"),
+            FB("The period ___ the company expanded rapidly was very profitable. (during which)", "during which", "relative-clauses"));
 
         AddExercises(ctx, l3, "c2e3",
-            MC("Which is an example of hedging language?", "It could be argued that...", "It is absolutely certain that...", "It is obvious that...", "Clearly, ...", "hedging,academic-writing"),
-            MC("'Ostensibly' means:", "apparently, though not actually", "certainly", "obviously", "extremely", "vocabulary,academic"),
-            MC("Which is NOT a hedging expression?", "It is absolutely certain that...", "It seems that...", "It could be suggested...", "Evidence appears to indicate...", "hedging,academic-writing"),
-            FB("The results ___ suggest a correlation between the variables. (appear)", "appear to", "hedging"));
+            MC("Reduced relatives simplify: 'The student studying diligently' replaces:", "'The student who is studying diligently'", "'The student which studies diligently'", "'The student whose studying is diligent'", "None of the above", "reduced-relatives"),
+            MC("'Having completed the analysis, she presented findings' is:", "a reduced relative clause", "a cleft sentence", "a nominalization", "an inversion", "reduced-relatives,participle"),
+            MC("Which shows correct reduced form?", "The documents submitted yesterday contain errors.", "The documents submitting yesterday contain errors.", "The documents being submit yesterday contain errors.", "The documents to submit yesterday contain errors.", "reduced-relatives"),
+            FB("The employees ___ by this decision are requesting a meeting. (affected)", "affected", "reduced-relatives,passive"));
 
         AddExercises(ctx, l4, "c2e4",
-            MC("A 'non sequitur' is:", "a conclusion that doesn't follow the premise", "a logical argument", "a strong counterpoint", "a rhetorical question", "critical-analysis,vocabulary"),
-            MC("'Equivocal' describes a statement that is:", "ambiguous", "crystal clear", "misleading intentionally", "factually incorrect", "vocabulary,critical-analysis"),
-            MC("Which word means 'talking around the point'?", "circumlocution", "elaboration", "amplification", "clarification", "vocabulary,critical-analysis"),
-            FB("The data is ___ — it supports more than one interpretation. (ambiguous, formal)", "equivocal", "vocabulary"));
+            MC("'It is teamwork that made the project succeed' is:", "an it-cleft (emphasizes 'teamwork')", "a wh-cleft", "a pseudo-cleft", "a relative clause", "cleft-sentences"),
+            MC("'What matters most is implementation' is:", "a wh-cleft (emphasizes 'implementation')", "an it-cleft", "a reduced relative", "an inversion", "cleft-sentences"),
+            MC("Cleft sentences are used to:", "emphasize specific elements", "shorten sentences", "avoid passive voice", "simplify complex ideas", "cleft-sentences,emphasis"),
+            FB("___ that created the problem was poor communication. (It)", "It was", "cleft-sentences"));
 
         AddExercises(ctx, l5, "c2e5",
-            MC("Paraphrasing means:", "restating using different words and structure", "simply changing a few words", "condensing to key points", "translating to another language", "paraphrasing,writing-skills"),
-            MC("Which is the best summary of a long article?", "The essential findings in 1-2 sentences", "Every detail in new words", "A shorter version with all details", "The author's opinion restated", "summarization"),
-            MC("'To recapitulate' means:", "to summarize the key points", "to elaborate further", "to provide more examples", "to criticize the argument", "vocabulary,summarization"),
-            FB("A ___ of the chapter provides a brief overview. (summary)", "synopsis", "summarization"));
+            MC("Nominalization transforms 'The government decided to raise taxes' to:", "'The government's decision to raise taxes'", "'The government raised its taxes'", "'Taxes raised by government'", "'The decision-raising of taxes'", "nominalization"),
+            MC("'The analysis of the data revealed patterns' uses nominalization to:", "make the sentence more formal and sophisticated", "shorten the sentence", "emphasize the verb", "create active voice", "nominalization"),
+            MC("Which shows correct nominalization?", "Her ability to lead was evident.", "Her leadership was evident.", "Both are correct.", "Neither is correct.", "nominalization"),
+            FB("The ___ of the project took years. (develop)", "development", "nominalization"));
 
         AddExercises(ctx, l6, "c2e6",
-            MC("An implicature is:", "an implied meaning beyond literal words", "a grammatical mistake", "a formal speech pattern", "a written statement", "pragmatics,vocabulary"),
-            MC("'It's cold in here' might imply:", "Close the window/Please leave", "The temperature is low", "It is winter", "I like the cold", "pragmatics,implicature"),
-            MC("A presupposition in 'Stop eating cake' is:", "You are eating cake", "I want you to stop", "Cake is delicious", "You should eat less", "pragmatics"),
-            FB("The ___ of his comment is that she is not performing well. (implied meaning)", "implicature", "pragmatics"));
+            MC("In 'Remarkable was her courage,' 'remarkable' is moved for:", "emphasis and stylistic effect", "grammatical correctness", "clarity", "brevity", "fronting,emphasis"),
+            MC("Which demonstrates fronting for emphasis?", "Particularly striking were the results.", "The results were particularly striking.", "Both are equally emphatic.", "Fronting isn't possible here.", "fronting"),
+            MC("Fronting is more common in:", "formal, literary, and academic writing", "casual conversation", "technical documents", "informal speech", "fronting,register"),
+            FB("___ were the objections to the proposal. (strong, emphatic)", "Strong", "fronting,emphasis"));
 
         AddExercises(ctx, l7, "c2e7",
-            MC("Which sentence demonstrates stylistic variation (informal)?", "Hey, your idea rocks!", "The proposed concept presents merit.", "It is suggested that...", "The methodology is rigorous.", "style,register"),
-            MC("'Eloquent' speech is:", "expressive and persuasive", "unclear and confusing", "brief and curt", "technical and jargon-heavy", "vocabulary,style"),
-            MC("Which rhetorical device is demonstrated: 'He was cold, calculating, and cruel'?", "Alliteration", "Metaphor", "Irony", "Paradox", "literary-devices"),
-            FB("The baroque prose was difficult to ___. (understand/interpret)", "parse", "style,vocabulary"));
+            MC("'Never have I seen such evidence' is an example of:", "negative inversion", "degree inversion", "cleft sentence", "fronting", "inversion,negative"),
+            MC("'So impressive were the results that...' demonstrates:", "inversion with 'so' for degree emphasis", "negative inversion", "pseudo-cleft", "nominalization", "inversion,degree"),
+            MC("'Seldom do we encounter such talent' uses inversion to:", "express emphasis and formality", "change the meaning", "create active voice", "shorten the sentence", "inversion,emphasis"),
+            FB("'Hardly had she arrived when...' shows inversion for:", "temporal and dramatic emphasis", "inversion"));
 
         AddExercises(ctx, l8, "c2e8",
-            MC("Elision in English is:", "omitting sounds in informal speech", "adding extra syllables", "changing word order", "inventing new words", "native-features,pronunciation"),
-            MC("'Gonna' is an example of:", "elision (gonna = going to)", "assimilation", "hesitation", "code-switching", "native-features"),
-            MC("Prosody refers to:", "intonation, stress, and rhythm in speech", "grammatical structure", "vocabulary choice", "formal register", "pronunciation,native-features"),
-            FB("'___ he was totally confused, you know?' — Native discourse pattern", "Like", "native-features,discourse"));
+            MC("'Only she can authorize this' — 'only' is a:", "focus adverb that restricts meaning", "conjunction", "relative pronoun", "discourse marker", "focus-adverbs"),
+            MC("'Even he passed the exam' puts emphasis on:", "'he' — suggesting it was surprising", "the verb 'passed'", "'the exam'", "the entire clause", "focus-adverbs"),
+            MC("Which placement of 'just' changes meaning?", "'She just arrived' (recently) vs. 'She just left' (moments ago)", "'She just arrived' vs. 'Just she arrived' (emphasis on she)", "All placements mean the same.", "Placement doesn't affect meaning.", "focus-adverbs,position"),
+            FB("'Neither did I.' — This uses focus adverb to express:", "agreement in negation", "focus-adverbs"));
 
         AddExercises(ctx, l9, "c2e9",
-            MC("'Frugal' vs 'stingy' — the difference is:", "connotation (both mean money-conscious but differ in approval)", "synonyms with identical meaning", "formal vs informal register only", "American vs British spelling", "nuance,vocabulary"),
-            MC("Which near-synonym carries the most negative connotation?", "stingy", "thrifty", "economical", "frugal", "connotation,vocabulary"),
-            MC("'Error' differs from 'mistake' in that:", "error is more formal; mistake is more general", "error is intentional, mistake is not", "error is only written; mistake is only spoken", "they have no difference", "nuance,vocabulary"),
-            FB("The ___ between 'angry' and 'furious' is that furious expresses more intense emotion. (subtle difference)", "nuance", "nuance,vocabulary"));
+            MC("In 'The tall building on the corner near the park,' the noun phrase uses:", "extensive post-modification", "pre-modification only", "no modification", "relative clause only", "noun-phrases"),
+            MC("'The analysis of the data by experts from three countries' shows:", "complex post-modification stacking", "simple adjective modification", "cleft structure", "nominalization only", "noun-phrases,complex"),
+            MC("Which is correctly modified?", "The government decision on education policy", "The government decision on the education policy", "The governmental education decision on policy", "All are equally correct.", "noun-phrases"),
+            FB("Complex noun phrases are common in:", "academic and formal writing", "noun-phrases,register"));
 
         AddExercises(ctx, l10, "c2e10",
-            MC("Thematic progression in discourse refers to:", "how given and new information are organized to guide readers", "the main theme of a text", "repetition of the same word", "transition words between sentences", "discourse-analysis"),
-            MC("Which discourse marker signals cause-effect?", "therefore", "however", "moreover", "conversely", "discourse-markers,cohesion"),
-            MC("'Problem-solution' is an example of:", "rhetorical structure that organizes extended text", "a grammar rule", "a vocabulary strategy", "a pronunciation pattern", "discourse-analysis"),
-            FB("___ helps readers follow arguments by linking sentences and ideas. (Text connection)", "Cohesion", "discourse-analysis"));
+            MC("'He acted ___ principle despite pressure.' Which preposition?", "on", "by", "in", "with", "prepositions,fixed"),
+            MC("'The policy is ___ accordance with international standards.'", "in", "on", "by", "with", "prepositions,fixed"),
+            MC("'She prevailed ___ the odds.'", "against", "upon", "through", "over", "prepositions,idiom"),
+            FB("'I stumbled ___ the solution by accident.' (upon)", "upon", "prepositions,idiom"));
 
         AddExercises(ctx, l11, "c2e11",
-            MC("'Orwellian' refers to:", "dystopian surveillance (from George Orwell's 1984)", "British English", "agricultural societies", "romantic poetry", "allusions,cultural-references"),
-            MC("'Kafkaesque' describes situations that are:", "absurdly bureaucratic and nightmarish", "romantic and whimsical", "simple and straightforward", "humorous and entertaining", "allusions,cultural-references"),
-            MC("Understanding allusions requires:", "cultural and literary knowledge", "only grammar skills", "only vocabulary", "memorizing all possible references", "cultural-references"),
-            FB("The phrase '____ moment' alludes to a doomed, inevitable outcome. (Titanic)", "Titanic", "allusions,cultural-references"));
+            MC("'Turn down' (a proposal) is:", "a transitive phrasal verb (accepts object)", "an intransitive phrasal verb", "a separable phrasal verb only", "a literal phrasal verb", "phrasal-verbs"),
+            MC("'Look after' in 'Look after yourself' is:", "transitive (object required)", "intransitive (no object)", "both transitive and intransitive", "separable", "phrasal-verbs,transitive"),
+            MC("Which shows incorrect transitive phrasal verb use?", "She turned down the offer.", "She turned the offer down.", "She turned down it.", "Options 1 and 2 are correct.", "phrasal-verbs,transitive"),
+            FB("'Run into' (meet by chance) is:", "transitive", "phrasal-verbs"));
 
         AddExercises(ctx, l12, "c2e12",
-            MC("Lexical ambiguity occurs when:", "a word has multiple meanings (e.g., 'bank' = financial or river)", "a sentence structure is unclear", "an author is being sarcastic", "grammar is incorrect", "ambiguity,vocabulary"),
-            MC("'I saw the man with the telescope' demonstrates:", "syntactic ambiguity (unclear who has the telescope)", "lexical ambiguity", "phonetic confusion", "misused punctuation", "ambiguity"),
-            MC("'That's interesting' might mean:", "genuine interest or subtle criticism (pragmatic ambiguity)", "always genuine praise", "always dismissal", "simple, single meaning", "ambiguity,pragmatics"),
-            FB("A ___ is a play on words using double meaning for humorous effect. (wordplay, single word)", "pun", "ambiguity,wordplay"));
+            MC("Which is a strong collocation?", "make a decision", "do a decision", "take a decision (less natural)", "form a decision", "collocations"),
+            MC("'Highly ___' is a common collocation with:", "unlikely", "bad", "good", "important", "collocations,intensifier"),
+            MC("'___ and shoulders above' shows:", "a fixed idiomatic phrase (head and shoulders)", "flexible word order", "simple word combination", "variable expression", "collocations,idiom"),
+            FB("'The project ___ to completion.' (draw)", "drew", "collocations"));
+
+        AddExercises(ctx, l13, "c2e13",
+            MC("'Furthermore, the evidence suggests...' is:", "an additive discourse marker", "a contrastive marker", "a causal marker", "a sequential marker", "discourse-markers"),
+            MC("'Nevertheless, results were positive' shows:", "contrast/concession", "addition", "cause-effect", "sequence", "discourse-markers,contrast"),
+            MC("'Consequently, costs increased significantly' signals:", "cause-effect relationship", "addition", "contrast", "time sequence", "discourse-markers,causal"),
+            FB("'Initially, the proposal faced opposition. Subsequently, ___ evolved.' (support)", "support", "discourse-markers"));
+
+        AddExercises(ctx, l14, "c2e14",
+            MC("'She is a doctor. She specializes in cardiology.' — What cohesive device?", "reference (she refers back)", "substitution", "ellipsis", "conjunction", "cohesion,reference"),
+            MC("'Do you like coffee?' 'Yes, I do.' — This uses:", "substitution (do replaces like coffee)", "ellipsis", "reference", "conjunction", "cohesion,substitution"),
+            MC("'She arrived early. He did too.' — This shows:", "substitution with 'did'", "ellipsis of the full verb phrase", "reference", "conjunction", "cohesion"),
+            FB("Cohesive devices help create:", "text cohesion and flow", "cohesion"));
+
+        AddExercises(ctx, l15, "c2e15",
+            MC("'John went to Paris; Sarah to Rome' shows:", "ellipsis (omission of 'went')", "substitution", "reference", "conjunction", "ellipsis"),
+            MC("In 'She is taller than he is,' ellipsis could produce:", "'She is taller than he' (omit 'is')", "'She taller than he is'", "'She is than he is'", "Ellipsis isn't possible here.", "ellipsis,comparative"),
+            MC("Ellipsis makes writing more:", "concise and natural", "formal", "complex", "emphatic", "ellipsis"),
+            FB("'Some students passed; others ___.' (ellipsis of 'passed')", "didn't", "ellipsis"));
+
+        AddExercises(ctx, l16, "c2e16",
+            MC("'Do you want tea?' 'I do' substitutes for:", "'I want tea'", "'I do want'", "'I tea'", "'Do want'", "substitution"),
+            MC("'Is he coming?' 'I think so' uses substitution with:", "'so' (replacing 'he is coming')", "'think'", "'coming'", "'is'", "substitution"),
+            MC("'She won't leave, but he will' uses:", "substitution (will replaces won't leave)", "ellipsis", "reference", "none of the above", "substitution"),
+            FB("'Will you attend?' 'I hope not.' — 'not' substitutes for:", "'I won't attend'", "substitution"));
     }
 
     // ── LESSON CONTENT ────────────────────────────────────────────────────────
@@ -1674,123 +1718,163 @@ public static class DataSeeder
     );
 
     private static string C2L1() => C(
-        "Register is the level of formality in language. C2 speakers switch effortlessly between formal, neutral, and informal registers. Understanding register means knowing when something sounds too formal, too casual, or just right. This is native-level proficiency.",
-        ["Formal: 'I would like to enquire about...' / Informal: 'I want to ask about...'", "Subjunctive in formal writing: 'I suggest that he be present' (not 'is')", "Avoid filler words in formal contexts: 'basically', 'you know', 'like', 'sort of'", "Use hedging for academic precision: 'It appears that...', 'Evidence suggests...'", "Nominalizations elevate register: 'develop' → 'development', 'solve' → 'solution'"],
-        [("solicit", "solicitar / pedir formalmente", "I would like to solicit your expert opinion."), ("ratify", "ratificar", "The treaty was ratified by all members."), ("promulgate", "promulgar", "The new law was promulgated last year."), ("ameliorate", "mejorar / aliviar", "Measures were taken to ameliorate the situation."), ("commence", "comenzar / iniciar", "The ceremony will commence at 9 AM.")],
-        [("I would like to enquire about the position advertised on your website.", "Formal opening for a letter"), ("I suggest that the committee be given more time to deliberate.", "Subjunctive mood"), ("The board ratified the proposal with immediate effect.", "Formal vocabulary in a business context")],
-        "Rewrite this casual email in formal register: 'Hey, I wanted to ask about your job. I think I'd be really good at it and I want to know more stuff about what it involves. Can you send me some info? Thanks.'",
-        "In formal spoken English, your speech should be clear, measured, and deliberate. Maintain full vowels — do not reduce them as in casual speech.",
-        [("Register and Formality in English", "Papa English", null), ("Formal vs Informal English", "Learn English with EnglishClass101.com", null)]
+        "Non-defining relative clauses (set off by commas) provide extra information about a noun without restricting its meaning. They often use which, whose, and where, and are more common in formal, academic writing. Understanding their structure is essential for C2 sophistication.",
+        ["Non-defining: 'The report, which was published last year, became a bestseller.' (commas — the report is already identified)", "Defining: 'The report that was published last year became a bestseller.' (no commas — identifies which report)", "Whose in non-defining: 'The author, whose books are famous, gave a lecture.' (possession, non-restrictive)", "Where in non-defining: 'The office, where I worked for years, is now closed.' (location, non-restrictive)", "Formal prepositions: 'The laboratory in which the research was conducted is prestigious.' (more formal than 'that')"],
+        [("sentential relative", "relativa sentencial / de sentencia", "He lost the game, which upset him greatly. (which = entire clause)"), ("restrictive", "restrictiva / que limita", "The students who submitted late received lower scores."), ("non-restrictive", "no restrictiva / que añade información", "The students, who all worked hard, passed the exam."), ("whereby", "mediante / por lo cual", "A system whereby everyone gets a fair chance."), ("during which", "durante el cual", "The period during which the crisis escalated.")],
+        [("The book, which won three awards, is now out of print.", "Non-defining relative with which"), ("The laboratory in which this research was conducted is famous.", "Formal preposition + relative"), ("She studied medicine, which surprised no one.", "Sentential relative clause"), ("The period during which he served was transformative.", "Adverbial relative with during which")],
+        "Write 8 sentences: 4 with non-defining relative clauses (with commas) and 4 with formal prepositions + relative pronouns (to which, in which, for which, during which).",
+        "Non-defining relative clauses require natural pauses (commas) in speech. 'My brother, who is a doctor' flows with pauses; without commas, it sounds defining: 'My brother who is a doctor' (implying you have multiple brothers).",
+        [("Non-defining Relative Clauses", "Cambridge English", null), ("Formal Relative Clause Structures", "Papa English", null), ("Advanced Relative Clauses in Academic English", "English Speeches", null)]
     );
 
     private static string C2L2() => C(
-        "At C2 level, you use complex idioms, cultural references, and nuanced vocabulary naturally. These expressions add texture and authenticity — not by translating from your language, but by thinking in English.",
-        ["'Pyrrhic victory': a win so costly it resembles defeat — from King Pyrrhus of Epirus", "'Penultimate': second to last — NOT 'second ultimate'!", "'Cogent': clear, logical, convincing — a cogent argument, cogent reasoning", "'Circumlocution': using many words to avoid saying something directly", "'Equivocal': ambiguous, capable of multiple interpretations"],
-        [("pyrrhic victory", "victoria pírrica", "Their market dominance was a pyrrhic victory."), ("penultimate", "penúltimo", "The penultimate episode was the best."), ("cogent", "convincente / sólido", "She presented a cogent case for reform."), ("circumlocution", "circunloquio / rodeos", "Stop the circumlocution — just say what you mean."), ("equivocal", "equívoco / ambiguo", "His equivocal answer raised more questions.")],
-        [("The company's Pyrrhic victory left it with no resources to compete further.", "Pyrrhic victory in business"), ("In the penultimate chapter, the mystery is finally unraveled.", "Penultimate as literary term"), ("Her argument was so cogent that no one could find a flaw.", "Cogent in academic context"), ("His equivocal response only deepened suspicions.", "Equivocal in political context")],
-        "Write a paragraph (7–9 sentences) using all five vocabulary items from this lesson in natural, connected prose. You can write about a fictional character, a historical event, or a scenario from your professional life.",
-        "'Penultimate' is pen-UL-ti-mate (5 syllables, stress 2nd). 'Equivocal' is eh-KWIV-oh-kal (4 syllables, stress 2nd). 'Cogent' is KOH-jent. 'Circumlocution' is sir-kum-loh-KYOO-shun.",
-        [("English Idioms C2 Level", "English Speeches", null), ("Pyrrhic Victory Meaning", "English Academy", null), ("Advanced English Vocabulary", "Cambridge English", null)]
+        "Sentential relative clauses use which to refer to an entire previous clause rather than a specific noun. Relative adverbs (where, when, why, how) add sophistication. These structures are hallmarks of academic and formal writing.",
+        ["Sentential which: 'He forgot his keys, which caused him to miss the meeting.' (which = the entire situation)", "'He admitted the error, which surprised everyone.' (which = his admission, not just the error)", "Relative adverbs: why (reason), when (time), where (place), how (manner)", "The reason why, the place where, the time when — these combine relative adverbs with antecedents", "Common in academic and literary writing; creates sophisticated causal and temporal connections"],
+        [("sentential", "sentencial / de la oración entera", "The sentential relative clause adds commentary."), ("relative adverb", "adverbio relativo", "She explained the reason why she left."), ("whereby", "mediante el cual / por lo cual", "A process whereby everyone benefits equally."), ("wherein", "en el cual / dentro del cual", "The document wherein all terms are detailed is binding."), ("whence", "de donde / de ahí", "The place whence he came is forgotten.")],
+        [("He announced his resignation, which shocked the team.", "Sentential relative clause"), ("The reason why she refused is still unclear.", "Relative adverb + antecedent"), ("The period during which we negotiated was tense.", "Sophisticated temporal relative"), ("A system whereby fairness is ensured appeals to everyone.", "Formal relative structure")],
+        "Write 6 sentences: 3 with sentential which clauses and 3 with relative adverbs (why, where, when, how) + antecedents. Show causal and temporal relationships.",
+        "'Sentential' is sen-TEN-shal (stress 2nd). 'Whereby' is where-BY (stress 2nd). 'Wherein' is where-IN (stress 2nd). These formal structures are pronounced with clear stress for emphasis and formality.",
+        [("Sentential Relative Clauses", "Cambridge English", null), ("Relative Adverbs and Their Use", "Papa English", null), ("Advanced Relative Structures", "English Speeches", null)]
     );
 
     private static string C2L3() => C(
-        "Hedging language makes claims less absolute, signalling academic caution and intellectual honesty. It is indispensable in research writing, academic essays, and any context where absolute certainty is impossible.",
-        ["Hedging verbs: suggest, indicate, appear, seem, tend, imply, point to", "Modal hedges: may, might, could, would (possibility), should (recommendation)", "Adverb hedges: possibly, probably, apparently, seemingly, generally, typically", "Phrase hedges: 'It could be argued that...', 'Evidence suggests that...', 'It appears that...'", "Over-hedging weakens writing — use hedges purposefully, not constantly"],
-        [("It could be argued that", "Se podría argumentar que", "It could be argued that inequality drives conflict."), ("Evidence suggests", "La evidencia sugiere", "Evidence suggests a causal link."), ("It appears / It seems", "Parece que", "It appears that demand is declining."), ("tend to", "tiende a", "Students tend to perform better with feedback."), ("ostensibly", "aparentemente / en apariencia", "Ostensibly, the policy aims to reduce poverty.")],
-        [("The data suggest a possible correlation between sleep and productivity.", "Hedging with 'suggest'"), ("It could be argued that economic inequality exacerbates social tensions.", "Phrase hedge"), ("The results appear to indicate a significant improvement.", "Hedge with 'appear'"), ("Ostensibly, the measure was introduced for public safety reasons.", "Adverb hedge")],
-        "Rewrite these definitive sentences with appropriate hedging: 1) Climate change causes wars. 2) Social media makes teenagers depressed. 3) Early education determines success in life. 4) Exercise cures anxiety. 5) Technology will replace all human workers.",
-        "'Ostensibly' is os-TEN-si-blee (5 syllables). 'Apparently' is a-PAR-ent-lee (4 syllables). In speech, pause slightly before a hedge — it signals deliberate, careful thought.",
-        [("Academic Writing Hedging Language", "Academic English", null), ("How to Use Modal Verbs for Hedging", "English Speeches", null), ("Cautious Language in Essays", "Cambridge English", null)]
+        "Reduced relative clauses — participle clauses and adjectival phrases — replace full relative clauses with more concise, elegant structures. 'The student working diligently' replaces 'The student who is working diligently.' This is essential for sophisticated, professional writing.",
+        ["Active participles: 'The woman standing near the door' = 'The woman who is standing'", "Passive participles: 'The document submitted yesterday' = 'The document which was submitted yesterday'", "Perfect participles: 'Having finished the report, she left.' = 'After having finished, she left.'", "Adjectival phrases: 'The person in charge' (replaces 'the person who is in charge')", "Creates sophisticated flow and avoids repetitive 'who/which' structures"],
+        [("participle clause", "cláusula de participio / estructura de participio", "The participle clause modifies the noun efficiently."), ("reduced relative", "relativa reducida", "Reducing clauses creates elegant, formal writing."), ("pending", "pendiente / esperando", "All matters pending approval will be addressed."), ("pertaining to", "relativo a / que concierne", "Documents pertaining to the merger are confidential."), ("resembling", "parecido a / que se asemeja a", "Phenomena resembling this pattern have been documented.")],
+        [("The student working on the project completed it early.", "Active participle clause"), ("Having received the promotion, she felt relieved.", "Perfect participle clause"), ("Matters pertaining to security are classified.", "Participle + preposition"), ("The documents submitted contain sensitive information.", "Passive participle clause"), ("The period during which... = The period during which the crisis escalated was difficult.", "Formal relative with adverbial participle")],
+        "Convert 10 sentences containing full relative clauses ('who is', 'which was', etc.) into reduced participle clauses. Write 3 additional sentences using perfect participles (having completed, having been informed).",
+        "Participle clauses flow smoothly: 'The woman standing at the entrance' reads as one unit. 'Pending' is PEN-ding (stress 1st). 'Pertaining' is per-TANE-ing (stress 2nd). Reduced clauses should sound concise, not clipped.",
+        [("Participle Clauses and Reduction", "Cambridge English", null), ("Reduced Relative Clauses in Academic Writing", "Papa English", null), ("Elegant Sentence Structure with Participles", "English Speeches", null)]
     );
 
     private static string C2L4() => C(
-        "Critical analysis means examining arguments carefully: identifying strengths, exposing logical flaws, and evaluating evidence. At C2, you both construct and deconstruct sophisticated arguments.",
-        ["Non sequitur: conclusion does not logically follow from the premises", "Ad hominem: attacking the speaker's character instead of their argument", "Straw man: misrepresenting an opponent's argument to make it easier to attack", "False dichotomy: presenting only two options when others exist", "Equivocation: using an ambiguous term with different meanings in the same argument"],
-        [("non sequitur", "conclusión que no se sigue", "That is a non sequitur — it does not follow."), ("ad hominem", "ataque personal", "That ad hominem adds nothing to the debate."), ("cogent", "sólido / convincente", "The paper makes a cogent, well-evidenced argument."), ("equivocal", "equívoco / ambiguo", "The data is equivocal on this point."), ("circumlocution", "circunloquio / rodeos", "His circumlocution masked a lack of substance.")],
-        [("The argument is cogent and supported by robust empirical evidence.", "Positive critical evaluation"), ("This is a classic non sequitur — growth does not automatically reduce poverty.", "Identifying a logical flaw"), ("The author resorts to ad hominem attacks rather than engaging with the argument.", "Identifying ad hominem"), ("The data remain equivocal, pointing in different directions depending on methodology.", "Acknowledging uncertainty")],
-        "Find a news article or opinion piece. Write a critical analysis paragraph (8–10 sentences) identifying at least 2 argumentative strengths and 2 logical weaknesses. Use vocabulary from this lesson.",
-        "'Non sequitur' is Latin: non-SEK-wi-ter. 'Ad hominem' is ad-HOM-in-em. Academic Latin phrases are pronounced the English way, not classical Latin. Both 3 syllables, stress on 2nd.",
-        [("Logical Fallacies Explained", "TED-Ed", null), ("Critical Thinking and Logical Fallacies", "Paul Graham", null), ("How to Analyze Arguments", "Cambridge English", null)]
+        "Cleft sentences emphasize specific elements using 'it is...that' (it-clefts) or 'what...is' (wh-clefts). They are powerful tools for shifting emphasis and creating sophisticated English. 'It is methodology that distinguishes this study' emphasizes 'methodology'.",
+        ["It-clefts: 'It is the budget that limits us.' (emphasizes 'the budget')", "Wh-clefts: 'What matters most is implementation.' (emphasizes 'implementation')", "Pseudo-clefts: 'The key to success is clarity.' (no 'it is' or 'what is')", "Clefts allow you to rearrange normal word order for rhetorical effect", "Common in formal writing, speeches, and when arguing a point"],
+        [("cleft sentence", "oración escindida / de énfasis", "Cleft sentences shift emphasis for effect."), ("it-cleft", "oración escindida con 'it'", "It was her dedication that won the award."), ("wh-cleft", "oración escindida con 'what'", "What impressed us was his honesty."), ("pseudo-cleft", "pseudo-escisión", "The real issue is communication."), ("emphasize", "enfatizar / poner énfasis", "Use clefts to emphasize key points.")],
+        [("It is the data that supports our conclusion.", "It-cleft emphasizing 'data'"), ("What they need is better communication.", "Wh-cleft emphasizing 'communication'"), ("The problem is not lack of funding but poor management.", "Pseudo-cleft structure"), ("It was her persistence that led to success.", "Emphatic it-cleft")],
+        "Write 12 sentences: 4 with it-clefts, 4 with wh-clefts, and 4 with pseudo-clefts. Vary what you emphasize to show rhetorical control.",
+        "'Cleft' is KLEFT (1 syllable, stress 1st). 'It-cleft' emphasizes a word with slight stress increase: 'It IS the BUDGET that matters.' 'Wh-cleft' also shifts stress: 'WHAT matters is CLARITY.' These create rising-falling intonation for emphasis.",
+        [("Cleft Sentences for Emphasis", "Cambridge English", null), ("It-Clefts and Wh-Clefts Explained", "Papa English", null), ("Rhetorical Emphasis in Advanced English", "English Speeches", null)]
     );
 
     private static string C2L5() => C(
-        "Paraphrasing and summarization at C2 level requires maintaining nuance while changing structure. You reformulate complex ideas without losing meaning. Summarization condenses information while retaining key points. Essential for academic and professional communication.",
-        ["Paraphrasing: restate using different words/structures but same meaning", "Avoid simply replacing words — change sentence structure completely", "Summarization: distil key points from longer text into essential information", "Signal phrases: 'To put it another way...', 'In other words...', 'Essentially...'", "Maintain accuracy — paraphrasing is NOT interpretation or commentary"],
-        [("paraphrase", "parafrasear", "Let me paraphrase that for clarity."), ("distil", "destilar / extraer lo esencial", "The report distils complex data into actionable insights."), ("synopsis", "sinopsis / resumen", "A synopsis of the chapter is provided below."), ("recapitulate", "recapitular / resumir", "To recapitulate, the main findings are..."), ("consolidate", "consolidar / resumir", "The analysis consolidates evidence from multiple sources.")],
-        [("Original: 'The data indicates a positive correlation.' / Paraphrase: 'Evidence points to a relationship between variables.'", "Basic paraphrasing"), ("Summarizing: 'The 300-page report concludes that climate policy must prioritize renewable energy.'", "Condensing to essential points"), ("The author's argument, stripped to essentials, is that innovation drives progress.", "Paraphrasing while summarizing"), ("To recapitulate, three key challenges emerge from this analysis.", "Summarization signal phrase")],
-        "Find a complex paragraph from an academic article. Paraphrase it (3–4 sentences) maintaining all nuance, then summarize it (1–2 sentences) to its essential message.",
-        "'Paraphrase' is PAR-uh-fraze (stress 1st). 'Consolidate' is con-SOL-i-date (stress 2nd). 'Recapitulate' is re-kuh-PIT-choo-late (stress 3rd). In speech, paraphrasing flows naturally — it is not word-by-word substitution.",
-        [("Paraphrasing Strategies", "Academic English", null), ("Summarizing Skills for C2", "Cambridge English", null), ("Advanced Paraphrasing Techniques", "English Speeches", null)]
+        "Nominalization transforms action (verbs/adjectives) into things (nouns) for formal, sophisticated style. 'The government decided to reform education' becomes 'The government's reform of education.' Nominalizations dominate academic and professional writing.",
+        ["Verb → Noun: develop→development, analyze→analysis, argue→argument, judge→judgment", "Adjective → Noun: able→ability, possible→possibility, significant→significance", "Benefits: conciseness, formality, logical flow, academic register", "Disadvantage: overuse creates dense, hard-to-read prose — balance is essential", "Signal pattern: possessive + nominalization = sophisticated style"],
+        [("nominalization", "nominalización", "Nominalization makes writing more formal."), ("transformation", "transformación", "The transformation of the system took years."), ("analysis", "análisis", "The analysis revealed unexpected patterns."), ("implementation", "implementación / ejecución", "Implementation of the policy will begin next month."), ("achievement", "logro / realización", "The achievement of our goals requires commitment.")],
+        [("Rather than: 'We analyzed the data.' / Better: 'Our analysis of the data.'", "Nominalization for formality"), ("The development of these strategies led to success.", "Nominalization in formal context"), ("His ability to lead inspired confidence.", "Possessive + nominalization"), ("The implementation of reforms faced resistance.", "Nominalization in business writing")],
+        "Rewrite these sentences using nominalization: 1) The team analyzed the results. 2) Companies must innovate to survive. 3) The government approved the policy. 4) Students demonstrated remarkable improvement. 5) She contributed significantly to the project.",
+        "'Nominalization' is nom-i-nal-i-ZA-shun (stress 4th). 'Development' is de-VEL-up-ment (stress 2nd). Nominalizations are pronounced clearly to signal formality and abstraction.",
+        [("Nominalization in Academic Writing", "Cambridge English", null), ("Transform Verbs to Nouns", "Papa English", null), ("Formal Style Through Nominalization", "English Speeches", null)]
     );
 
     private static string C2L6() => C(
-        "Pragmatics examines what is MEANT beyond literal words. Implicature refers to implied meaning. Native speakers understand 'Can you pass the salt?' as a request, not a question about ability. Mastering pragmatics makes your English genuinely native-like.",
-        ["Implicature: implied meaning beyond literal words", "'It's cold in here' might mean 'Close the window' or 'Please leave'", "Presupposition: what is assumed to be true. 'Stop eating cake' presupposes you ARE eating cake", "Speech acts: performative verbs that do something (promise, apologize, request, warn)", "Context determines meaning — the same sentence has different meanings in different situations"],
-        [("implicature", "implicatura / significado implícito", "The implicature of that comment is that she disagrees."), ("presupposition", "presuposición / asunción implícita", "The presupposition here is that he was late."), ("pragmatic", "pragmático / práctico contextualmente", "The pragmatic meaning differs from the literal."), ("felicitous", "apropiado / conveniente", "That remark is hardly felicitous in formal settings."), ("infelicitous", "inapropiado / fuera de lugar", "The comment was infelicitous — it offended the audience.")],
-        [("'You could do better' → Implicature: you are not doing well enough", "Implied criticism"), ("'Have you finished?' asked at 5 PM → Presupposition: you should be done by now", "Presupposition in context"), ("'I promise to be on time' → Speech act: making a commitment", "Performative verb"), ("Literal: 'The door is open.' Pragmatic: 'You can enter.' or 'It's windy here.'", "Context-dependent pragmatics")],
-        "Select 5 sentences that have implicit meaning beyond literal words. Explain the implicature and the context in which each is said.",
-        "'Pragmatic' is prag-MAT-ic (3 syllables, stress 2nd). 'Implicature' is IM-pli-kuh-chur (4 syllables, stress 1st). 'Presupposition' — stress 3rd syllable: pre-sup-o-ZI-shun.",
-        [("Pragmatics in English", "Academic English", null), ("Implicature and Indirect Speech Acts", "Cambridge English", null), ("Context and Meaning in English", "English Speeches", null)]
+        "Fronting — moving sentence elements to the front for emphasis or stylistic effect — is a hallmark of sophisticated writing. 'Remarkable were the results.' 'Particularly troubling is the trend.' Fronting shifts attention and creates rhetorical impact.",
+        ["Fronting an adjective: 'Remarkable was his dedication.' (vs. 'His dedication was remarkable.')", "Fronting an adverbial: 'Only then did we understand.' (creates narrative tension)", "Fronting an object: 'This issue, we must address.' (conversational emphasis)", "Fronting a prepositional phrase: 'In the corner sat an old chair.' (narrative/literary effect)", "More common in formal, literary, and journalistic writing; creates variety and emphasis"],
+        [("fronting", "anteposición / inversión", "Fronting emphasizes specific elements."), ("inversion", "inversión", "Inversion follows fronting of certain elements."), ("narrative", "narrativo / del relato", "Fronting creates narrative tension and flow."), ("literary", "literario", "Literary writing uses fronting for stylistic effect."), ("constituent", "constituyente / elemento sintáctico", "Fronting moves a constituent to sentence-initial position.")],
+        [("Remarkable was her composure throughout the crisis.", "Fronted adjective"), ("Only after years of effort did she succeed.", "Fronted adverbial"), ("In the distance loomed the mountains.", "Fronted prepositional phrase"), ("Particularly concerning is the lack of transparency.", "Fronted adjectival phrase")],
+        "Write 10 sentences using fronting: 3 with fronted adjectives, 3 with fronted adverbials, 2 with fronted prepositional phrases, and 2 with fronted objects or complements.",
+        "'Fronting' is FRONT-ing (stress 1st). When you front elements, they receive primary stress: 'REMARKABLE was her COMPOSURE.' This stress pattern signals emphasis and draws listener attention.",
+        [("Fronting for Emphasis and Style", "Cambridge English", null), ("Inversion and Fronting in English", "Papa English", null), ("Literary Use of Fronting", "English Speeches", null)]
     );
 
     private static string C2L7() => C(
-        "Stylistic variation — the ability to shift register, tone, and style based on context — distinguishes near-native from native speakers. C2 mastery involves conscious control of style for effect. Literary devices create impact; clarity requires simplicity. Style is a signature.",
-        ["Register shift: formal ↔ informal based on audience", "Tone: humorous, serious, ironic, compassionate, clinical, passionate", "Sentence variety: simple, compound, complex structures for rhythm and emphasis", "Rhetorical devices: alliteration, parallelism, repetition, contrast for effect", "Clarity vs. complexity: know when to simplify and when complexity adds nuance"],
-        [("eloquent", "elocuente / expresivo", "Her eloquent speech moved the audience."), ("terse", "conciso / breve", "His terse reply indicated displeasure."), ("baroque", "barroco / muy ornamentado", "The baroque prose is difficult to parse."), ("understated", "subestimado / discreto", "The understated humor appeals to sophisticated audiences."), ("prosaic", "prosaico / ordinario", "The prosaic description lacks emotional impact.")],
-        [("Register shift: 'The defendant unlawfully appropriated funds.' (formal) vs. 'He stole the money.' (direct)", "Formal to direct"), ("Tone in one sentence: 'Your argument, while creative, lacks empirical support.' (constructive but firm)", "Balanced critical tone"), ("Alliteration for effect: 'The bitter, bleak, barren landscape...'", "Stylistic device"), ("Parallelism: 'It was the best of times, it was the worst of times.'", "Rhetorical device")],
-        "Rewrite the same information in 3 different styles: 1) Scientific/clinical, 2) Journalistic/accessible, 3) Literary/creative. Show how style shapes meaning.",
-        "Eloquent is e-KWAH-went (stress 1st). Baroque is buh-ROHK (stress 2nd). When shifting styles, your intonation and pace change — formal speech is slower and more precise.",
-        [("Stylistic Variation in Writing", "Cambridge English", null), ("Register and Style in English", "Academic English", null), ("Literary Devices and Rhetoric", "English Speeches", null)]
+        "Negative inversion (with Never, Hardly, Seldom) and degree inversion (with So, Such) create dramatic emphasis. 'Never have I seen such courage.' 'So striking were the results that...' These are hallmarks of formal, literary, and sophisticated English.",
+        ["Negative inversion: 'Never have I witnessed...' (auxiliary before subject after negative adverb)", "'Hardly had she arrived when...' (temporal + negative inversion)", "'Seldom does such talent emerge.' (regular inversion)", "Degree inversion: 'So impressive were the findings...' (So + adjective + inversion)", "'Such remarkable progress have they made...' (Such + adjective + noun + inversion)", "Creates emphasis and is common in formal speeches, academic writing, and literature"],
+        [("inversion", "inversión", "Inversion places the verb before the subject."), ("negative adverb", "adverbio negativo", "Negative adverbs trigger inversion."), ("degree", "grado / medida", "Degree inversion emphasizes extent or intensity."), ("trigger", "desencadenar / provocar", "Certain adverbs trigger inversion."), ("consequential", "como consecuencia / resultante", "So damaging were the consequences that...")],
+        [("Never have I encountered such evidence.", "Negative inversion with Never"), ("Hardly had the meeting begun when objections arose.", "Negative inversion with Hardly"), ("So thorough was the investigation that no stone was left unturned.", "Degree inversion with So"), ("Such significant advances have rarely been achieved.", "Degree inversion with Such")],
+        "Write 12 sentences: 4 with negative inversion (Never, Hardly, Seldom, Rarely), 4 with So inversion, and 4 with Such inversion. Ensure grammatical accuracy and natural emphasis.",
+        "Negative inversion is dramatic: 'NEV-er HAVE I seen...' — stress the never, then the auxiliary. Degree inversion: 'SO STRIK-ing WERE the RESULTS...' — falling intonation emphasizes the degree and creates formality.",
+        [("Inversion in English: Negative and Degree", "Cambridge English", null), ("Emphasis Through Inversion", "Papa English", null), ("Literary Use of Inversion", "English Speeches", null)]
     );
 
     private static string C2L8() => C(
-        "Native speaker features include: elision (omitting sounds), assimilation (sound changes), prosody (rhythm/intonation), and discourse patterns. At C2, you understand how native speakers really speak — not textbook English, but authentic variation.",
-        ["Elision: 'going to' → 'gonna', 'want to' → 'wanna' (in informal speech)", "Assimilation: 'handbag' → /hæm'bæg/, 'that' → /ðət/ before certain sounds", "Prosody: intonation rising for questions, stress on content words, rhythm patterns", "Discourse patterns: turn-taking, back-channeling ('mm', 'yeah'), fillers ('like', 'you know')", "Variation: native speakers code-switch, use colloquialisms, break grammar rules intentionally"],
-        [("elision", "elisión / omisión", "Elision is common in rapid, informal speech."), ("assimilation", "asimilación / cambio de sonido", "Assimilation affects pronunciation in connected speech."), ("prosody", "prosodia / entonación y ritmo", "Native-like prosody requires extensive listening."), ("colloquial", "coloquial / informal", "Colloquial expressions mark native speech."), ("discourse marker", "marcador del discurso", "Discourse markers like 'you know' signal native speech patterns.")],
-        [("I'm gonna go to the store. / I'm going to go to the store.", "Elision in informal speech"), ("Handbag pronounced /hæm'bæg/ due to assimilation", "Sound change in connected speech"), ("Rising intonation on 'You're coming?' signals question", "Prosodic patterns"), ("'Like, he was totally confused, you know?' — Native informal pattern", "Discourse features")],
-        "Record yourself or find a native speaker interview. Transcribe 2–3 minutes and identify: elisions, assimilations, discourse markers, and prosodic patterns used.",
-        "'Elision' is i-LIZH-un (stress 2nd). 'Assimilation' is uh-sim-uh-LAY-shun (stress 3rd). 'Prosody' is PRAH-suh-dee (stress 1st). Native speech flows — stress and intonation carry meaning more than individual words.",
-        [("Native English Pronunciation Patterns", "Papa English", null), ("Connected Speech in English", "Cambridge English", null), ("How Native Speakers Really Talk", "English Speeches", null)]
+        "Focus adverbs (even, only, just, still, already, so) change meaning based on position. 'Only she knows' vs. 'She only knows' — different emphasis. These subtleties mark native proficiency and are essential for nuanced communication.",
+        ["Position of 'only': 'Only she knows' (no one else knows) vs. 'She only knows' (she merely knows, doesn't understand) vs. 'She knows only him' (she knows only that person)", "'Even' adds emphasis: 'Even he passed' (surprisingly), 'He even passed' (contrary to expectations)", "'Just' as focus: 'I just arrived' (moments ago) vs. 'I just want peace' (all I want)", "'Still' and 'already' show state changes: 'I'm still waiting' vs. 'I've already left'", "Shift in position creates shift in meaning — this is subtle but crucial for C2"],
+        [("focus adverb", "adverbio de enfoque / de alcance", "Focus adverbs restrict or emphasize meaning."), ("scope", "alcance / dominio", "The scope of 'only' determines meaning."), ("contrastive", "contrastivo / de contraste", "Even creates contrastive stress."), ("temporal", "temporal / de tiempo", "Just marks temporal proximity."), ("already", "ya / ya", "Already marks completed action or change of state.")],
+        [("Only she attended the meeting. (No one else)", "Only with narrow scope"), ("She only attended the meeting. (She merely attended, didn't participate)", "Only with wider scope"), ("Even he understood the concept. (Surprising)", "Even for contrast"), ("I've already finished. (Change of state before now)", "Already marking completion")],
+        "Write 15 sentences showing how position of focus adverbs (only, even, just, still, already) changes meaning. Include at least 2 sentences for each adverb, showing different positions.",
+        "Focus adverbs carry subtle stress: 'ONLY she knows' (no one else) vs. 'she ONLY knows' (merely knows). The stress position signals the meaning. In rapid speech, focus adverbs can be reduced but should remain clear.",
+        [("Position of Focus Adverbs", "Cambridge English", null), ("Only and Its Meanings", "Papa English", null), ("Scope Ambiguity in Focus Adverbs", "English Speeches", null)]
     );
 
     private static string C2L9() => C(
-        "Subtle nuance and precision distinguish C2 mastery. This means understanding shades of meaning, using words with exact precision, and recognizing when near-synonyms carry different implications. English has many near-synonyms that differ in register, connotation, or subtle meaning.",
-        ["'Mistake' vs 'error' vs 'blunder': mistake is unintentional; error is more formal; blunder is a serious mistake", "'Angry' vs 'furious' vs 'irate': angry is general; furious is intense emotion; irate is formal/archaic", "'Small' vs 'tiny' vs 'diminutive': small is neutral; tiny emphasizes unusually small; diminutive is formal/literary", "Connotation matters: 'frugal' (positive) vs 'stingy' (negative), both mean money-conscious", "Precision is power: choosing exact words elevates writing and shows native competence"],
-        [("nuance", "matiz / sutileza", "The nuance of this distinction is important."), ("subtlety", "sutileza", "Subtlety is lost in translation."), ("connotation", "connotación / matiz", "The connotation of the word is pejorative."), ("pedantic", "pedante / muy formal", "Avoiding pedantic language keeps writing accessible."), ("discernment", "discernimiento / buen juicio", "Discernment in word choice separates native from non-native writers.")],
-        [("A blunder (serious mistake) vs a simple slip", "Distinguishing severity levels"), ("Frugal (approved thriftiness) vs stingy (disapproved miserliness)", "Connotation differences"), ("The nuance between 'I believe' (personal opinion) and 'I know' (certainty)", "Epistemic precision"), ("Subtle differences shape meaning: 'reluctant' vs 'unwilling'", "Near-synonym precision")],
-        "Find 3 pairs of near-synonyms in a formal text. Explain why the author chose one over the other. What would change if they used the alternative?",
-        "'Nuance' is NOO-ahns (stress 1st). 'Connotation' is kuh-no-TAY-shun (stress 3rd). 'Pedantic' is puh-DAN-tik (stress 2nd). Precision is pronounced PRIH-SIZH-un.",
-        [("Subtle Differences in English Vocabulary", "Papa English", null), ("Near Synonyms and Precision", "Cambridge English", null), ("Connotation in Advanced English", "English Speeches", null)]
+        "Complex noun phrases use extensive pre- and post-modification to build sophisticated, information-dense expressions. 'The government decision on education policy' vs. 'The government's education policy decision'— word order and modification create different formality and emphasis.",
+        ["Pre-modification: adjectives and nouns before the head: 'the tall administrative building', 'government education policy'", "Post-modification: prepositional phrases, relative clauses, participles after the head: 'the analysis of the data by experts'", "Stacking modifiers: 'The comprehensive analysis of survey data from three countries conducted over two years'", "Register shift: informal 'the big problem we discussed' vs. formal 'the significant problem pertaining to implementation'", "Complex NPs are hallmarks of academic, legal, and formal writing"],
+        [("noun phrase", "sintagma nominal", "Complex noun phrases convey dense information."), ("pre-modification", "premodificación", "Pre-modification adds specificity."), ("post-modification", "postmodificación", "Post-modification elaborates meaning."), ("constituent", "constituyente / componente", "Each constituent contributes meaning."), ("embedding", "incrustación", "Embedding creates hierarchical meaning.")],
+        [("The policy on education reform implemented by the government", "Complex post-modification"), ("The government's comprehensive education reform initiative", "Complex pre-modification"), ("The three-year study of climate patterns across five continents published last year", "Stacked pre- and post-modification"), ("Matters concerning administrative procedure and implementation responsibility", "Formal complex NP")],
+        "Identify and analyze 5 complex noun phrases from academic or formal texts. Map their pre- and post-modification. Then write 8 sentences using complex NPs with at least 3 levels of modification each.",
+        "Complex noun phrases should flow naturally: 'the comprehensive analysis OF the data BY experts FROM three countries.' Slight pauses help the listener parse meaning without losing naturalness.",
+        [("Complex Noun Phrases in Academic Writing", "Cambridge English", null), ("Modification and Noun Phrase Structure", "Papa English", null), ("Information Density in English", "English Speeches", null)]
     );
 
     private static string C2L10() => C(
-        "Discourse analysis examines how language functions beyond individual sentences — how texts are organized, how arguments develop, how writers persuade. C2 proficiency includes understanding text structure, cohesion devices, and rhetorical patterns that shape meaning at macro level.",
-        ["Discourse markers organize ideas: 'however' signals contrast, 'moreover' adds ideas, 'therefore' shows cause-effect", "Thematic progression: given information (what we know) → new information (what's new) shapes flow", "Rhetorical structure: problem-solution, chronological, cause-effect, comparison organize extended texts", "Presuppositions shape discourse: what is assumed vs. explicitly stated", "Register shift within discourse: formal introduction, informal middle section, formal conclusion"],
-        [("discourse analysis", "análisis del discurso", "Discourse analysis reveals how texts persuade."), ("cohesion", "cohesión / conexión", "Strong cohesion guides readers through arguments."), ("thematic", "temático / relacionado al tema", "Thematic progression makes texts coherent."), ("presupposition", "presuposición / asunción", "Presuppositions shape how readers interpret text."), ("rhetorical", "retórico / persuasivo", "The rhetorical structure strengthens the argument.")],
-        [("'First, we observe the problem. Next, we examine causes. Finally, solutions emerge.' (Explicit organization)", "Discourse structure"), ("Given: 'She is a doctor.' New: 'She specializes in cardiology.'", "Thematic progression"), ("Problem (inequality exists) → Solution (policy change needed)", "Rhetorical pattern"), ("'Some argue that... However, evidence suggests...' (Discourse markers signaling contrast)", "Cohesion across sentences")],
-        "Analyze a 1-2 page article. Map its discourse structure: what is given vs. new information, what rhetorical pattern organizes it (problem-solution, comparison, etc.), and what discourse markers guide readers.",
-        "'Discourse' is DIS-korse (stress 1st). 'Cohesion' is ko-HEE-zhun (stress 2nd). 'Rhetorical' is ruh-TOR-i-kal (stress 2nd). Pronounce these words precisely — they are academic register markers.",
-        [("Discourse Analysis in English Texts", "Academic English", null), ("How Texts are Organized", "Cambridge English", null), ("Analyzing Text Structure", "English Speeches", null)]
+        "Idiomatic prepositions appear in fixed expressions where meaning cannot be derived from individual words. 'At stake' (not 'in stake'), 'by means of' (not 'with means'), 'in accordance with' (not 'in agreement with'). These fixed collocations are essential for native-like fluency.",
+        ["'At stake' (risk), 'at hand' (present/available), 'at random' (without plan)", "'By means of' (using), 'by virtue of' (due to), 'by dint of' (through effort)", "'In light of' (considering), 'in accordance with' (following), 'in the course of' (during)", "'On the basis of' (evaluating by), 'on account of' (because), 'on behalf of' (representing)", "Mistakes here are very noticeable to native speakers — these must be learned as fixed expressions"],
+        [("at stake", "en juego / en riesgo", "The company's reputation is at stake."), ("by virtue of", "en virtud de / por", "She was appointed by virtue of her expertise."), ("in light of", "a la luz de", "In light of new evidence, we reconsidered."), ("on account of", "debido a / por", "The meeting was postponed on account of weather."), ("in accordance with", "de acuerdo con", "Procedures were followed in accordance with policy.")],
+        [("The success of the project is at stake.", "Idiomatic at stake"), ("By means of careful planning, they avoided disaster.", "Idiomatic by means of"), ("In accordance with regulations, we must submit reports.", "Formal idiomatic in accordance with"), ("On the basis of available evidence, we conclude...", "Academic idiomatic on the basis of")],
+        "Write 12 sentences using idiomatic fixed prepositions: 'at stake', 'at hand', 'by means of', 'by virtue of', 'in light of', 'in accordance with', 'on the basis of', 'on account of', 'on behalf of', plus 3 others from your knowledge.",
+        "Idiomatic prepositions should flow smoothly as fixed chunks: 'in LIGHT of' (not in-LITE of), 'by VIRT-yoo' (not by-VIRT-yoo). These are pronounced as units, not word-by-word.",
+        [("Idiomatic Prepositions and Fixed Expressions", "Cambridge English", null), ("Prepositional Collocations in English", "Papa English", null), ("Advanced Preposition Usage", "English Speeches", null)]
     );
 
     private static string C2L11() => C(
-        "Cultural references and allusions enrich language but require cultural knowledge to fully understand. Native English includes references to literature, history, film, and shared cultural experiences. Understanding and using these marks sophisticated, culturally integrated English.",
-        ["Literary allusions: 'Orwellian' (from George Orwell → dystopian), 'Kafkaesque' (from Kafka → absurd bureaucracy)", "Historical references: 'Titanic moment' (doomed inevitability), 'Shakespearean tragedy' (noble downfall)", "Film/pop culture: 'Mission Impossible' (seemingly impossible task), 'Star Wars moment' (good vs evil confrontation)", "Proverbs and idioms embed cultural wisdom: 'Don't count chickens before they hatch' (don't assume success)", "Understanding context-dependent meaning: same phrase means differently to different cultures"],
-        [("Orwellian", "orwelliano / distópico", "The government's surveillance was Orwellian in scale."), ("Kafkaesque", "kafkiano / absurdo burocrático", "Navigating the bureaucracy felt Kafkaesque."), ("Shakespearean", "shakespeariano / trágico", "Their romance had a Shakespearean quality."), ("allude", "aludir / hacer referencia", "The author alludes to classical mythology."), ("metaphorical", "metafórico / figurado", "His language was highly metaphorical and cultural.")],
-        [("'That's an Orwellian nightmare' — understood by those familiar with 1984", "Literary allusion"), ("'A Titanic moment was inevitable' — understood as doomed", "Historical reference"), ("Cultural allusions assume shared knowledge", "Context-dependent meaning"), ("'Don't put all your eggs in one basket' — embedded cultural wisdom", "Proverb understanding")],
-        "Find 5 allusions in English literature, film, or news. Explain the cultural reference and its meaning. What would be lost if the allusion were not understood?",
-        "'Orwellian' is or-WEL-ee-an (4 syllables, stress 2nd). 'Kafkaesque' is kah-ka-ESKE (3 syllables, stress 3rd). 'Allude' is uh-LOOD (2 syllables, stress 2nd). Cultural references are pronounced distinctively to signal sophistication.",
-        [("English Allusions and References", "Papa English", null), ("Literary and Cultural References", "Cambridge English", null), ("Understanding Allusions in English", "English Speeches", null)]
+        "Advanced phrasal verbs show complex patterns: transitive vs. intransitive, separable vs. inseparable, and multi-word particles. 'Turn down' (transitive) vs. 'run into' (transitive), vs. 'look out' (intransitive). Understanding these patterns is essential for advanced fluency.",
+        ["Transitive separable: 'turn down the offer' or 'turn the offer down'", "Transitive inseparable: 'run into trouble' (NOT 'run trouble into')", "Intransitive: 'look out!' (no object possible)", "Three-word phrasal verbs: 'look forward to', 'get away with', 'catch up with' (with = inseparable preposition)", "Usage errors are very noticeable — mastery shows sophistication"],
+        [("transitive", "transitivo", "This phrasal verb is transitive."), ("inseparable", "inseparable", "Some phrasal verbs are inseparable."), ("particle", "partícula", "The particle changes the verb's meaning."), ("multi-word", "de múltiples palabras", "Multi-word phrasal verbs are complex."), ("collocation", "colocación", "Phrasal verbs form fixed collocations.")],
+        [("She turned down his proposal. / She turned his proposal down.", "Transitive separable"), ("He ran into an old friend yesterday.", "Transitive inseparable"), ("They ran up against unexpected difficulties.", "Three-word phrasal verb"), ("I'm looking forward to our meeting.", "Three-word with preposition")],
+        "Write sentences using: 5 transitive separable phrasal verbs (show both orders), 5 transitive inseparable, 3 intransitive, and 3 multi-word phrasal verbs. Verify each pattern is correct.",
+        "Phrasal verbs form tight units: 'turn DOWN the offer' — stress the particle. Multi-word: 'look FORWARD TO' — stress forward and to. Position changes meaning, but pronunciation rhythm stays consistent.",
+        [("Phrasal Verbs: Patterns and Positions", "Cambridge English", null), ("Advanced Phrasal Verb Structures", "Papa English", null), ("Mastering Phrasal Verbs at C2", "English Speeches", null)]
     );
 
     private static string C2L12() => C(
-        "Mastery of ambiguity means understanding that English embraces multiple meanings intentionally. Puns, wordplay, irony, and deliberate vagueness are tools for sophisticated communication. C2 proficiency includes producing ambiguous language when appropriate and recognizing layers of meaning.",
-        ["Ambiguity can be intentional: poets use it for depth, advertisers for memorable messaging, speakers for diplomacy", "Lexical ambiguity: 'bank' (financial institution vs. riverbank), 'light' (illumination vs. weight)", "Syntactic ambiguity: 'I saw the man with the telescope' — who has the telescope?", "Pragmatic ambiguity: 'That's interesting' can be genuine interest OR subtle criticism", "Recognizing and using ambiguity marks native sophistication — not confusion, but intentional layering"],
-        [("ambiguity", "ambigüedad / falta de claridad", "The ambiguity in the statement allows multiple interpretations."), ("wordplay", "juego de palabras", "The poet uses wordplay for humorous effect."), ("irony", "ironía", "Her ironic comment masked genuine concern."), ("pun", "juego de palabras / calambur", "The pun relies on double meaning."), ("equivocal", "equívoco / ambiguo", "His equivocal response left everyone confused.")],
-        [("'That's a brilliant idea!' — Could be genuine praise OR sarcastic criticism (pragmatic ambiguity)", "Intentional ambiguity"), ("'Light' can mean brightness OR lack of weight (lexical ambiguity)", "Multiple meanings"), ("'I saw the boy with the binoculars' — Who has them? (syntactic ambiguity)", "Sentence structure creates ambiguity"), ("Poetry intentionally uses ambiguity to create multiple layers of meaning", "Artistic ambiguity")],
-        "Write a short paragraph (4–6 sentences) that intentionally uses ambiguity at least 3 times. The meaning should be clear in context but allow for alternative interpretations. Then explain where the ambiguity lies.",
-        "'Ambiguity' is am-BIG-yoo-i-tee (5 syllables, stress 2nd). 'Equivocal' is eh-KWIV-uh-kal (4 syllables, stress 2nd). 'Irony' is EYE-ruh-nee (3 syllables, stress 1st). These words are pronounced distinctly — they signal advanced discourse.",
-        [("Ambiguity in English Language", "Academic English", null), ("Intentional Ambiguity in Literature", "Cambridge English", null), ("Playing with Meaning in English", "English Speeches", null)]
+        "Collocations and idiomatic prepositional phrases are word partnerships that native speakers use naturally. 'Strong coffee' (not 'powerful coffee'), 'reach an agreement' (not 'arrive at an agreement'), 'come to a conclusion' (not 'come to a decision' when referring to deduction). These cannot be learned rule-by-rule.",
+        ["Strong collocations: 'make a decision', 'reach a conclusion', 'come to an agreement', 'raise an issue'", "Weak collocations: 'good/bad luck' (but NOT 'good/bad accident')", "Idiomatic: 'give sb a hand' (help), 'get sb's drift' (understand), 'bend over backwards' (work very hard)", "Register matters: 'kick the bucket' (informal) vs. 'pass away' (formal) = same meaning, different collocations", "Collocation errors mark non-natives immediately — recognition and production are both crucial"],
+        [("collocation", "colocación", "These words form a strong collocation."), ("strong collocation", "colocación fuerte / frecuente", "Strong collocations are less flexible."), ("weak collocation", "colocación débil", "Weak collocations allow more variation."), ("give sb a hand", "echar una mano", "Can you give me a hand?"), ("get sb's drift", "captar lo que alguien quiere decir", "I get your drift.")],
+        [("They reached an agreement after long negotiations.", "Standard collocation"), ("She made a remarkable discovery.", "Collocation: made + discovery"), ("He bent over backwards to help us.", "Idiomatic collocation"), ("The committee came to an unfortunate conclusion.", "Collocation: come to + conclusion")],
+        "Find 15 strong collocations in English texts. For each, explain why the specific verb/adjective is used rather than alternatives. Then write 8 sentences using 8 different strong collocations naturally.",
+        "Collocations should sound automatic, not constructed: 'make a DECISION' flows as one unit. 'Strong collocations' are pronounced without hesitation — they're automatic for native speakers.",
+        [("English Collocations and Idioms", "Cambridge English", null), ("Verb-Noun Collocations", "Papa English", null), ("Idiomatic Expressions and Collocations", "English Speeches", null)]
+    );
+
+    private static string C2L13() => C(
+        "Discourse markers organize extended text and signal logical relationships. Additive markers (furthermore, moreover), contrastive (nevertheless, however), causal (consequently, therefore), sequential (subsequently, eventually). These guide readers through complex arguments and mark sophisticated writing.",
+        ["Additive: furthermore, moreover, in addition, additionally, as well as", "Contrastive: nevertheless, however, conversely, by contrast, on the other hand, yet", "Causal: consequently, therefore, as a result, due to, because of, for this reason", "Sequential: subsequently, eventually, next, later, meanwhile, in due course", "More formal markers appear sentence-initially or mid-sentence to guide argument flow"],
+        [("furthermore", "además / por otra parte", "Furthermore, the evidence suggests..."), ("nevertheless", "sin embargo / no obstante", "The data are inconclusive; nevertheless, patterns emerge."), ("consequently", "en consecuencia / por lo tanto", "The delay was problematic; consequently, costs increased."), ("subsequently", "posteriormente / después", "He joined in 2010; subsequently, he led the department."), ("conversely", "por el contrario / inversamente", "Some support expansion; conversely, others favor consolidation.")],
+        [("The study was limited in scope. Furthermore, the sample size was small.", "Additive marker"), ("The evidence is mixed. Nevertheless, trends favor this conclusion.", "Contrastive marker"), ("The project was delayed. Consequently, the budget exceeded projections.", "Causal marker"), ("The initial phase was challenging. Subsequently, progress accelerated.", "Sequential marker")],
+        "Write a 15-20 sentence paragraph on a topic of your choice using at least 8 different discourse markers to organize ideas logically. Label each marker and its function (additive, contrastive, causal, sequential).",
+        "Discourse markers are typically unstressed bridges: 'Furthermore' — the rhythm emphasizes what follows, not the marker itself. 'Consequently' flows as the bridge between two ideas.",
+        [("Discourse Markers and Cohesion", "Cambridge English", null), ("Linking Words for Advanced Writers", "Papa English", null), ("Organization Through Discourse Markers", "English Speeches", null)]
+    );
+
+    private static string C2L14() => C(
+        "Cohesive devices — reference, substitution, conjunction, and ellipsis — tie sentences and ideas together. Understanding how to create and follow cohesion is crucial for reading and writing coherent, sophisticated texts. Cohesion is the glue that makes writing flow.",
+        ["Reference: pronouns refer back to nouns, maintaining continuity ('She is a doctor. She specializes...')", "Substitution: pronouns or verbs replace earlier words ('Do you like coffee? I do.')", "Conjunction: linking words show relationships (but, and, or, because, although)", "Ellipsis: omitting understood words for brevity ('John went to Paris; Sarah to Rome')", "Thematic progression: moving from given (known) to new information creates flow"],
+        [("cohesion", "cohesión", "Strong cohesion guides readers through text."), ("reference", "referencia / anáfora", "The pronoun 'it' refers back to the noun."), ("substitution", "sustitución", "Do substitution with 'do' or 'so'."), ("conjunction", "conjunción / nexo", "Conjunctions link ideas logically."), ("thematic", "temático", "Thematic progression shows text structure.")],
+        [("She arrived early. She was nervous.", "Reference: 'she' maintains cohesion"), ("'Will you attend?' 'Yes, I will.'", "Substitution: 'will' replaces 'attend'"), ("He studied hard. However, he failed the exam.", "Conjunction showing contrast"), ("Some students passed; others did not.", "Ellipsis: 'passed' understood in second clause")],
+        "Analyze a 2-3 paragraph academic text. Map all cohesive devices (reference, substitution, ellipsis, conjunction). Show how thematic progression (given→new) creates flow. Then write a 10-sentence paragraph demonstrating strong cohesion through all four types of devices.",
+        "Cohesive devices create rhythm: reference pronouns are usually unstressed ('She, she, she' flows naturally). Cohesion should be invisible — readers follow the argument without noticing the devices.",
+        [("Cohesion in English Texts", "Cambridge English", null), ("Creating Coherence and Cohesion", "Papa English", null), ("Discourse Cohesion Strategies", "English Speeches", null)]
+    );
+
+    private static string C2L15() => C(
+        "Ellipsis — omitting words understood from context — creates natural, concise English. 'He went to Paris; she to Rome' (ellipsis of 'went'). 'Better late than never' (ellipsis of 'it is'). Ellipsis makes writing and speech more fluent and less repetitive.",
+        ["Verbal ellipsis: omitting the verb or auxiliary ('John passed; so did Mary')", "Nominal ellipsis: omitting the noun ('I prefer red ones over blue ones' → 'I prefer red over blue')", "Clausal ellipsis: omitting entire clauses when understood ('He's coming tomorrow — I think so')", "Stranding: leaving a preposition at the end when the object is omitted ('What do you think about?' vs. 'What office are you in?')", "Creates rhythm and avoids awkward repetition"],
+        [("ellipsis", "elipsis / omisión", "Ellipsis makes sentences concise."), ("verbal", "verbal / del verbo", "Verbal ellipsis omits the verb."), ("nominal", "nominal / del sustantivo", "Nominal ellipsis omits the noun."), ("stranding", "preposición al final", "Preposition stranding is natural in informal speech."), ("implied", "implícito / sobreentendido", "Understanding ellipsis requires recognizing implied words.")],
+        [("John bought a car; Mary, a truck.", "Nominal ellipsis of 'bought a'"), ("'Do you want to come?' 'I'd like to.' (ellipsis of verb + object)", "Verbal ellipsis"), ("'She's more experienced than he is.' → 'She's more experienced than he.' (ellipsis of 'is')", "Ellipsis in comparison"), ("'Which conference did you attend?' (stranding of preposition)", "Preposition stranding")],
+        "Rewrite 12 sentences using ellipsis: 4 with verbal ellipsis, 4 with nominal ellipsis, 2 with comparative ellipsis, and 2 with stranded prepositions. Ensure they sound natural.",
+        "Ellipsis creates rhythm and fluency: 'John went to Paris; Sarah to Rome.' The second clause is faster because words are omitted — this mirrors natural speech patterns.",
+        [("Ellipsis in English Grammar", "Cambridge English", null), ("Omission and Ellipsis", "Papa English", null), ("Creating Fluency Through Ellipsis", "English Speeches", null)]
+    );
+
+    private static string C2L16() => C(
+        "Substitution — using pronouns or auxiliary verbs to replace clauses — allows native speakers to speak elegantly without repetition. 'Do you like coffee?' 'Yes, I do.' / 'Is she coming?' 'I think so.' / 'Some agree; others don't.' This is fluency and sophistication.",
+        ["Do-substitution: 'She likes coffee; I do too.' (do = like coffee)", "So/not-substitution: 'Is he coming?' 'I hope so.' / 'Will they succeed?' 'I hope not.'", "Substitution with auxiliaries: 'She's finished. I haven't.' (have = finished)", "Substitution makes writing and speech more natural and less repetitive", "Errors in substitution mark non-native speakers — mastery shows fluency"],
+        [("substitution", "sustitución", "Substitution replaces words to avoid repetition."), ("do-substitution", "sustitución con 'do'", "Do substitutes for the main verb."), ("so-substitution", "sustitución con 'so'", "So replaces an affirmative clause."), ("not-substitution", "sustitución con 'not'", "Not replaces a negative clause."), ("auxiliary", "verbo auxiliar", "Auxiliaries can substitute for main verbs.")],
+        [("'Do you like this?' 'Yes, I do.' (do = like this)", "Do-substitution"), ("'Is he aware of the issue?' 'I think so.' (so = he is aware)", "So-substitution"), ("'Will she attend?' 'I hope not.' (not = she won't attend)", "Not-substitution"), ("'They finished early. We haven't.' (have = finished)", "Auxiliary substitution")],
+        "Write 20 short dialogues: 4 using do-substitution (various tenses), 4 using so-substitution, 4 using not-substitution, 4 using auxiliary substitution, and 4 mixing multiple types. Make them sound natural.",
+        "Substitution is automatic in native speech: 'Yes, I DO' (slight stress on do), 'I HOPE so' (so is usually unstressed). Substitution flows naturally — it should sound unthinking and fluent.",
+        [("Substitution and Ellipsis in English", "Cambridge English", null), ("Do-Support and Substitution", "Papa English", null), ("Native-Like Use of Substitution", "English Speeches", null)]
     );
 
     // ── Helpers ───────────────────────────────────────────────────────────────
