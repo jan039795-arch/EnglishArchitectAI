@@ -7,51 +7,77 @@
 
 @if (_loading)
 {
-    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+    <div style="display: flex; justify-content: center; padding: 3rem;">
+        <MudProgressCircular Indeterminate="true" Color="Color.Primary" Size="Size.Large" />
+    </div>
 }
 else if (_level is null)
 {
-    <MudAlert Severity="Severity.Error">Level not found.</MudAlert>
+    <MudAlert Severity="Severity.Error" Style="margin-bottom: 2rem;">
+        ❌ Level not found
+    </MudAlert>
 }
 else
 {
-    <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
-    <MudText Typo="Typo.h5" GutterBottom="true">@_level.Code — @_level.Name</MudText>
-    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
-        Complete each module in order to progress through the level.
-    </MudText>
+    <!-- Page Header -->
+    <div style="margin-bottom: 2rem;">
+        <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
+        <h1 style="color: #003D7A; margin: 0 0 0.5rem 0;">📚 @_level.Code — @_level.Name</h1>
+        <p style="color: #6C757D; font-size: 1.1rem; margin: 0;">Complete each module to progress through the level and deepen your understanding.</p>
+    </div>
 
     @if (_modules.Count == 0)
     {
-        <MudAlert Severity="Severity.Info">No modules available yet for this level.</MudAlert>
+        <div class="alert alert-info">
+            <span>ℹ️ No modules available yet for this level. Check back soon!</span>
+        </div>
     }
     else
     {
-        <MudTimeline TimelinePosition="TimelinePosition.Start">
+        <div style="max-width: 900px;">
             @foreach (var (mod, idx) in _modules.Select((m, i) => (m, i)))
             {
-                <MudTimelineItem Color="Color.Primary" Size="Size.Small">
-                    <MudCard Elevation="2" Style="cursor:pointer" @onclick="@(() => Nav.NavigateTo($"/modules/{mod.Id}"))">
-                        <MudCardContent>
-                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                                <div>
-                                    <MudText Typo="Typo.overline" Color="Color.Secondary">Module @(idx + 1)</MudText>
-                                    <MudText Typo="Typo.h6">@mod.Title</MudText>
-                                    <MudText Typo="Typo.body2" Color="Color.Secondary">@mod.Description</MudText>
+                var stepNumber = idx + 1;
+                var isOdd = idx % 2 == 0;
+
+                <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; margin-bottom: 3rem; align-items: stretch;">
+                    <!-- Timeline number -->
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #003D7A 0%, #0052A3 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
+                            @stepNumber
+                        </div>
+                        @if (stepNumber < _modules.Count)
+                        {
+                            <div style="width: 2px; height: 120px; background: linear-gradient(180deg, #003D7A 0%, transparent 100%);"></div>
+                        }
+                    </div>
+
+                    <!-- Module Card -->
+                    <div class="card" style="cursor: pointer; transition: all 300ms ease-in-out;"
+                         @onclick="@(() => Nav.NavigateTo($"/modules/{mod.Id}"))">
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div style="flex: 1;">
+                                <div style="color: #003D7A; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                                    📖 Module @stepNumber
                                 </div>
-                                <MudStack Spacing="1" AlignItems="AlignItems.End">
-                                    <MudChip T="string" Icon="@Icons.Material.Filled.Schedule" Size="Size.Small">
-                                        @mod.EstimatedHours h
-                                    </MudChip>
-                                    <MudIconButton Icon="@Icons.Material.Filled.ArrowForward"
-                                                   Color="Color.Primary" Size="Size.Small" />
-                                </MudStack>
-                            </MudStack>
-                        </MudCardContent>
-                    </MudCard>
-                </MudTimelineItem>
+                                <h3 style="color: #003D7A; margin: 0 0 0.5rem 0; font-size: 1.25rem;">@mod.Title</h3>
+                                <p style="color: #6C757D; margin: 0 0 1rem 0; line-height: 1.5;">@mod.Description</p>
+
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #6C757D; font-size: 0.9rem;">
+                                        <span>⏱️</span> <span>~@mod.EstimatedHours hours</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background-color: #F8F9FA; border-radius: 0.5rem; flex-shrink: 0;">
+                                <MudIcon Icon="@Icons.Material.Filled.ArrowForward" Size="Size.Medium" Color="Color.Primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
-        </MudTimeline>
+        </div>
     }
 }
 

@@ -5,62 +5,74 @@
 
 <PageTitle>Search Lessons — English Architect AI</PageTitle>
 
-<MudText Typo="Typo.h5" GutterBottom="true">Search Lessons</MudText>
-<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
-    Find lessons across all levels and modules.
-</MudText>
+<!-- Page Header -->
+<div style="margin-bottom: 2rem;">
+    <h1 style="color: #003D7A; margin: 0 0 0.5rem 0;">🔍 Search Lessons</h1>
+    <p style="color: #6C757D; font-size: 1.1rem; margin: 0;">Find lessons across all levels and modules. Search by title or keyword.</p>
+</div>
 
-<MudStack Row="true" Spacing="2" Class="mb-6">
-    <MudTextField @bind-Value="_searchTerm" Placeholder="Enter lesson title..."
-                  Variant="Variant.Outlined" Margin="Margin.Dense"
-                  Class="flex-grow-1" />
-    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="PerformSearch" Disabled="_searching">
-        @if (_searching)
-        {
-            <MudProgressCircular Size="Size.Small" Indeterminate="true" />
-            <span class="ms-2">Searching...</span>
-        }
-        else
-        {
-            <span>Search</span>
-        }
-    </MudButton>
-</MudStack>
+<!-- Search Box -->
+<div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); margin-bottom: 2rem;">
+    <div style="display: flex; gap: 1rem;">
+        <MudTextField @bind-Value="_searchTerm"
+                      Placeholder="Enter lesson title or keyword..."
+                      Variant="Variant.Outlined"
+                      FullWidth="true"
+                      Margin="Margin.Dense" />
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   OnClick="PerformSearch"
+                   Disabled="_searching"
+                   Size="Size.Medium"
+                   Style="font-weight: 600;">
+            @if (_searching)
+            {
+                <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="me-2" />
+                <span>Searching...</span>
+            }
+            else
+            {
+                <span>Search</span>
+            }
+        </MudButton>
+    </div>
+</div>
 
+<!-- Results -->
 @if (_results.Count == 0 && !_searching && _searched)
 {
-    <MudAlert Severity="Severity.Info">No lessons found matching your search.</MudAlert>
+    <div class="alert alert-info">
+        <span>ℹ️ No lessons found matching "<strong>@_searchTerm</strong>". Try a different search term.</span>
+    </div>
 }
 else if (_results.Count > 0)
 {
-    <MudText Typo="Typo.subtitle2" Class="mb-4">@_results.Count result(s) found</MudText>
-    <MudList T="EA.Client.Services.SearchLessonDto" Dense="false">
+    <div style="margin-bottom: 1.5rem;">
+        <p style="color: #6C757D;"><strong>@_results.Count</strong> result(s) found</p>
+    </div>
+
+    <div style="display: grid; gap: 1.5rem;">
         @foreach (var result in _results)
         {
-            <MudListItem>
-                <MudCard Style="cursor:pointer" @onclick="@(() => OpenLesson(result))">
-                    <MudCardContent>
-                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                            <MudStack Spacing="1">
-                                <MudText Typo="Typo.subtitle1">@result.LessonTitle</MudText>
-                                <MudText Typo="Typo.body2" Color="Color.Secondary">
-                                    <strong>Module:</strong> @result.ModuleTitle
-                                </MudText>
-                                <MudStack Row="true" Spacing="1">
-                                    <MudChip T="string" Size="Size.Small" Color="Color.Primary">
-                                        @result.LevelCode
-                                    </MudChip>
-                                </MudStack>
-                            </MudStack>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary" Size="Size.Small">
-                                View →
-                            </MudButton>
-                        </MudStack>
-                    </MudCardContent>
-                </MudCard>
-            </MudListItem>
+            <div class="card" style="cursor: pointer;"
+                 @onclick="@(() => OpenLesson(result))">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                    <div style="flex: 1;">
+                        <h3 style="color: #003D7A; margin: 0 0 0.5rem 0;">@result.LessonTitle</h3>
+                        <p style="color: #6C757D; margin: 0 0 1rem 0; font-size: 0.95rem;">
+                            <strong>Module:</strong> @result.ModuleTitle
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span class="level-badge @("level-" + result.LevelCode.ToLowerInvariant())">
+                                @result.LevelCode
+                            </span>
+                        </div>
+                    </div>
+                    <MudIcon Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Primary" Size="Size.Medium" />
+                </div>
+            </div>
         }
-    </MudList>
+    </div>
 }
 
 @code {

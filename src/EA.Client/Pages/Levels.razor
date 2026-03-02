@@ -7,68 +7,129 @@
 
 <PageTitle>My Learning Path — English Architect AI</PageTitle>
 
-<MudText Typo="Typo.h5" GutterBottom="true">My Learning Path</MudText>
-<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
-    Select your level to start studying. Your assigned level is highlighted.
-</MudText>
+<!-- Page Header -->
+<div style="margin-bottom: 3rem;">
+    <h1 style="color: #003D7A; margin-bottom: 0.5rem;">📚 My Learning Path</h1>
+    <p style="color: #6C757D; font-size: 1.1rem;">Select your level to continue learning. Your current level is highlighted. Progress through each CEFR level at your own pace.</p>
+</div>
 
 @if (_loading)
 {
-    <MudGrid>
+    <div class="row">
         @for (int i = 0; i < 6; i++)
         {
-            <MudItem xs="12" sm="6" md="4">
-                <MudSkeleton Height="160px" Animation="Animation.Wave" />
-            </MudItem>
+            <MudSkeleton Height="220px" Animation="Animation.Wave" />
         }
-    </MudGrid>
+    </div>
 }
 else
 {
-    <MudGrid>
+    <!-- Level Selection Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
         @foreach (var level in _displayLevels)
         {
             var isAssigned = level.Code == _userLevel;
             var isLocked = IsLocked(level.Code);
-            <MudItem xs="12" sm="6" md="4">
-                <MudCard Elevation="@(isAssigned ? 6 : 2)"
-                         Style="@(isAssigned ? "border:2px solid #5C6BC0;cursor:pointer" : isLocked ? "opacity:.55;cursor:not-allowed" : "cursor:pointer")"
-                         @onclick="@(() => OpenLevel(level, isLocked))">
-                    <MudCardHeader>
-                        <CardHeaderContent>
-                            <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
-                                <MudChip T="string" Color="@LevelColor(level.Code)" Size="Size.Small">
-                                    @level.Code
-                                </MudChip>
-                                @if (isAssigned)
-                                {
-                                    <MudChip T="string" Color="Color.Primary" Size="Size.Small"
-                                             Icon="@Icons.Material.Filled.Star">Your Level</MudChip>
-                                }
-                                @if (isLocked)
-                                {
-                                    <MudIcon Icon="@Icons.Material.Filled.Lock"
-                                             Size="Size.Small" Color="Color.Default" />
-                                }
-                            </MudStack>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardContent>
-                        <MudText Typo="Typo.h6">@level.Name</MudText>
-                    </MudCardContent>
-                    @if (!isLocked)
+
+            <div class="card @(isAssigned ? "animate-slide-in-left" : "")"
+                 style="@(isAssigned ? "border: 2px solid #003D7A; position: relative;" : isLocked ? "opacity: 0.5;" : "") cursor: pointer; transition: all 300ms ease-in-out;"
+                 @onclick="@(() => OpenLevel(level, isLocked))">
+
+                <!-- Ribbon for Current Level -->
+                @if (isAssigned)
+                {
+                    <div style="position: absolute; top: -1px; right: -1px; background: linear-gradient(135deg, #003D7A 0%, #E84C3D 100%); color: white; padding: 0.5rem 1rem; border-radius: 0 0.75rem 0 0.75rem; font-weight: 700; font-size: 0.875rem; z-index: 10;">
+                        ⭐ Your Level
+                    </div>
+                }
+
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                    <div>
+                        <div style="display: inline-block; background-color: @GetLevelBgColor(level.Code); color: @GetLevelTextColor(level.Code); padding: 0.5rem 1rem; border-radius: 99px; font-weight: 700; font-size: 0.875rem;">
+                            @level.Code
+                        </div>
+                    </div>
+                    @if (isLocked)
                     {
-                        <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary"
-                                       EndIcon="@Icons.Material.Filled.ArrowForward">
-                                Study
-                            </MudButton>
-                        </MudCardActions>
+                        <span style="font-size: 1.5rem;">🔒</span>
                     }
-                </MudCard>
-            </MudItem>
+                    else if (isAssigned)
+                    {
+                        <span style="font-size: 1.5rem;">📍</span>
+                    }
+                </div>
+
+                <h3 style="color: #003D7A; margin-bottom: 0.5rem;">@level.Name</h3>
+
+                <!-- Level Description -->
+                <p style="color: #6C757D; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5;">
+                    @GetLevelDescription(level.Code)
+                </p>
+
+                <!-- Status -->
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                    @if (isAssigned)
+                    {
+                        <span class="badge badge-primary">Currently Learning</span>
+                    }
+                    @if (isLocked)
+                    {
+                        <span class="badge" style="background-color: #FFE5E5; color: #E84C3D;">Locked</span>
+                    }
+                    else
+                    {
+                        <span class="badge" style="background-color: #E8F5E9; color: #27AE60;">Available</span>
+                    }
+                </div>
+
+                <!-- Action Button -->
+                @if (!isLocked)
+                {
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               FullWidth="true"
+                               Size="Size.Medium"
+                               EndIcon="@Icons.Material.Filled.ArrowForward"
+                               Style="font-weight: 600; margin-top: auto;">
+                        Study Level
+                    </MudButton>
+                }
+                else
+                {
+                    <MudButton Variant="Variant.Outlined"
+                               Color="Color.Primary"
+                               FullWidth="true"
+                               Size="Size.Medium"
+                               Disabled="true"
+                               Style="font-weight: 600;">
+                        Locked
+                    </MudButton>
+                }
+            </div>
         }
-    </MudGrid>
+    </div>
+
+    <!-- CEFR Information -->
+    <section style="background-color: #F8F9FA; padding: 2rem; border-radius: 0.75rem; margin-top: 2rem;">
+        <h3 style="color: #003D7A; margin-bottom: 1rem;">📖 Understanding CEFR Levels</h3>
+        <p style="color: #6C757D; margin-bottom: 1.5rem;">
+            The Common European Framework of Reference (CEFR) is the standard for describing English proficiency levels. Progress from beginner (A1) to mastery (C2).
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+            <div style="padding: 1rem; background: white; border-radius: 0.5rem; border-left: 3px solid #E8F4F8;">
+                <strong class="level-badge level-a1">A1-A2</strong>
+                <p style="font-size: 0.9rem; color: #6C757D; margin-top: 0.5rem;">Elementary — Basic communication</p>
+            </div>
+            <div style="padding: 1rem; background: white; border-radius: 0.5rem; border-left: 3px solid #DCF0F7;">
+                <strong class="level-badge level-b1">B1-B2</strong>
+                <p style="font-size: 0.9rem; color: #6C757D; margin-top: 0.5rem;">Intermediate — Fluent conversation</p>
+            </div>
+            <div style="padding: 1rem; background: white; border-radius: 0.5rem; border-left: 3px solid #B5DFEE;">
+                <strong class="level-badge level-c1">C1-C2</strong>
+                <p style="font-size: 0.9rem; color: #6C757D; margin-top: 0.5rem;">Advanced — Near-native proficiency</p>
+            </div>
+        </div>
+    </section>
 }
 
 @code {
@@ -115,11 +176,37 @@ else
         Nav.NavigateTo($"/levels/{level.Id}");
     }
 
-    private static Color LevelColor(string code) => code switch
+    private static string GetLevelBgColor(string code) => code switch
     {
-        "A1" or "A2" => Color.Success,
-        "B1" or "B2" => Color.Warning,
-        _ => Color.Error
+        "A1" => "#E8F4F8",
+        "A2" => "#DCF0F7",
+        "B1" => "#D1EBF6",
+        "B2" => "#C6E6F5",
+        "C1" => "#B5DFEE",
+        "C2" => "#A4D8E7",
+        _ => "#E9ECEF"
+    };
+
+    private static string GetLevelTextColor(string code) => code switch
+    {
+        "A1" => "#006994",
+        "A2" => "#004B7A",
+        "B1" => "#003D66",
+        "B2" => "#002F52",
+        "C1" => "#001F3D",
+        "C2" => "#001426",
+        _ => "#212529"
+    };
+
+    private static string GetLevelDescription(string code) => code switch
+    {
+        "A1" => "Start from scratch. Learn basic greetings, simple sentences, and essential vocabulary for everyday situations.",
+        "A2" => "Build confidence with past tense, simple conversations, and practical communication skills.",
+        "B1" => "Express opinions, discuss complex topics, and understand main points of conversations.",
+        "B2" => "Master advanced grammar, write fluently, and understand detailed arguments.",
+        "C1" => "Handle complex situations. Understand nuanced meanings and express yourself spontaneously.",
+        "C2" => "Near-native proficiency. Master sophisticated language and all nuances of English.",
+        _ => "Continue your English learning journey."
     };
 
     private record LevelDisplay(Guid Id, string Code, string Name);

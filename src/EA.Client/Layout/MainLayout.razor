@@ -9,17 +9,19 @@
 <AuthorizeView>
     <Authorized>
         <MudLayout>
-            <MudAppBar Elevation="1" Color="Color.Primary">
+            <MudAppBar Elevation="2" Color="Color.Primary" Style="background: linear-gradient(135deg, #003D7A 0%, #0052A3 100%);">
                 <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit"
                                Edge="Edge.Start" OnClick="@ToggleDrawer" />
-                <MudText Typo="Typo.h6" Class="ms-2">English Architect AI</MudText>
+                <MudText Typo="Typo.h6" Class="ms-2" Style="font-weight: 700;">📚 English Architect AI</MudText>
                 <MudSpacer />
                 <MudTooltip Text="Spaced Repetition Review">
                     <MudIconButton Icon="@Icons.Material.Filled.AutoAwesome" Color="Color.Inherit"
                                    Href="/review" />
                 </MudTooltip>
-                <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit"
-                               OnClick="Logout" />
+                <MudTooltip Text="Sign Out">
+                    <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit"
+                                   OnClick="Logout" />
+                </MudTooltip>
             </MudAppBar>
 
             <MudDrawer @bind-Open="_drawerOpen" Elevation="2" ClipMode="DrawerClipMode.Always">
@@ -38,11 +40,11 @@
     </Authorized>
     <NotAuthorized>
         <MudLayout>
-            <MudAppBar Elevation="1" Color="Color.Primary">
-                <MudText Typo="Typo.h6" Class="ms-3">English Architect AI</MudText>
+            <MudAppBar Elevation="2" Color="Color.Primary" Style="background: linear-gradient(135deg, #003D7A 0%, #0052A3 100%);">
+                <MudText Typo="Typo.h6" Class="ms-3" Style="font-weight: 700;">📚 English Architect AI</MudText>
                 <MudSpacer />
-                <MudButton Color="Color.Inherit" Href="/login">Sign In</MudButton>
-                <MudButton Variant="Variant.Outlined" Color="Color.Inherit" Href="/register" Class="ms-2">
+                <MudButton Color="Color.Inherit" Href="/login" Style="font-weight: 600;">Sign In</MudButton>
+                <MudButton Variant="Variant.Outlined" Color="Color.Inherit" Href="/register" Class="ms-2" Style="font-weight: 600;">
                     Get Started
                 </MudButton>
             </MudAppBar>
@@ -62,11 +64,16 @@
     {
         PaletteLight = new PaletteLight
         {
-            Primary = "#5C6BC0",
-            Secondary = "#26A69A",
-            AppbarBackground = "#5C6BC0",
-            Background = "#F5F5F5",
-            Surface = "#FFFFFF",
+            Primary = "#003D7A",              // British Council Deep Blue
+            Secondary = "#E84C3D",            // British Council Orange/Red Accent
+            AppbarBackground = "#003D7A",    // Deep Blue header
+            Background = "#F8F9FA",           // Very light gray
+            Surface = "#FFFFFF",              // White
+            Success = "#27AE60",              // Green
+            Warning = "#F39C12",              // Orange
+            Error = "#E74C3C",                // Red
+            Info = "#3498DB",                 // Light Blue
+            Tertiary = "#6C757D",             // Gray text
         }
     };
 

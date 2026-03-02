@@ -32,7 +32,10 @@
       "Bash(pkill:*)",
       "Bash(powershell:*)",
       "Bash(pwsh:*)",
-      "Bash(echo ==========================================:*)"
+      "Bash(echo ==========================================:*)",
+      "Bash(cat:*)",
+      "Bash(kill:*)",
+      "Bash(dotnet add:*)"
     ]
   }
 }

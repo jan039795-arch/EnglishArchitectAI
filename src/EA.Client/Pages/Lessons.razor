@@ -7,78 +7,139 @@
 
 @if (_loading)
 {
-    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+    <div style="display: flex; justify-content: center; padding: 3rem;">
+        <MudProgressCircular Indeterminate="true" Color="Color.Primary" Size="Size.Large" />
+    </div>
 }
 else
 {
-    <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
-    <MudText Typo="Typo.h5" GutterBottom="true">@_moduleTitle</MudText>
-    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
-        Complete lessons in order. Each lesson unlocks the next.
-    </MudText>
+    <!-- Page Header -->
+    <div style="margin-bottom: 2rem;">
+        <MudBreadcrumbs Items="_breadcrumbs" Class="mb-4 pa-0" />
+        <h1 style="color: #003D7A; margin: 0 0 0.5rem 0;">📖 @_moduleTitle</h1>
+        <p style="color: #6C757D; font-size: 1.1rem; margin: 0;">Complete lessons sequentially. Each lesson unlocks the next. Track your progress as you learn.</p>
+    </div>
 
     @if (_lessons.Count == 0)
     {
-        <MudAlert Severity="Severity.Info">No lessons available yet for this module.</MudAlert>
+        <div class="alert alert-info">
+            <span>ℹ️ No lessons available yet for this module. Check back soon!</span>
+        </div>
     }
     else
     {
-        <MudList T="EA.Client.Services.LessonDto" Dense="false">
+        <!-- Progress Bar -->
+        <div style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="font-weight: 600; color: #003D7A;">Your Progress</span>
+                <span style="color: #6C757D; font-size: 0.9rem;">@_completedIds.Count of @_lessons.Count</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: @(_completedIds.Count * 100 / _lessons.Count)%;"></div>
+            </div>
+        </div>
+
+        <!-- Lessons List -->
+        <div style="display: grid; gap: 1.5rem;">
             @foreach (var (lesson, idx) in _lessons.Select((l, i) => (l, i)))
             {
                 var completed = _completedIds.Contains(lesson.Id);
                 var isNext = !completed && idx == _nextIdx;
-                <MudListItem>
-                    <MudCard Elevation="@(isNext ? 4 : 1)"
-                             Style="@(isNext ? "border-left:4px solid #5C6BC0;cursor:pointer" : completed ? "opacity:.7;cursor:pointer" : "opacity:.5;cursor:not-allowed")"
-                             @onclick="@(() => OpenLesson(lesson, idx))">
-                        <MudCardContent>
-                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                                <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="3">
-                                    <MudAvatar Color="@(completed ? Color.Success : isNext ? Color.Primary : Color.Default)"
-                                               Size="Size.Medium">
+                var isLocked = !completed && idx > _nextIdx;
+
+                <div class="exercise-card @(isNext ? "animate-slide-in-left" : "")"
+                     style="@(isLocked ? "opacity: 0.5;" : "cursor: pointer;")"
+                     @onclick="@(() => OpenLesson(lesson, idx))">
+
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <!-- Number Badge -->
+                        <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; color: white; @(completed ? "background-color: #27AE60;" : isNext ? "background: linear-gradient(135deg, #003D7A 0%, #0052A3 100%);" : "background-color: #ADB5BD;")">
+                                @if (completed)
+                                {
+                                    <MudIcon Icon="@Icons.Material.Filled.Check" Size="Size.Medium" />
+                                }
+                                else
+                                {
+                                    <span>@(idx + 1)</span>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Lesson Content -->
+                        <div style="flex: 1; min-width: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+                                <div>
+                                    <h3 style="color: #003D7A; margin: 0 0 0.5rem 0; font-size: 1.125rem;">@lesson.Title</h3>
+                                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                                        <span class="badge" style="background-color: #E3F2FD; color: #003D7A;">
+                                            @lesson.SkillType
+                                        </span>
+                                        @if (lesson.IsAIGenerated)
+                                        {
+                                            <span class="badge" style="background-color: #FFF3E0; color: #E84C3D;">
+                                                ✨ AI-Generated
+                                            </span>
+                                        }
                                         @if (completed)
                                         {
-                                            <MudIcon Icon="@Icons.Material.Filled.Check" />
+                                            <span class="badge badge-success">
+                                                ✓ Completed
+                                            </span>
                                         }
-                                        else
-                                        {
-                                            <span>@(idx + 1)</span>
-                                        }
-                                    </MudAvatar>
-                                    <div>
-                                        <MudText Typo="Typo.subtitle1">@lesson.Title</MudText>
-                                        <MudStack Row="true" Spacing="1">
-                                            <MudChip T="string" Size="Size.Small" Color="Color.Secondary">
-                                                @lesson.SkillType
-                                            </MudChip>
-                                            @if (lesson.IsAIGenerated)
-                                            {
-                                                <MudChip T="string" Size="Size.Small" Icon="@Icons.Material.Filled.AutoAwesome">
-                                                    AI
-                                                </MudChip>
-                                            }
-                                        </MudStack>
                                     </div>
-                                </MudStack>
-                                @if (isNext)
-                                {
-                                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-                                        Start
-                                    </MudButton>
-                                }
-                                else if (completed)
-                                {
-                                    <MudButton Variant="Variant.Text" Color="Color.Default" Size="Size.Small">
-                                        Review
-                                    </MudButton>
-                                }
-                            </MudStack>
-                        </MudCardContent>
-                    </MudCard>
-                </MudListItem>
+                                </div>
+
+                                <!-- Status -->
+                                <div style="text-align: right; flex-shrink: 0;">
+                                    @if (isNext)
+                                    {
+                                        <div style="font-weight: 700; color: #E84C3D; font-size: 0.875rem;">
+                                            ⭐ Start Now
+                                        </div>
+                                    }
+                                    else if (completed)
+                                    {
+                                        <div style="font-weight: 600; color: #27AE60; font-size: 0.875rem;">
+                                            ✓ Done
+                                        </div>
+                                    }
+                                    else if (isLocked)
+                                    {
+                                        <div style="font-weight: 600; color: #6C757D; font-size: 0.875rem;">
+                                            🔒 Locked
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    @if (!isLocked)
+                    {
+                        @if (isNext)
+                        {
+                            <MudButton Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       Size="Size.Small"
+                                       Style="margin-top: 1rem; font-weight: 600;">
+                                Start Lesson
+                            </MudButton>
+                        }
+                        else if (completed)
+                        {
+                            <MudButton Variant="Variant.Outlined"
+                                       Color="Color.Primary"
+                                       Size="Size.Small"
+                                       Style="margin-top: 1rem; font-weight: 600;">
+                                Review
+                            </MudButton>
+                        }
+                    }
+                </div>
             }
-        </MudList>
+        </div>
     }
 }
 

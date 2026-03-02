@@ -5,116 +5,129 @@
 
 <PageTitle>Certificates — English Architect AI</PageTitle>
 
-<MudText Typo="Typo.h5" GutterBottom="true">My Certificates</MudText>
-<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
-    Earn certificates by completing all lessons in a level.
-</MudText>
+<!-- Page Header -->
+<div style="margin-bottom: 2rem;">
+    <h1 style="color: #003D7A; margin: 0 0 0.5rem 0;">🏆 My Certificates</h1>
+    <p style="color: #6C757D; font-size: 1.1rem; margin: 0;">Earn certificates by completing all lessons in a level. Showcase your achievements and verify your English proficiency.</p>
+</div>
 
 @if (_loading)
 {
-    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+    <div style="display: flex; justify-content: center; padding: 3rem;">
+        <MudProgressCircular Indeterminate="true" Color="Color.Primary" Size="Size.Large" />
+    </div>
 }
 else
 {
-    <MudTabs>
-        <MudTabPanel Text="Earned Certificates">
+    <MudTabs Elevation="0" PanelClass="mud-height-full">
+        <MudTabPanel Text="📜 Earned Certificates">
             @if (_certificates.Count == 0)
             {
-                <MudAlert Severity="Severity.Info" Class="mt-4">You haven't earned any certificates yet.</MudAlert>
+                <div class="alert alert-info" style="margin-top: 2rem;">
+                    <span>ℹ️ You haven't earned any certificates yet. Complete all lessons in a level to earn one!</span>
+                </div>
             }
             else
             {
-                <MudList T="EA.Client.Services.CertificateDto" Dense="false">
+                <div style="display: grid; gap: 2rem; margin-top: 2rem;">
                     @foreach (var cert in _certificates)
                     {
-                        <MudListItem>
-                            <MudCard>
-                                <MudCardContent>
-                                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                                        <MudStack Spacing="1">
-                                            <MudText Typo="Typo.subtitle1">
-                                                <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Color="Color.Warning" />
-                                                @cert.LevelCode Certificate
-                                            </MudText>
-                                            <MudText Typo="Typo.body2" Color="Color.Secondary">
-                                                Issued: @cert.IssuedAt.ToString("MMM d, yyyy")
-                                            </MudText>
-                                            <MudText Typo="Typo.caption" Color="Color.Tertiary">
-                                                Verification Code: @cert.VerificationCode
-                                            </MudText>
-                                        </MudStack>
-                                        <MudStack>
-                                            @if (!string.IsNullOrEmpty(cert.PDFBlobUrl))
-                                            {
-                                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"
-                                                           Href="@cert.PDFBlobUrl" Target="_blank">
-                                                    Download PDF
-                                                </MudButton>
-                                            }
-                                            <MudButton Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small"
-                                                       Href="@($"/certificates/verify/{cert.VerificationCode}")" Target="_blank">
-                                                Verify
-                                            </MudButton>
-                                        </MudStack>
-                                    </MudStack>
-                                </MudCardContent>
-                            </MudCard>
-                        </MudListItem>
+                        <div class="card">
+                            <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                                <div style="font-size: 3rem; display: flex; align-items: center;">🏆</div>
+                                <div style="flex: 1;">
+                                    <h3 style="color: #003D7A; margin: 0 0 0.5rem 0; font-size: 1.25rem;">
+                                        English Architect AI — @cert.LevelCode Certificate
+                                    </h3>
+                                    <p style="color: #6C757D; margin: 0 0 1rem 0;">
+                                        <strong>Issued:</strong> @cert.IssuedAt.ToString("MMMM d, yyyy")
+                                    </p>
+                                    <p style="color: #6C757D; font-size: 0.875rem; margin: 0;">
+                                        <strong>Verification Code:</strong> <code>@cert.VerificationCode</code>
+                                    </p>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem; flex-direction: column; flex-shrink: 0;">
+                                    @if (!string.IsNullOrEmpty(cert.PDFBlobUrl))
+                                    {
+                                        <MudButton Variant="Variant.Filled"
+                                                   Color="Color.Primary"
+                                                   Size="Size.Small"
+                                                   Href="@cert.PDFBlobUrl"
+                                                   Target="_blank"
+                                                   Style="font-weight: 600;">
+                                            📥 Download PDF
+                                        </MudButton>
+                                    }
+                                    <MudButton Variant="Variant.Outlined"
+                                               Color="Color.Primary"
+                                               Size="Size.Small"
+                                               Href="@($"/certificates/verify/{cert.VerificationCode}")"
+                                               Target="_blank"
+                                               Style="font-weight: 600;">
+                                        ✓ Verify
+                                    </MudButton>
+                                </div>
+                            </div>
+                        </div>
                     }
-                </MudList>
+                </div>
             }
         </MudTabPanel>
 
-        <MudTabPanel Text="Request Certificate">
+        <MudTabPanel Text="🎯 Request Certificate">
             @if (_levels.Count == 0)
             {
-                <MudAlert Severity="Severity.Info" Class="mt-4">No levels available.</MudAlert>
+                <div class="alert alert-info" style="margin-top: 2rem;">
+                    <span>ℹ️ No levels available.</span>
+                </div>
             }
             else
             {
-                <MudList T="EA.Client.Services.LevelDto" Dense="false">
+                <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
                     @foreach (var level in _levels)
                     {
                         var hasCert = _certificates.Any(c => c.LevelCode == level.Code);
-                        <MudListItem>
-                            <MudCard Style="@(hasCert ? "opacity:.6;" : "")">
-                                <MudCardContent>
-                                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                                        <MudStack Spacing="1">
-                                            <MudText Typo="Typo.subtitle1">@level.Name (@level.Code)</MudText>
-                                            <MudText Typo="Typo.body2" Color="Color.Secondary">
-                                                @if (hasCert)
-                                                {
-                                                    <span>✓ Certificate earned</span>
-                                                }
-                                                else
-                                                {
-                                                    <span>Complete all lessons to unlock certificate</span>
-                                                }
-                                            </MudText>
-                                        </MudStack>
-                                        @if (!hasCert)
+                        <div class="card" style="@(hasCert ? "opacity: 0.7;" : "")">
+                            <div style="display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
+                                <div>
+                                    <h3 style="color: #003D7A; margin: 0 0 0.5rem 0;">@level.Name <span class="level-badge @("level-" + level.Code.ToLowerInvariant())">@level.Code</span></h3>
+                                    <p style="color: #6C757D; margin: 0;">
+                                        @if (hasCert)
                                         {
-                                            <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"
-                                                       OnClick="@(() => RequestCertificate(level.Code))"
-                                                       Disabled="@_issuing">
-                                                @if (_issuingLevel == level.Code && _issuing)
-                                                {
-                                                    <MudProgressCircular Size="Size.Small" Indeterminate="true" />
-                                                    <span class="ms-2">Requesting...</span>
-                                                }
-                                                else
-                                                {
-                                                    <span>Request</span>
-                                                }
-                                            </MudButton>
+                                            <span>✓ <strong>Certificate earned</strong></span>
                                         }
-                                    </MudStack>
-                                </MudCardContent>
-                            </MudCard>
-                        </MudListItem>
+                                        else
+                                        {
+                                            <span>Complete all lessons to unlock certificate</span>
+                                        }
+                                    </p>
+                                </div>
+                                @if (!hasCert)
+                                {
+                                    <MudButton Variant="Variant.Filled"
+                                               Color="Color.Primary"
+                                               OnClick="@(() => RequestCertificate(level.Code))"
+                                               Disabled="@_issuing"
+                                               Style="font-weight: 600; flex-shrink: 0;">
+                                        @if (_issuingLevel == level.Code && _issuing)
+                                        {
+                                            <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="me-2" />
+                                            <span>Requesting...</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Request Certificate</span>
+                                        }
+                                    </MudButton>
+                                }
+                                else
+                                {
+                                    <span style="font-weight: 600; color: #27AE60;">✓ Completed</span>
+                                }
+                            </div>
+                        </div>
                     }
-                </MudList>
+                </div>
             }
         </MudTabPanel>
     </MudTabs>
