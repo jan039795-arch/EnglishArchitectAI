@@ -144,6 +144,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
+
+// Serve static files from the Blazor WASM client
+app.UseStaticFiles();
+
 app.UseCors("ClientPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
@@ -164,8 +168,12 @@ app.Use(async (context, next) =>
     }
 });
 
+// API endpoints
 app.MapControllers();
 app.MapHub<EA.API.Hubs.LessonHub>("/hubs/lesson");
+
+// Fallback to index.html for Blazor WASM routing
+app.MapFallbackToFile("index.html");
 
 // Schedule daily content refresh job at 2 AM
 using (var scope = app.Services.CreateScope())
