@@ -1078,123 +1078,123 @@ public static class DataSeeder
     );
 
     private static string A1L5() => C(
-        "Family vocabulary helps you talk about the people closest to you. Learning family words is one of the first steps in language learning, as you constantly refer to family in daily conversation. Perfect English Grammar emphasizes the importance of mastering these foundational words.",
+        "Family vocabulary helps you talk about people closest to you (Essential Grammar in Use Elementary, Unit 5). Learning family words is one of the first steps in language learning. Watch 'Essential Grammar in Use Unit 5' for family member names and relationships with visual aids.",
         ["Mother (mom) — your female parent", "Father (dad) — your male parent", "Brother — male sibling", "Sister — female sibling", "Grandmother and grandfather — your parents' parents", "Son and daughter — your children"],
         [("mother / mom", "madre / mamá", "My mother is a doctor."), ("father / dad", "padre / papá", "My dad works in an office."), ("brother", "hermano", "I have two brothers."), ("sister", "hermana", "My sister is younger than me."), ("grandmother / grandma", "abuela / abuelita", "My grandmother is eighty years old."), ("grandfather / grandpa", "abuelo / abuelito", "My grandfather lives with us.")],
         [("I have a big family with two brothers and one sister.", "Talking about family size"), ("My mother is a teacher and my father is an engineer.", "Describing family occupations"), ("I live with my parents and my grandmother.", "Describing who you live with"), ("My brother is five years older than me.", "Comparing ages")],
         "Draw your family tree or write about your family. Use at least 8 sentences describing who is in your family, what they do, and how old they are.",
         "'Family' rhymes with 'jam' — FAM-i-lee (3 syllables). 'Sister' — SIS-ter (2 syllables). 'Brother' — BRUH-ther (2 syllables). Stress the first syllable in all family words.",
-        [("Family Members Vocabulary", "Learn English Kids", null), ("English Family Words", "EnglishClass101", null), ("How to Talk About Your Family", "Papa English", null)]
+        [("Family Members Vocabulary", "Learn English Kids", null), ("English Family Words", "EnglishClass101", null), ("How to Talk About Your Family", "Papa English", null), ("Essential Grammar in Use Unit 5 — Family", "YouTube: Search 'Essential Grammar in Use Unit 5'", null)]
     );
 
     private static string A1L6() => C(
-        "Personal pronouns and the verb 'to be' are the foundation of English grammar. You cannot construct a single sentence without them. These 8 pronouns (I, you, he, she, it, we, you, they) are the most important words in English, and 'to be' is the most used verb in the language.",
+        "Personal pronouns and 'to be' are the foundation of English (Essential Grammar in Use Elementary, Unit 6). You cannot construct a sentence without them. Watch 'Essential Grammar in Use Unit 6' for complete conjugation tables and example dialogues.",
         ["I, you, he, she, it, we, they — the 8 personal pronouns", "Verb 'to be' in present: am (I), are (you/we/they), is (he/she/it)", "Contraction: I'm, you're, he's, she's, it's, we're, they're", "Negative: I'm not, you're not (you aren't), he's not (he isn't)", "Question word order: 'Are you a student?' — Subject and 'to be' swap places"],
         [("I", "yo", "I am a student."), ("you", "tú", "You are my friend."), ("he / she / it", "él / ella / eso", "He is a teacher. She is happy. It is big."), ("we", "nosotros", "We are in the class."), ("they", "ellos", "They are my friends."), ("to be", "ser/estar", "I am happy. You are kind.")],
         [("I am from Spain.", "Talking about origin"), ("You are a good friend.", "Describing others"), ("She is a doctor and he is a nurse.", "Describing occupations"), ("We are in the park.", "Describing location"), ("They are very nice people.", "Describing group")],
         "Write 10 sentences about yourself and people around you using different pronouns. Example: 'I am happy. You are smart. She is my teacher.'",
         "'I am' contracts to 'I'm' (I'm, not Iam). 'You are' → 'You're'. 'He is' → 'He's'. These contractions are very common in spoken English.",
-        [("English Pronouns: I, You, He, She, It", "Learn English with Papa English", null), ("The Verb 'To Be' in English", "English Speeches", null), ("Personal Pronouns and Present 'To Be'", "Cambridge English", null)]
+        [("English Pronouns: I, You, He, She, It", "Learn English with Papa English", null), ("The Verb 'To Be' in English", "English Speeches", null), ("Personal Pronouns and Present 'To Be'", "Cambridge English", null), ("Essential Grammar in Use Unit 6 — Pronouns & Be", "YouTube: Search 'Essential Grammar in Use Unit 6'", null)]
     );
 
     private static string A1L7() => C(
-        "Days of the week and months of the year are essential for discussing schedules, plans, and dates. Capitalizing day and month names is a key rule in English — always capitalize them. The British Council emphasizes the importance of this distinction for written accuracy.",
+        "Days of the week and months (Essential Grammar in Use Elementary, Unit 7) are essential for schedules and dates. Capitalizing day and month names is a key rule in English. Watch 'Essential Grammar in Use Unit 7' for pronunciation practice and calendar usage.",
         ["Days of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday", "Months of the year: January, February, March, April, May, June, July, August, September, October, November, December", "ALWAYS capitalize days and months — this is a key grammar rule", "Abbreviations: Mon., Tues., Wed., etc. — Saturday and Sunday shorten to Sat. and Sun.", "On + day: 'On Monday', 'On Friday' — on is the correct preposition"],
         [("Monday", "lunes", "I have English class on Monday."), ("Friday", "viernes", "We play football on Friday."), ("January", "enero", "My birthday is in January."), ("December", "diciembre", "Christmas is in December."), ("week", "semana", "There are seven days in a week."), ("month", "mes", "There are twelve months in a year.")],
         [("I work on Mondays and Wednesdays.", "Discussing weekly schedule"), ("My birthday is in July.", "Talking about birth month"), ("The meeting is on Friday at 10 o'clock.", "Planning a specific day"), ("January is cold but February is colder.", "Comparing months")],
         "Create a weekly schedule. Write where you are or what you do on each day of the week. Example: 'On Monday, I go to school. On Wednesday, I have English class.'",
         "'Tuesday' is tricky — TUE-s-day or CHOOS-day. 'Thursday' — THURS-day (sounds like 'Thursday', not 'Thurday'). Practice the difficult days: Tuesday, Wednesday, Thursday.",
-        [("Days of the Week in English", "Learn English Kids", null), ("English Months and Seasons", "Papa English", null), ("Days of the Week and Months", "Cambridge English", null)]
+        [("Days of the Week in English", "Learn English Kids", null), ("English Months and Seasons", "Papa English", null), ("Days of the Week and Months", "Cambridge English", null), ("Essential Grammar in Use Unit 7 — Days & Months", "YouTube: Search 'Essential Grammar in Use Unit 7'", null)]
     );
 
     private static string A1L8() => C(
-        "Food and drinks vocabulary opens conversations about eating habits, preferences, and meals. These words are used in daily life constantly — asking what someone ate, what they like, or ordering food. The British Council highlights the social importance of food vocabulary for real-world interaction.",
+        "Food and drinks vocabulary (Essential Grammar in Use Elementary, Unit 8) opens conversations about eating habits and preferences. These words are essential for daily life and ordering. Watch 'Essential Grammar in Use Unit 8' for food vocabulary and meal-related dialogues.",
         ["Meals: breakfast (morning), lunch (midday), dinner/supper (evening)", "Drinks: water, milk, juice, tea, coffee, soda", "Fruits: apple, banana, orange, strawberry, grape", "Vegetables: carrot, potato, tomato, broccoli, lettuce", "Other foods: bread, rice, meat, chicken, fish, egg"],
         [("apple", "manzana", "An apple a day keeps the doctor away."), ("bread", "pan", "I eat bread for breakfast."), ("coffee", "café", "My dad drinks coffee every morning."), ("chicken", "pollo", "We have chicken for dinner."), ("water", "agua", "Drink plenty of water."), ("rice", "arroz", "I like rice with vegetables.")],
         [("I like apples and oranges.", "Talking about food preferences"), ("She drinks coffee in the morning.", "Describing eating habits"), ("What do you have for lunch?", "Asking about meals"), ("We eat chicken and rice for dinner.", "Describing meals"), ("Do you like vegetables?", "Asking preferences")],
         "Describe your favorite meal. Write 8 sentences about what you eat, what you drink, which foods you like and dislike, and when you eat it.",
         "'Breakfast' — BREAK-fast (2 syllables). 'Dinner' — DIN-er (2 syllables). 'Vegetables' — VEJ-uh-tulz (3 syllables). Many words have stress on the first syllable.",
-        [("Food Vocabulary in English", "Learn English with Papa English", null), ("English Food and Drinks", "English Speeches", null), ("Meals and Food Vocabulary", "Cambridge English", null)]
+        [("Food Vocabulary in English", "Learn English with Papa English", null), ("English Food and Drinks", "English Speeches", null), ("Meals and Food Vocabulary", "Cambridge English", null), ("Essential Grammar in Use Unit 8 — Food & Drinks", "YouTube: Search 'Essential Grammar in Use Unit 8'", null)]
     );
 
     private static string A2L1() => C(
-        "Past Simple describes completed actions in the past. Regular verbs add -ED to the base form. This form is the SAME for ALL subjects — I, you, he, she, we, they.",
+        "Past Simple (Essential Grammar in Use Elementary, Unit 9) describes completed actions. Regular verbs add -ED to the base form. Watch 'Essential Grammar in Use Unit 9' for regular past verb rules and pronunciation patterns.",
         ["Base verb + ED: work→worked, play→played, walk→walked", "Verb ending in E: add only D: live→lived, like→liked", "Short vowel + single consonant → double it: stop→stopped, plan→planned", "Consonant + Y → change to -IED: study→studied, try→tried", "Time markers: yesterday, last week, in 1990, ago, when"],
         [("worked", "trabajé", "I worked in that office for two years."), ("studied", "estudié", "She studied all night for the exam."), ("stopped", "paré", "The car stopped suddenly."), ("lived", "viví", "They lived in Paris for five years."), ("played", "jugué", "He played football every day.")],
         [("I worked hard yesterday.", "Regular past action"), ("She studied medicine at university.", "Regular past verb"), ("They stopped at a café.", "Double consonant rule"), ("We walked to the park.", "Simple past action")],
         "Write 8 sentences about what you did yesterday or last week using at least 6 different regular past verbs.",
         "-ED has 3 pronunciations: /t/ (worked, stopped), /d/ (played, called), /ɪd/ (wanted, needed). The pronunciation depends on the final sound.",
-        [("Past Simple Regular Verbs", "Papa English", null), ("Regular Past Tense", "Learn English with EnglishClass101.com", null)]
+        [("Past Simple Regular Verbs", "Papa English", null), ("Regular Past Tense", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 9 — Past Simple Regular", "YouTube: Search 'Essential Grammar in Use Unit 9'", null)]
     );
 
     private static string A2L2() => C(
-        "Many common English verbs are irregular — they do NOT follow the -ED rule. Common irregular verbs: go→went, have→had, see→saw, come→came, give→gave, eat→ate, drink→drank, write→wrote.",
+        "Irregular verbs (Essential Grammar in Use Elementary, Unit 10) do NOT follow the -ED rule. Common: go→went, have→had, see→saw. Watch 'Essential Grammar in Use Unit 10' for irregular verb memorization and usage patterns.",
         ["Common: go→went, have→had, see→saw, come→came, give→gave, say→said", "More: eat→ate, drink→drank, write→wrote, read→read, take→took, make→made", "More: know→knew, think→thought, buy→bought, meet→met, sit→sat", "Negatives: I didn't go, she didn't have (base verb!)", "Questions: Did you see? Did he come? (base verb!)"],
         [("went (go)", "fui", "I went to the cinema last night."), ("had (have)", "tuve", "She had a great time at the party."), ("saw (see)", "vi", "We saw a great film yesterday."), ("ate (eat)", "comí", "They ate pizza for dinner."), ("wrote (write)", "escribí", "He wrote a long email to her.")],
         [("I went to the beach last summer.", "go → went"), ("She had coffee and toast for breakfast.", "have → had"), ("They saw the new film yesterday.", "see → saw"), ("He wrote her a letter.", "write → wrote")],
         "Write a paragraph about a memorable day using at least 8 different irregular past verbs. You can write about a birthday, trip, or special event.",
         "'Read' looks the same but sounds different: REED (present) vs RED (past). 'Thought' is pronounced THAWT. Irregular verbs are more common in spoken English.",
-        [("Irregular Past Tense Verbs", "Papa English", null), ("Common Irregular Verbs", "Learn English with EnglishClass101.com", null)]
+        [("Irregular Past Tense Verbs", "Papa English", null), ("Common Irregular Verbs", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 10 — Irregular Verbs", "YouTube: Search 'Essential Grammar in Use Unit 10'", null)]
     );
 
     private static string A2L3() => C(
-        "Past Continuous describes actions that were happening at a specific moment in the past. Form: was/were + verb-ING. Use it for: interrupted actions, simultaneous actions, and background situations in the past.",
+        "Past Continuous (Essential Grammar in Use Elementary, Unit 11) describes actions happening at a moment. Form: was/were + verb-ING. Watch 'Essential Grammar in Use Unit 11' for interrupted and simultaneous action examples.",
         ["Form: Subject + was/were + verb-ING", "I was working, you were reading, he was sleeping, we were playing", "Time markers: at 3 o'clock, when..., while..., at that moment", "Negatives: was not (wasn't) / were not (weren't) + verb-ING", "Questions: Was/Were + subject + verb-ING?"],
         [("was working", "estaba trabajando", "I was working on a project."), ("were sleeping", "estaban durmiendo", "The children were sleeping when the storm came."), ("were playing", "estaban jugando", "They were playing football at the moment."), ("was studying", "estaba estudiando", "She was studying when her friend called.")],
         [("I was working when you called.", "Interrupted action"), ("They were eating dinner when the fire alarm went off.", "Background action"), ("She was reading a book at that moment.", "Action at a specific time"), ("We were building a house last year.", "Long-term past action")],
         "Write 8 sentences about what you and others were doing at a specific time last week. Use past continuous with time markers.",
         "Past Continuous: stress the first syllable. WAS: /wɑz/ or /wəz/ (weak form). WERE: /wɜr/ or /wər/ (weak form). The ING ending is one syllable.",
-        [("Past Continuous Tense", "Papa English", null), ("English Past Continuous", "Learn English with EnglishClass101.com", null)]
+        [("Past Continuous Tense", "Papa English", null), ("English Past Continuous", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 11 — Past Continuous", "YouTube: Search 'Essential Grammar in Use Unit 11'", null)]
     );
 
     private static string A2L4() => C(
-        "Form questions and negatives in Past Continuous. Questions: Was/Were + subject + verb-ING? Negatives: was not / were not + verb-ING. Use these to ask about what was happening or to state what was NOT happening.",
+        "Past Continuous questions and negatives (Essential Grammar in Use Elementary, Unit 12) follow specific patterns. Questions: Was/Were + subject + verb-ING? Watch 'Essential Grammar in Use Unit 12' for Q&A practice.",
         ["Yes/No questions: Was/Were + subject + verb-ING?", "WH- questions: What/Where/When/Why + was/were + subject + verb-ING?", "Negatives: I wasn't / he wasn't / they weren't + verb-ING", "Short answers: Yes, I was. / No, she wasn't.", "Common: What was she doing? Were they playing football?"],
         [("Was he working?", "¿Estaba trabajando?", "Was he working when you arrived?"), ("weren't playing", "no estaban jugando", "They weren't playing football."), ("What were you doing?", "¿Qué estabas haciendo?", "What were you doing at noon?"), ("Was it raining?", "¿Estaba lloviendo?", "Was it raining when you left?"), ("She wasn't listening.", "Ella no estaba escuchando.", "She wasn't listening to the teacher.")],
         [("Was she sleeping? — Yes, she was.", "Yes/no question"), ("What were they doing? — They were cooking.", "Wh- question"), ("Weren't they watching TV? — No, they weren't.", "Negative question"), ("I wasn't paying attention.", "Negative statement")],
         "Write 10 past continuous questions and negatives: 5 yes/no questions and 5 negative statements.",
         "Past Continuous questions: The order is WAS/WERE + subject + verb-ING. Wrong: 'He was doing what?' Right: 'What was he doing?'",
-        [("Past Continuous Questions & Negatives", "Learn English with EnglishClass101.com", null), ("Past Continuous Tense", "English Speeches", null)]
+        [("Past Continuous Questions & Negatives", "Learn English with EnglishClass101.com", null), ("Past Continuous Tense", "English Speeches", null), ("Essential Grammar in Use Unit 12 — Past Continuous Q&N", "YouTube: Search 'Essential Grammar in Use Unit 12'", null)]
     );
 
     private static string A2L5() => C(
-        "Present Perfect connects past actions to the present. Form: have/has + past participle. Regular verbs: have worked, has played. Irregular: have eaten, has been. Use it for: life experiences, recent actions, and situations that started in the past and continue.",
+        "Present Perfect (Essential Grammar in Use Elementary, Unit 13) connects past to present. Form: have/has + past participle. Watch 'Essential Grammar in Use Unit 13' for life experiences and recent actions.",
         ["Form: Subject + have/has + past participle", "I/you/we/they + have: I have worked, you have played", "He/she/it + has: He has worked, she has played", "Regular: base + -ed (worked, played, lived)", "Irregular: went, seen, eaten, been, taken, written"],
         [("have worked", "he trabajado", "I have worked there for five years."), ("has lived", "ha vivido", "She has lived in London since 1990."), ("have eaten", "he comido", "We have eaten Thai food before."), ("has been", "ha sido", "He has been to France three times."), ("have finished", "hemos terminado", "They have finished their homework.")],
         [("I have lived in this city for ten years.", "Life experience"), ("She has worked here since 2020.", "Action starting in past, continuing"), ("Have you ever visited Japan?", "Life experience question"), ("We have completed the project.", "Recent completed action")],
         "Write 10 sentences using present perfect. Include 5 sentences about your life experiences and 5 about recent actions.",
         "Present Perfect emphasizes the connection between past and present. Don't say 'I went' when the result is relevant now; say 'I have been'.",
-        [("Present Perfect Tense", "Papa English", null), ("Present Perfect English Grammar", "Learn English with EnglishClass101.com", null)]
+        [("Present Perfect Tense", "Papa English", null), ("Present Perfect English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 13 — Present Perfect", "YouTube: Search 'Essential Grammar in Use Unit 13'", null)]
     );
 
     private static string A2L6() => C(
-        "Present Perfect questions ask about life experiences or actions starting in the past. Form: Have/Has + subject + past participle? Common question patterns: Have you ever...? / How long have you...? / Where have you been?",
+        "Present Perfect questions (Essential Grammar in Use Elementary, Unit 14) ask about life experiences. Form: Have/Has + subject + past participle? Watch 'Essential Grammar in Use Unit 14' for 'Have you ever...' patterns.",
         ["Yes/No questions: Have you worked? / Has she lived?", "WH- questions: Where have you been? / What have they done? / How long have you lived?", "Ever/never: Have you ever been to Italy? / I've never seen snow.", "How long + present perfect: How long have you been here?", "Short answers: Yes, I have. / No, she hasn't."],
         [("Have you ever?", "¿Alguna vez has...?", "Have you ever travelled by train?"), ("How long have you lived?", "¿Cuánto tiempo llevas viviendo?", "How long have you lived here?"), ("Where have you been?", "¿Dónde has estado?", "Where have you been?"), ("Has she finished?", "¿Ha terminado?", "Has she finished her homework?"), ("What have they done?", "¿Qué han hecho?", "What have they done so far?")],
         [("Have you ever been to Paris? — Yes, I have.", "Life experience question"), ("How long have you worked here? — For three years.", "Duration question"), ("Where have you been? — I've been to the market.", "Location question"), ("She hasn't finished yet.", "Negative with yet")],
         "Write 12 present perfect questions: 4 'Have you ever...' questions, 4 'How long have you...' questions, and 4 WH- questions.",
         "In Present Perfect questions, the auxiliary (have/has) comes before the subject: 'Have you been?' NOT 'You have been?' Never use past tense with 'yet' in negatives.",
-        [("Present Perfect Questions", "Learn English with EnglishClass101.com", null), ("Have vs Has Questions", "English Speeches", null)]
+        [("Present Perfect Questions", "Learn English with EnglishClass101.com", null), ("Have vs Has Questions", "English Speeches", null), ("Essential Grammar in Use Unit 14 — Present Perfect Questions", "YouTube: Search 'Essential Grammar in Use Unit 14'", null)]
     );
 
     private static string A2L7() => C(
-        "CAN expresses present ability, permission, and possibility. Form: can + base verb. All subjects use the SAME form — no -s. Negatives: can't (cannot). Questions: Can you...?",
+        "CAN (Essential Grammar in Use Elementary, Unit 15) expresses ability, permission, and possibility. Form: can + base verb. Watch 'Essential Grammar in Use Unit 15' for can/can't in context.",
         ["Present ability: I can swim, she can cook, they can speak English", "Permission: Can I go? / Yes, you can. / No, you can't.", "Possibility: It can be expensive. / Animals can be dangerous.", "No -s: 'He CAN swim' — NOT 'He cans swim'", "Negatives: I can't / she can't / they can't"],
         [("can", "puedo", "I can play guitar."), ("can't", "no puedo", "She can't drive yet."), ("Can you?", "¿Puedes?", "Can you help me please?"), ("able to", "capaz de", "I am able to understand French."), ("couldn't", "no pude", "I couldn't open the door.")],
         [("I can cook Italian food.", "Present ability"), ("She can't speak German.", "Negative ability"), ("Can you help me?", "Polite request"), ("Animals can be dangerous.", "Possibility")],
         "Write 8 sentences: 4 using 'can' for ability and 4 using 'can' for permission or possibility.",
         "CAN has two pronunciations: strong form /kæn/ and weak form /kən/. In questions, 'Can you...?' uses weak form: 'kən yə?'",
-        [("Modal Verb: CAN", "Papa English", null), ("Can and Could in English", "Learn English with EnglishClass101.com", null)]
+        [("Modal Verb: CAN", "Papa English", null), ("Can and Could in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 15 — Can/Can't", "YouTube: Search 'Essential Grammar in Use Unit 15'", null)]
     );
 
     private static string A2L8() => C(
-        "COULD has two main uses: past ability ('I could swim as a child') and polite requests ('Could you help me?'). Form: could + base verb. All subjects use the SAME form. COULD for past ability is more common than 'was able to'.",
+        "COULD (Essential Grammar in Use Elementary, Unit 16) has two main uses: past ability and polite requests. Form: could + base verb. Watch 'Essential Grammar in Use Unit 16' for Could you...? patterns.",
         ["Past ability: I could swim when I was young, she could dance", "Polite requests: Could you help me? / Could I ask a question?", "Negative: couldn't (could not) for past or requests", "Questions: Could you...? / Could he...?", "Note: 'could' also expresses possibility: 'It could rain tomorrow'"],
         [("could", "podía", "I could dance well as a child."), ("couldn't", "no podía", "She couldn't speak English before."), ("Could you...?", "¿Podrías?", "Could you open the window please?"), ("was able to", "pude lograr", "He was able to finish the race."), ("might", "podría", "It could rain tomorrow.")],
         [("When I was younger, I could climb trees.", "Past ability"), ("She couldn't cook when she was 15.", "Negative past ability"), ("Could you help me with this?", "Polite request"), ("Could he swim? — Yes, he could.", "Past ability question")],
         "Write 10 sentences: 5 about past abilities using 'could', and 5 polite requests using 'Could you...?'",
         "COULD is pronounced /kʊd/. In polite requests, 'Could you..?' sounds more formal than 'Can you...?' Use COULD for past events, not present ability.",
-        [("Could - Past Tense of Can", "Learn English with EnglishClass101.com", null), ("Modals of Ability in English", "English Speeches", null)]
+        [("Could - Past Tense of Can", "Learn English with EnglishClass101.com", null), ("Modals of Ability in English", "English Speeches", null), ("Essential Grammar in Use Unit 16 — Could", "YouTube: Search 'Essential Grammar in Use Unit 16'", null)]
     );
 
     private static string A2L9() => C(
