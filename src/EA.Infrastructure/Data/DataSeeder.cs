@@ -710,10 +710,19 @@ public static class DataSeeder
         var m2 = G("c1020000-0000-0000-0000-000000000002");
         var m3 = G("c1030000-0000-0000-0000-000000000003");
         var m4 = G("c1040000-0000-0000-0000-000000000004");
-        ctx.Modules.Add(NewModule(m1, levelId, "Advanced Grammar", "Master inversion, emphasis, and mixed conditionals.", 1, 6));
-        ctx.Modules.Add(NewModule(m2, levelId, "Advanced Vocabulary", "Expand academic and idiomatic language.", 2, 6));
-        ctx.Modules.Add(NewModule(m3, levelId, "Writing Sophistication", "Nominalization, discourse markers, and cohesion for advanced writing.", 3, 6));
-        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Structures", "Master ellipsis, subjunctive mood, and modal perfection.", 4, 6));
+        var m5 = G("c1050000-0000-0000-0000-000000000005");
+        var m6 = G("c1060000-0000-0000-0000-000000000006");
+        var m7 = G("c1070000-0000-0000-0000-000000000007");
+        var m8 = G("c1080000-0000-0000-0000-000000000008");
+
+        ctx.Modules.Add(NewModule(m1, levelId, "Module 1: Perfect Continuous Tenses (Units 1-4)", "Master present/past perfect continuous for nuanced temporal expression.", 1, 2));
+        ctx.Modules.Add(NewModule(m2, levelId, "Module 2: Future Forms (Units 9-14)", "Express future with will, going to, future continuous/perfect, and be to.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Module 3: Advanced Modals (Units 15-20)", "Master can/could, must/have to, should/ought to in complex contexts.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Module 4: Passive Voice & Questions (Units 21-27)", "Advanced passives, wh-questions, and linking verbs.", 4, 2));
+        ctx.Modules.Add(NewModule(m5, levelId, "Module 5: Reported Speech (Units 32-39)", "Master tense shifts, reporting verbs, and subjunctive in reported clauses.", 5, 2));
+        ctx.Modules.Add(NewModule(m6, levelId, "Module 6: Relative Clauses (Units 53-59)", "Participle clauses, reduced relative clauses, and adverbial meaning.", 6, 2));
+        ctx.Modules.Add(NewModule(m7, levelId, "Module 7: Adjectives & Adverbs (Units 66-78)", "Gradable adjectives, position of adverbs, comment adverbs for sophistication.", 7, 2));
+        ctx.Modules.Add(NewModule(m8, levelId, "Module 8: Prepositions & Emphasis (Units 88-94)", "Complex prepositions, inversion for emphasis, and mixed structures.", 8, 2));
 
         var l1 = G("c1b10000-0000-0000-0000-000000000001");
         var l2 = G("c1b20000-0000-0000-0000-000000000002");
@@ -723,62 +732,150 @@ public static class DataSeeder
         var l6 = G("c1b60000-0000-0000-0000-000000000006");
         var l7 = G("c1b70000-0000-0000-0000-000000000007");
         var l8 = G("c1b80000-0000-0000-0000-000000000008");
-        ctx.Lessons.Add(NewLesson(l1, m1, "Inversion for Emphasis", SkillType.Writing, 1, C1L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "Mixed Conditionals", SkillType.Writing, 2, C1L2()));
-        ctx.Lessons.Add(NewLesson(l3, m2, "Academic & Formal Language", SkillType.Reading, 1, C1L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Collocations & Idioms", SkillType.Reading, 2, C1L4()));
-        ctx.Lessons.Add(NewLesson(l5, m3, "Nominalization", SkillType.Writing, 1, C1L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Discourse Markers & Cohesion", SkillType.Writing, 2, C1L6()));
-        ctx.Lessons.Add(NewLesson(l7, m4, "Ellipsis & Substitution", SkillType.Reading, 1, C1L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Subjunctive & Modal Perfection", SkillType.Writing, 2, C1L8()));
+        var l9 = G("c1b90000-0000-0000-0000-000000000009");
+        var l10 = G("c1b10000-0000-0000-0000-000000000010");
+        var l11 = G("c1b11000-0000-0000-0000-000000000011");
+        var l12 = G("c1b12000-0000-0000-0000-000000000012");
+        var l13 = G("c1b13000-0000-0000-0000-000000000013");
+        var l14 = G("c1b14000-0000-0000-0000-000000000014");
+        var l15 = G("c1b15000-0000-0000-0000-000000000015");
+        var l16 = G("c1b16000-0000-0000-0000-000000000016");
 
+        // Module 1: Perfect Continuous Tenses
+        ctx.Lessons.Add(NewLesson(l1, m1, "Present Perfect Continuous: extended duration", SkillType.Reading, 1, C1L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "Past Perfect Continuous: antecedent actions", SkillType.Writing, 2, C1L2()));
+
+        // Module 2: Future Forms
+        ctx.Lessons.Add(NewLesson(l3, m2, "Future Continuous & Perfect: advanced temporal expression", SkillType.Reading, 1, C1L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "Be to, about to, on the point of: scheduled/imminent futures", SkillType.Writing, 2, C1L4()));
+
+        // Module 3: Advanced Modals
+        ctx.Lessons.Add(NewLesson(l5, m3, "Modal deduction: must, can't, might (certainty levels)", SkillType.Reading, 1, C1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Modal perfects: should have, could have, might have (speculation)", SkillType.Writing, 2, C1L6()));
+
+        // Module 4: Passive Voice & Questions
+        ctx.Lessons.Add(NewLesson(l7, m4, "Passive with infinitives, -ing forms, and get-passive", SkillType.Reading, 1, C1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Wh- questions with complex structures and inversion", SkillType.Writing, 2, C1L8()));
+
+        // Module 5: Reported Speech
+        ctx.Lessons.Add(NewLesson(l9, m5, "Reporting structures: say, tell, ask, wonder, admit", SkillType.Reading, 1, C1L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "Reported speech: tense shifts, reporting subjunctive", SkillType.Writing, 2, C1L10()));
+
+        // Module 6: Relative Clauses
+        ctx.Lessons.Add(NewLesson(l11, m6, "Participle clauses: reducing relative clauses", SkillType.Reading, 1, C1L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Adverbial meaning in relative clauses and clausal phrases", SkillType.Writing, 2, C1L12()));
+
+        // Module 7: Adjectives & Adverbs
+        ctx.Lessons.Add(NewLesson(l13, m7, "Gradable vs ungradable adjectives and intensifiers", SkillType.Reading, 1, C1L13()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "Adverb position and comment adverbs for sophistication", SkillType.Writing, 2, C1L14()));
+
+        // Module 8: Prepositions & Emphasis
+        ctx.Lessons.Add(NewLesson(l15, m8, "Complex prepositions and prepositional nuance", SkillType.Reading, 1, C1L15()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Inversion structures, clefts, and emphasis techniques", SkillType.Writing, 2, C1L16()));
+
+        // Module 1: Perfect Continuous
         AddExercises(ctx, l1, "c1e1",
-            MC("Not only ___ he win the race, but he broke the record.", "did", "had", "was", "has", "inversion,advanced-grammar"),
-            MC("Hardly ___ he arrived when problems started.", "had", "did", "was", "were", "inversion,advanced-grammar"),
-            MC("Never ___ I seen such a beautiful place.", "have", "had", "did", "was", "inversion,advanced-grammar"),
-            FB("Rarely ___ we have such good weather in November. (do/did)", "do", "inversion"));
+            MC("They ___ on this project for six months now.", "have been working", "have worked", "are working", "are being working", "perfect-continuous"),
+            MC("How long ___ you ___ at this university?", "have-been studying", "have studied", "are studying", "are being studying", "perfect-continuous"),
+            MC("She ___ constantly about this issue.", "has been complaining", "has complained", "is complaining", "was complaining", "perfect-continuous"),
+            FB("The machinery ___ since 5 AM this morning. (run)", "has been running", "perfect-continuous"));
 
         AddExercises(ctx, l2, "c1e2",
-            MC("If I ___ taken that job, I would be rich now.", "had", "have", "would have", "was", "mixed-conditional"),
-            MC("She would have more friends if she ___ friendlier.", "were", "was", "would be", "is", "mixed-conditional"),
-            MC("He wouldn't be struggling now if he ___ worked harder then.", "had", "has", "would have", "did", "mixed-conditional"),
-            FB("If I ___ born in Italy, I would speak Italian now. (be, third conditional)", "had been", "mixed-conditional"));
+            MC("Before the meeting started, they ___ for three hours.", "had been discussing", "had discussed", "were discussing", "were being discussed", "past-perfect-continuous"),
+            MC("When I arrived, the children ___ all afternoon.", "had been playing", "had played", "were playing", "were being played", "past-perfect-continuous"),
+            MC("By the time she resigned, she ___ for the company for 20 years.", "had been working", "had worked", "was working", "was being worked", "past-perfect-continuous"),
+            FB("He realized he ___ about the wrong issue all along. (worry)", "had been worrying", "past-perfect-continuous"));
 
+        // Module 2: Future Forms
         AddExercises(ctx, l3, "c1e3",
-            MC("A synonym of 'ubiquitous' is:", "omnipresent", "rare", "unique", "occasional", "vocabulary,academic"),
-            MC("Which word means 'to make something worse'?", "exacerbate", "ameliorate", "mitigate", "alleviate", "vocabulary,academic"),
-            MC("'Laconic' describes someone who is:", "brief in speech", "very talkative", "highly emotional", "deeply philosophical", "vocabulary,academic"),
-            FB("The politician's speech was ___ — it went on for three hours. (wordy)", "verbose", "vocabulary"));
+            MC("At this time next week, we ___ our final exams.", "will be taking", "will take", "are taking", "have been taking", "future-continuous"),
+            MC("By the end of the year, she ___ on this project for eighteen months.", "will have been working", "will work", "will have worked", "has been working", "future-perfect"),
+            MC("Next summer, they ___ in that house for five years.", "will have been living", "will live", "will have lived", "are living", "future-perfect-continuous"),
+            FB("When you arrive tomorrow, I ___ the preparations. (finish)", "will have finished", "future-perfect"));
 
         AddExercises(ctx, l4, "c1e4",
-            MC("She has a ___ memory — she never forgets anything.", "photographic", "selective", "short-term", "poor", "collocations,idioms"),
-            MC("He was ___ with joy when he heard the news.", "beside himself", "above himself", "behind himself", "beyond himself", "idioms"),
-            MC("'A blessing in disguise' means:", "something good that seemed bad", "a curse in hiding", "unexpected danger", "a literal blessing", "idioms"),
-            FB("The negotiations hit a ___; no progress was made. (impasse word)", "deadlock", "vocabulary,idioms"));
+            MC("The president ___ to the parliament next month about these reforms.", "is to present", "is presenting", "will present", "has to present", "be-to-future"),
+            MC("The meeting ___ at 3 PM tomorrow.", "is to commence", "is commencing", "will commence", "has to commence", "be-to-future"),
+            MC("She ___ to be promoted within the next quarter.", "is", "has", "will be", "is about", "future-structures"),
+            FB("The ceremony ___ to take place on Friday. (be supposed)", "is", "be-to-future"));
 
+        // Module 3: Advanced Modals
         AddExercises(ctx, l5, "c1e5",
-            MC("'Analyze' becomes a nominalization:", "analysis", "analyzing", "analyzed", "analytical", "nominalization,vocabulary"),
-            MC("Which is a nominalization of 'develop'?", "development", "developing", "developed", "developer", "nominalization"),
-            MC("The sentence 'His judgment was sound' uses nominalization from:", "judge", "judging", "judgement", "judiciary", "nominalization"),
-            FB("The ___ of the project took longer than expected. (implement, nominalization)", "implementation", "nominalization"));
+            MC("She ___ be in the office — I just saw her.", "must", "might", "could", "can't", "modal-deduction"),
+            MC("He ___ have missed the train; it's nearly midnight.", "must", "might", "could", "can't", "modal-deduction"),
+            MC("The letter ___ be from the government — the envelope is official.", "must", "might", "could", "can't", "modal-deduction"),
+            FB("They ___ have understood the instructions — they're doing it wrong. (modal: negative certainty)", "can't", "modal-deduction"));
 
         AddExercises(ctx, l6, "c1e6",
-            MC("Which discourse marker shows contrast?", "nevertheless", "furthermore", "consequently", "moreover", "discourse-markers"),
-            MC("'Due to the delay, sales declined.' Which marker could replace 'due to'?", "Consequently", "Furthermore", "Conversely", "Additionally", "discourse-markers"),
-            MC("The correct discourse marker for cause-effect is:", "consequently", "conversely", "concurrently", "conjointly", "discourse-markers"),
-            FB("The evidence is unclear. ___,  the pattern is discernible. (discourse marker for contrast)", "Nevertheless", "discourse-markers"));
+            MC("You ___ told her the truth earlier.", "should have", "would have", "might have", "could have", "modal-perfect,regret"),
+            MC("He ___ passed the exam if he'd studied.", "could have", "should have", "might have", "would have", "modal-perfect"),
+            MC("She ___ known about the cancellation, but I'm not sure.", "might have", "should have", "would have", "must have", "modal-perfect,speculation"),
+            FB("They ___ arrived hours ago. (regret/criticism: should)", "should have", "modal-perfect"));
 
+        // Module 4: Passive Voice & Questions
         AddExercises(ctx, l7, "c1e7",
-            MC("'Which office is he in? The one John is in.' This demonstrates:", "ellipsis", "substitution", "repetition", "emphasis", "ellipsis"),
-            MC("'Do you like coffee?' 'Yes, I do.' The 'do' is:", "substitution", "ellipsis", "repetition", "auxiliary", "substitution"),
-            MC("'He passed; she did not' uses:", "substitution", "ellipsis", "inversion", "nominalization", "substitution"),
-            FB("John went to London; Sarah to Paris. (___of 'went')", "ellipsis", "ellipsis-substitution"));
+            MC("The work needs ___ by Friday.", "to be completed", "to complete", "being completed", "be completed", "passive,infinitive"),
+            MC("I want my car ___.", "serviced", "to service", "to be serviced", "being serviced", "passive,infinitive"),
+            MC("The proposal is likely ___.", "to be rejected", "to reject", "being rejected", "be rejected", "passive,infinitive"),
+            FB("The presentation is worth ___ twice. (worth, listen)", "listening to", "passive,-ing"));
 
         AddExercises(ctx, l8, "c1e8",
-            MC("'I insist that she be present.' This uses:", "subjunctive", "conditional", "subjunctive mood", "imperative", "subjunctive,advanced-grammar"),
-            MC("Which sentence is correct subjunctive?", "It is vital that he arrive on time.", "It is vital that he arrives on time.", "It is vital that he will arrive.", "It is vital that he arrived.", "subjunctive"),
-            MC("'She could have succeeded if she'd tried.' This perfect modal expresses:", "regret", "permission", "ability", "obligation", "perfect-modals"),
-            FB("I suggest that the policy ___ reviewed. (be, subjunctive)", "be", "subjunctive"));
+            MC("___ was it that you discovered this?", "Why", "When", "How", "Which", "wh-questions,inversion"),
+            MC("___ haven't they informed the authorities about this?", "Why", "When", "How long", "How many", "wh-questions"),
+            MC("___ long had you known before you told anyone?", "How", "How long", "How much", "How many", "wh-questions"),
+            FB("___ were you when the accident happened? (wh-question)", "Where", "wh-questions"));
+
+        // Module 5: Reported Speech
+        AddExercises(ctx, l9, "c1e9",
+            MC("She mentioned that she ___ moving to another city.", "was", "is", "has been", "will be", "reported-speech,tense-shift"),
+            MC("He told me he ___ never seen such a beautiful place.", "had", "has", "would have", "might have", "reported-speech,tense-shift"),
+            MC("They admitted that they ___ made a mistake.", "had", "have", "would have", "should have", "reported-speech,tense-shift"),
+            FB("She said she ___ going to resign. (was, reported speech)", "was", "reported-speech"));
+
+        AddExercises(ctx, l10, "c1e10",
+            MC("He asked whether I ___ interested in the position.", "was", "am", "have been", "would be", "reported-questions,tense-shift"),
+            MC("They wondered why we ___ refused their offer.", "had", "have", "would have", "might have", "reported-questions"),
+            MC("I asked him what he ___ doing here.", "was", "is", "has been", "would be", "reported-questions"),
+            FB("She inquired when the meeting ___ to start. (was, reported speech)", "was", "reported-questions"));
+
+        // Module 6: Relative Clauses
+        AddExercises(ctx, l11, "c1e11",
+            MC("The woman ___ across the street is my teacher.", "walking", "walked", "who walks", "that walked", "participle-clauses"),
+            MC("The report ___ last week contains important data.", "submitted", "submitting", "that submitted", "who submitting", "participle-clauses"),
+            MC("The issue ___ is complex and requires careful analysis.", "discussing", "discussed", "that discuss", "being discussed", "participle-clauses"),
+            FB("The documents ___ the new policy are now available. (outline)", "outlining", "participle-clauses"));
+
+        AddExercises(ctx, l12, "c1e12",
+            MC("He graduated in 2020, ___ his career in finance.", "starting", "started", "to start", "start", "participle-adverbial"),
+            MC("The manager spoke clearly, ___ no room for misunderstanding.", "leaving", "left", "to leave", "leave", "participle-adverbial"),
+            MC("We worked through the night, ___ to complete the project.", "determined", "determining", "to determine", "determine", "participle-adverbial"),
+            FB("Having received the news, he ___ immediately. (leave)", "left", "participle-adverbial"));
+
+        // Module 7: Adjectives & Adverbs
+        AddExercises(ctx, l13, "c1e13",
+            MC("'Beautiful' is a ___ adjective.", "gradable", "ungradable", "non-gradable", "absolute", "gradable-adjectives"),
+            MC("Which of these is NOT a gradable adjective?", "unique", "beautiful", "cold", "interesting", "gradable-adjectives"),
+            MC("We can say 'very ___ ' but not 'very unique'.", "interesting", "absolute", "unique", "perfect", "gradable-adjectives"),
+            FB("You can say 'extremely ___' but not 'extremely dead'. (ungradable example)", "alive", "gradable"));
+
+        AddExercises(ctx, l14, "c1e14",
+            MC("___, the decision was controversial.", "Frankly", "Frankly speaking", "Speaking frank", "Frank", "comment-adverbs"),
+            MC("She ___ didn't approve of the plan.", "Clearly", "Clear", "Clearing", "Clearly speaking", "adverb-position"),
+            MC("___, we need to reconsider our strategy.", "Honestly speaking", "Honestly", "Honest", "Honesty", "comment-adverbs"),
+            FB("___,this matter requires our attention. (Obviously, comment adverb)", "Obviously", "comment-adverbs"));
+
+        // Module 8: Prepositions & Emphasis
+        AddExercises(ctx, l15, "c1e15",
+            MC("The decision was made ___ pressure from the board.", "under", "from", "with", "by", "prepositions,complex"),
+            MC("The research is still ___ investigation.", "under", "in", "on", "at", "prepositions"),
+            MC("We acted ___ the assumption that all were aware.", "on", "at", "in", "under", "prepositions,complex"),
+            FB("The plan proceeded ___ plan despite objections. (as planned)", "as", "prepositions"));
+
+        AddExercises(ctx, l16, "c1e16",
+            MC("___ John who won the award, not his colleague.", "It was", "It is", "That was", "What was", "inversion,emphasis"),
+            MC("Not only ___ he study hard, but he also mentored others.", "did", "does", "had", "has", "inversion"),
+            MC("Never ___ I heard such nonsense.", "have", "had", "has", "do", "inversion,emphasis"),
+            FB("Only after ___ his mistake did he apologize. (realize)", "realizing", "inversion"));
     }
 
     private static void BuildC2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -1494,6 +1591,86 @@ public static class DataSeeder
         "Write 8 sentences: 4 using subjunctive (insist, recommend, it is essential that, it is vital that) and 4 using perfect modals (should have, could have, might have, may have) to express regret, criticism, or speculation.",
         "The subjunctive is often not pronounced differently from the indicative, but formal speech emphasizes the 'be': 'I insist that she BE present' — the 'be' sounds deliberate.",
         [("Subjunctive Mood in English", "Papa English", null), ("Perfect Modal Verbs", "Cambridge English", null), ("Advanced Modal Structures", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L9() => C(
+        "Reported speech (or indirect speech) conveys what someone said without quoting directly. At C1, you master reporting structures beyond simple 'said' — including tell, ask, wonder, admit, acknowledge, insist — and handle tense shifts and reported questions precisely.",
+        ["Reporting verbs: say, tell (person), ask, wonder, inquire, admit, acknowledge, deny, insist", "Tense shifts: direct 'I'm working' → reported 'She said (that) she was working'", "Reported questions: direct 'Where are you going?' → reported 'He asked where I was going'", "Reported requests/commands: direct 'Clean your room!' → reported 'She told him to clean his room'", "Backshift in time: past reported 'She said she was tired' (was working then) vs. present 'She says she is tired' (is still tired)"],
+        [("admitted", "admitió", "He admitted (that) he had made a mistake."), ("denied", "negó", "She denied having seen the document."), ("acknowledge", "reconocer", "The committee acknowledged the report's findings."), ("alleged", "alegó", "The defendant alleged that he was elsewhere."), ("insisted", "insistió", "He insisted that he be allowed to speak.")],
+        [("She said that she would attend the conference next month.", "Tense shift: present → conditional"), ("He asked me whether I had finished the report.", "Reported question with backshift"), ("The witness admitted that she had seen the suspect near the building.", "Reported admission with perfect"), ("The doctor told me to reduce my stress levels.", "Reported instruction"), ("They insisted that the proposal be reconsidered.", "Reported insistence with subjunctive")],
+        "Convert 8 direct speech sentences into reported speech, including at least one reported question, one reported command, one reported negative statement, and one using a formal reporting verb (acknowledge, admitted, alleged, denied).",
+        "In formal speech, 'he said' flows naturally, but in academic contexts, use varied reporting verbs: 'he argued', 'she proposed', 'they contended'. Reporting verbs signal your stance toward the information.",
+        [("Reported Speech in English", "Papa English", null), ("Reporting Verbs and Advanced Structures", "Cambridge English", null), ("Indirect Speech Transformation", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L10() => C(
+        "Advanced reported speech includes tense shifts (backshift), reported subjunctive, and reporting embedded clauses. Understanding backshift is crucial: 'He said he was tired' (at that moment) versus 'He said he is tired' (still tired now).",
+        ["Tense backshift: present perfect → past perfect, future → conditional, present continuous → past continuous", "No backshift if reporting present situation: 'He says he is tired' (still tired)", "Reported subjunctive: 'I recommend that he be informed' → 'She recommended that he be informed'", "Reported conditionals: direct 'If I were you, I would...' → reported 'He suggested that if I were him, I would...'", "Embedded questions and clauses: 'She wondered why he hadn't called' (no question mark)"],
+        [("backshift", "cambio de tiempo", "The tense backshift occurred when reporting past speech."), ("recommend that", "recomendar que", "I recommend that the proposal be accepted."), ("embedded", "incrustada / integrada", "The embedded clause provides crucial context."), ("contend", "sostener / argumentar", "The author contends that reform is necessary."), ("asserted", "afirmó rotundamente", "He asserted that the evidence was conclusive.")],
+        [("She said she had been waiting for hours.", "Backshift: continuous to perfect continuous"), ("He insists that students be given more time to complete the exam.", "Reported subjunctive"), ("The report suggested that if the trend continued, demand would triple.", "Reported conditional"), ("She wondered whether anyone would volunteer.", "Embedded question"), ("They asserted that the findings contradicted previous research.", "Formal reporting verb")],
+        "Write a dialogue (6-8 exchanges) between two people discussing a disagreement. Then convert it into reported speech, using backshift, at least one reported subjunctive, and at least 5 different reporting verbs.",
+        "When reporting, your intonation subtly expresses your stance: skeptical 'She claimed...' vs. neutral 'She said...' vs. endorsing 'She correctly noted...'",
+        [("Advanced Reported Speech", "Cambridge English", null), ("Reported Subjunctive in Academic Writing", "Academic English", null), ("Tense Backshift Rules", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L11() => C(
+        "Participle clauses (reduced relative clauses) make writing more concise and sophisticated. 'The student who was working on the project' becomes 'The student working on the project' — more elegant and more natural in academic and professional contexts.",
+        ["Participle clauses replace relative clauses: 'The woman standing there' = 'The woman who is standing there'", "Active -ing clauses: 'The children playing in the park' (= who are playing)", "Passive past participle clauses: 'The book published last year' (= which was published)", "Adverbial participle clauses: 'Completing the task, he felt relieved' (= After completing, he felt relieved)", "Perfect participles: 'Having finished the report, she submitted it' (= After having finished)"],
+        [("participle clause", "cláusula de participio", "The participle clause modifies the noun."), ("reducing", "reduciendo / simplificando", "Reducing the clause made the sentence more concise."), ("pending", "pendiente", "All matters pending approval will be addressed next week."), ("pertaining to", "relativo a / que concierne", "The documents pertaining to this case are confidential."), ("resembling", "parecido a", "Rocks resembling meteorites were discovered.")],
+        [("The student working on the project completed it on time.", "Participle clause replacing relative clause"), ("Having completed the analysis, she presented her findings.", "Perfect participle for temporal relationship"), ("The documents pertaining to the merger are confidential.", "Participle clause with preposition"), ("Pending final approval, the proposal will proceed.", "Adverbial participle clause"), ("Books published in the last decade show this trend.", "Past participle clause (passive)")],
+        "Convert 10 sentences containing 'who/which is' or 'who/which was' into reduced participle clauses. Also write 3 sentences using perfect participles (having completed, having been informed, etc.).",
+        "Participle clauses add sophistication: 'The woman standing near the door arrived yesterday' is more elegant than 'The woman who was standing near the door arrived yesterday.' Use them in formal writing.",
+        [("Participle Clauses Explained", "Cambridge English", null), ("Reducing Relative Clauses", "Papa English", null), ("Advanced Sentence Structure", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L12() => C(
+        "Advanced relative clause structures include whose + noun (possession), preposition + which (formal), and adverbial relative clauses (why, when, where, how). These structures add sophistication to complex, academic writing.",
+        ["Whose + noun: 'The student whose essay was accepted...' (possession)", "Preposition + relative pronoun: 'The institution to which she applied...' (formal)", "Adverbial relative clauses: when, where, why, how, the reason why, the place where", "Postmodifying clauses: 'The person in charge' becomes 'The person in charge of the project'", "Non-defining vs defining: 'My brother, who is a doctor' (non-defining) vs 'My brother who is a doctor' (defining — I have multiple brothers)"],
+        [("whose", "cuyo/a/os/as", "The student whose project won the award..."), ("in which", "en el cual / donde", "The laboratory in which the research was conducted..."), ("during which", "durante el cual", "The period during which the project was developing..."), ("whereby", "mediante / por lo cual", "A system whereby each person gets a vote..."), ("notwithstanding", "a pesar de / sin embargo", "The difficulties notwithstanding, they succeeded.")],
+        [("The researchers to whom the grant was awarded began their work immediately.", "Preposition + which"), ("The reason why she left is still unclear.", "Adverbial relative clause with why"), ("The technique whereby rust is removed is highly effective.", "Defining relative with whereby"), ("The period during which the company expanded rapidly was very profitable.", "Adverbial relative clause"), ("The documents, whose copies were distributed, contained sensitive information.", "Possessive relative with non-defining clause")],
+        "Write 10 complex sentences using: 4 with whose + noun, 3 with preposition + relative pronoun (to which, in which, for which, etc.), and 3 with adverbial relative clauses (when, where, why, during which).",
+        "Non-defining relative clauses (set off by commas) need natural breath pauses in speech. Defining relative clauses flow without pauses. This rhythm helps you distinguish them when speaking.",
+        [("Advanced Relative Clauses", "Cambridge English", null), ("Whose vs Of Which in English", "Papa English", null), ("Formal Relative Structures", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L13() => C(
+        "Gradable adjectives (hot, cold, good, bad) admit degrees (very hot, quite hot). Ungradable adjectives (perfect, complete, impossible, dead) do not — you cannot say 'very complete'. At C1, you distinguish these for precision and avoid elementary mistakes.",
+        ["Gradable adjectives: hot, cold, big, small, good, bad, interesting, difficult, expensive (accept degree modification)", "Ungradable adjectives: perfect, complete, entire, absolute, dead, alive, unique, impossible, essential (cannot be 'very')", "Intensifiers for gradable: very, quite, rather, fairly, pretty, extremely, incredibly, remarkably", "Intensifiers for ungradable: absolutely, completely, utterly, totally (modify the entire concept)", "Comparative/superlative with gradable only: 'more interesting' but NOT 'more perfect'"],
+        [("ungradable", "no gradable / sin grados", "The word 'perfect' is ungradable."), ("intensifier", "intensificador", "Use 'very' as an intensifier with gradable adjectives."), ("absolute", "absoluto", "We need absolute certainty before proceeding."), ("entire", "entero", "The entire project was compromised."), ("unique", "único", "This approach is completely unique (not 'very unique').")],
+        [("The situation is absolutely impossible.", "Ungradable: intensifier is 'absolutely'"), ("The presentation was very effective and quite persuasive.", "Gradable: multiple intensifiers"), ("This is a unique opportunity, not 'a very unique opportunity'.", "Ungradable corrected"), ("The data are entirely complete and ready for analysis.", "Ungradable: 'entirely' modifies the concept"), ("The solution is extremely simple but absolutely essential.", "Mix of gradable and ungradable")],
+        "Identify which adjectives are gradable and which are ungradable in 15 given sentences. Then rewrite sentences containing incorrect intensifier use (e.g., 'very perfect', 'rather complete') with the correct intensifier choice.",
+        "In speech, gradable intensifiers can be slightly reduced: 'vry good' (very good). Ungradable intensifiers remain fully pronounced: 'AB-so-LUTE-ly impossible' — the word carries weight.",
+        [("Gradable vs Ungradable Adjectives", "Cambridge English", null), ("Intensifiers in English", "Papa English", null), ("Adjective Gradability", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L14() => C(
+        "Adverb placement affects meaning and elegance. Adverbs can appear sentence-initial (formally), mid-position (typically), or end-position (naturally). Comment adverbs (frankly, undoubtedly, fortunately) signal the speaker's attitude and add sophistication.",
+        ["Adverbial positions: sentence-initial (However, she succeeded.), mid-position (She has clearly misunderstood.), end-position (She worked diligently.)", "Frequency adverbs: position matters. 'I always enjoy it' vs 'Do you always enjoy it?' (after subject/auxiliary)", "Comment adverbs: frankly, undoubtedly, understandably, fortunately, regrettably, arguably, inevitably", "Focus adverbs: only, even, just, still, already — position changes meaning: 'Only she knows' vs 'She only knows'", "Manner adverbs typically end-position; frequency mid-position; degree/comment adverbs flexible"],
+        [("comment adverb", "adverbio de comentario", "Undoubtedly, the proposal has merit."), ("arguably", "se podría argumentar", "Arguably, this is the best solution available."), ("regrettably", "lamentablemente", "Regrettably, the deadline was not met."), ("inevitably", "inevitablemente", "Inevitably, costs will increase."), ("inextricably", "indisolublemente", "The two issues are inextricably linked.")],
+        [("Frankly, I don't agree with this approach.", "Comment adverb: sentence-initial"), ("She has undoubtedly made the right decision.", "Comment adverb: mid-position"), ("Regrettably, the project was cancelled.", "Comment adverb expressing speaker's attitude"), ("Only the CEO can authorize this expenditure.", "Focus adverb: change meaning with position"), ("The two concepts are inextricably linked.", "Manner adverb: end-position")],
+        "Write 12 sentences: 4 using comment adverbs (frankly, undoubtedly, regrettably, fortunately), 4 with focus adverbs (only, even, just, still) showing position effects, and 4 with frequency/manner adverbs in correct positions.",
+        "Comment adverbs signal your tone: 'Frankly, I disagree' (emphatic honesty), 'Arguably, the claim is weak' (academic distance). In speech, they often carry falling intonation.",
+        [("Adverb Position and Word Order", "Cambridge English", null), ("Comment Adverbs in English", "Papa English", null), ("Adverb Placement for Advanced Learners", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L15() => C(
+        "Complex prepositions (in front of, because of, in addition to, in accordance with, by virtue of) are more precise than simple prepositions. Mastering them elevates your formal writing and academic expression.",
+        ["Complex prepositions: in front of, because of, by means of, in addition to, in spite of, by virtue of, in accordance with, with regard to, in the light of", "Distinction: 'in front of' (physical) vs 'ahead of' (competitive); 'because of' (cause) vs 'due to' (consequence)", "Idiomatic usage: 'owing to' (passive acknowledgment), 'on the basis of' (evaluation), 'in the course of' (during)", "Prepositional nuance: 'despite' (concessive) vs 'because of' (causal); choosing the right preposition changes logical meaning", "Register: 'because of' is neutral; 'owing to' is formal; 'due to' is less formal for written English"],
+        [("by virtue of", "en virtud de", "She was appointed by virtue of her expertise."), ("in the light of", "a la luz de", "In the light of new evidence, the decision was reconsidered."), ("in accordance with", "de acuerdo con", "The process was followed in accordance with regulations."), ("notwithstanding", "no obstante / a pesar de", "The difficulties notwithstanding, progress was made."), ("pursuant to", "de conformidad con", "Pursuant to your request, we have provided the information.")],
+        [("In accordance with the company policy, all employees must submit their reports.", "Complex preposition in formal context"), ("By virtue of his experience, he was chosen to lead the project.", "Formal appointment language"), ("In the light of recent developments, the committee has reconsidered its position.", "Preposition introducing revised information"), ("Notwithstanding the challenges, the team achieved all objectives.", "Concessive complex preposition"), ("Pursuant to the contract, payment is due within 30 days.", "Formal business language")],
+        "Write 8 sentences incorporating: 2 with 'in accordance/accordance with', 2 with 'because of/due to' (show the difference), 2 with 'by virtue of/in virtue of', and 2 with other complex prepositions (notwithstanding, pursuant to, in the light of, in addition to).",
+        "Complex prepositions carry formal weight in speech. Pronounce them clearly: 'in LIGHT of' (not 'inlightof'), 'PUR-suant TO' (not rushed). Clarity marks professionalism.",
+        [("Complex Prepositions in English", "Cambridge English", null), ("Prepositional Phrases and Nuance", "Papa English", null), ("Advanced Prepositions for Formal Writing", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string C1L16() => C(
+        "Inversion (placing the verb before the subject) and cleft sentences (using 'it is...that' or 'what...is') add emphasis and sophistication. These structures signal native proficiency in formal, academic, and literary English.",
+        ["Inversion with negative adverbs: 'Never have I seen such...' (formal emphasis)", "Inversion with 'so': 'So impressive were the results that...' (literary effect)", "Cleft sentences with 'it': 'It is the methodology that distinguishes this study.' (emphasis on methodology)", "Cleft sentences with 'what': 'What matters most is implementation.' (emphasis on what matters)", "Pseudo-cleft: 'The key issue is implementation' vs true cleft 'It is implementation that is the key issue'"],
+        [("inversion", "inversión", "Inverted sentence structure for emphasis."), ("cleft", "dividida (estructura)", "A cleft sentence emphasizes part of the clause."), ("pseudo-cleft", "pseudo-escisión", "This is a pseudo-cleft construction."), ("striking", "notable / sorprendente", "Striking results emerged from the study."), ("paramount", "supremo / primordial", "Attention to detail is paramount.")],
+        [("Never have I encountered such compelling evidence.", "Inversion with negative for emphasis"), ("What they discovered was a fundamental flaw in the theory.", "Cleft with 'what'"), ("It is the budget constraints that limit our options.", "Cleft with 'it'"), ("So thorough was the investigation that no stone was left unturned.", "Inversion with 'so'"), ("Paramount to success is clear communication.", "Inverted copular structure")],
+        "Write 10 sentences using inversion and cleft structures: 4 with negative inversion ('Never...', 'Seldom...'), 3 with 'it is...that' clefts, 2 with 'what...is' clefts, and 1 with pseudo-cleft. Then explain which elements are emphasized.",
+        "In speech, inverted structures carry dramatic intonation. 'NEVER have I SEEN such...' — the never is stressed, then a falling pitch. Cleft sentences sound formal and deliberate: 'It IS the BUDGET that matters.'",
+        [("Inversion for Emphasis in English", "Cambridge English", null), ("Cleft Sentences Explained", "Papa English", null), ("Advanced Emphasis Structures", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string C2L1() => C(
