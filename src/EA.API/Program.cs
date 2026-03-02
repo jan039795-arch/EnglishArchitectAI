@@ -3,7 +3,11 @@ using EA.Application;
 using EA.Domain.Entities;
 using EA.Infrastructure;
 using EA.Infrastructure.Data;
+using EA.Infrastructure.Services;
 using FluentValidation;
+using Hangfire;
+using Hangfire.AspNetCore;
+using Hangfire.InMemory;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -114,6 +118,19 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// Hangfire for background jobs
+builder.Services.AddHangfire(config =>
+    config.UseInMemoryStorage(new InMemoryStorageOptions()));
+builder.Services.AddHangfireServer(options =>
+{
+    options.WorkerCount = 1; // Single worker for development
+    options.SchedulePollingInterval = TimeSpan.FromSeconds(15);
+});
+
+// Content Refresh Service
+builder.Services.AddScoped<ExerciseGeneratorService>();
+builder.Services.AddScoped<ContentRefreshService>();
+
 var app = builder.Build();
 
 // Apply migrations & seed on startup
@@ -149,5 +166,11 @@ app.Use(async (context, next) =>
 
 app.MapControllers();
 app.MapHub<EA.API.Hubs.LessonHub>("/hubs/lesson");
+
+// Schedule daily content refresh job at 2 AM
+RecurringJob.AddOrUpdate<ContentRefreshService>(
+    "daily-content-refresh",
+    service => service.RefreshDailyContentAsync(),
+    Cron.Daily(2, 0)); // 2:00 AM every day
 
 app.Run();

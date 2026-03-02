@@ -26,6 +26,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
     public DbSet<PlacementTest> PlacementTests => Set<PlacementTest>();
     public DbSet<Certificate> Certificates => Set<Certificate>();
     public DbSet<LessonComment> LessonComments => Set<LessonComment>();
+    public DbSet<ContentVersion> ContentVersions => Set<ContentVersion>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

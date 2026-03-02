@@ -22,6 +22,7 @@ public interface IApplicationDbContext
     DbSet<Certificate> Certificates { get; }
     DbSet<Subscription> Subscriptions { get; }
     DbSet<LessonComment> LessonComments { get; }
+    DbSet<ContentVersion> ContentVersions { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
