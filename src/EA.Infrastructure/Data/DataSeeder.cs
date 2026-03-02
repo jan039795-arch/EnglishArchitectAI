@@ -362,10 +362,19 @@ public static class DataSeeder
         var m2 = G("b1020000-0000-0000-0000-000000000002");
         var m3 = G("b1030000-0000-0000-0000-000000000003");
         var m4 = G("b1040000-0000-0000-0000-000000000004");
-        ctx.Modules.Add(NewModule(m1, levelId, "Present Perfect", "Connect past experiences to the present.", 1, 4));
-        ctx.Modules.Add(NewModule(m2, levelId, "Conditional Sentences", "Explore real and hypothetical situations.", 2, 4));
-        ctx.Modules.Add(NewModule(m3, levelId, "Continuous & Perfect Tenses", "Master complex tenses for nuanced expression.", 3, 4));
-        ctx.Modules.Add(NewModule(m4, levelId, "Advanced Grammar & Structures", "Relative clauses and reported speech for sophistication.", 4, 4));
+        var m5 = G("b1050000-0000-0000-0000-000000000005");
+        var m6 = G("b1060000-0000-0000-0000-000000000006");
+        var m7 = G("b1070000-0000-0000-0000-000000000007");
+        var m8 = G("b1080000-0000-0000-0000-000000000008");
+
+        ctx.Modules.Add(NewModule(m1, levelId, "Module 1: Present Perfect Continuous (Units 1-3)", "Connect ongoing past actions to the present.", 1, 2));
+        ctx.Modules.Add(NewModule(m2, levelId, "Module 2: Past Perfect & Past Perfect Continuous (Units 4-10)", "Master complex past tenses for narrative.", 2, 2));
+        ctx.Modules.Add(NewModule(m3, levelId, "Module 3: Future Continuous (Units 19-21)", "Describe actions happening at a future moment.", 3, 2));
+        ctx.Modules.Add(NewModule(m4, levelId, "Module 4: Future Perfect (Units 22-25)", "Express completion before a future time.", 4, 2));
+        ctx.Modules.Add(NewModule(m5, levelId, "Module 5: Modals 1 - Ability & Permission (Units 26-30)", "Can, could, may, might for ability and possibility.", 5, 2));
+        ctx.Modules.Add(NewModule(m6, levelId, "Module 6: Modals 2 - Obligation & Advice (Units 31-37)", "Should, must, have to, need to for necessity.", 6, 2));
+        ctx.Modules.Add(NewModule(m7, levelId, "Module 7: Conditional Sentences (Units 38-41)", "If clauses and wish for hypothetical situations.", 7, 2));
+        ctx.Modules.Add(NewModule(m8, levelId, "Module 8: Passive Voice & Reported Speech (Units 42-48)", "Shift focus and report others' words accurately.", 8, 2));
 
         var l1 = G("b1b10000-0000-0000-0000-000000000001");
         var l2 = G("b1b20000-0000-0000-0000-000000000002");
@@ -375,61 +384,149 @@ public static class DataSeeder
         var l6 = G("b1b60000-0000-0000-0000-000000000006");
         var l7 = G("b1b70000-0000-0000-0000-000000000007");
         var l8 = G("b1b80000-0000-0000-0000-000000000008");
-        ctx.Lessons.Add(NewLesson(l1, m1, "Have/Has + Past Participle", SkillType.Writing, 1, B1L1()));
-        ctx.Lessons.Add(NewLesson(l2, m1, "For vs Since", SkillType.Writing, 2, B1L2()));
-        ctx.Lessons.Add(NewLesson(l3, m2, "First Conditional", SkillType.Writing, 1, B1L3()));
-        ctx.Lessons.Add(NewLesson(l4, m2, "Second Conditional", SkillType.Writing, 2, B1L4()));
-        ctx.Lessons.Add(NewLesson(l5, m3, "Present Perfect Continuous", SkillType.Writing, 1, B1L5()));
-        ctx.Lessons.Add(NewLesson(l6, m3, "Past Perfect", SkillType.Writing, 2, B1L6()));
-        ctx.Lessons.Add(NewLesson(l7, m4, "Relative Clauses", SkillType.Reading, 1, B1L7()));
-        ctx.Lessons.Add(NewLesson(l8, m4, "Reported Speech", SkillType.Writing, 2, B1L8()));
+        var l9 = G("b1b90000-0000-0000-0000-000000000009");
+        var l10 = G("b1b10000-0000-0000-0000-000000000010");
+        var l11 = G("b1b11000-0000-0000-0000-000000000011");
+        var l12 = G("b1b12000-0000-0000-0000-000000000012");
+        var l13 = G("b1b13000-0000-0000-0000-000000000013");
+        var l14 = G("b1b14000-0000-0000-0000-000000000014");
+        var l15 = G("b1b15000-0000-0000-0000-000000000015");
+        var l16 = G("b1b16000-0000-0000-0000-000000000016");
 
+        // Module 1: Present Perfect Continuous
+        ctx.Lessons.Add(NewLesson(l1, m1, "How long have you been doing this?", SkillType.Reading, 1, B1L1()));
+        ctx.Lessons.Add(NewLesson(l2, m1, "Present Perfect Continuous: emphasis on duration", SkillType.Writing, 2, B1L2()));
+
+        // Module 2: Past Perfect & Past Perfect Continuous
+        ctx.Lessons.Add(NewLesson(l3, m2, "Past Perfect: had done / had not done", SkillType.Reading, 1, B1L3()));
+        ctx.Lessons.Add(NewLesson(l4, m2, "Past Perfect Continuous: had been doing", SkillType.Writing, 2, B1L4()));
+
+        // Module 3: Future Continuous
+        ctx.Lessons.Add(NewLesson(l5, m3, "Future Continuous: will be doing", SkillType.Reading, 1, B1L5()));
+        ctx.Lessons.Add(NewLesson(l6, m3, "Future Continuous questions and negatives", SkillType.Writing, 2, B1L6()));
+
+        // Module 4: Future Perfect
+        ctx.Lessons.Add(NewLesson(l7, m4, "Future Perfect: will have done", SkillType.Reading, 1, B1L7()));
+        ctx.Lessons.Add(NewLesson(l8, m4, "Future Perfect Continuous: will have been doing", SkillType.Writing, 2, B1L8()));
+
+        // Module 5: Modals 1 (Ability & Permission)
+        ctx.Lessons.Add(NewLesson(l9, m5, "Can, Could, Be able to: ability in different times", SkillType.Reading, 1, B1L9()));
+        ctx.Lessons.Add(NewLesson(l10, m5, "May, Might: permission and possibility", SkillType.Writing, 2, B1L10()));
+
+        // Module 6: Modals 2 (Obligation & Advice)
+        ctx.Lessons.Add(NewLesson(l11, m6, "Should, Ought to, Must: obligation and advice", SkillType.Reading, 1, B1L11()));
+        ctx.Lessons.Add(NewLesson(l12, m6, "Have to, Must, Need to: necessity and obligation", SkillType.Writing, 2, B1L12()));
+
+        // Module 7: Conditional Sentences
+        ctx.Lessons.Add(NewLesson(l13, m7, "First & Second Conditional: real and hypothetical", SkillType.Reading, 1, B1L9()));
+        ctx.Lessons.Add(NewLesson(l14, m7, "Third Conditional & Wish: unreal past situations", SkillType.Writing, 2, B1L10()));
+
+        // Module 8: Passive Voice & Reported Speech
+        ctx.Lessons.Add(NewLesson(l15, m8, "Passive Voice: transform active to passive", SkillType.Reading, 1, B1L11()));
+        ctx.Lessons.Add(NewLesson(l16, m8, "Reported Speech: indirect statements and questions", SkillType.Writing, 2, B1L12()));
+
+        // Module 1: Present Perfect Continuous
         AddExercises(ctx, l1, "b1e1",
-            MC("I ___ here for three years.", "have lived", "am living", "live", "lived", "present-perfect,duration"),
-            MC("She ___ her homework already.", "has finished", "finished", "is finishing", "finishes", "present-perfect"),
-            MC("Have you ever ___ sushi?", "eaten", "eat", "ate", "eating", "present-perfect,experience"),
-            FB("He ___ three books this week. (read)", "has read", "present-perfect"));
-
-        AddExercises(ctx, l2, "b1e2",
-            MC("I have worked here ___ 2020.", "since", "for", "from", "during", "present-perfect,since-for"),
-            MC("She has been ill ___ three days.", "for", "since", "during", "from", "present-perfect,since-for"),
-            MC("We haven't spoken ___ a long time.", "for", "since", "from", "at", "present-perfect,since-for"),
-            FB("He has known her ___ they were children. (since/for)", "since", "present-perfect,since-for"));
-
-        AddExercises(ctx, l3, "b1e3",
-            MC("If it rains, I ___ an umbrella.", "will take", "would take", "take", "took", "first-conditional"),
-            MC("She ___ if she studies hard.", "will pass", "would pass", "passes", "passed", "first-conditional"),
-            MC("If you hurry, you ___ the bus.", "will catch", "would catch", "catch", "caught", "first-conditional"),
-            FB("If you ___ early, you'll get a good seat. (arrive)", "arrive", "first-conditional"));
-
-        AddExercises(ctx, l4, "b1e4",
-            MC("If I had more money, I ___ a new car.", "would buy", "will buy", "buy", "bought", "second-conditional"),
-            MC("She would travel more if she ___ more time.", "had", "has", "would have", "having", "second-conditional"),
-            MC("If I were you, I ___ accept the offer.", "would", "will", "should", "could", "second-conditional"),
-            FB("If he ___ harder, he would succeed. (work)", "worked", "second-conditional"));
-
-        AddExercises(ctx, l5, "b1e5",
-            MC("How long ___ you ___ at this job?", "have-been working", "are working", "have worked", "are", "present-perfect-continuous"),
+            MC("How long ___ you ___ here?", "have-been working", "are working", "have worked", "work", "present-perfect-continuous,duration"),
             MC("She ___ her book for three hours.", "has been writing", "has written", "writes", "is write", "present-perfect-continuous"),
             MC("They ___ football all afternoon.", "have been playing", "have played", "are playing", "plays", "present-perfect-continuous"),
-            FB("I ___ English for 5 years. (study)", "have been studying", "present-perfect-continuous"));
+            FB("I ___ English for five years. (study)", "have been studying", "present-perfect-continuous"));
 
-        AddExercises(ctx, l6, "b1e6",
+        AddExercises(ctx, l2, "b1e2",
+            MC("How long have you ___ here?", "been working", "worked", "work", "are working", "present-perfect-continuous"),
+            MC("She ___ television all evening.", "has been watching", "has watched", "watches", "is watching", "present-perfect-continuous"),
+            MC("We ___ for the bus for 20 minutes.", "have been waiting", "have waited", "wait", "are waiting", "present-perfect-continuous"),
+            FB("___ you ___ well lately? (sleep)", "Have been sleeping", "present-perfect-continuous"));
+
+        // Module 2: Past Perfect & Past Perfect Continuous
+        AddExercises(ctx, l3, "b1e3",
             MC("Before they arrived, I ___ the dishes.", "had finished", "finished", "have finished", "was finishing", "past-perfect"),
             MC("She ___ that book before.", "had never read", "has never read", "never read", "was reading", "past-perfect"),
             MC("By the time he called, we ___ already ___.", "had-left", "left", "have left", "was leaving", "past-perfect"),
-            FB("When she arrived, he ___ for an hour. (wait)", "had been waiting", "past-perfect"));
+            FB("When she arrived, he ___ for an hour. (wait)", "had been waiting", "past-perfect-continuous"));
 
+        AddExercises(ctx, l4, "b1e4",
+            MC("He ___ there for five years before he moved.", "had been living", "lived", "has lived", "was living", "past-perfect-continuous"),
+            MC("By noon, she ___ on the project for three hours.", "had been working", "worked", "has worked", "was working", "past-perfect-continuous"),
+            MC("After we ___ for an hour, the bus finally came.", "had been waiting", "waited", "have waited", "were waiting", "past-perfect-continuous"),
+            FB("When I arrived, they ___ dinner for ten minutes. (eat)", "had been eating", "past-perfect-continuous"));
+
+        // Module 3: Future Continuous
+        AddExercises(ctx, l5, "b1e5",
+            MC("This time next week, I ___ on the beach.", "will be relaxing", "will relax", "am relaxing", "relax", "future-continuous"),
+            MC("At 8 PM, she ___ to the radio.", "will be listening", "will listen", "is listening", "listens", "future-continuous"),
+            MC("When you call, I ___ my homework.", "will be doing", "will do", "am doing", "do", "future-continuous"),
+            FB("Next year, they ___ in a new house. (live)", "will be living", "future-continuous"));
+
+        AddExercises(ctx, l6, "b1e6",
+            MC("___ you ___ the match tomorrow at 3 PM?", "Will-be watching", "Will watch", "Are watching", "Watch", "future-continuous,questions"),
+            MC("What ___ you ___ at this time next week?", "will-be doing", "will do", "are doing", "do", "future-continuous,questions"),
+            MC("At midnight, we ___ the New Year.", "will be celebrating", "will celebrate", "are celebrating", "celebrate", "future-continuous"),
+            FB("I ___ about you. (think)", "will be thinking", "future-continuous"));
+
+        // Module 4: Future Perfect
         AddExercises(ctx, l7, "b1e7",
-            MC("The woman ___ taught me is kind.", "who", "that", "which", "where", "relative-clauses,who"),
-            MC("The book ___ I read was excellent.", "that", "which", "who", "where", "relative-clauses,that-which"),
-            MC("The café ___ we met is closed.", "where", "who", "that", "when", "relative-clauses,where"),
-            FB("I know someone ___ speaks five languages. (relative pronoun)", "who", "relative-clauses"));
+            MC("By next month, I ___ this project.", "will have completed", "will complete", "have completed", "am completing", "future-perfect"),
+            MC("When you arrive, I ___ dinner.", "will have cooked", "will cook", "have cooked", "am cooking", "future-perfect"),
+            MC("By the end of the year, she ___ her degree.", "will have finished", "will finish", "has finished", "is finishing", "future-perfect"),
+            FB("By 2030, we ___ in this house for 20 years. (live)", "will have lived", "future-perfect"));
 
         AddExercises(ctx, l8, "b1e8",
+            MC("By next year, I ___ here for five years.", "will have been working", "will work", "have worked", "am working", "future-perfect-continuous"),
+            MC("When he retires, he ___ for 40 years.", "will have been working", "will work", "has worked", "is working", "future-perfect-continuous"),
+            MC("By the time you finish reading, I ___ this book.", "will have been reading", "will read", "have read", "am reading", "future-perfect-continuous"),
+            FB("By summer, we ___ on this project for six months. (work)", "will have been working", "future-perfect-continuous"));
+
+        // Module 5: Modals 1 (Ability & Permission)
+        AddExercises(ctx, l9, "b1e9",
+            MC("He ___ drive when he was 16.", "could", "can", "will be able to", "might", "modal-ability,past"),
+            MC("She ___ speak five languages.", "can", "could", "might", "should", "modal-ability,present"),
+            MC("I ___ play tennis next week (I hope to learn).", "will be able to", "can", "could", "might", "modal-ability,future"),
+            FB("When I was young, I ___ climb trees easily. (ability)", "could", "modal-ability"));
+
+        AddExercises(ctx, l10, "b1e10",
+            MC("___ I ask you a question?", "May", "Can", "Must", "Should", "modal-permission"),
+            MC("You ___ stay here if you want.", "may", "must", "should", "could", "modal-permission"),
+            MC("___ I use your phone?", "Might", "Can", "Should", "Could", "modal-permission"),
+            FB("___ we go outside to play? (permission)", "May", "modal-permission"));
+
+        // Module 6: Modals 2 (Obligation & Advice)
+        AddExercises(ctx, l11, "b1e11",
+            MC("You ___ wear a seatbelt in the car.", "must", "should", "could", "might", "modal-obligation"),
+            MC("Teenagers ___ study harder.", "should", "must", "could", "might", "modal-advice"),
+            MC("You ___ not smoke in hospitals.", "must", "should", "could", "might", "modal-prohibition"),
+            FB("You ___ see a doctor about that pain. (advice)", "should", "modal-advice"));
+
+        AddExercises(ctx, l12, "b1e12",
+            MC("I ___ go to the meeting tomorrow.", "have to", "must", "should", "could", "modal-necessity"),
+            MC("You ___ bring your passport to the airport.", "must", "should", "could", "might", "modal-obligation"),
+            MC("Do you ___ wear a uniform at your job?", "have to", "must", "should", "could", "modal-necessity"),
+            FB("We ___ arrive before 8 AM. (obligation)", "must", "modal-obligation"));
+
+        // Module 7: Conditional Sentences
+        AddExercises(ctx, l13, "b1e13",
+            MC("If it rains tomorrow, I ___ stay home.", "will", "would", "am staying", "stayed", "first-conditional"),
+            MC("If she studies hard, she ___ the exam.", "will pass", "would pass", "passes", "passed", "first-conditional"),
+            MC("If I had more money, I ___ travel more.", "would", "will", "am traveling", "traveled", "second-conditional"),
+            FB("If he ___ harder, he would succeed. (work)", "worked", "second-conditional"));
+
+        AddExercises(ctx, l14, "b1e14",
+            MC("If I had known about the party, I ___ gone.", "would have", "will have", "have", "would", "third-conditional"),
+            MC("If she ___ me earlier, everything would be different.", "had told", "told", "has told", "will tell", "third-conditional"),
+            MC("I wish I ___ travel the world.", "could", "can", "will", "am", "wish,ability"),
+            FB("If we ___ left earlier, we wouldn't have missed the train. (leave)", "had", "third-conditional"));
+
+        // Module 8: Passive Voice & Reported Speech
+        AddExercises(ctx, l15, "b1e15",
+            MC("The letter ___ by the postman.", "was delivered", "delivered", "has delivered", "is delivering", "passive,past"),
+            MC("This book ___ by Shakespeare.", "was written", "wrote", "has written", "is writing", "passive,past"),
+            MC("The house ___ by the workers tomorrow.", "will be painted", "will paint", "will have painted", "is painting", "passive,future"),
+            FB("The email ___ to all staff members. (send)", "was sent", "passive"));
+
+        AddExercises(ctx, l16, "b1e16",
             MC("She said she ___ tired.", "was", "is", "were", "am", "reported-speech,tense-shift"),
-            MC("He asked if I ___ to the party.", "was going", "am going", "go", "will go", "reported-speech,questions"),
-            MC("They told me they ___ finished.", "had", "have", "has", "will have", "reported-speech,tense-shift"),
+            MC("He told me he ___ to the cinema.", "was going", "is going", "goes", "will go", "reported-speech,tense-shift"),
+            MC("They said they ___ finished their work.", "had", "have", "has", "will have", "reported-speech,tense-shift"),
             FB("She asked what time it ___. (be)", "was", "reported-speech,questions"));
     }
 
@@ -943,83 +1040,123 @@ public static class DataSeeder
     );
 
     private static string B1L1() => C(
-        "The Present Perfect connects the past to NOW. We use it for experiences in your life, recent events, or past actions that still affect the present. Formed with: have/has + past participle. Perfect English Grammar and EngVid provide excellent explanations of this fundamental tense.",
-        ["Form: have/has + past participle (worked, gone, eaten, seen...)", "USE 1 — Life experiences (ever/never): 'Have you ever been to Japan?'", "USE 2 — Recent actions (just/already/yet): 'She has just arrived'", "USE 3 — Unfinished situations: 'I have lived here for 5 years' (still true NOW)", "DO NOT use with specific finished time: say 'I saw him yesterday' — NOT 'I have seen him yesterday'"],
-        [("ever", "alguna vez", "Have you ever eaten sushi?"), ("never", "nunca", "I have never seen snow."), ("just", "acaba de", "She has just called me."), ("already", "ya", "He has already finished."), ("yet", "todavía/aún", "Have you eaten yet? — Not yet.")],
-        [("I have never eaten sushi.", "Life experience with 'never'"), ("Have you ever been to London?", "Life experience question"), ("She has just finished her homework.", "Recent action with 'just'"), ("They haven't arrived yet.", "Expected action with 'yet'")],
-        "Write 6 Present Perfect sentences: 2 with 'ever/never', 2 with 'just/already', and 2 with 'yet'.",
-        "In spoken English, 'have' contracts: I've, you've, she's, he's, we've, they've. 'I have never' → 'I've never'. These contractions are essential for natural speech.",
-        [("Present Perfect Tense Explained", "Learn English with EnglishClass101.com", "dj-iEPfFqlI"), ("Present Perfect Grammar Lesson", "English Addict with Mr. Duncan", "fHYrBa-jaPo")]
+        "Present Perfect Continuous emphasizes duration and shows actions that started in the past and continue now. 'How long have you been doing this?' — Form: have/has + been + verb-ING. Essential for discussing ongoing activities, work, and habits that continue to the present moment.",
+        ["Form: have/has + been + verb-ING", "Focus: duration and continuity of the action", "'How long have you been working here?' → emphasis on time spent", "'I have worked here 5 years' (how many jobs?) vs 'I have been working here 5 years' (how long?)", "Common: 'I've been waiting for 20 minutes', 'She's been studying all day', 'We've been living here since 2020'"],
+        [("have been working", "he estado trabajando", "I have been working on this project for weeks."), ("has been studying", "ha estado estudiando", "She has been studying English for 3 years."), ("have been living", "he estado viviendo", "We have been living in Barcelona since 2020."), ("has been waiting", "ha estado esperando", "He has been waiting for an hour.")],
+        [("How long have you been learning English? — For two years.", "Duration question"), ("She has been working here since she graduated.", "Ongoing work situation"), ("They have been playing football all afternoon.", "Activity in progress"), ("I have been trying to call you all day.", "Repeated or continuous attempts")],
+        "Write 8 Present Perfect Continuous sentences about your life: work, studies, hobbies, or projects. Include 'how long' in at least 3 sentences.",
+        "The ING ending adds syllables. Stress pattern: 'I HAVE been STUDying' — stress on 'have' and the participle. In fast speech: 'I've-bin-STUDY-ing'.",
+        [("Present Perfect Continuous Tense", "Papa English", null), ("How Long Have You Been...", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L2() => C(
-        "'For' and 'since' both describe duration, but differently. FOR tells us the period of time; SINCE tells us the starting point. Both are used with the Present Perfect. British Council provides excellent explanations of this distinction.",
-        ["FOR + a period of time: for two hours, for a week, for six months, for ten years", "SINCE + a starting point: since Monday, since 2015, since I was a child", "Quick test: 'how long?' → FOR. 'Starting from when?' → SINCE", "Common error: 'I live here since 5 years' — wrong! Use Present Perfect: 'I have lived here for 5 years'"],
-        [("for two hours", "durante dos horas", "I have been waiting for two hours."), ("for a long time", "desde hace mucho tiempo", "We haven't talked for a long time."), ("since Monday", "desde el lunes", "She has been ill since Monday."), ("since last year", "desde el año pasado", "He has worked here since last year.")],
-        [("I have worked here for three years.", "FOR + duration"), ("She has been a teacher since 2018.", "SINCE + starting point"), ("He hasn't eaten since this morning.", "SINCE + time of day"), ("We have known each other for a very long time.", "FOR in a longer statement")],
-        "Write 6 Present Perfect sentences: 3 with 'for' and 3 with 'since'. Talk about your hobbies, home, work, friendships, or habits.",
-        "'Since' is pronounced SINTS (one syllable). 'For' in fast speech often sounds like 'fer' — that is normal and native.",
-        [("Present Perfect For vs Since", "Papa English", null), ("For vs Since with Present Perfect", "Learn English with EnglishClass101.com", null)]
+        "Present Perfect Continuous questions and negatives ask about duration and express what has NOT been happening. Form: have/has (not) + been + verb-ING. Use 'How long...?' questions to ask about ongoing activities and their duration.",
+        ["Questions: 'How long have you been waiting?', 'What have you been doing?', 'Where have you been living?'", "Negatives: haven't been / hasn't been + verb-ING", "'Have you been feeling ill?' → emphasizes the duration of the feeling", "Time expressions: How long? / since / for / all day / recently / lately", "Short answers: 'Yes, I have been.' / 'No, I haven't been.'"],
+        [("Have you been waiting?", "¿Llevas esperando?", "How long have you been waiting?"), ("hasn't been working", "no ha estado trabajando", "She hasn't been working properly."), ("What have you been doing?", "¿Qué has estado haciendo?", "What have you been doing all day?"), ("haven't been sleeping", "no hemos estado durmiendo", "I haven't been sleeping well lately.")],
+        [("How long have you been learning English? — For two years.", "Duration question"), ("What have you been working on? — A new project.", "Activity question"), ("Haven't you been complaining about that?", "Emphasis on duration"), ("They haven't been studying for the exam.", "Negative statement")],
+        "Write 10 questions and negatives using Present Perfect Continuous: 5 'How long...?' questions and 5 negative statements with 'haven't/hasn't been'.",
+        "In questions, 'been' is usually unstressed: 'How LONG have you BIN waiting?' The stress falls on the question word and participle.",
+        [("Present Perfect Continuous Questions", "Learn English with EnglishClass101.com", null), ("Questions with How Long", "English Speeches", null)]
     );
 
     private static string B1L3() => C(
-        "The First Conditional describes real, possible situations in the future and their likely results. If the condition happens, the result will follow. This is essential for discussing everyday predictions and plans.",
-        ["Structure: IF + Present Simple, WILL + base verb", "The IF clause can come first or second: 'If I study, I will pass' = 'I will pass if I study'", "Use a comma only when the IF clause comes first", "Can also use: might, may, can, could instead of will", "Compare: First = possible future; Second = unlikely/imaginary"],
-        [("If ... will", "Si ... va a / irá", "If it rains, I will take an umbrella."), ("Unless", "A menos que / Si no", "Unless you hurry, you will miss the bus."), ("might / may", "podría / puede que", "If you study, you might pass.")],
-        [("If it rains tomorrow, I will stay home.", "Basic first conditional"), ("You'll miss the bus if you don't leave now.", "IF clause at the end"), ("If she calls, tell her I'm busy.", "First conditional as instruction"), ("If you eat too much sugar, you might feel ill.", "Using 'might'")],
-        "Write 5 first conditional sentences about your week ahead. Think about: the weather, your studies, your plans. Use 'will', 'might', and 'might not'.",
-        "'Will' contracts in spoken English: I'll, you'll, she'll, he'll, we'll, they'll. 'I will go' → 'I'll go'. Practice until contractions feel natural.",
-        [("First Conditional Sentences", "Papa English", null), ("If Clauses - First Conditional", "Learn English with EnglishClass101.com", null)]
+        "Past Perfect (Pluperfect) shows which event happened FIRST when discussing two past events. Form: had + past participle. Crucial for storytelling, narrative, and clarifying sequence in complex past situations. Essential for B1+ level fluency.",
+        ["Form: had + past participle (worked, gone, eaten, finished)", "Shows the earlier of two past events: 'Before they arrived, I had already finished'", "Time expressions: after, before, when, by the time, by + noun, had just", "Often abbreviated: 'I'd finished', 'She'd eaten', 'They'd left'", "Compare Past Simple: 'I finished at 5 PM' vs Past Perfect: 'I had finished before he arrived'"],
+        [("had finished", "había terminado", "Before the concert started, she had finished her homework."), ("had eaten", "había comido", "By the time he arrived, we had already eaten."), ("had never seen", "nunca había visto", "I had never seen snow before that day."), ("had left", "había salido", "When they called, I had already left the house.")],
+        [("She had studied French before she moved to Paris.", "Earlier event → later event"), ("By the time I woke up, everyone had left.", "Clear sequence with 'by the time'"), ("He realized he had forgotten his passport.", "Past realization about earlier action"), ("After she had finished university, she traveled the world.", "Completed past action before another")],
+        "Write 8 Past Perfect sentences telling stories where one event happened before another. Use time expressions: before, after, by the time, by the time, as soon as, had just.",
+        "'Had' is often contracted: 'I'd finished', 'she'd eaten'. In rapid speech: 'I-fin-isht'. The stress falls on the past participle, not 'had'.",
+        [("Past Perfect Tense Explained", "Papa English", null), ("Had vs Did - Past Perfect", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L4() => C(
-        "The Second Conditional describes unreal, hypothetical, or unlikely situations. It imagines 'What if...?' scenarios that are not currently true. Perfect English Grammar emphasizes the importance of mastering this tense.",
-        ["Structure: IF + Past Simple, WOULD + base verb", "'If I were' is preferred to 'If I was' (formal writing)", "Compare: First = 'If I win the lottery' (possible) vs Second = 'If I won' (unlikely dream)", "Use for: advice ('If I were you, I would...'), imaginary situations", "'Would' contracts: I'd, you'd, she'd, he'd, we'd, they'd"],
-        [("If I were", "Si yo fuera", "If I were taller, I'd play basketball."), ("If I had", "Si tuviera", "If I had more time, I would travel."), ("would", "haría/iría (condicional)", "I would live in Italy if I could."), ("If I were you", "Yo que tú / En tu lugar", "If I were you, I would apologize.")],
-        [("If I had more money, I would travel the world.", "Imaginary situation"), ("She would be happier if she lived near the sea.", "Hypothetical preference"), ("If I were you, I would accept the job offer.", "Giving advice"), ("What would you do if you lost your phone?", "Second conditional question")],
-        "Write 5 second conditional sentences: 2 imaginary 'what if' scenarios, 1 piece of advice using 'If I were you...', and 2 hypothetical preferences.",
-        "'Would' is pronounced WOOD — the 'l' is silent. In fast speech it sounds just like 'wood'. Contractions: I'd, you'd, she'd — the 'd' is barely audible.",
-        [("Second Conditional Sentences", "Papa English", null), ("If Clauses - Second Conditional", "Learn English with EnglishClass101.com", null)]
+        "Past Perfect Continuous shows how long an action had been happening before another event in the past. Form: had + been + verb-ING. Use for: expressing duration before a past event, background actions in narratives, and explaining ongoing past situations.",
+        ["Form: had + been + verb-ING", "Shows: duration before a past event", "'By the time he called, I had been working for three hours'", "'When she arrived, they had been waiting for an hour'", "Compare: 'I had worked' (completed) vs 'I had been working' (duration emphasized)"],
+        [("had been working", "había estado trabajando", "He had been working there for five years before he moved."), ("had been waiting", "había estado esperando", "By noon, she had been waiting on the project for three hours."), ("had been studying", "había estado estudiando", "When I arrived, they had been studying for ten hours."), ("had been living", "había estado viviendo", "When war broke out, they had been living abroad for a decade.")],
+        [("By the time he arrived, I had been waiting for an hour.", "Duration before a past event"), ("When the manager arrived, they had been working on it for days.", "Background action"), ("She had been teaching for thirty years when she retired.", "Total duration"), ("We had been traveling for weeks when we finally arrived home.", "Long journey narrative")],
+        "Write 8 Past Perfect Continuous sentences about past experiences, travel, work, or projects where one action lasted for a duration before another happened.",
+        "Past Perfect Continuous: had-BIN-working. 'Been' is unstressed. Stress falls on the participle: 'They HAD-bin WAIT-ing'. In rapid speech: sounds like one continuous phrase.",
+        [("Past Perfect Continuous Tense", "Papa English", null), ("How Long Had They Been...", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L5() => C(
-        "The Present Perfect Continuous emphasizes the duration of an action that started in the past and continues NOW. It answers 'How long have you been...?' We use it for activities, work, or states that are ongoing. This tense bridges past and present naturally.",
-        ["Form: have/has + been + verb-ING", "'Have you been waiting long?' — Yes, I have been waiting for 20 minutes", "Duration: 'How long' → Present Perfect Continuous", "Complete action: 'How many?' → Present Perfect Simple", "Can omit 'been': 'I have been working' vs 'I have worked' (slightly different meaning)", "Common: 'I've been living here for 5 years' (still here) vs 'I've lived in 10 countries' (complete)"],
-        [("have been working", "he estado trabajando", "I have been working on this project for weeks."), ("has been studying", "ha estado estudiando", "She has been studying English for 3 years."), ("have been living", "he estado viviendo", "We have been living in Barcelona since 2020."), ("has been waiting", "ha estado esperando", "He has been waiting for an hour.")],
-        [("How long have you been learning English? — For two years.", "Duration question"), ("She has been working here since she graduated.", "Ongoing work situation"), ("They have been playing football all afternoon.", "Activity in progress"), ("I have been trying to call you all day.", "Repeated or continuous attempts")],
-        "Write 6 Present Perfect Continuous sentences about your life: work, studies, hobbies, or projects. Include 'how long' in at least 2 sentences.",
-        "The ING ending adds a syllable: 'study' (1) → 'studying' (3). 'Have been' flows together: 'have-BIN'. The stress falls on 'studying': 'I have been STUDying.'",
-        [("Present Perfect Continuous Tense", "Papa English", null), ("How Long Have You Been...", "Learn English with EnglishClass101.com", null), ("Present Perfect Continuous Grammar", "English Speeches", null)]
+        "Future Continuous describes actions that will be happening at a specific moment in the future. Form: will + be + verb-ING. Use for: actions in progress at a future time, events that won't be completed by a future deadline, and predictions about future activities.",
+        ["Form: will + be + verb-ING", "Shows: action happening at a specific future moment", "'At 3 PM tomorrow, I will be studying' — the action will be in progress at that time", "'This time next week, I will be relaxing on a beach'", "Common time markers: at + time, this time (next week/month), when + future event"],
+        [("will be working", "estaré trabajando", "This time next week, I will be relaxing on the beach."), ("will be studying", "estaré estudiando", "When you call, I will be sleeping."), ("will be traveling", "estaré viajando", "Next month, we will be traveling in Europe."), ("will be living", "estaré viviendo", "In five years, I will be living in a new house.")],
+        [("At 8 PM, she will be watching the news.", "Action at a specific future time"), ("When you arrive, I will be cooking dinner.", "Future action in progress"), ("This time tomorrow, we will be flying to Paris.", "Future continuous moment"), ("Next year, they will be working on a new project.", "Expected future activity")],
+        "Write 10 Future Continuous sentences: 5 about what you will be doing at specific times, and 5 about what others will be doing in the future.",
+        "Will be: stress on WILL and the participle. 'I will-BE-STUDying'. In fast speech: sounds like one unit. Don't pause between 'be' and the participle.",
+        [("Future Continuous Tense", "Papa English", null), ("Will Be Doing - Future Continuous", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L6() => C(
-        "The Past Perfect (Pluperfect) shows which event happened FIRST when discussing two past events. It uses had + past participle. This tense is crucial for storytelling, narrating complex past situations, and clarifying sequence in narratives.",
-        ["Form: had + past participle (worked, gone, eaten, finished)", "Use: to show the earlier of two past events", "'Before they arrived, I had already finished the dinner' — finished happened first", "Time expressions: after, before, when, by the time, by + noun", "Common mistake: mixing Past Simple and Past Perfect incorrectly"],
-        [("had finished", "había terminado", "Before the concert started, she had finished her homework."), ("had eaten", "había comido", "By the time he arrived, we had already eaten."), ("had never seen", "nunca había visto", "I had never seen snow before that day."), ("had left", "había salido", "When they called, I had already left the house.")],
-        [("She had studied French before she moved to Paris.", "Earlier event → later event"), ("By the time I woke up, everyone had left.", "Clear sequence with 'by the time'"), ("He realized he had forgotten his passport.", "Past realization about earlier action"), ("After she had finished university, she traveled the world.", "Completed past action before another past action")],
-        "Write 5 Past Perfect sentences about your life, telling stories where one event happened before another. Use time expressions like 'before', 'after', 'by the time'.",
-        "'Had' is pronounced HAD (one syllable). In rapid speech, it's often just: 'I'd finished', 'she'd eaten' (with contractions). The stress falls on the past participle: 'I had FINished'.",
-        [("Past Perfect Tense Explained", "Papa English", null), ("Had vs Did - Past Perfect", "Learn English with EnglishClass101.com", null), ("When to Use Past Perfect", "English Speeches", null)]
+        "Future Perfect Continuous shows how long an action will have been happening before a specific future moment. Form: will + have + been + verb-ING. Use for: expressing duration before a future event, life milestones, and achievements by future dates.",
+        ["Form: will + have + been + verb-ING", "Shows: duration continuing up to a future time", "'By next year, I will have been working here for 10 years'", "'When you graduate, I will have been studying for 4 years'", "Emphasizes: completion AND duration"],
+        [("will have been working", "habré estado trabajando", "By next year, I will have been working here for five years."), ("will have been studying", "habré estado estudiando", "When he retires, he will have been working for 40 years."), ("will have been living", "habré estado viviendo", "By 2030, we will have been living in this house for 20 years."), ("will have been learning", "habré estado aprendiendo", "By summer, I will have been learning English for 6 months.")],
+        [("By the end of the year, she will have been teaching for 20 years.", "Career milestone"), ("When we meet again, I will have been living abroad for 3 years.", "Duration before future meeting"), ("By graduation, they will have been studying together for 4 years.", "Shared experience"), ("In six months, I will have been working on this project for a year.", "Project duration")],
+        "Write 8 Future Perfect Continuous sentences about achievements, durations, and milestones you expect by certain future dates.",
+        "Will have been: 4 stresses. But only stress WILL and the participle heavily. 'I will-HAVE-been STUDying.' In rapid speech it flows: will've-been.",
+        [("Future Perfect Continuous", "Papa English", null), ("Will Have Been Doing", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L7() => C(
-        "Relative clauses (also called adjective clauses) give extra information about a noun using relative pronouns: WHO (people), THAT/WHICH (things), WHOSE (possession), WHERE (place), WHEN (time). They make sentences more sophisticated and are essential for advanced English.",
-        ["WHO: for people — 'The woman who taught me is kind'", "THAT/WHICH: for things — 'The car that I bought is blue' or 'The car, which I bought, is blue'", "WHOSE: for possession — 'The girl whose phone was stolen reported it'", "WHERE: for places — 'The café where we met is closed'", "WHEN: for time — 'The day when we arrived was sunny'", "Defining clause (no commas): 'Students who study hard pass' — ESSENTIAL info", "Non-defining clause (with commas): 'John, who is 25, is my brother' — EXTRA info"],
-        [("who", "quien/que (persona)", "The doctor who helped me was excellent."), ("that/which", "que (cosa)", "The book which I read was fascinating."), ("whose", "cuyo/a/os/as", "The student whose essay won the prize is here."), ("where", "donde/en el que", "The restaurant where we ate was expensive."), ("when", "cuando/en el que", "The time when I was happiest was my childhood.")],
-        [("I know someone who speaks five languages.", "Relative clause with who"), ("The house that we bought is very old.", "Relative clause with that"), ("She is the woman whose son is a doctor.", "Relative clause with whose"), ("That is the café where we first met.", "Relative clause with where")],
-        "Write 7 sentences using different relative pronouns (who, that, which, whose, where, when). Mix defining and non-defining clauses.",
-        "When 'that' is a relative pronoun, it's unstressed: 'The book THAT I read' — 'that' is quick and light. In 'the time when I was happy', 'when' is also unstressed.",
-        [("Relative Clauses in English", "Papa English", null), ("WHO THAT WHICH WHOSE - Relative Pronouns", "Learn English Kids", null), ("Defining and Non-Defining Relative Clauses", "Cambridge English", null)]
+        "Modals express ability in different times: CAN (present), COULD (past), BE ABLE TO (all tenses). CAN and COULD are most common for ability. 'I can swim', 'She could speak five languages as a child', 'I will be able to drive next year'.",
+        ["Present ability: CAN (I can swim, she can cook, they can speak English)", "Past ability: COULD (I could swim as a child, he could speak French)", "Future ability: WILL BE ABLE TO (I will be able to drive next month)", "Possibility/Permission: MAY (May I...?), MIGHT (It might rain)", "Common: 'Can't' (cannot), 'couldn't' (could not)"],
+        [("can", "puedo", "I can play guitar."), ("could", "podía", "She could speak five languages as a child."), ("be able to", "ser capaz de", "I will be able to understand French by next year."), ("may/might", "puedo/podría", "It might rain tomorrow. / May I leave early?")],
+        [("He can play tennis very well.", "Present ability"), ("When I was young, I could climb trees.", "Past ability"), ("She will be able to drive in two months.", "Future ability"), ("May I use the bathroom?", "Polite permission"), ("It might be cold tomorrow.", "Possibility")],
+        "Write 10 sentences: 3 about present ability with 'can', 3 about past ability with 'could', 2 about future ability with 'will be able to', and 2 about possibility/permission with 'may/might'.",
+        "'Can' has two pronunciations: strong /kæn/ and weak /kən/. 'Could' is /kʊd/. Practice weak forms: 'I-kən do it', 'He-kəd speak French'.",
+        [("Modal Verbs: CAN & COULD", "Papa English", null), ("Can Could Ability English Grammar", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B1L8() => C(
-        "Reported Speech (Indirect Speech) allows you to communicate what someone said without using their exact words. Rules change for verb tenses, pronouns, time words, and place references. This is essential for speaking naturally about what others said.",
-        ["Direct: 'I like ice cream,' he said. → Reported: He said he liked ice cream.", "Tense shift: Present → Past, Past → Past Perfect, will → would", "Pronouns shift: I → he/she, you → me/him/her, my → his/her, this → that", "Time shifts: now → then, today → that day, tomorrow → the next day, here → there", "Yes/No questions: ask + if/whether; WH questions: ask what/where/why/who"],
+        "SHOULD, MUST, HAVE TO express obligation and advice at different strengths. SHOULD = advice/recommendation. MUST/HAVE TO = obligation/necessity. 'You should study' (good idea), 'You must arrive on time' (obligation), 'I have to go now' (necessity).",
+        ["SHOULD: advice, good ideas, opinions — 'You should see a doctor'", "MUST: strong obligation, prohibition — 'You must wear a seatbelt', 'You mustn't smoke'", "HAVE TO: necessity, obligation — 'I have to go to work', 'She has to study'", "NEED TO: necessity — 'You need to bring your passport'", "Strength: SHOULD (weakest) < HAVE TO < MUST (strongest)"],
+        [("should", "debería", "You should exercise more."), ("must", "debes", "You must arrive on time."), ("have to", "tengo que", "I have to finish this work."), ("mustn't", "no debes", "You mustn't tell anyone."), ("need to", "necesito", "I need to buy groceries.")],
+        [("You should eat more vegetables.", "Advice — SHOULD"), ("You must wear a helmet when biking.", "Strong obligation — MUST"), ("I have to work tomorrow.", "Necessity — HAVE TO"), ("You mustn't smoke in the hospital.", "Prohibition — MUSTN'T"), ("She needs to study hard for the exam.", "Necessity — NEED TO")],
+        "Write 10 sentences: 3 with 'should' (advice), 3 with 'must' (obligation/prohibition), 2 with 'have to' (necessity), and 2 with 'need to' (necessity).",
+        "MUST /mʌst/ vs SHOULD /ʃʊd/ — different vowel sounds. HAVE TO: stress on HAVE. NEED TO: stress on NEED. Practice the stress patterns.",
+        [("Modals: SHOULD MUST HAVE TO", "Papa English", null), ("Obligation and Advice Modals", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B1L9() => C(
+        "First Conditional describes real, possible situations in the future: IF + Present Simple, WILL + base verb. 'If it rains tomorrow, I will stay home.' Second Conditional describes unlikely/imaginary situations: IF + Past Simple, WOULD + base verb. 'If I were rich, I would travel.'",
+        ["First Conditional: real/possible future situations", "IF + Present Simple + WILL + base verb: 'If you study, you will pass'", "Second Conditional: unlikely/imaginary situations", "IF + Past Simple + WOULD + base verb: 'If I had wings, I would fly'", "Compare: First = possible; Second = unlikely or imaginary"],
+        [("If ... will", "Si ... va a", "If it rains, I will take an umbrella."), ("If ... would", "Si ... haría", "If I were taller, I would play basketball."), ("Unless", "A menos que", "Unless you hurry, you will miss the bus."), ("would", "haría/iría", "I would live in Italy if I could.")],
+        [("If it rains tomorrow, I will stay home.", "First Conditional"), ("If I had more money, I would travel the world.", "Second Conditional"), ("She would be happier if she lived near the sea.", "Hypothetical preference"), ("If you study hard, you'll pass the exam.", "Real future possibility")],
+        "Write 10 conditional sentences: 5 first conditionals about possible futures, and 5 second conditionals about imaginary or unlikely situations.",
+        "First: WILL contracts: I'll, you'll, she'll. Second: WOULD contracts: I'd, you'd, she'd. Both stress the IF clause: 'IF it rains, I'll stay' — 'if' is emphasized.",
+        [("First vs Second Conditional", "Papa English", null), ("If Clauses English Grammar", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B1L10() => C(
+        "Third Conditional describes impossible past situations: IF + Past Perfect, WOULD HAVE + past participle. 'If I had known, I would have helped.' WISH expresses regrets about unreal or impossible situations. 'I wish I had studied harder.' Both show hypothetical or regretful thoughts.",
+        ["Third Conditional: impossible past situations (can't change what happened)", "IF + Past Perfect + WOULD HAVE + pp: 'If I had studied, I would have passed'", "WISH + Past Perfect: 'I wish I had gone to the party' (but I didn't)", "WISH + Past Simple: 'I wish I knew the answer' (but I don't)", "These express regret, hope, or wistful thinking about unreal situations"],
+        [("If I had known", "Si hubiera sabido", "If I had known about the party, I would have gone."), ("would have", "habría", "If he had studied harder, he would have passed."), ("I wish", "Ojalá/Desearía", "I wish I had listened to you."), ("I wish I could", "Ojalá pudiera", "I wish I could speak French fluently.")],
+        [("If we had left earlier, we wouldn't have missed the train.", "Third Conditional"), ("I wish I had studied more for the exam.", "Regret about past"), ("If I had known her, we could have become friends.", "Impossible past"), ("I wish I were taller.", "Present wish about unchangeable fact")],
+        "Write 10 sentences: 5 third conditionals expressing regrets about the past, and 5 wishes about impossible/unreal situations (past or present).",
+        "Third Conditional: 'If I-ad-KNOWN, I-would-have-HELPED'. Stress the main verbs: 'known' and 'helped'. WISH: /wɪʃ/ — practice natural stress and flow.",
+        [("Third Conditional Sentences", "Papa English", null), ("Wish Sentences - Present & Past", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B1L11() => C(
+        "Passive Voice transforms active sentences: 'Someone stole my phone' → 'My phone was stolen.' Use passive when the agent is unknown, unimportant, or obvious. Present Passive: am/is/are + pp. Past Passive: was/were + pp. Essential for formal writing and news reporting.",
+        ["Active: Subject + verb + object. Passive: Object + be + pp (+ by agent)", "Present passive: am/is/are + pp — 'The car is made in Germany'", "Past passive: was/were + pp — 'The letter was written yesterday'", "Agent with 'by': 'The novel was written by Austen' (important person)", "Omit agent: 'The window was broken' (agent unknown)"],
+        [("is made", "está hecho", "This car is made in Germany."), ("was written", "fue escrito", "The report was written yesterday."), ("are sold", "se venden", "These products are sold online."), ("is spoken", "se habla", "English is spoken worldwide.")],
+        [("English is spoken all over the world.", "Present passive"), ("The letter was written by the CEO.", "Past passive with agent"), ("My phone was stolen on the subway.", "Past passive, agent unknown"), ("These shoes are made in Italy.", "Present passive - origin")],
+        "Write 10 passive sentences: 5 present passive and 5 past passive. Use topics: products, famous buildings, historical events, things that happened to you, or things you observe.",
+        "Passive stress: 'The letter WAS-WRITten'. Agent with 'by' is less stressed: 'by auSTEN'. The participle carries the main stress.",
+        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null)]
+    );
+
+    private static string B1L12() => C(
+        "Reported Speech allows you to communicate what someone said indirectly. Rules: verb tenses shift (present → past), pronouns shift (I → he/she), and time words change (now → then). Direct: 'I am happy,' she said. Reported: She said she was happy. Essential for natural conversation about what others said.",
+        ["Tense shift: Present → Past, Past → Past Perfect, will → would", "Pronouns: I → he/she, you → me/him/her, my → his/her, this → that", "Time shifts: now → then, today → that day, tomorrow → the next day, here → there", "Yes/No questions: ask + if/whether — 'He asked if I would help'", "WH questions: ask + wh-word — 'She asked where he lived'"],
         [("said that", "dijo que", "She said that she was tired."), ("asked if", "preguntó si", "He asked if we wanted to go."), ("told me", "me dijo", "She told me she would be late."), ("asked what", "preguntó qué", "He asked what I was doing.")],
-        [("Direct: 'I am happy.' → Reported: She said she was happy.", "Present → Past"), ("Direct: 'Will you help?' → Reported: He asked if I would help.", "Yes/No question"), ("Direct: 'Where is the station?' → Reported: He asked where the station was.", "WH question"), ("Direct: 'I have finished my homework.' → Reported: She said she had finished her homework.", "Present Perfect → Past Perfect")],
-        "Rewrite 6 sentences from direct to reported speech. Include 2 statements, 2 yes/no questions, and 2 WH questions. Pay attention to tense changes, pronouns, and time expressions.",
-        "'Said' is pronounced SED (rhymes with 'bed'). 'Asked' is pronounced ASKT. In reported speech, these helper verbs are often unstressed: 'She SAID she was going' — 'said' is quick.",
-        [("Reported Speech - Indirect Speech", "Papa English", null), ("Direct and Indirect Speech", "Learn English with EnglishClass101.com", null), ("Reported Speech Rules and Examples", "Cambridge English", null)]
+        [("Direct: 'I like pizza.' → Reported: He said he liked pizza.", "Present → Past"), ("Direct: 'Where is the station?' → Reported: She asked where the station was.", "WH question"), ("Direct: 'Will you help?' → Reported: He asked if I would help.", "Yes/No question"), ("Direct: 'I have finished.' → Reported: She said she had finished.", "Present Perfect → Past Perfect")],
+        "Convert 8 sentences from direct to reported speech: 3 statements, 3 yes/no questions, and 2 wh-questions. Focus on tense shifts, pronouns, and time expressions.",
+        "'Said' is /sed/ (rhymes with 'bed'). 'Asked' is /æskt/. In reported speech, these verbs are often unstressed: 'She SAID she was going'.",
+        [("Reported Speech - Indirect Speech", "Papa English", null), ("Direct and Indirect Speech", "Learn English with EnglishClass101.com", null)]
     );
 
     private static string B2L1() => C(
