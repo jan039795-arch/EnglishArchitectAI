@@ -775,115 +775,115 @@ public static class DataSeeder
 
         // Module 1 Exercises: Present Perfect Continuous
         AddExercises(ctx, l1, "c1e1",
-            MC("They ___ on this project for six months now.", "have been working", "have worked", "are working", "are being working", "perfect-continuous"),
-            MC("How long ___ you ___ at this university?", "have been studying", "have studied", "are studying", "are being studying", "perfect-continuous"),
-            MC("She ___ constantly about this issue.", "has been complaining", "has complained", "is complaining", "was complaining", "perfect-continuous"),
-            FB("The machinery ___ since 5 AM this morning. (run)", "has been running", "perfect-continuous"));
+            MC("They ___ on this project for six months now.", "have been working", "have worked", "are working", "have been working on", "perfect-continuous,duration"),
+            MC("The CEO ___ with the board all morning — she looks exhausted.", "has been negotiating", "has negotiated", "is negotiating", "had negotiated", "perfect-continuous,evidence"),
+            MC("Your eyes are red. ___ you ___?", "Have - been crying", "Are - crying", "Do - cry", "Have - cried", "perfect-continuous,result"),
+            FB("The machinery ___ since 5 AM. We need maintenance soon. (run)", "has been running", "perfect-continuous,duration"));
 
         // Module 1 Exercises: Past Perfect Continuous
         AddExercises(ctx, l2, "c1e2",
-            MC("Before the meeting started, they ___ for three hours.", "had been discussing", "had discussed", "were discussing", "were being discussed", "past-perfect-continuous"),
-            MC("When I arrived, the children ___ all afternoon.", "had been playing", "had played", "were playing", "were being played", "past-perfect-continuous"),
-            MC("By the time she resigned, she ___ for the company for 20 years.", "had been working", "had worked", "was working", "was being worked", "past-perfect-continuous"),
-            FB("He realized he ___ about the wrong issue all along. (worry)", "had been worrying", "past-perfect-continuous"));
+            MC("Before the merger was finalized, the two companies ___ for weeks.", "had been negotiating", "had negotiated", "were negotiating", "negotiated", "past-perfect-continuous,context"),
+            MC("When the fire alarm went off, how long ___ the presentation ___?", "had - been going on", "was - going on", "has - been going on", "did - go on", "past-perfect-continuous,interruption"),
+            MC("She felt exhausted because she ___ on the same task for hours.", "had been working", "had worked", "was working", "worked", "past-perfect-continuous,reason"),
+            FB("By the time he arrived, I ___ for him for over an hour. (wait)", "had been waiting", "past-perfect-continuous,prior-action"));
 
         // Module 2 Exercises: Future Continuous & Perfect
         AddExercises(ctx, l3, "c1e3",
-            MC("At this time next week, we ___ our final exams.", "will be taking", "will take", "are taking", "have been taking", "future-continuous"),
-            MC("By the end of the year, she ___ on this project for eighteen months.", "will have been working", "will work", "will have worked", "has been working", "future-perfect-continuous"),
-            MC("Next summer, they ___ in that house for five years.", "will have been living", "will live", "will have lived", "are living", "future-perfect-continuous"),
-            FB("When you arrive tomorrow, I ___ the preparations. (finish)", "will have finished", "future-perfect"));
+            MC("At this time next week, we ___ our final exams.", "will be taking", "take", "will have taken", "have taken", "future-continuous,specific-time"),
+            MC("By the time you finish your PhD, you ___ in university life for nearly a decade.", "will have been living", "will live", "live", "have been living", "future-perfect-continuous,duration-by-time"),
+            MC("Don't call me at 8 PM — I ___ dinner with clients.", "will be having", "will have had", "have", "am having", "future-continuous,unavailable"),
+            FB("When you retire, you ___ for this company for 30 years. (work)", "will have been working", "future-perfect-continuous"));
 
         // Module 2 Exercises: Backshift & Future Forms
         AddExercises(ctx, l4, "c1e4",
-            MC("The president ___ to the parliament next month about these reforms.", "is to present", "is presenting", "will present", "has to present", "be-to-future"),
-            MC("The meeting ___ at 3 PM tomorrow.", "is to commence", "is commencing", "will commence", "has to commence", "be-to-future"),
-            MC("He said the ceremony ___ to take place on Friday.", "was", "is", "has been", "would be", "backshift,be-to-future"),
-            FB("The agreement ___ on next Monday. (supposed to be signed)", "is to be signed", "be-to-future"));
+            MC("The president ___ to address Parliament tomorrow about healthcare reforms.", "is to", "is going to", "will", "is about to", "be-to,scheduled"),
+            MC("She said the deadline ___ next Friday without fail.", "was to be", "is to be", "would be", "will be", "backshift,be-to"),
+            MC("The package is ___ to arrive by noon. It's being tracked closely.", "to be scheduled", "supposed", "expected", "about", "be-to,expectation"),
+            FB("The ceremony ___ to commence at precisely 6 PM. Please arrive early. (formal, scheduled)", "is", "be-to"));
 
         // Module 3 Exercises: Deduction Modals (must, can't, might)
         AddExercises(ctx, l5, "c1e5",
-            MC("She ___ be in the office — I just saw her.", "must", "might", "could", "can't", "modal-deduction"),
-            MC("He ___ have missed the train; it's nearly midnight.", "must", "might", "could", "can't", "modal-deduction"),
-            MC("The letter ___ be from the government — the envelope is official.", "must", "might", "could", "can't", "modal-deduction"),
-            FB("They ___ have understood the instructions — they're doing it wrong. (modal: negative certainty)", "can't", "modal-deduction"));
+            MC("She ___ be in the office — I just saw her there five minutes ago.", "must", "might", "could", "can't", "modal-deduction,certainty"),
+            MC("He ___ have missed the train; he would have called by now if he had.", "can't", "must", "might", "could", "modal-deduction,negation"),
+            MC("The letter ___ be from the government, but it could also be from the bank.", "might", "must", "can't", "should", "modal-deduction,possibility"),
+            FB("They ___ have understood the instructions clearly—they're implementing it perfectly. (modal: positive certainty)", "must", "modal-deduction,certainty"));
 
         // Module 3 Exercises: Modal Deduction with Continuous & Perfect
         AddExercises(ctx, l6, "c1e6",
-            MC("She ___ working late—the office lights are still on.", "must be", "might be", "can't be", "could be", "modal-deduction,continuous"),
-            MC("He ___ lost the keys; they're not in his pocket.", "could have", "might have", "should have", "must have", "modal-perfect"),
-            MC("They ___ been aware of this situation.", "can't have", "shouldn't have", "wouldn't have", "mightn't have", "modal-perfect,certainty"),
-            FB("She ___ working on this project for weeks—she's very tired. (must, continuous)", "must have been", "modal-perfect,continuous"));
+            MC("Someone ___ using the conference room—I can hear voices inside.", "must be", "might be", "can't be", "couldn't be", "modal-deduction,continuous,present"),
+            MC("He ___ lost the keys in the car; they were in his pocket all along.", "can't have", "might have", "could have", "should have", "modal-perfect,negation"),
+            MC("The suspect ___ been in two places at once, so one alibi must be false.", "couldn't have", "shouldn't have", "wouldn't have", "can't be", "modal-perfect,logic"),
+            FB("She ___ working on this for months—it explains her exhaustion. (must + perfect continuous)", "must have been", "modal-perfect,continuous"));
 
         // Module 4 Exercises: Had to, Didn't have to, Needn't have
         AddExercises(ctx, l7, "c1e7",
-            MC("I ___ attend the meeting, but I chose to.", "had to", "didn't have to", "needn't have", "must have", "obligation,past"),
-            MC("She ___ worried about the deadline—the boss extended it.", "didn't have to", "needn't have", "wouldn't have", "shouldn't have", "unnecessary-action"),
-            MC("They ___ pay the full amount; a discount was available.", "could have", "might have", "needn't have", "had to", "unnecessary-past-action"),
-            FB("You ___ apologized, but it was appreciated. (unnecessary regret)", "needn't have", "unnecessary-action"));
+            MC("I ___ attend the meeting, yet I arrived two hours early out of nervousness.", "didn't have to", "needn't have", "hadn't had to", "wouldn't have to", "obligation,unnecessary"),
+            MC("She ___ about the deadline—the boss had already extended it by a week.", "didn't need to worry", "needn't have worried", "wouldn't have worried", "mustn't have worried", "unnecessary-past-emotion"),
+            MC("They ___ pay full price; the early-bird discount applied to them.", "didn't have to", "had to", "needn't have", "shouldn't have", "obligation,exemption"),
+            FB("You ___ told him the truth—he would've found out anyway eventually. (regret about unnecessary action)", "needn't have", "unnecessary-action,regret"));
 
         // Module 4 Exercises: Semi-modals
         AddExercises(ctx, l8, "c1e8",
-            MC("He ___ smoking when he was young.", "used to", "is used to", "gets used to", "would used to", "semi-modal,habit"),
-            MC("She ___ loud noises now after working in a factory.", "used to", "is used to", "got used to", "would have used to", "semi-modal,habituated"),
-            MC("They're gradually ___ the new software.", "using to", "getting used to", "used to", "would be", "semi-modal,adjustment"),
-            FB("He ___ work here before he moved abroad. (past habit)", "used to", "semi-modal,habit"));
+            MC("He ___ smoke, but quit five years ago for his health.", "used to", "is used to", "gets used to", "uses to", "semi-modal,past-habit"),
+            MC("Noise doesn't bother her anymore; she's ___ working in open-plan offices.", "used to", "is used to", "gets used to", "using to", "semi-modal,accustomed"),
+            MC("The team is gradually ___ the agile development process.", "used to", "is used to", "getting used to", "uses to", "semi-modal,gradual-adaptation"),
+            FB("Before moving to the city, she ___ living in quiet, rural areas. (past habit)", "used to", "semi-modal,past-habit"));
 
         // Module 5 Exercises: Causatives
         AddExercises(ctx, l9, "c1e9",
-            MC("I will ___ the car ___ before I sell it.", "have-serviced", "have-service", "get-serviced", "get-service", "causative"),
-            MC("She ___ her house painted last month.", "had", "has", "have", "gets", "causative,past"),
-            MC("We should ___ the roof repaired before winter.", "have it", "get it", "make it", "let it", "causative"),
-            FB("They're going to ___ new uniforms made for the team. (causative)", "have", "causative"));
+            MC("I will ___ the car serviced before selling it.", "have", "get", "make", "let", "causative,have-get"),
+            MC("She ___ her portrait painted by a famous artist.", "had", "has", "gets", "made", "causative,past"),
+            MC("We should ___ the plumbing inspected before purchasing the house.", "have it", "get it", "make it", "let it", "causative,advice"),
+            FB("They had the architect ___ the entire building plan from scratch. (redesign)", "redesign", "causative,infinitive"));
 
         // Module 5 Exercises: Advanced Passive
         AddExercises(ctx, l10, "c1e10",
-            MC("The work needs ___ by Friday.", "to be completed", "to complete", "being completed", "be completed", "passive,infinitive"),
-            MC("The proposal is known ___.", "to be flawed", "to be flaws", "being flawed", "be flawed", "passive,infinitive"),
-            MC("The decision got ___ by the board yesterday.", "approved", "approving", "to approve", "approve", "get-passive"),
-            FB("These issues are worth ___ carefully. (examine)", "examining", "passive,-ing"));
+            MC("The proposal is believed ___ the best solution available.", "to be", "being", "to be being", "be", "passive,infinitive"),
+            MC("The decision appears ___ by several factors beyond our control.", "to be influenced", "to influence", "being influenced", "be influenced", "passive,infinitive,seem"),
+            MC("The new policy got ___ by the board despite strong opposition.", "approved", "approving", "to approve", "being approved", "get-passive"),
+            FB("These procedures are worth ___ in detail before implementation. (examine)", "examining", "passive,-ing,worth"));
 
         // Module 6 Exercises: Reporting Verbs
         AddExercises(ctx, l11, "c1e11",
-            MC("The scientists ___ that their findings were revolutionary.", "claimed", "told", "asked", "wondered", "reporting-verbs"),
-            MC("She ___ maintaining her innocence throughout the trial.", "insisted on", "suggested", "admitted", "denied", "reporting-verbs"),
-            MC("They ___ that the policy needed reform.", "asserted", "suggested", "claimed", "conceded", "reporting-verbs"),
-            FB("He ___ that the plan had some merit, though not ideal. (partially agreed)", "conceded", "reporting-verbs"));
+            MC("The lead researcher ___ that the breakthrough could revolutionize treatment.", "claimed", "whispered", "shouted", "stuttered", "reporting-verbs,neutral"),
+            MC("The defendant ___ having any involvement in the crime whatsoever.", "denied", "suggested", "admitted", "complained", "reporting-verbs,negation"),
+            MC("Political commentators ___ that this decision would have far-reaching consequences.", "contended", "asked", "whispered", "told", "reporting-verbs,argument"),
+            FB("She ___ reluctantly that her colleague's approach had merit. (partially conceded)", "acknowledged", "reporting-verbs,concession"));
 
         // Module 6 Exercises: Verb Patterns after Reporting
         AddExercises(ctx, l12, "c1e12",
-            MC("The manager recommended ___ the project immediately.", "starting", "to start", "start", "be starting", "verb-pattern,reporting"),
-            MC("He insisted on ___ the meeting himself.", "leading", "to lead", "lead", "be leading", "verb-pattern,reporting"),
-            MC("She denied ___ the allegations.", "making", "to make", "make", "have made", "verb-pattern,reporting"),
-            FB("They agreed ___ the new contract terms. (to-infinitive)", "to accept", "verb-pattern,reporting"));
+            MC("The safety officer insisted ___ all equipment before use.", "on checking", "to check", "checking", "on to check", "verb-pattern,reporting,insist"),
+            MC("The minister acknowledged ___ the previous government's efforts.", "having underestimated", "to underestimate", "underestimate", "to have underestimated", "verb-pattern,reporting,acknowledge"),
+            MC("The lawyer advised her ___ signing any documents without review.", "against", "against to", "to against", "not to", "verb-pattern,reporting,advise"),
+            FB("The witness maintained ___ the suspect at the scene of the crime. (had seen)", "having seen", "verb-pattern,reporting,maintain"));
 
         // Module 7 Exercises: Mixed Conditionals
         AddExercises(ctx, l13, "c1e13",
-            MC("If I ___ medicine, I ___ a doctor now.", "had studied - would be", "studied - would be", "had studied - will be", "study - would be", "mixed-conditional"),
-            MC("If she ___ there, she ___ the accident.", "were - could have prevented", "had been - could have prevented", "was - could have prevented", "is - would prevent", "mixed-conditional"),
-            MC("If they ___ differently, ___ better off.", "acted - they would be", "had acted - they would be", "act - they would be", "had acted - they are", "mixed-conditional"),
-            FB("If I ___ the opportunity, I ___ yes immediately. (mixed: past hypothetical, present result)", "had had - would say", "mixed-conditional"));
+            MC("If I ___ the job offer back then, I ___ abroad now.", "had accepted - would be living", "accepted - would be living", "had accepted - will be living", "accept - would live", "mixed-conditional,past-condition-present"),
+            MC("If she ___ the warning signs, she ___ serious health problems now.", "had heeded - wouldn't have", "had heeded - wouldn't be having", "heed - won't have", "heeded - wouldn't have", "mixed-conditional,cause-effect"),
+            MC("If the government ___ action then, we ___ facing this crisis today.", "had taken - wouldn't be", "took - wouldn't be", "takes - won't be", "had taken - aren't", "mixed-conditional,policy"),
+            FB("If I ___ fluent in Mandarin, I ___ that job in Beijing now. (past condition → present result)", "had become - would have", "mixed-conditional,hypothetical"));
 
         // Module 7 Exercises: Unless, As long as, Provided that
         AddExercises(ctx, l14, "c1e14",
-            MC("You can go out ___ you finish your homework.", "unless", "as long as", "provided", "if not", "conditional-variant"),
-            MC("The project will proceed ___ funding is approved.", "unless", "as long as", "provided that", "if", "conditional-variant"),
-            MC("___ you have the required documents, the process is simple.", "Unless", "As long as", "Provided", "If not", "conditional-variant"),
-            FB("We'll accept the proposal ___ you reduce the budget by 10%. (on condition that)", "provided that", "conditional-variant"));
+            MC("You won't succeed ___ you work consistently and focus.", "unless", "as long as", "provided", "even if", "conditional-variant,negation"),
+            MC("The contract is valid ___ both parties sign within 30 days.", "unless", "as long as", "provided that", "if not", "conditional-variant,requirement"),
+            MC("___ you meet the minimum academic standards, admission is guaranteed.", "Unless", "As long as", "Provided", "If", "conditional-variant,condition"),
+            FB("The warranty covers damage ___ it results from normal wear and tear. (except, on condition)", "provided that", "conditional-variant,exclusion"));
 
         // Module 8 Exercises: Inverted Conditionals
         AddExercises(ctx, l15, "c1e15",
-            MC("___ I known the truth, I would have acted differently.", "Had", "Should", "Would", "If", "inverted-conditional"),
-            MC("___ you need further assistance, please contact us.", "Should", "Had", "Would", "Might", "inverted-conditional"),
-            MC("___ the project been completed earlier, we would have shipped on time.", "Had", "Should", "Would", "Might", "inverted-conditional"),
-            FB("___ I in your position, I would accept the offer. (were)", "Were", "inverted-conditional"));
+            MC("___ I realized the consequences earlier, I would never have agreed.", "Had", "Should", "Would", "If", "inverted-conditional,past"),
+            MC("___ you encounter any difficulties during the procedure, contact technical support immediately.", "Should", "Had", "Would", "Might", "inverted-conditional,possibility"),
+            MC("___ the witnesses not come forward, the case would have been unsolved.", "Had", "Should", "Would", "If", "inverted-conditional,causal"),
+            FB("___ I in your position, I would reconsider that decision entirely. (hypothetical, were)", "Were", "inverted-conditional,present"));
 
         // Module 8 Exercises: Wish, If only, Hypothetical
         AddExercises(ctx, l16, "c1e16",
-            MC("I wish I ___ more time to finish this project.", "had", "have", "would have", "had had", "wish,present-regret"),
-            MC("If only he ___ about the meeting!", "knew", "had known", "knows", "would know", "wish,past-regret"),
-            MC("It's time they ___ their responsibilities seriously.", "took", "take", "would take", "had taken", "it's-time"),
-            FB("I'd rather you ___ me the truth. (wouldn't have to, past hypothetical)", "had told", "would-rather"));
+            MC("I wish I ___ invested in cryptocurrency years ago—I'd be wealthy now.", "had", "have", "would have", "had had", "wish,past-regret,money"),
+            MC("If only she ___ her potential before wasting those years on the wrong path.", "had realized", "realizes", "would realize", "had been realizing", "wish,past-regret,missed-potential"),
+            MC("It's high time the government ___ serious action on climate change.", "took", "take", "would take", "had taken", "it's-time,urgency"),
+            FB("He'd rather you ___ him the opportunity to explain himself properly. (past hypothetical, accusation)", "had given", "would-rather,regret"));
     }
 
     private static void BuildC2Modules(ApplicationDbContext ctx, Guid levelId)
@@ -939,100 +939,100 @@ public static class DataSeeder
         ctx.Lessons.Add(NewLesson(l16, m8, "Substitution: do/so/not replacing clauses (Units 103-105)", SkillType.Writing, 2, C2L16()));
 
         AddExercises(ctx, l1, "c2e1",
-            MC("In 'The students who submitted late received penalties,' the clause is:", "defining (restricts meaning)", "non-defining", "reduced", "cleft", "relative-clauses"),
-            MC("'Whose' in relative clauses shows:", "possession", "location", "time", "reason", "relative-clauses,possessive"),
-            MC("Which sentence uses a non-defining relative clause correctly?", "The book, which was published last year, became a bestseller.", "The book which was published last year became a bestseller.", "The book that was published last year became a bestseller.", "All are correct.", "relative-clauses,non-defining"),
-            FB("The laboratory ___ the research was conducted is now closed. (in which)", "in which", "relative-clauses,preposition"));
+            MC("In 'The students who submitted late received penalties,' the relative clause is:", "defining (restricts which students)", "non-defining (adds extra info)", "reduced participle", "cleft", "relative-clauses,defining"),
+            MC("Which shows correct punctuation for a non-defining relative?", "The professor, whose research won an award, retired last year.", "The professor whose research won an award, retired last year.", "The professor who's research won an award retired last year.", "All three are correct.", "relative-clauses,non-defining,punctuation"),
+            MC("'She consulted several experts, many of whom disagreed with her thesis.' The 'whom' phrase is:", "a non-defining relative clause", "a cleft sentence", "a participle clause", "an inversion", "relative-clauses,formal"),
+            FB("The prestigious laboratory ___ the groundbreaking research was conducted has since closed permanently. (in which)", "in which", "relative-clauses,preposition,formal"));
 
         AddExercises(ctx, l2, "c2e2",
-            MC("'He admitted the error, which surprised everyone' — this 'which' refers to:", "the entire previous clause", "the word 'error'", "the word 'admitted'", "an implied noun", "sentential-relative"),
-            MC("Which is a sentential relative clause?", "He lost the game, which devastated him.", "He lost the game that devastated him.", "He lost which was the game.", "All correct.", "relative-clauses"),
-            MC("The reason why he left is not clear' — 'why' is:", "a relative adverb", "a regular adverb", "a conjunction", "a preposition", "relative-adverbs"),
-            FB("The period ___ the company expanded rapidly was very profitable. (during which)", "during which", "relative-clauses"));
+            MC("In 'He abandoned his family fortune, which shocked the entire community,' the 'which' refers to:", "his abandonment of the fortune (entire situation)", "the word 'fortune' alone", "his family", "the community's reaction", "sentential-relative,situation"),
+            MC("Which best demonstrates a sentential relative clause?", "The proposal was rejected outright, which meant months of wasted effort.", "The proposal which was rejected was poorly written.", "The rejected proposal meant wasted effort.", "None—sentential relatives are rare.", "sentential-relative,consequence"),
+            MC("'The period during which the market crashed was terrifying' — 'during which' is:", "a complex relative adverbial phrase", "a simple preposition", "an inversion structure", "an elliptical construction", "relative-clauses,complex"),
+            FB("The reason why he resigned was financial hardship, a situation whereby he had little choice. The 'whereby' clause introduces:", "an alternative explanation or consequence", "relative-clauses,whereby"));
 
         AddExercises(ctx, l3, "c2e3",
-            MC("Reduced relatives simplify: 'The student studying diligently' replaces:", "'The student who is studying diligently'", "'The student which studies diligently'", "'The student whose studying is diligent'", "None of the above", "reduced-relatives"),
-            MC("'Having completed the analysis, she presented findings' is:", "a reduced relative clause", "a cleft sentence", "a nominalization", "an inversion", "reduced-relatives,participle"),
-            MC("Which shows correct reduced form?", "The documents submitted yesterday contain errors.", "The documents submitting yesterday contain errors.", "The documents being submit yesterday contain errors.", "The documents to submit yesterday contain errors.", "reduced-relatives"),
-            FB("The employees ___ by this decision are requesting a meeting. (affected)", "affected", "reduced-relatives,passive"));
+            MC("'The proposal approved by the committee' is a reduced relative. It replaces:", "'The proposal which was approved by the committee'", "'The proposal that was approved by the committee'", "Both A and B", "Neither—it's a participle phrase", "reduced-relatives,participle"),
+            MC("'Having exhausted all alternatives, the government introduced emergency measures' is:", "an adverbial participle clause (reduced from a temporal relative)", "a cleft sentence", "a nominalization structure", "an inversion", "reduced-relatives,adverbial"),
+            MC("Which correctly shows a reduced passive relative?", "The regulations introduced last year are controversial.", "The regulations introducing last year are controversial.", "The regulations being introduced last year are controversial.", "The regulations to introduce last year are controversial.", "reduced-relatives,passive"),
+            FB("The documents ___ without proper authorization have been flagged for review. (circulate)", "circulating", "reduced-relatives,passive,present-participle"));
 
         AddExercises(ctx, l4, "c2e4",
-            MC("'It is teamwork that made the project succeed' is:", "an it-cleft (emphasizes 'teamwork')", "a wh-cleft", "a pseudo-cleft", "a relative clause", "cleft-sentences"),
-            MC("'What matters most is implementation' is:", "a wh-cleft (emphasizes 'implementation')", "an it-cleft", "a reduced relative", "an inversion", "cleft-sentences"),
-            MC("Cleft sentences are used to:", "emphasize specific elements", "shorten sentences", "avoid passive voice", "simplify complex ideas", "cleft-sentences,emphasis"),
-            FB("___ that created the problem was poor communication. (It)", "It was", "cleft-sentences"));
+            MC("In 'It is innovation that drives market success,' the cleft sentence emphasizes:", "'innovation' (the subject agent)", "'drives market success' (the consequence)", "'market success' (the outcome)", "the entire concept", "cleft-sentences,it-cleft,emphasis"),
+            MC("'What the board ultimately decided was to restructure the entire division' is:", "a wh-cleft (emphasizes the decision)", "an it-cleft", "a pseudo-cleft (no it-is or what-is frame)", "an inverted conditional", "cleft-sentences,wh-cleft"),
+            MC("Comparing normal vs. cleft: Normal: 'The lack of transparency caused public distrust.' Cleft: 'It was the lack of transparency that caused public distrust.' This shift:", "highlights a specific cause by isolating it", "changes the grammatical voice", "makes the sentence shorter", "creates ambiguity", "cleft-sentences,rhetorical"),
+            FB("___ that determined the outcome was not luck but careful preparation and foresight. (It)", "It was", "cleft-sentences,it-cleft"));
 
         AddExercises(ctx, l5, "c2e5",
-            MC("Nominalization transforms 'The government decided to raise taxes' to:", "'The government's decision to raise taxes'", "'The government raised its taxes'", "'Taxes raised by government'", "'The decision-raising of taxes'", "nominalization"),
-            MC("'The analysis of the data revealed patterns' uses nominalization to:", "make the sentence more formal and sophisticated", "shorten the sentence", "emphasize the verb", "create active voice", "nominalization"),
-            MC("Which shows correct nominalization?", "Her ability to lead was evident.", "Her leadership was evident.", "Both are correct.", "Neither is correct.", "nominalization"),
-            FB("The ___ of the project took years. (develop)", "development", "nominalization"));
+            MC("The nominalization in 'The government's decision to raise taxes proved unpopular' emphasizes:", "the decision (noun) rather than the action of deciding (verb)", "tax raising rather than government policy", "public opinion rather than policy", "the verb form of decide", "nominalization,focus"),
+            MC("'The implementation of the new strategy required extensive reorganization.' This nominalization achieves:", "formal, abstract style suitable for business writing", "brevity and simplicity", "emphasis on the verb 'implement'", "active voice", "nominalization,register"),
+            MC("Which correctly nominalizes a gerund-based concept?", "Their commitment to environmental sustainability impressed stakeholders.", "Their committing to environmental sustainability impressed stakeholders.", "They committed to environmental sustainability, which impressed stakeholders.", "The commitment by them to sustainability was impressive.", "nominalization,gerund"),
+            FB("The ___ of the research findings by multiple institutions confirmed the original hypothesis. (verify)", "verification", "nominalization,passive"));
 
         AddExercises(ctx, l6, "c2e6",
-            MC("In 'Remarkable was her courage,' 'remarkable' is moved for:", "emphasis and stylistic effect", "grammatical correctness", "clarity", "brevity", "fronting,emphasis"),
-            MC("Which demonstrates fronting for emphasis?", "Particularly striking were the results.", "The results were particularly striking.", "Both are equally emphatic.", "Fronting isn't possible here.", "fronting"),
-            MC("Fronting is more common in:", "formal, literary, and academic writing", "casual conversation", "technical documents", "informal speech", "fronting,register"),
-            FB("___ were the objections to the proposal. (strong, emphatic)", "Strong", "fronting,emphasis"));
+            MC("In 'Unprecedented were the challenges faced by the organization,' fronting achieves:", "emphasis on 'unprecedented' (the degree/quality)", "grammatical inversion", "shortened sentence length", "passive voice", "fronting,degree,emphasis"),
+            MC("Comparing normal vs. fronted: Normal: 'Most troubling is the lack of transparency.' Fronted: 'Most troubling about this situation is the lack of transparency.' The fronted version:", "adds additional context and nuance", "emphasizes the troubling aspect", "changes the meaning significantly", "is grammatically incorrect", "fronting,context"),
+            MC("Which demonstrates fronting in academic writing?", "Particularly significant was the discovery that previously unknown species thrived in extreme depths.", "The discovery that previously unknown species thrived was particularly significant.", "They discovered that previously unknown species thrived—particularly significant.", "All carry equal emphasis.", "fronting,academic"),
+            FB("___ is the gap between policy and implementation in most large organizations. (Striking)", "Striking", "fronting,emphasis,adjective"));
 
         AddExercises(ctx, l7, "c2e7",
-            MC("'Never have I seen such evidence' is an example of:", "negative inversion", "degree inversion", "cleft sentence", "fronting", "inversion,negative"),
-            MC("'So impressive were the results that...' demonstrates:", "inversion with 'so' for degree emphasis", "negative inversion", "pseudo-cleft", "nominalization", "inversion,degree"),
-            MC("'Seldom do we encounter such talent' uses inversion to:", "express emphasis and formality", "change the meaning", "create active voice", "shorten the sentence", "inversion,emphasis"),
-            FB("'Hardly had she arrived when...' shows inversion for:", "temporal and dramatic emphasis", "inversion"));
+            MC("'Under no circumstances should you disclose this information' shows:", "negative inversion (subject-auxiliary inverted after negative adverb)", "degree inversion", "fronting of a prepositional phrase", "a prohibition structure", "inversion,negative"),
+            MC("'So compelling was the evidence that the verdict was unanimous' demonstrates:", "degree inversion with 'so' + adjective (emphasizes intensity)", "negative inversion", "pseudo-cleft", "a conditional structure", "inversion,degree,intensity"),
+            MC("'Hardly had negotiations begun when the unexpected proposal emerged' combines:", "negative inversion + temporal clause", "degree inversion", "nominalization", "ellipsis", "inversion,temporal"),
+            FB("'___ once has the project exceeded budget in its fifteen-year history.' (rarely, never, seldom)", "Rarely", "inversion,negative,emphasis"));
 
         AddExercises(ctx, l8, "c2e8",
-            MC("'Only she can authorize this' — 'only' is a:", "focus adverb that restricts meaning", "conjunction", "relative pronoun", "discourse marker", "focus-adverbs"),
-            MC("'Even he passed the exam' puts emphasis on:", "'he' — suggesting it was surprising", "the verb 'passed'", "'the exam'", "the entire clause", "focus-adverbs"),
-            MC("Which placement of 'just' changes meaning?", "'She just arrived' (recently) vs. 'She just left' (moments ago)", "'She just arrived' vs. 'Just she arrived' (emphasis on she)", "All placements mean the same.", "Placement doesn't affect meaning.", "focus-adverbs,position"),
-            FB("'Neither did I.' — This uses focus adverb to express:", "agreement in negation", "focus-adverbs"));
+            MC("In 'Only the CEO can make this decision,' 'only' restricts to:", "the CEO (nobody else can)", "the decision (no other actions)", "the ability (no other circumstances)", "the present time", "focus-adverbs,scope"),
+            MC("Position changes meaning: 'Even critics acknowledged merit' vs. 'Critics even acknowledged merit.' The difference is:", "the first emphasizes surprising agreement; the second emphasizes completeness of agreement", "no difference—both mean the same", "the first is emphatic; the second is neutral", "only the second is grammatical", "focus-adverbs,position"),
+            MC("'Just yesterday she submitted her resignation, not long before today's announcement' — 'just' indicates:", "temporal proximity and recent timing", "emphasis on the specific day", "duration of resignation", "causality with announcement", "focus-adverbs,temporal"),
+            FB("'Neither solution satisfies the requirement for compatibility across all systems.' Here 'neither' functions as:", "a focus adverb restricting to none of two options", "focus-adverbs,negative"));
 
         AddExercises(ctx, l9, "c2e9",
-            MC("In 'The tall building on the corner near the park,' the noun phrase uses:", "extensive post-modification", "pre-modification only", "no modification", "relative clause only", "noun-phrases"),
-            MC("'The analysis of the data by experts from three countries' shows:", "complex post-modification stacking", "simple adjective modification", "cleft structure", "nominalization only", "noun-phrases,complex"),
-            MC("Which is correctly modified?", "The government decision on education policy", "The government decision on the education policy", "The governmental education decision on policy", "All are equally correct.", "noun-phrases"),
-            FB("Complex noun phrases are common in:", "academic and formal writing", "noun-phrases,register"));
+            MC("In 'The comprehensive analysis of survey data from three countries conducted over two years,' post-modification includes:", "of survey data + from three countries + conducted over two years", "the comprehensive (pre-modification only)", "conducted (only the participle)", "comprehensive and analysis (adjective + noun)", "noun-phrases,post-modification"),
+            MC("'The government's controversial decision on education reform affecting millions' stacks:", "pre-modification (government's, controversial) + noun + post-modification (on education reform affecting millions)", "all pre-modification", "all post-modification", "only adjective modification", "noun-phrases,complex"),
+            MC("Which complex noun phrase is correctly structured?", "The three recent studies examining climate impacts from major institutions", "The three recent from major institutions studies examining climate impacts", "Studies three recent examining climate impacts from major institutions", "The three recent studies institutions from examining climate impacts", "noun-phrases,order"),
+            FB("Formal and academic writing favors extensive noun phrase modification to create:", "density of information and sophistication", "noun-phrases,register,formality"));
 
         AddExercises(ctx, l10, "c2e10",
-            MC("'He acted ___ principle despite pressure.' Which preposition?", "on", "by", "in", "with", "prepositions,fixed"),
-            MC("'The policy is ___ accordance with international standards.'", "in", "on", "by", "with", "prepositions,fixed"),
-            MC("'She prevailed ___ the odds.'", "against", "upon", "through", "over", "prepositions,idiom"),
-            FB("'I stumbled ___ the solution by accident.' (upon)", "upon", "prepositions,idiom"));
+            MC("'Success in business depends largely ___ maintaining strong professional relationships.' Which completes correctly?", "on", "in", "for", "with", "prepositions,collocate"),
+            MC("'The policy is ___ with the recommendations from international regulatory bodies.'", "in line", "in accordance", "in agreement", "in keeping", "prepositions,fixed,formal"),
+            MC("'She proceeded cautiously ___ her past experiences with betrayal and disappointment.'", "in light of", "on the basis of", "by virtue of", "in case of", "prepositions,reason"),
+            FB("'The regulations ___ the merger outlined specific requirements for transparency reporting.' (governing, from)", "governing", "prepositions,participle"));
 
         AddExercises(ctx, l11, "c2e11",
-            MC("'Turn down' (a proposal) is:", "a transitive phrasal verb (accepts object)", "an intransitive phrasal verb", "a separable phrasal verb only", "a literal phrasal verb", "phrasal-verbs"),
-            MC("'Look after' in 'Look after yourself' is:", "transitive (object required)", "intransitive (no object)", "both transitive and intransitive", "separable", "phrasal-verbs,transitive"),
-            MC("Which shows incorrect transitive phrasal verb use?", "She turned down the offer.", "She turned the offer down.", "She turned down it.", "Options 1 and 2 are correct.", "phrasal-verbs,transitive"),
-            FB("'Run into' (meet by chance) is:", "transitive", "phrasal-verbs"));
+            MC("'Give in to pressure' (yield) is classified as:", "a three-word phrasal verb with inseparable preposition (to)", "a two-word separable phrasal verb", "an intransitive structure", "a literal use of give", "phrasal-verbs,three-word"),
+            MC("Separable vs. inseparable: 'look up information' can become 'look information up,' but 'look after children' cannot become 'look children after.' This shows:", "some phrasal verbs are separable, others inseparable", "all phrasal verbs are separable", "word order doesn't matter", "formality determines separability", "phrasal-verbs,separable"),
+            MC("Which shows advanced phrasal verb mastery?", "'The company has cut back on overseas expansion' AND 'cut expansion on overseas back' is wrong", "'Get around regulations' (circumvent) vs. 'get around' (move about) show multiple meanings", "Both demonstrate C2 competence", "Neither requires advanced knowledge", "phrasal-verbs,semantic"),
+            FB("'The committee ran into unexpected legal obstacles, which required consulting external counsel.' Here 'run into' means:", "encounter or meet (a problem) inadvertently", "phrasal-verbs,encounter"));
 
         AddExercises(ctx, l12, "c2e12",
-            MC("Which is a strong collocation?", "make a decision", "do a decision", "take a decision (less natural)", "form a decision", "collocations"),
-            MC("'Highly ___' is a common collocation with:", "unlikely", "bad", "good", "important", "collocations,intensifier"),
-            MC("'___ and shoulders above' shows:", "a fixed idiomatic phrase (head and shoulders)", "flexible word order", "simple word combination", "variable expression", "collocations,idiom"),
-            FB("'The project ___ to completion.' (draw)", "drew", "collocations"));
+            MC("The researcher will ___ her findings at the international conference next month.", "present", "make a presentation", "give a presentation", "present a presentation", "collocations,research"),
+            MC("'The company ___ significant losses during the recession.' Which verb is idiomatic?", "sustained", "received", "took", "suffered", "collocations,business"),
+            MC("Which collocation is correct for 'draw ___' (attract attention)?", "scrutiny", "notice", "eyes", "focus", "collocations,fixed"),
+            FB("'The decision to downsize operations ___ widespread resistance from the workforce.' (meet, encounter)", "encountered", "collocations,business"));
 
         AddExercises(ctx, l13, "c2e13",
-            MC("'Furthermore, the evidence suggests...' is:", "an additive discourse marker", "a contrastive marker", "a causal marker", "a sequential marker", "discourse-markers"),
-            MC("'Nevertheless, results were positive' shows:", "contrast/concession", "addition", "cause-effect", "sequence", "discourse-markers,contrast"),
-            MC("'Consequently, costs increased significantly' signals:", "cause-effect relationship", "addition", "contrast", "time sequence", "discourse-markers,causal"),
-            FB("'Initially, the proposal faced opposition. Subsequently, ___ evolved.' (support)", "support", "discourse-markers"));
+            MC("'The initial proposal was rejected. Nevertheless, the authors persisted with revisions.' This discourse marker shows:", "concession despite setback (contrast)", "addition", "temporal sequence", "cause-effect", "discourse-markers,contrastive"),
+            MC("'Three critical issues emerged: first, funding gaps; second, lack of expertise; third, political resistance. Therefore, progress stalled.' 'Therefore' signals:", "cause-effect (the three issues → stalled progress)", "temporal sequence", "concession", "addition", "discourse-markers,causal"),
+            MC("'Investment in infrastructure is essential. Moreover, taxation reforms are equally vital.' 'Moreover' is a(n):", "additive discourse marker (adds emphasis to supporting point)", "contrastive marker", "causal marker", "sequential marker", "discourse-markers,additive"),
+            FB("'The initial phase faced significant obstacles. Eventually, however, breakthrough innovations emerged.' Here, 'eventually' signals:", "temporal progression despite difficulties (sequential marker)", "discourse-markers,temporal"));
 
         AddExercises(ctx, l14, "c2e14",
-            MC("'She is a doctor. She specializes in cardiology.' — What cohesive device?", "reference (she refers back)", "substitution", "ellipsis", "conjunction", "cohesion,reference"),
-            MC("'Do you like coffee?' 'Yes, I do.' — This uses:", "substitution (do replaces like coffee)", "ellipsis", "reference", "conjunction", "cohesion,substitution"),
-            MC("'She arrived early. He did too.' — This shows:", "substitution with 'did'", "ellipsis of the full verb phrase", "reference", "conjunction", "cohesion"),
-            FB("Cohesive devices help create:", "text cohesion and flow", "cohesion"));
+            MC("'The company restructured its operations. This decision sparked considerable debate among stakeholders.' The cohesive link uses:", "demonstrative reference (This → the restructuring)", "lexical cohesion", "conjunction", "substitution", "cohesion,demonstrative"),
+            MC("'Critics argue funding is insufficient. Proponents contend resources are adequate.' The second sentence uses:", "reference (ellipsis of 'argue' and 'funding') plus implicit 'that'", "only conjunction", "substitution", "explicit reference", "cohesion,ellipsis"),
+            MC("'Scientists conducted three major experiments. Each produced consistent findings.' The link between sentences is:", "reference (Each = the three experiments)", "substitution", "ellipsis", "conjunction only", "cohesion,pronoun"),
+            FB("'Several proposals were submitted. The strongest one advocated for immediate action.' Cohesion here depends on:", "lexical repetition (proposals, one—referring back) plus demonstrative reference", "cohesion,reference"));
 
         AddExercises(ctx, l15, "c2e15",
-            MC("'John went to Paris; Sarah to Rome' shows:", "ellipsis (omission of 'went')", "substitution", "reference", "conjunction", "ellipsis"),
-            MC("In 'She is taller than he is,' ellipsis could produce:", "'She is taller than he' (omit 'is')", "'She taller than he is'", "'She is than he is'", "Ellipsis isn't possible here.", "ellipsis,comparative"),
-            MC("Ellipsis makes writing more:", "concise and natural", "formal", "complex", "emphatic", "ellipsis"),
-            FB("'Some students passed; others ___.' (ellipsis of 'passed')", "didn't", "ellipsis"));
+            MC("'The government raised taxes; citizens protested. The minister resigned; the parliament dissolved early.' This pattern shows:", "nominal ellipsis (entire clause structures omitted after semicolon)", "verbal ellipsis", "substitution", "reference", "ellipsis,nominal"),
+            MC("In rapid, formal discourse: 'Which solutions will succeed? Some might, others might not.' The implied structure is:", "others might not [succeed]—ellipsis of the verb 'succeed'", "substitution", "reference", "no ellipsis", "ellipsis,verbal"),
+            MC("Comparing: 'She is more experienced than he is' → 'She is more experienced than he.' The ellipsis omits:", "'is' (the copula verb)", "'he'", "'experienced'", "nothing—both are equally complete", "ellipsis,comparative"),
+            FB("'The first proposal was rejected; the second, accepted unanimously.' This shows:", "ellipsis of 'was' (or verb phrase), creating parallelism", "ellipsis,reduction"));
 
         AddExercises(ctx, l16, "c2e16",
-            MC("'Do you want tea?' 'I do' substitutes for:", "'I want tea'", "'I do want'", "'I tea'", "'Do want'", "substitution"),
-            MC("'Is he coming?' 'I think so' uses substitution with:", "'so' (replacing 'he is coming')", "'think'", "'coming'", "'is'", "substitution"),
-            MC("'She won't leave, but he will' uses:", "substitution (will replaces won't leave)", "ellipsis", "reference", "none of the above", "substitution"),
-            FB("'Will you attend?' 'I hope not.' — 'not' substitutes for:", "'I won't attend'", "substitution"));
+            MC("'Will you support the initiative?' 'I will.' Here, 'will' substitutes for:", "'support the initiative' (the entire verb phrase)", "'you'", "nothing—it's not substitution", "'support'", "substitution,auxiliary"),
+            MC("'Has he completed the analysis?' 'I think so.' The 'so' substitutes for:", "'he has completed the analysis' (the entire clause)", "'has'", "'analysis'", "'he'", "substitution,so-substitution"),
+            MC("'The proposal is controversial. Some agree; others don't.' The 'don't' substitutes for:", "'don't agree' or 'don't think it's controversial'", "'don't propose'", "nothing—it's incomplete", "only 'do'", "substitution,negation"),
+            FB("'Would you reconsider if we revised the terms?' 'I might.' Here, 'might' is used as substitution to replace:", "'reconsider if you revised the terms' (the entire conditional)", "substitution,modal"));
     }
 
     // ── LESSON CONTENT ────────────────────────────────────────────────────────
