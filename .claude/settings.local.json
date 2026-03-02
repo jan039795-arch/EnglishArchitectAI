@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(kill 20368:*)",
+      "Bash(taskkill:*)",
+      "Bash(sed:*)",
+      "Bash(echo Token \\(first 40\\): ${TOKEN:0:40}...:*)",
+      "Bash(__NEW_LINE_80a21c257f161543__ echo:*)",
+      "Bash(python:*)",
+      "Bash(start:*)",
+      "Bash(netstat:*)",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)",
+      "WebSearch",
+      "WebFetch(domain:www.engvid.com)",
+      "WebFetch(domain:www.superenglish.com)",
+      "WebFetch(domain:www.voicetube.com)",
+      "WebFetch(domain:us.youtubers.me)",
+      "WebFetch(domain:ytscribe.com)",
+      "Bash(wmic process:*)",
+      "Bash(rm:*)",
+      "Bash(do:*)",
+      "Bash(__NEW_LINE_14891b96ed10925f__ curl:*)",
+      "Bash(echo ✅ Usuario registrado con token:*)",
+      "Bash(cmd:*)",
+      "Bash(dotnet test:*)",
+      "Bash(dotnet ef:*)",
+      "Bash(dotnet run:*)",
+      "Bash(pkill:*)",
+      "Bash(powershell:*)",
+      "Bash(pwsh:*)",
+      "Bash(echo ==========================================:*)"
+    ]
+  }
+}
