@@ -1,5 +1,6 @@
 using EA.Application.Features.Lessons.GetLessonById;
 using EA.Application.Features.Lessons.GetLessonsByModule;
+using EA.Application.Features.Lessons.SearchLessons;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,13 @@ public class LessonsController : BaseApiController
     {
         var result = await Mediator.Send(new GetLessonByIdQuery(id));
         if (result is null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpGet("search")]
+    public async Task<IActionResult> Search([FromQuery] string q)
+    {
+        var result = await Mediator.Send(new SearchLessonsQuery(q));
         return Ok(result);
     }
 }

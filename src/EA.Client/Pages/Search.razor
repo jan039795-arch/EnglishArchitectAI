@@ -1,0 +1,89 @@
+@page "/search"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+
+<PageTitle>Search Lessons — English Architect AI</PageTitle>
+
+<MudText Typo="Typo.h5" GutterBottom="true">Search Lessons</MudText>
+<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+    Find lessons across all levels and modules.
+</MudText>
+
+<MudStack Row="true" Spacing="2" Class="mb-6">
+    <MudTextField @bind-Value="_searchTerm" Placeholder="Enter lesson title..."
+                  Variant="Variant.Outlined" Margin="Margin.Dense"
+                  Class="flex-grow-1" />
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="PerformSearch" Disabled="_searching">
+        @if (_searching)
+        {
+            <MudProgressCircular Size="Size.Small" Indeterminate="true" />
+            <span class="ms-2">Searching...</span>
+        }
+        else
+        {
+            <span>Search</span>
+        }
+    </MudButton>
+</MudStack>
+
+@if (_results.Count == 0 && !_searching && _searched)
+{
+    <MudAlert Severity="Severity.Info">No lessons found matching your search.</MudAlert>
+}
+else if (_results.Count > 0)
+{
+    <MudText Typo="Typo.subtitle2" Class="mb-4">@_results.Count result(s) found</MudText>
+    <MudList T="EA.Client.Services.SearchLessonDto" Dense="false">
+        @foreach (var result in _results)
+        {
+            <MudListItem>
+                <MudCard Style="cursor:pointer" @onclick="@(() => OpenLesson(result))">
+                    <MudCardContent>
+                        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                            <MudStack Spacing="1">
+                                <MudText Typo="Typo.subtitle1">@result.LessonTitle</MudText>
+                                <MudText Typo="Typo.body2" Color="Color.Secondary">
+                                    <strong>Module:</strong> @result.ModuleTitle
+                                </MudText>
+                                <MudStack Row="true" Spacing="1">
+                                    <MudChip T="string" Size="Size.Small" Color="Color.Primary">
+                                        @result.LevelCode
+                                    </MudChip>
+                                </MudStack>
+                            </MudStack>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary" Size="Size.Small">
+                                View →
+                            </MudButton>
+                        </MudStack>
+                    </MudCardContent>
+                </MudCard>
+            </MudListItem>
+        }
+    </MudList>
+}
+
+@code {
+    private string _searchTerm = string.Empty;
+    private List<EA.Client.Services.SearchLessonDto> _results = [];
+    private bool _searching = false;
+    private bool _searched = false;
+
+    private async Task PerformSearch()
+    {
+        if (string.IsNullOrWhiteSpace(_searchTerm) || _searchTerm.Length < 2)
+        {
+            return;
+        }
+
+        _searching = true;
+        _searched = true;
+        _results = await Api.SearchLessonsAsync(_searchTerm) ?? [];
+        _searching = false;
+    }
+
+    private void OpenLesson(EA.Client.Services.SearchLessonDto result)
+    {
+        Nav.NavigateTo($"/lessons/{result.LessonId}");
+    }
+}

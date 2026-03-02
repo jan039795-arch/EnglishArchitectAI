@@ -9,6 +9,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
+    public override DbSet<ApplicationUser> Users => base.Users;
     public DbSet<Subscription> Subscriptions => Set<Subscription>();
     public DbSet<Level> Levels => Set<Level>();
     public DbSet<Module> Modules => Set<Module>();
@@ -24,6 +25,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
     public DbSet<SpeakingAttempt> SpeakingAttempts => Set<SpeakingAttempt>();
     public DbSet<PlacementTest> PlacementTests => Set<PlacementTest>();
     public DbSet<Certificate> Certificates => Set<Certificate>();
+    public DbSet<LessonComment> LessonComments => Set<LessonComment>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -14,4 +14,5 @@ public class Lesson : BaseEntity
     public Module Module { get; set; } = null!;
     public ICollection<Exercise> Exercises { get; set; } = [];
     public ICollection<UserProgress> Progresses { get; set; } = [];
+    public ICollection<LessonComment> Comments { get; set; } = [];
 }

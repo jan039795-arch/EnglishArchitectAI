@@ -273,7 +273,7 @@ else if (_state == State.Complete)
         <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mb-6">
             Los ejercicios incorrectos se agregaron a tu mazo de repaso.
         </MudText>
-        <MudStack Row="true" Justify="Justify.Center" Spacing="3">
+        <MudStack Row="true" Justify="Justify.Center" Spacing="3" Class="mb-6">
             <MudButton Variant="Variant.Outlined" Color="Color.Primary" Href="/review">
                 Repasar tarjetas
             </MudButton>
@@ -281,6 +281,64 @@ else if (_state == State.Complete)
                 Continuar
             </MudButton>
         </MudStack>
+
+        <!-- Comments Section -->
+        <MudDivider Class="my-4" />
+        <MudText Typo="Typo.h6" Class="mt-6 mb-4">Comentarios sobre esta lección</MudText>
+
+        @if (_loadingComments)
+        {
+            <MudProgressCircular Indeterminate="true" Color="Color.Primary" Size="Size.Small" />
+        }
+        else
+        {
+            <MudPaper Elevation="0" Class="pa-4 mb-4" Style="background:var(--mud-palette-background-grey);border-radius:8px">
+                <MudTextField @bind-Value="_commentText" Label="Agregar un comentario..."
+                              Variant="Variant.Outlined" Margin="Margin.Dense"
+                              FullWidth="true" Lines="3"
+                              Disabled="@_submittingComment" />
+                <MudStack Row="true" Justify="Justify.FlexEnd" Class="mt-2">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"
+                               OnClick="SubmitComment" Disabled="@(string.IsNullOrWhiteSpace(_commentText) || _submittingComment)">
+                        @if (_submittingComment)
+                        {
+                            <MudProgressCircular Size="Size.Small" Indeterminate="true" />
+                            <span class="ms-2">Enviando...</span>
+                        }
+                        else
+                        {
+                            <span>Enviar</span>
+                        }
+                    </MudButton>
+                </MudStack>
+            </MudPaper>
+
+            @if (_comments.Count > 0)
+            {
+                <MudList T="EA.Client.Services.LessonCommentDto" Dense="false">
+                    @foreach (var comment in _comments)
+                    {
+                        <MudListItem>
+                            <MudPaper Elevation="0" Class="pa-3 w-100" Style="background:var(--mud-palette-background-grey);border-radius:8px">
+                                <MudStack Spacing="1">
+                                    <MudStack Row="true" Justify="Justify.SpaceBetween">
+                                        <MudText Typo="Typo.body2"><b>@comment.Username</b></MudText>
+                                        <MudText Typo="Typo.caption" Color="Color.Secondary">
+                                            @comment.CreatedAt.ToString("MMM d, yyyy HH:mm")
+                                        </MudText>
+                                    </MudStack>
+                                    <MudText Typo="Typo.body2">@comment.Body</MudText>
+                                </MudStack>
+                            </MudPaper>
+                        </MudListItem>
+                    }
+                </MudList>
+            }
+            else
+            {
+                <MudAlert Severity="Severity.Info" Dense="true">No hay comentarios aún. ¡Sé el primero en comentar!</MudAlert>
+            }
+        }
     </MudContainer>
 }
 
@@ -300,6 +358,10 @@ else if (_state == State.Complete)
     private bool _lastCorrect;
     private int _correctCount;
     private DateTime _exerciseStarted;
+    private List<EA.Client.Services.LessonCommentDto> _comments = [];
+    private string _commentText = string.Empty;
+    private bool _loadingComments;
+    private bool _submittingComment;
 
     private ExerciseVm? Current => _currentIdx < _exercises.Count ? _exercises[_currentIdx] : null;
     private double ExerciseProgress => (_currentIdx + 1.0) / _exercises.Count * 100;
@@ -320,6 +382,11 @@ else if (_state == State.Complete)
             _state = State.Playing;
 
         _exerciseStarted = DateTime.UtcNow;
+
+        // Load comments
+        _loadingComments = true;
+        _comments = await Api.GetLessonCommentsAsync(LessonId) ?? [];
+        _loadingComments = false;
     }
 
     private void AdvanceFromTheory()
@@ -380,6 +447,25 @@ else if (_state == State.Complete)
         var totalSeconds = _exercises.Count * 60;
         await Api.CompleteLessonAsync(LessonId, score, totalSeconds);
         _state = State.Complete;
+
+        // Load comments when lesson is complete
+        _loadingComments = true;
+        _comments = await Api.GetLessonCommentsAsync(LessonId) ?? [];
+        _loadingComments = false;
+    }
+
+    private async Task SubmitComment()
+    {
+        if (string.IsNullOrWhiteSpace(_commentText)) return;
+
+        _submittingComment = true;
+        var newComment = await Api.AddLessonCommentAsync(LessonId, _commentText);
+        if (newComment is not null)
+        {
+            _comments.Add(newComment);
+            _commentText = string.Empty;
+        }
+        _submittingComment = false;
     }
 
     private Color OptionColor(string optText)

@@ -15,6 +15,7 @@ var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5225";
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiBaseUrl) });
 builder.Services.AddScoped<ApiService>();
+builder.Services.AddScoped<NotificationService>();
 
 // MudBlazor
 builder.Services.AddMudServices();

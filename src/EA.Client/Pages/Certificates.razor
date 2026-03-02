@@ -1,0 +1,174 @@
+@page "/certificates"
+@attribute [Authorize]
+@inject EA.Client.Services.ApiService Api
+@inject NavigationManager Nav
+
+<PageTitle>Certificates — English Architect AI</PageTitle>
+
+<MudText Typo="Typo.h5" GutterBottom="true">My Certificates</MudText>
+<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+    Earn certificates by completing all lessons in a level.
+</MudText>
+
+@if (_loading)
+{
+    <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+}
+else
+{
+    <MudTabs>
+        <MudTabPanel Text="Earned Certificates">
+            @if (_certificates.Count == 0)
+            {
+                <MudAlert Severity="Severity.Info" Class="mt-4">You haven't earned any certificates yet.</MudAlert>
+            }
+            else
+            {
+                <MudList T="EA.Client.Services.CertificateDto" Dense="false">
+                    @foreach (var cert in _certificates)
+                    {
+                        <MudListItem>
+                            <MudCard>
+                                <MudCardContent>
+                                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                        <MudStack Spacing="1">
+                                            <MudText Typo="Typo.subtitle1">
+                                                <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Color="Color.Warning" />
+                                                @cert.LevelCode Certificate
+                                            </MudText>
+                                            <MudText Typo="Typo.body2" Color="Color.Secondary">
+                                                Issued: @cert.IssuedAt.ToString("MMM d, yyyy")
+                                            </MudText>
+                                            <MudText Typo="Typo.caption" Color="Color.Tertiary">
+                                                Verification Code: @cert.VerificationCode
+                                            </MudText>
+                                        </MudStack>
+                                        <MudStack>
+                                            @if (!string.IsNullOrEmpty(cert.PDFBlobUrl))
+                                            {
+                                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"
+                                                           Href="@cert.PDFBlobUrl" Target="_blank">
+                                                    Download PDF
+                                                </MudButton>
+                                            }
+                                            <MudButton Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small"
+                                                       Href="@($"/certificates/verify/{cert.VerificationCode}")" Target="_blank">
+                                                Verify
+                                            </MudButton>
+                                        </MudStack>
+                                    </MudStack>
+                                </MudCardContent>
+                            </MudCard>
+                        </MudListItem>
+                    }
+                </MudList>
+            }
+        </MudTabPanel>
+
+        <MudTabPanel Text="Request Certificate">
+            @if (_levels.Count == 0)
+            {
+                <MudAlert Severity="Severity.Info" Class="mt-4">No levels available.</MudAlert>
+            }
+            else
+            {
+                <MudList T="EA.Client.Services.LevelDto" Dense="false">
+                    @foreach (var level in _levels)
+                    {
+                        var hasCert = _certificates.Any(c => c.LevelCode == level.Code);
+                        <MudListItem>
+                            <MudCard Style="@(hasCert ? "opacity:.6;" : "")">
+                                <MudCardContent>
+                                    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                        <MudStack Spacing="1">
+                                            <MudText Typo="Typo.subtitle1">@level.Name (@level.Code)</MudText>
+                                            <MudText Typo="Typo.body2" Color="Color.Secondary">
+                                                @if (hasCert)
+                                                {
+                                                    <span>✓ Certificate earned</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Complete all lessons to unlock certificate</span>
+                                                }
+                                            </MudText>
+                                        </MudStack>
+                                        @if (!hasCert)
+                                        {
+                                            <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"
+                                                       OnClick="@(() => RequestCertificate(level.Code))"
+                                                       Disabled="@_issuing">
+                                                @if (_issuingLevel == level.Code && _issuing)
+                                                {
+                                                    <MudProgressCircular Size="Size.Small" Indeterminate="true" />
+                                                    <span class="ms-2">Requesting...</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Request</span>
+                                                }
+                                            </MudButton>
+                                        }
+                                    </MudStack>
+                                </MudCardContent>
+                            </MudCard>
+                        </MudListItem>
+                    }
+                </MudList>
+            }
+        </MudTabPanel>
+    </MudTabs>
+
+    @if (!string.IsNullOrEmpty(_errorMessage))
+    {
+        <MudAlert Severity="Severity.Error" Class="mt-4">@_errorMessage</MudAlert>
+    }
+    @if (!string.IsNullOrEmpty(_successMessage))
+    {
+        <MudAlert Severity="Severity.Success" Class="mt-4">@_successMessage</MudAlert>
+    }
+}
+
+@code {
+    private bool _loading = true;
+    private List<EA.Client.Services.CertificateDto> _certificates = [];
+    private List<EA.Client.Services.LevelDto> _levels = [];
+    private bool _issuing = false;
+    private string _issuingLevel = string.Empty;
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var certsTask = Api.GetCertificatesAsync();
+        var levelsTask = Api.GetLevelsAsync();
+
+        await Task.WhenAll(certsTask, levelsTask);
+
+        _certificates = await certsTask ?? [];
+        _levels = await levelsTask ?? [];
+        _loading = false;
+    }
+
+    private async Task RequestCertificate(string levelCode)
+    {
+        _issuing = true;
+        _issuingLevel = levelCode;
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+
+        var result = await Api.IssueCertificateAsync(levelCode);
+        if (result is not null)
+        {
+            _certificates.Add(result);
+            _successMessage = $"Certificate for {levelCode} issued successfully!";
+        }
+        else
+        {
+            _errorMessage = "Failed to issue certificate. Please ensure you have completed all lessons for this level.";
+        }
+
+        _issuing = false;
+        _issuingLevel = string.Empty;
+    }
+}

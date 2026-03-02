@@ -5,6 +5,7 @@ namespace EA.Application.Contracts;
 
 public interface IApplicationDbContext
 {
+    DbSet<ApplicationUser> Users { get; }
     DbSet<Level> Levels { get; }
     DbSet<Module> Modules { get; }
     DbSet<Lesson> Lessons { get; }
@@ -20,6 +21,7 @@ public interface IApplicationDbContext
     DbSet<PlacementTest> PlacementTests { get; }
     DbSet<Certificate> Certificates { get; }
     DbSet<Subscription> Subscriptions { get; }
+    DbSet<LessonComment> LessonComments { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }

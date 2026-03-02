@@ -8,6 +8,7 @@ public record LevelDto(Guid Id, string Code, string Name, int Order, string? Unl
 public record ModuleDto(Guid Id, Guid LevelId, string Title, string Description, int Order, string? YoutubePlaylistId, int EstimatedHours);
 public record LessonDto(Guid Id, Guid ModuleId, string Title, string SkillType, int Order, bool IsAIGenerated);
 public record LessonDetailDto(Guid Id, Guid ModuleId, string Title, string SkillType, int Order, bool IsAIGenerated, string? ContentJson);
+public record SearchLessonDto(Guid LessonId, string LessonTitle, string ModuleTitle, string LevelCode, Guid ModuleId);
 public record ExerciseOptionDto(Guid Id, string Text, string? Explanation);
 public record ExerciseDto(Guid Id, Guid LessonId, string Type, string Prompt, int Difficulty, string? Tags, string Source, List<ExerciseOptionDto> Options);
 public record SubmitResponseResult(bool IsCorrect, string? AIFeedback);
@@ -15,6 +16,8 @@ public record UserProgressDto(Guid Id, string UserId, Guid LessonId, string Less
 public record PlacementTestStatusDto(bool Completed, string? AssignedLevel, DateTime? CompletedAt);
 public record PlacementAnswer(Guid? ExerciseId, string? Answer, bool IsCorrect);
 public record SpacedRepetitionCardDto(Guid Id, string UserId, Guid ExerciseId, string ExercisePrompt, string ExerciseType, double EasinessFactor, int Interval, int Repetitions, DateTime NextReviewDate);
+public record CertificateDto(Guid Id, string LevelCode, DateTime IssuedAt, string? PDFBlobUrl, Guid VerificationCode);
+public record LessonCommentDto(Guid Id, string Body, string Username, DateTime CreatedAt);
 
 // ── Service ───────────────────────────────────────────────────────────────────
 
@@ -41,6 +44,9 @@ public class ApiService
 
     public Task<LessonDetailDto?> GetLessonByIdAsync(Guid id) =>
         _http.GetFromJsonAsync<LessonDetailDto>($"api/lessons/{id}");
+
+    public Task<List<SearchLessonDto>?> SearchLessonsAsync(string q) =>
+        _http.GetFromJsonAsync<List<SearchLessonDto>>($"api/lessons/search?q={Uri.EscapeDataString(q)}");
 
     // Exercises
     public Task<List<ExerciseDto>?> GetExercisesByLessonAsync(Guid lessonId) =>
@@ -90,6 +96,31 @@ public class ApiService
         return response.IsSuccessStatusCode;
     }
 
+    // Certificates
+    public Task<List<CertificateDto>?> GetCertificatesAsync() =>
+        _http.GetFromJsonAsync<List<CertificateDto>>("api/certificates");
+
+    public async Task<CertificateDto?> IssueCertificateAsync(string levelCode)
+    {
+        var response = await _http.PostAsJsonAsync("api/certificates/issue", new { LevelCode = levelCode });
+        if (!response.IsSuccessStatusCode) return null;
+        var result = await response.Content.ReadFromJsonAsync<IssueCertificateResponse>();
+        return result?.Value;
+    }
+
+    // Lesson Comments
+    public Task<List<LessonCommentDto>?> GetLessonCommentsAsync(Guid lessonId) =>
+        _http.GetFromJsonAsync<List<LessonCommentDto>>($"api/lessoncomments/{lessonId}");
+
+    public async Task<LessonCommentDto?> AddLessonCommentAsync(Guid lessonId, string body)
+    {
+        var response = await _http.PostAsJsonAsync("api/lessoncomments",
+            new { LessonId = lessonId, Body = body });
+        if (!response.IsSuccessStatusCode) return null;
+        return await response.Content.ReadFromJsonAsync<LessonCommentDto>();
+    }
+
     private record IdResponse(Guid Id);
+    private record IssueCertificateResponse(bool IsSuccess, CertificateDto? Value);
     private record AssignedLevelResponse(string AssignedLevel);
 }

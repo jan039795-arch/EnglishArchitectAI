@@ -1,0 +1,194 @@
+@page "/reminders"
+@attribute [Authorize]
+@inject NotificationService NotificationSvc
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<PageTitle>Study Reminders — English Architect AI</PageTitle>
+
+@using Blazored.LocalStorage
+
+<MudText Typo="Typo.h5" GutterBottom="true">Study Reminders</MudText>
+<MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-6">
+    Set up browser notifications to remind you to study regularly.
+</MudText>
+
+@if (_initError)
+{
+    <MudAlert Severity="Severity.Error">
+        Browser notifications are not supported on your device.
+    </MudAlert>
+}
+else
+{
+    <MudPaper Elevation="2" Class="pa-6 mb-6">
+        <MudStack Spacing="4">
+            <!-- Enable/Disable toggle -->
+            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                <MudStack Spacing="1">
+                    <MudText Typo="Typo.subtitle1"><b>Enable Study Reminders</b></MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">
+                        @if (_remindersEnabled)
+                        {
+                            <span>Reminders are active. You'll receive notifications at your chosen time.</span>
+                        }
+                        else
+                        {
+                            <span>Enable reminders to get study notifications.</span>
+                        }
+                    </MudText>
+                </MudStack>
+                <MudSwitch T="bool" Value="_remindersEnabled" ValueChanged="@ToggleReminders"
+                           Color="Color.Primary" Size="Size.Large" />
+            </MudStack>
+
+            @if (_remindersEnabled)
+            {
+                <MudDivider />
+
+                <!-- Time picker -->
+                <MudStack Spacing="2">
+                    <MudText Typo="Typo.subtitle2"><b>Reminder Time</b></MudText>
+                    <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+                        <MudTimePicker @bind-Time="_reminderTime" ClosingDelay="300"
+                                       Label="What time should we remind you?" />
+                        <MudText Typo="Typo.body2">
+                            @if (_reminderTime.HasValue)
+                            {
+                                <span>Daily at @_reminderTime.Value.Hours:@_reminderTime.Value.Minutes.ToString("D2")</span>
+                            }
+                        </MudText>
+                    </MudStack>
+                </MudStack>
+
+                <MudDivider />
+
+                <!-- Test notification button -->
+                <MudStack Spacing="2">
+                    <MudText Typo="Typo.subtitle2"><b>Test Notification</b></MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mb-2">
+                        Send a test notification right now to verify it's working.
+                    </MudText>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary"
+                               OnClick="SendTestNotification" Disabled="@_sendingTest">
+                        @if (_sendingTest)
+                        {
+                            <MudProgressCircular Size="Size.Small" Indeterminate="true" />
+                            <span class="ms-2">Sending...</span>
+                        }
+                        else
+                        {
+                            <span>📬 Send Test Notification</span>
+                        }
+                    </MudButton>
+                </MudStack>
+            }
+        </MudStack>
+    </MudPaper>
+
+    @if (!string.IsNullOrEmpty(_successMessage))
+    {
+        <MudAlert Severity="Severity.Success" Class="mb-4">@_successMessage</MudAlert>
+    }
+    @if (!string.IsNullOrEmpty(_errorMessage))
+    {
+        <MudAlert Severity="Severity.Error" Class="mb-4">@_errorMessage</MudAlert>
+    }
+
+    <MudPaper Elevation="0" Class="pa-4" Style="background:var(--mud-palette-background-grey);border-radius:8px">
+        <MudText Typo="Typo.subtitle2"><b>💡 Tips</b></MudText>
+        <MudList T="string" Dense="true">
+            <MudListItem T="string">Make sure notifications are enabled in your browser settings.</MudListItem>
+            <MudListItem T="string">Set a consistent time that works with your study schedule.</MudListItem>
+            <MudListItem T="string">Close the browser and keep the tab open to receive notifications.</MudListItem>
+        </MudList>
+    </MudPaper>
+}
+
+@code {
+    private bool _remindersEnabled;
+    private TimeSpan? _reminderTime = new TimeSpan(9, 0, 0); // Default: 9:00 AM
+    private bool _sendingTest;
+    private bool _initError;
+    private string _successMessage = string.Empty;
+    private string _errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        // Check if notifications are supported
+        try
+        {
+            var permission = await NotificationSvc.RequestPermissionAsync();
+            if (permission == "not-supported")
+            {
+                _initError = true;
+                return;
+            }
+        }
+        catch
+        {
+            _initError = true;
+            return;
+        }
+
+        // Load saved preference
+        try
+        {
+            _remindersEnabled = await LocalStorage.GetItemAsync<bool>("reminders_enabled");
+            var savedTime = await LocalStorage.GetItemAsync<string>("reminder_time");
+            if (!string.IsNullOrEmpty(savedTime) && TimeSpan.TryParse(savedTime, out var ts))
+            {
+                _reminderTime = ts;
+            }
+        }
+        catch { }
+    }
+
+    private async Task ToggleReminders(bool enabled)
+    {
+        _remindersEnabled = enabled;
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+
+        if (enabled)
+        {
+            var permission = await NotificationSvc.RequestPermissionAsync();
+            if (permission != "granted")
+            {
+                _remindersEnabled = false;
+                _errorMessage = "Notification permission was denied. Please enable notifications in browser settings.";
+                return;
+            }
+            _successMessage = "Study reminders enabled!";
+        }
+
+        await LocalStorage.SetItemAsync("reminders_enabled", enabled);
+        if (enabled && _reminderTime.HasValue)
+        {
+            await LocalStorage.SetItemAsync("reminder_time", _reminderTime.Value.ToString(@"hh\:mm\:ss"));
+        }
+    }
+
+    private async Task SendTestNotification()
+    {
+        _sendingTest = true;
+        _errorMessage = string.Empty;
+        _successMessage = string.Empty;
+
+        var success = await NotificationSvc.ScheduleReminderAsync(
+            "English Architect AI",
+            "Time to study! Open the app and continue your learning journey.",
+            0); // 0ms delay = immediate
+
+        if (success)
+        {
+            _successMessage = "Test notification sent! Check if you received it.";
+        }
+        else
+        {
+            _errorMessage = "Failed to send notification. Please ensure notifications are enabled.";
+        }
+
+        _sendingTest = false;
+    }
+}
