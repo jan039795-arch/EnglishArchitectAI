@@ -40,7 +40,13 @@
       "Bash(xargs -r kill -9)",
       "Bash(dotnet:*)",
       "Bash(mkdir:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(tasklist:*)",
+      "Bash(while read pid)",
+      "Bash(__NEW_LINE_d78293cf525c34a9__ cd:*)",
+      "Bash(ls:*)",
+      "Bash(__NEW_LINE_81482f46dad00b4a__ echo:*)",
+      "Bash(__NEW_LINE_bed23f3a4f4edeeb__ cd:*)"
     ]
   }
 }
