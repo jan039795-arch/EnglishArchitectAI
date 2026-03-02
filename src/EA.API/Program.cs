@@ -168,9 +168,16 @@ app.MapControllers();
 app.MapHub<EA.API.Hubs.LessonHub>("/hubs/lesson");
 
 // Schedule daily content refresh job at 2 AM
-RecurringJob.AddOrUpdate<ContentRefreshService>(
-    "daily-content-refresh",
-    service => service.RefreshDailyContentAsync(),
-    Cron.Daily(2, 0)); // 2:00 AM every day
+using (var scope = app.Services.CreateScope())
+{
+    var recurringJobManager = scope.ServiceProvider.GetRequiredService<IRecurringJobManager>();
+    recurringJobManager.AddOrUpdate<ContentRefreshService>(
+        "daily-content-refresh",
+        service => service.RefreshDailyContentAsync(),
+        Cron.Daily(2, 0), // 2:00 AM every day
+        new RecurringJobOptions { TimeZone = TimeZoneInfo.Utc });
+
+    app.Logger.LogInformation("Daily content refresh job scheduled for 2:00 AM UTC");
+}
 
 app.Run();
