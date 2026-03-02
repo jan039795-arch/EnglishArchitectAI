@@ -1044,7 +1044,7 @@ public static class DataSeeder
         [("Good morning! How are you?", "Greeting in the morning"), ("Fine, thank you. And you?", "Responding to 'How are you?'"), ("Nice to meet you!", "Meeting someone for the first time"), ("Goodbye! See you later.", "Saying farewell")],
         "Write a short dialogue (4–6 lines) between two people meeting for the first time. Use at least 3 different greetings. Reference the video for authentic examples.",
         "The 'h' in 'hello' and 'hi' is always pronounced. Say it with a clear breath — HEH-loh, not EH-loh. Listen to the video pronunciation module.",
-        [("English Greetings for Beginners", "EnglishClass101", "ozT4MI_oHFc"), ("How to Greet People in English", "BBC Learning English", "oJx2iH0VJQA"), ("Essential Grammar in Use Unit 1 — Greetings", "YouTube: Search 'Essential Grammar in Use Unit 1'", null)]
+        [("English Greetings for Beginners", "EnglishClass101", "ozT4MI_oHFc"), ("How to Greet People in English", "BBC Learning English", "oJx2iH0VJQA"), ("Essential Grammar in Use Unit 1 — Greetings", "YouTube: Search 'Essential Grammar in Use Unit 1'", null)], ComplementaryResourcesMap["A1L1"]
     );
 
     private static string A1L2() => C(
@@ -1054,7 +1054,7 @@ public static class DataSeeder
         [("I have three cats and two dogs.", "Using small numbers"), ("She is fifteen years old.", "Talking about age"), ("There are twelve students in the class.", "Counting people"), ("My phone number is five-five-three, two-one-four-zero.", "Reading phone numbers")],
         "Write 5 sentences using different numbers: your age, people in your family, your address number, phone digits, and how many hours you sleep. Use the video to check pronunciation.",
         "Stress the '-TEEN': thirTEEN, fourTEEN. Compare: THIRty, FOURty (stress on first syllable for the tens). Listen to the video multiple times.",
-        [("English Numbers 1-20", "EnglishClass101", "5Fn4r0gMUFM"), ("Numbers 1-100 in English", "Learn English with Papa English", "92BdANvnwh4"), ("Essential Grammar in Use Unit 2 — Numbers", "YouTube: Search 'Essential Grammar in Use Unit 2'", null)]
+        [("English Numbers 1-20", "EnglishClass101", "5Fn4r0gMUFM"), ("Numbers 1-100 in English", "Learn English with Papa English", "92BdANvnwh4"), ("Essential Grammar in Use Unit 2 — Numbers", "YouTube: Search 'Essential Grammar in Use Unit 2'", null)], ComplementaryResourcesMap["A1L2"]
     );
 
     private static string A1L3() => C(
@@ -1064,7 +1064,7 @@ public static class DataSeeder
         [("The sky is blue on a clear day.", "Describing nature"), ("I have a red umbrella.", "Color before noun"), ("She is wearing a green dress.", "Describing clothes"), ("What is your favorite color? — My favorite color is purple.", "Asking preferences")],
         "Look around you right now. Describe 6 objects using colors. Example: 'My notebook is blue. My pen is black.'",
         "'Orange' is pronounced OR-inj (two syllables). 'White' — the 'wh' sounds like a regular 'w' in modern English.",
-        [("Learn Colors in English", "Learn English Kids", "U_8dO7WcHUE"), ("English Vocabulary: Colors", "Papa English", "cKGPRrFT-zU"), ("Essential Grammar in Use Unit 3 — Colors", "YouTube: Search 'Essential Grammar in Use Unit 3'", null)]
+        [("Learn Colors in English", "Learn English Kids", "U_8dO7WcHUE"), ("English Vocabulary: Colors", "Papa English", "cKGPRrFT-zU"), ("Essential Grammar in Use Unit 3 — Colors", "YouTube: Search 'Essential Grammar in Use Unit 3'", null)], ComplementaryResourcesMap["A1L3"]
     );
 
     private static string A1L4() => C(
@@ -1074,7 +1074,7 @@ public static class DataSeeder
         [("Take out a pen and a piece of paper.", "Following classroom instructions"), ("The book is on the desk.", "Describing location"), ("There are thirty chairs in the room.", "Counting classroom objects"), ("Open your book and go to page twelve.", "Teacher instruction")],
         "Describe your study area. Write 6 sentences: what objects are there, their colors, and how many. Example: 'I have two blue pens on my desk.'",
         "In American English: 'eraser'. In British English: 'rubber'. Both are correct — just know your context.",
-        [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI"), ("Essential Grammar in Use Unit 4 — Articles & Objects", "YouTube: Search 'Essential Grammar in Use Unit 4'", null)]
+        [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI"), ("Essential Grammar in Use Unit 4 — Articles & Objects", "YouTube: Search 'Essential Grammar in Use Unit 4'", null)], ComplementaryResourcesMap["A1L4"]
     );
 
     private static string A1L5() => C(
@@ -1084,7 +1084,7 @@ public static class DataSeeder
         [("I have a big family with two brothers and one sister.", "Talking about family size"), ("My mother is a teacher and my father is an engineer.", "Describing family occupations"), ("I live with my parents and my grandmother.", "Describing who you live with"), ("My brother is five years older than me.", "Comparing ages")],
         "Draw your family tree or write about your family. Use at least 8 sentences describing who is in your family, what they do, and how old they are.",
         "'Family' rhymes with 'jam' — FAM-i-lee (3 syllables). 'Sister' — SIS-ter (2 syllables). 'Brother' — BRUH-ther (2 syllables). Stress the first syllable in all family words.",
-        [("Family Members Vocabulary", "Learn English Kids", null), ("English Family Words", "EnglishClass101", null), ("How to Talk About Your Family", "Papa English", null), ("Essential Grammar in Use Unit 5 — Family", "YouTube: Search 'Essential Grammar in Use Unit 5'", null)]
+        [("Family Members Vocabulary", "Learn English Kids", null), ("English Family Words", "EnglishClass101", null), ("How to Talk About Your Family", "Papa English", null), ("Essential Grammar in Use Unit 5 — Family", "YouTube: Search 'Essential Grammar in Use Unit 5'", null)], ComplementaryResourcesMap["A1L5"]
     );
 
     private static string A1L6() => C(
@@ -1094,7 +1094,7 @@ public static class DataSeeder
         [("I am from Spain.", "Talking about origin"), ("You are a good friend.", "Describing others"), ("She is a doctor and he is a nurse.", "Describing occupations"), ("We are in the park.", "Describing location"), ("They are very nice people.", "Describing group")],
         "Write 10 sentences about yourself and people around you using different pronouns. Example: 'I am happy. You are smart. She is my teacher.'",
         "'I am' contracts to 'I'm' (I'm, not Iam). 'You are' → 'You're'. 'He is' → 'He's'. These contractions are very common in spoken English.",
-        [("English Pronouns: I, You, He, She, It", "Learn English with Papa English", null), ("The Verb 'To Be' in English", "English Speeches", null), ("Personal Pronouns and Present 'To Be'", "Cambridge English", null), ("Essential Grammar in Use Unit 6 — Pronouns & Be", "YouTube: Search 'Essential Grammar in Use Unit 6'", null)]
+        [("English Pronouns: I, You, He, She, It", "Learn English with Papa English", null), ("The Verb 'To Be' in English", "English Speeches", null), ("Personal Pronouns and Present 'To Be'", "Cambridge English", null), ("Essential Grammar in Use Unit 6 — Pronouns & Be", "YouTube: Search 'Essential Grammar in Use Unit 6'", null)], ComplementaryResourcesMap["A1L6"]
     );
 
     private static string A1L7() => C(
@@ -1104,7 +1104,7 @@ public static class DataSeeder
         [("I work on Mondays and Wednesdays.", "Discussing weekly schedule"), ("My birthday is in July.", "Talking about birth month"), ("The meeting is on Friday at 10 o'clock.", "Planning a specific day"), ("January is cold but February is colder.", "Comparing months")],
         "Create a weekly schedule. Write where you are or what you do on each day of the week. Example: 'On Monday, I go to school. On Wednesday, I have English class.'",
         "'Tuesday' is tricky — TUE-s-day or CHOOS-day. 'Thursday' — THURS-day (sounds like 'Thursday', not 'Thurday'). Practice the difficult days: Tuesday, Wednesday, Thursday.",
-        [("Days of the Week in English", "Learn English Kids", null), ("English Months and Seasons", "Papa English", null), ("Days of the Week and Months", "Cambridge English", null), ("Essential Grammar in Use Unit 7 — Days & Months", "YouTube: Search 'Essential Grammar in Use Unit 7'", null)]
+        [("Days of the Week in English", "Learn English Kids", null), ("English Months and Seasons", "Papa English", null), ("Days of the Week and Months", "Cambridge English", null), ("Essential Grammar in Use Unit 7 — Days & Months", "YouTube: Search 'Essential Grammar in Use Unit 7'", null)], ComplementaryResourcesMap["A1L7"]
     );
 
     private static string A1L8() => C(
@@ -1114,7 +1114,7 @@ public static class DataSeeder
         [("I like apples and oranges.", "Talking about food preferences"), ("She drinks coffee in the morning.", "Describing eating habits"), ("What do you have for lunch?", "Asking about meals"), ("We eat chicken and rice for dinner.", "Describing meals"), ("Do you like vegetables?", "Asking preferences")],
         "Describe your favorite meal. Write 8 sentences about what you eat, what you drink, which foods you like and dislike, and when you eat it.",
         "'Breakfast' — BREAK-fast (2 syllables). 'Dinner' — DIN-er (2 syllables). 'Vegetables' — VEJ-uh-tulz (3 syllables). Many words have stress on the first syllable.",
-        [("Food Vocabulary in English", "Learn English with Papa English", null), ("English Food and Drinks", "English Speeches", null), ("Meals and Food Vocabulary", "Cambridge English", null), ("Essential Grammar in Use Unit 8 — Food & Drinks", "YouTube: Search 'Essential Grammar in Use Unit 8'", null)]
+        [("Food Vocabulary in English", "Learn English with Papa English", null), ("English Food and Drinks", "English Speeches", null), ("Meals and Food Vocabulary", "Cambridge English", null), ("Essential Grammar in Use Unit 8 — Food & Drinks", "YouTube: Search 'Essential Grammar in Use Unit 8'", null)], ComplementaryResourcesMap["A1L8"]
     );
 
     private static string A2L1() => C(
@@ -1124,7 +1124,7 @@ public static class DataSeeder
         [("I worked hard yesterday.", "Regular past action"), ("She studied medicine at university.", "Regular past verb"), ("They stopped at a café.", "Double consonant rule"), ("We walked to the park.", "Simple past action")],
         "Write 8 sentences about what you did yesterday or last week using at least 6 different regular past verbs.",
         "-ED has 3 pronunciations: /t/ (worked, stopped), /d/ (played, called), /ɪd/ (wanted, needed). The pronunciation depends on the final sound.",
-        [("Past Simple Regular Verbs", "Papa English", null), ("Regular Past Tense", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 9 — Past Simple Regular", "YouTube: Search 'Essential Grammar in Use Unit 9'", null)]
+        [("Past Simple Regular Verbs", "Papa English", null), ("Regular Past Tense", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 9 — Past Simple Regular", "YouTube: Search 'Essential Grammar in Use Unit 9'", null)], ComplementaryResourcesMap["A2L1"]
     );
 
     private static string A2L2() => C(
@@ -1134,7 +1134,7 @@ public static class DataSeeder
         [("I went to the beach last summer.", "go → went"), ("She had coffee and toast for breakfast.", "have → had"), ("They saw the new film yesterday.", "see → saw"), ("He wrote her a letter.", "write → wrote")],
         "Write a paragraph about a memorable day using at least 8 different irregular past verbs. You can write about a birthday, trip, or special event.",
         "'Read' looks the same but sounds different: REED (present) vs RED (past). 'Thought' is pronounced THAWT. Irregular verbs are more common in spoken English.",
-        [("Irregular Past Tense Verbs", "Papa English", null), ("Common Irregular Verbs", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 10 — Irregular Verbs", "YouTube: Search 'Essential Grammar in Use Unit 10'", null)]
+        [("Irregular Past Tense Verbs", "Papa English", null), ("Common Irregular Verbs", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 10 — Irregular Verbs", "YouTube: Search 'Essential Grammar in Use Unit 10'", null)], ComplementaryResourcesMap["A2L2"]
     );
 
     private static string A2L3() => C(
@@ -1144,7 +1144,7 @@ public static class DataSeeder
         [("I was working when you called.", "Interrupted action"), ("They were eating dinner when the fire alarm went off.", "Background action"), ("She was reading a book at that moment.", "Action at a specific time"), ("We were building a house last year.", "Long-term past action")],
         "Write 8 sentences about what you and others were doing at a specific time last week. Use past continuous with time markers.",
         "Past Continuous: stress the first syllable. WAS: /wɑz/ or /wəz/ (weak form). WERE: /wɜr/ or /wər/ (weak form). The ING ending is one syllable.",
-        [("Past Continuous Tense", "Papa English", null), ("English Past Continuous", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 11 — Past Continuous", "YouTube: Search 'Essential Grammar in Use Unit 11'", null)]
+        [("Past Continuous Tense", "Papa English", null), ("English Past Continuous", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 11 — Past Continuous", "YouTube: Search 'Essential Grammar in Use Unit 11'", null)], ComplementaryResourcesMap["A2L3"]
     );
 
     private static string A2L4() => C(
@@ -1154,7 +1154,7 @@ public static class DataSeeder
         [("Was she sleeping? — Yes, she was.", "Yes/no question"), ("What were they doing? — They were cooking.", "Wh- question"), ("Weren't they watching TV? — No, they weren't.", "Negative question"), ("I wasn't paying attention.", "Negative statement")],
         "Write 10 past continuous questions and negatives: 5 yes/no questions and 5 negative statements.",
         "Past Continuous questions: The order is WAS/WERE + subject + verb-ING. Wrong: 'He was doing what?' Right: 'What was he doing?'",
-        [("Past Continuous Questions & Negatives", "Learn English with EnglishClass101.com", null), ("Past Continuous Tense", "English Speeches", null), ("Essential Grammar in Use Unit 12 — Past Continuous Q&N", "YouTube: Search 'Essential Grammar in Use Unit 12'", null)]
+        [("Past Continuous Questions & Negatives", "Learn English with EnglishClass101.com", null), ("Past Continuous Tense", "English Speeches", null), ("Essential Grammar in Use Unit 12 — Past Continuous Q&N", "YouTube: Search 'Essential Grammar in Use Unit 12'", null)], ComplementaryResourcesMap["A2L4"]
     );
 
     private static string A2L5() => C(
@@ -1164,7 +1164,7 @@ public static class DataSeeder
         [("I have lived in this city for ten years.", "Life experience"), ("She has worked here since 2020.", "Action starting in past, continuing"), ("Have you ever visited Japan?", "Life experience question"), ("We have completed the project.", "Recent completed action")],
         "Write 10 sentences using present perfect. Include 5 sentences about your life experiences and 5 about recent actions.",
         "Present Perfect emphasizes the connection between past and present. Don't say 'I went' when the result is relevant now; say 'I have been'.",
-        [("Present Perfect Tense", "Papa English", null), ("Present Perfect English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 13 — Present Perfect", "YouTube: Search 'Essential Grammar in Use Unit 13'", null)]
+        [("Present Perfect Tense", "Papa English", null), ("Present Perfect English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 13 — Present Perfect", "YouTube: Search 'Essential Grammar in Use Unit 13'", null)], ComplementaryResourcesMap["A2L5"]
     );
 
     private static string A2L6() => C(
@@ -1174,7 +1174,7 @@ public static class DataSeeder
         [("Have you ever been to Paris? — Yes, I have.", "Life experience question"), ("How long have you worked here? — For three years.", "Duration question"), ("Where have you been? — I've been to the market.", "Location question"), ("She hasn't finished yet.", "Negative with yet")],
         "Write 12 present perfect questions: 4 'Have you ever...' questions, 4 'How long have you...' questions, and 4 WH- questions.",
         "In Present Perfect questions, the auxiliary (have/has) comes before the subject: 'Have you been?' NOT 'You have been?' Never use past tense with 'yet' in negatives.",
-        [("Present Perfect Questions", "Learn English with EnglishClass101.com", null), ("Have vs Has Questions", "English Speeches", null), ("Essential Grammar in Use Unit 14 — Present Perfect Questions", "YouTube: Search 'Essential Grammar in Use Unit 14'", null)]
+        [("Present Perfect Questions", "Learn English with EnglishClass101.com", null), ("Have vs Has Questions", "English Speeches", null), ("Essential Grammar in Use Unit 14 — Present Perfect Questions", "YouTube: Search 'Essential Grammar in Use Unit 14'", null)], ComplementaryResourcesMap["A2L6"]
     );
 
     private static string A2L7() => C(
@@ -1184,7 +1184,7 @@ public static class DataSeeder
         [("I can cook Italian food.", "Present ability"), ("She can't speak German.", "Negative ability"), ("Can you help me?", "Polite request"), ("Animals can be dangerous.", "Possibility")],
         "Write 8 sentences: 4 using 'can' for ability and 4 using 'can' for permission or possibility.",
         "CAN has two pronunciations: strong form /kæn/ and weak form /kən/. In questions, 'Can you...?' uses weak form: 'kən yə?'",
-        [("Modal Verb: CAN", "Papa English", null), ("Can and Could in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 15 — Can/Can't", "YouTube: Search 'Essential Grammar in Use Unit 15'", null)]
+        [("Modal Verb: CAN", "Papa English", null), ("Can and Could in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 15 — Can/Can't", "YouTube: Search 'Essential Grammar in Use Unit 15'", null)], ComplementaryResourcesMap["A2L7"]
     );
 
     private static string A2L8() => C(
@@ -1194,7 +1194,7 @@ public static class DataSeeder
         [("When I was younger, I could climb trees.", "Past ability"), ("She couldn't cook when she was 15.", "Negative past ability"), ("Could you help me with this?", "Polite request"), ("Could he swim? — Yes, he could.", "Past ability question")],
         "Write 10 sentences: 5 about past abilities using 'could', and 5 polite requests using 'Could you...?'",
         "COULD is pronounced /kʊd/. In polite requests, 'Could you..?' sounds more formal than 'Can you...?' Use COULD for past events, not present ability.",
-        [("Could - Past Tense of Can", "Learn English with EnglishClass101.com", null), ("Modals of Ability in English", "English Speeches", null), ("Essential Grammar in Use Unit 16 — Could", "YouTube: Search 'Essential Grammar in Use Unit 16'", null)]
+        [("Could - Past Tense of Can", "Learn English with EnglishClass101.com", null), ("Modals of Ability in English", "English Speeches", null), ("Essential Grammar in Use Unit 16 — Could", "YouTube: Search 'Essential Grammar in Use Unit 16'", null)], ComplementaryResourcesMap["A2L8"]
     );
 
     private static string A2L9() => C(
@@ -1204,7 +1204,7 @@ public static class DataSeeder
         [("You should eat more vegetables.", "Health advice"), ("She shouldn't stay up so late.", "Negative advice"), ("I think you should apologize.", "Polite advice"), ("You should take a break.", "Recommendation")],
         "Give advice: Write 10 sentences with SHOULD/SHOULDN'T to advise a friend on health, study, work, and relationships.",
         "SHOULD /ʃʊd/ sounds similar to COULD /kʊd/ but means different things. SHOULD = good idea. MUST = necessity. Don't confuse them!",
-        [("Modal: SHOULD", "Papa English", null), ("Advice with SHOULD", "Learn English with EnglishClass101.com", null)]
+        [("Modal: SHOULD", "Papa English", null), ("Advice with SHOULD", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L9"]
     );
 
     private static string A2L10() => C(
@@ -1214,7 +1214,7 @@ public static class DataSeeder
         [("You must arrive on time.", "Obligation"), ("Students mustn't use phones in class.", "Prohibition"), ("Must I do the homework?", "Necessity question"), ("I must study for the exam.", "Strong obligation")],
         "Write 10 sentences with MUST/MUSTN'T: 5 about obligations and 5 about prohibitions.",
         "MUST /mʌst/ is pronounced with a short 'u' sound. MUSTN'T /ˈmʌsənt/ has a schwa in the middle. MUST is stronger than SHOULD.",
-        [("Modal: MUST", "Papa English", null), ("Must vs Should", "Learn English with EnglishClass101.com", null)]
+        [("Modal: MUST", "Papa English", null), ("Must vs Should", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L10"]
     );
 
     private static string A2L11() => C(
@@ -1224,7 +1224,7 @@ public static class DataSeeder
         [("My car is bigger than yours.", "Comparing two things"), ("January is colder than December in my country.", "Comparative in context"), ("She is more intelligent than her friend.", "Two-syllable adjective"), ("The red dress is nicer than the blue one.", "Clothing comparison")],
         "Write 10 comparative sentences comparing two people, things, or places using both -ER and MORE forms.",
         "Comparative pronunciation: 'bigger' /ˈbɪɡər/ and 'most beautiful' /ˌmoʊst ˈbjutɪfl/. Always use THAN after the comparative.",
-        [("Comparative Adjectives", "Papa English", null), ("English Comparatives", "Learn English with EnglishClass101.com", null)]
+        [("Comparative Adjectives", "Papa English", null), ("English Comparatives", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L11"]
     );
 
     private static string A2L12() => C(
@@ -1234,7 +1234,7 @@ public static class DataSeeder
         [("This is the best film I've ever seen.", "Superlative with 'ever'"), ("She is the most intelligent student in the class.", "Superlative comparison"), ("It was the coldest winter we had.", "Extreme in group"), ("These are the most expensive shoes in the store.", "Superlative in context")],
         "Write 10 superlative sentences describing the best, worst, or most extreme of people, things, or places you know.",
         "Superlative pronunciation: 'biggest' /ˈbɪɡɪst/ and 'most beautiful' /ˌmoʊst ˈbjutɪfl/. Always use THE before the superlative adjective.",
-        [("Superlative Adjectives", "Papa English", null), ("English Superlatives", "Learn English with EnglishClass101.com", null)]
+        [("Superlative Adjectives", "Papa English", null), ("English Superlatives", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L12"]
     );
 
     private static string A2L13() => C(
@@ -1244,7 +1244,7 @@ public static class DataSeeder
         [("I'm going to watch a film tomorrow.", "Plan"), ("She is going to study medicine at university.", "Intention"), ("We're going to have a picnic this Sunday.", "Arrangement"), ("It's going to rain later.", "Obvious future event")],
         "Write 10 sentences about your plans and intentions using 'going to': 5 positive and 5 negative.",
         "'Going to' is often pronounced 'gonna' /ˈɡɑnə/ in informal speech, but write 'going to' formally. Stress the time marker word.",
-        [("Future with Going To", "Papa English", null), ("Going To English Grammar", "Learn English with EnglishClass101.com", null)]
+        [("Future with Going To", "Papa English", null), ("Going To English Grammar", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L13"]
     );
 
     private static string A2L14() => C(
@@ -1254,7 +1254,7 @@ public static class DataSeeder
         [("Are you going to the cinema? — Yes, I am.", "Yes/no question"), ("What is he going to do tomorrow?", "Wh- question"), ("We aren't going to watch TV tonight.", "Negative statement"), ("Is she going to arrive on time? — No, she isn't.", "Question with negative answer")],
         "Write 12 future 'going to' questions and negatives: 6 yes/no questions and 6 negative statements.",
         "In questions with 'going to', the verb order is: AM/IS/ARE + subject + GOING TO + base verb. Wrong: 'You are going to do what?' Right: 'What are you going to do?'",
-        [("Going To Questions", "Learn English with EnglishClass101.com", null), ("Future with Going To", "English Speeches", null)]
+        [("Going To Questions", "Learn English with EnglishClass101.com", null), ("Future with Going To", "English Speeches", null)], ComplementaryResourcesMap["A2L14"]
     );
 
     private static string A2L15() => C(
@@ -1264,7 +1264,7 @@ public static class DataSeeder
         [("I think it will be sunny tomorrow.", "Prediction"), ("She will finish her work soon.", "Future fact"), ("Will he arrive on time?", "Question about future"), ("I'll help you with that.", "Spontaneous offer")],
         "Write 10 sentences making predictions about the future using 'will': 5 positive and 5 negative.",
         "WILL is pronounced /wɪl/ (strong) or /əl/ (weak). Contractions: I'LL /aɪl/, WON'T /woʊnt/ (irregular). Use 'will' for predictions, 'going to' for plans.",
-        [("Future with Will", "Papa English", null), ("Will Future Tense", "Learn English with EnglishClass101.com", null)]
+        [("Future with Will", "Papa English", null), ("Will Future Tense", "Learn English with EnglishClass101.com", null)], ComplementaryResourcesMap["A2L15"]
     );
 
     private static string A2L16() => C(
@@ -1274,7 +1274,7 @@ public static class DataSeeder
         [("I will help you move house.", "Promise"), ("Don't worry, I won't tell anyone.", "Promise of secrecy"), ("I'll buy the groceries on my way home.", "Spontaneous decision"), ("She will remember to send you a message.", "Promise about someone else")],
         "Write 10 sentences: 5 making promises with 'will' and 5 making spontaneous decisions with 'I'll'.",
         "'Will' in promises emphasizes commitment. I WILL do it (commitment) vs. I'm going to do it (plan already made). WON'T /woʊnt/ is irregular contraction of 'will not'.",
-        [("Promises with Will", "Learn English with EnglishClass101.com", null), ("Spontaneous Decisions - Will", "English Speeches", null)]
+        [("Promises with Will", "Learn English with EnglishClass101.com", null), ("Spontaneous Decisions - Will", "English Speeches", null)], ComplementaryResourcesMap["A2L16"]
     );
 
     private static string B1L1() => C(
@@ -1284,7 +1284,7 @@ public static class DataSeeder
         [("How long have you been learning English? — For two years.", "Duration question"), ("She has been working here since she graduated.", "Ongoing work situation"), ("They have been playing football all afternoon.", "Activity in progress"), ("I have been trying to call you all day.", "Repeated or continuous attempts")],
         "Write 8 Present Perfect Continuous sentences about your life: work, studies, hobbies, or projects. Include 'how long' in at least 3 sentences.",
         "The ING ending adds syllables. Stress pattern: 'I HAVE been STUDying' — stress on 'have' and the participle. In fast speech: 'I've-bin-STUDY-ing'.",
-        [("Present Perfect Continuous Tense", "Papa English", null), ("How Long Have You Been...", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 1 — Present Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 1'", null)]
+        [("Present Perfect Continuous Tense", "Papa English", null), ("How Long Have You Been...", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 1 — Present Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 1'", null)], ComplementaryResourcesMap["B1L1"]
     );
 
     private static string B1L2() => C(
@@ -1294,7 +1294,7 @@ public static class DataSeeder
         [("How long have you been learning English? — For two years.", "Duration question"), ("What have you been working on? — A new project.", "Activity question"), ("Haven't you been complaining about that?", "Emphasis on duration"), ("They haven't been studying for the exam.", "Negative statement")],
         "Write 10 questions and negatives using Present Perfect Continuous: 5 'How long...?' questions and 5 negative statements with 'haven't/hasn't been'.",
         "In questions, 'been' is usually unstressed: 'How LONG have you BIN waiting?' The stress falls on the question word and participle.",
-        [("Present Perfect Continuous Questions", "Learn English with EnglishClass101.com", null), ("Questions with How Long", "English Speeches", null), ("Essential Grammar in Use Unit 2 — Perfect Continuous Questions", "YouTube: Search 'Essential Grammar in Use Unit 2'", null)]
+        [("Present Perfect Continuous Questions", "Learn English with EnglishClass101.com", null), ("Questions with How Long", "English Speeches", null), ("Essential Grammar in Use Unit 2 — Perfect Continuous Questions", "YouTube: Search 'Essential Grammar in Use Unit 2'", null)], ComplementaryResourcesMap["B1L2"]
     );
 
     private static string B1L3() => C(
@@ -1304,7 +1304,7 @@ public static class DataSeeder
         [("She had studied French before she moved to Paris.", "Earlier event → later event"), ("By the time I woke up, everyone had left.", "Clear sequence with 'by the time'"), ("He realized he had forgotten his passport.", "Past realization about earlier action"), ("After she had finished university, she traveled the world.", "Completed past action before another")],
         "Write 8 Past Perfect sentences telling stories where one event happened before another. Use time expressions: before, after, by the time, by the time, as soon as, had just.",
         "'Had' is often contracted: 'I'd finished', 'she'd eaten'. In rapid speech: 'I-fin-isht'. The stress falls on the past participle, not 'had'.",
-        [("Past Perfect Tense Explained", "Papa English", null), ("Had vs Did - Past Perfect", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 3 — Past Perfect", "YouTube: Search 'Essential Grammar in Use Unit 3'", null)]
+        [("Past Perfect Tense Explained", "Papa English", null), ("Had vs Did - Past Perfect", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 3 — Past Perfect", "YouTube: Search 'Essential Grammar in Use Unit 3'", null)], ComplementaryResourcesMap["B1L3"]
     );
 
     private static string B1L4() => C(
@@ -1314,7 +1314,7 @@ public static class DataSeeder
         [("By the time he arrived, I had been waiting for an hour.", "Duration before a past event"), ("When the manager arrived, they had been working on it for days.", "Background action"), ("She had been teaching for thirty years when she retired.", "Total duration"), ("We had been traveling for weeks when we finally arrived home.", "Long journey narrative")],
         "Write 8 Past Perfect Continuous sentences about past experiences, travel, work, or projects where one action lasted for a duration before another happened.",
         "Past Perfect Continuous: had-BIN-working. 'Been' is unstressed. Stress falls on the participle: 'They HAD-bin WAIT-ing'. In rapid speech: sounds like one continuous phrase.",
-        [("Past Perfect Continuous Tense", "Papa English", null), ("How Long Had They Been...", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 4 — Past Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 4'", null)]
+        [("Past Perfect Continuous Tense", "Papa English", null), ("How Long Had They Been...", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 4 — Past Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 4'", null)], ComplementaryResourcesMap["B1L4"]
     );
 
     private static string B1L5() => C(
@@ -1324,7 +1324,7 @@ public static class DataSeeder
         [("At 8 PM, she will be watching the news.", "Action at a specific future time"), ("When you arrive, I will be cooking dinner.", "Future action in progress"), ("This time tomorrow, we will be flying to Paris.", "Future continuous moment"), ("Next year, they will be working on a new project.", "Expected future activity")],
         "Write 10 Future Continuous sentences: 5 about what you will be doing at specific times, and 5 about what others will be doing in the future.",
         "Will be: stress on WILL and the participle. 'I will-BE-STUDying'. In fast speech: sounds like one unit. Don't pause between 'be' and the participle.",
-        [("Future Continuous Tense", "Papa English", null), ("Will Be Doing - Future Continuous", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 5 — Future Continuous", "YouTube: Search 'Essential Grammar in Use Unit 5'", null)]
+        [("Future Continuous Tense", "Papa English", null), ("Will Be Doing - Future Continuous", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 5 — Future Continuous", "YouTube: Search 'Essential Grammar in Use Unit 5'", null)], ComplementaryResourcesMap["B1L5"]
     );
 
     private static string B1L6() => C(
@@ -1334,7 +1334,7 @@ public static class DataSeeder
         [("By the end of the year, she will have been teaching for 20 years.", "Career milestone"), ("When we meet again, I will have been living abroad for 3 years.", "Duration before future meeting"), ("By graduation, they will have been studying together for 4 years.", "Shared experience"), ("In six months, I will have been working on this project for a year.", "Project duration")],
         "Write 8 Future Perfect Continuous sentences about achievements, durations, and milestones you expect by certain future dates.",
         "Will have been: 4 stresses. But only stress WILL and the participle heavily. 'I will-HAVE-been STUDying.' In rapid speech it flows: will've-been.",
-        [("Future Perfect Continuous", "Papa English", null), ("Will Have Been Doing", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 6 — Future Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 6'", null)]
+        [("Future Perfect Continuous", "Papa English", null), ("Will Have Been Doing", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 6 — Future Perfect Continuous", "YouTube: Search 'Essential Grammar in Use Unit 6'", null)], ComplementaryResourcesMap["B1L6"]
     );
 
     private static string B1L7() => C(
@@ -1344,7 +1344,7 @@ public static class DataSeeder
         [("He can play tennis very well.", "Present ability"), ("When I was young, I could climb trees.", "Past ability"), ("She will be able to drive in two months.", "Future ability"), ("May I use the bathroom?", "Polite permission"), ("It might be cold tomorrow.", "Possibility")],
         "Write 10 sentences: 3 about present ability with 'can', 3 about past ability with 'could', 2 about future ability with 'will be able to', and 2 about possibility/permission with 'may/might'.",
         "'Can' has two pronunciations: strong /kæn/ and weak /kən/. 'Could' is /kʊd/. Practice weak forms: 'I-kən do it', 'He-kəd speak French'.",
-        [("Modal Verbs: CAN & COULD", "Papa English", null), ("Can Could Ability English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 7 — Modal Verbs for Ability", "YouTube: Search 'Essential Grammar in Use Unit 7'", null)]
+        [("Modal Verbs: CAN & COULD", "Papa English", null), ("Can Could Ability English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 7 — Modal Verbs for Ability", "YouTube: Search 'Essential Grammar in Use Unit 7'", null)], ComplementaryResourcesMap["B1L7"]
     );
 
     private static string B1L8() => C(
@@ -1354,7 +1354,7 @@ public static class DataSeeder
         [("You should eat more vegetables.", "Advice — SHOULD"), ("You must wear a helmet when biking.", "Strong obligation — MUST"), ("I have to work tomorrow.", "Necessity — HAVE TO"), ("You mustn't smoke in the hospital.", "Prohibition — MUSTN'T"), ("She needs to study hard for the exam.", "Necessity — NEED TO")],
         "Write 10 sentences: 3 with 'should' (advice), 3 with 'must' (obligation/prohibition), 2 with 'have to' (necessity), and 2 with 'need to' (necessity).",
         "MUST /mʌst/ vs SHOULD /ʃʊd/ — different vowel sounds. HAVE TO: stress on HAVE. NEED TO: stress on NEED. Practice the stress patterns.",
-        [("Modals: SHOULD MUST HAVE TO", "Papa English", null), ("Obligation and Advice Modals", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 8 — Obligation and Advice", "YouTube: Search 'Essential Grammar in Use Unit 8'", null)]
+        [("Modals: SHOULD MUST HAVE TO", "Papa English", null), ("Obligation and Advice Modals", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 8 — Obligation and Advice", "YouTube: Search 'Essential Grammar in Use Unit 8'", null)], ComplementaryResourcesMap["B1L8"]
     );
 
     private static string B1L9() => C(
@@ -1364,7 +1364,7 @@ public static class DataSeeder
         [("If it rains tomorrow, I will stay home.", "First Conditional"), ("If I had more money, I would travel the world.", "Second Conditional"), ("She would be happier if she lived near the sea.", "Hypothetical preference"), ("If you study hard, you'll pass the exam.", "Real future possibility")],
         "Write 10 conditional sentences: 5 first conditionals about possible futures, and 5 second conditionals about imaginary or unlikely situations.",
         "First: WILL contracts: I'll, you'll, she'll. Second: WOULD contracts: I'd, you'd, she'd. Both stress the IF clause: 'IF it rains, I'll stay' — 'if' is emphasized.",
-        [("First vs Second Conditional", "Papa English", null), ("If Clauses English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 9 — Conditional Sentences", "YouTube: Search 'Essential Grammar in Use Unit 9'", null)]
+        [("First vs Second Conditional", "Papa English", null), ("If Clauses English Grammar", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 9 — Conditional Sentences", "YouTube: Search 'Essential Grammar in Use Unit 9'", null)], ComplementaryResourcesMap["B1L9"]
     );
 
     private static string B1L10() => C(
@@ -1374,7 +1374,7 @@ public static class DataSeeder
         [("If we had left earlier, we wouldn't have missed the train.", "Third Conditional"), ("I wish I had studied more for the exam.", "Regret about past"), ("If I had known her, we could have become friends.", "Impossible past"), ("I wish I were taller.", "Present wish about unchangeable fact")],
         "Write 10 sentences: 5 third conditionals expressing regrets about the past, and 5 wishes about impossible/unreal situations (past or present).",
         "Third Conditional: 'If I-ad-KNOWN, I-would-have-HELPED'. Stress the main verbs: 'known' and 'helped'. WISH: /wɪʃ/ — practice natural stress and flow.",
-        [("Third Conditional Sentences", "Papa English", null), ("Wish Sentences - Present & Past", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 10 — Third Conditional & Wish", "YouTube: Search 'Essential Grammar in Use Unit 10'", null)]
+        [("Third Conditional Sentences", "Papa English", null), ("Wish Sentences - Present & Past", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 10 — Third Conditional & Wish", "YouTube: Search 'Essential Grammar in Use Unit 10'", null)], ComplementaryResourcesMap["B1L10"]
     );
 
     private static string B1L11() => C(
@@ -1384,7 +1384,7 @@ public static class DataSeeder
         [("English is spoken all over the world.", "Present passive"), ("The letter was written by the CEO.", "Past passive with agent"), ("My phone was stolen on the subway.", "Past passive, agent unknown"), ("These shoes are made in Italy.", "Present passive - origin")],
         "Write 10 passive sentences: 5 present passive and 5 past passive. Use topics: products, famous buildings, historical events, things that happened to you, or things you observe.",
         "Passive stress: 'The letter WAS-WRITten'. Agent with 'by' is less stressed: 'by auSTEN'. The participle carries the main stress.",
-        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 11 — Passive Voice", "YouTube: Search 'Essential Grammar in Use Unit 11'", null)]
+        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 11 — Passive Voice", "YouTube: Search 'Essential Grammar in Use Unit 11'", null)], ComplementaryResourcesMap["B1L11"]
     );
 
     private static string B1L12() => C(
@@ -1394,7 +1394,7 @@ public static class DataSeeder
         [("Direct: 'I like pizza.' → Reported: He said he liked pizza.", "Present → Past"), ("Direct: 'Where is the station?' → Reported: She asked where the station was.", "WH question"), ("Direct: 'Will you help?' → Reported: He asked if I would help.", "Yes/No question"), ("Direct: 'I have finished.' → Reported: She said she had finished.", "Present Perfect → Past Perfect")],
         "Convert 8 sentences from direct to reported speech: 3 statements, 3 yes/no questions, and 2 wh-questions. Focus on tense shifts, pronouns, and time expressions.",
         "'Said' is /sed/ (rhymes with 'bed'). 'Asked' is /æskt/. In reported speech, these verbs are often unstressed: 'She SAID she was going'.",
-        [("Reported Speech - Indirect Speech", "Papa English", null), ("Direct and Indirect Speech", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 12 — Reported Speech", "YouTube: Search 'Essential Grammar in Use Unit 12'", null)]
+        [("Reported Speech - Indirect Speech", "Papa English", null), ("Direct and Indirect Speech", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 12 — Reported Speech", "YouTube: Search 'Essential Grammar in Use Unit 12'", null)], ComplementaryResourcesMap["B1L12"]
     );
 
     private static string B2L1() => C(
@@ -1404,7 +1404,7 @@ public static class DataSeeder
         [("English is spoken all over the world.", "Present passive — general fact"), ("The letter was written by the CEO.", "Past passive — agent specified"), ("My phone was stolen on the subway.", "Past passive — unknown agent"), ("These shoes are made in Italy.", "Present passive — origin")],
         "Write 6 passive sentences: 3 in present passive and 3 in past passive. Write about products you use, famous buildings, historical events, or things that happened to you.",
         "In passive sentences, the past participle carries main stress: 'The letter WAS WRITten'. Practice the rhythm: was/were are unstressed, the participle is stressed.",
-        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 13 — Passive Voice Focus", "YouTube: Search 'Essential Grammar in Use Unit 13'", null)]
+        [("Passive Voice Explained", "Papa English", null), ("Passive Voice in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 13 — Passive Voice Focus", "YouTube: Search 'Essential Grammar in Use Unit 13'", null)], ComplementaryResourcesMap["B2L1"]
     );
 
     private static string B2L2() => C(
@@ -1414,7 +1414,7 @@ public static class DataSeeder
         [("All homework must be submitted by Friday.", "Obligation — must be"), ("Mistakes should be corrected before submission.", "Recommendation — should be"), ("The report can be found on the website.", "Possibility — can be"), ("The flight might be delayed due to weather.", "Uncertainty — might be")],
         "Write 5 passive sentences with modals. Write rules or guidelines for a real situation: workplace policy, school rules, or environmental regulations.",
         "'Should be' sounds like 'SHUD-bee'. 'Must be' sounds like 'MUST-bee'. The passive 'be' is unstressed — focus on the modal and participle.",
-        [("Passive Voice with Modals", "Papa English", null), ("Modal Verbs with Passive Voice", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 14 — Modal Passive", "YouTube: Search 'Essential Grammar in Use Unit 14'", null)]
+        [("Passive Voice with Modals", "Papa English", null), ("Modal Verbs with Passive Voice", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 14 — Modal Passive", "YouTube: Search 'Essential Grammar in Use Unit 14'", null)], ComplementaryResourcesMap["B2L2"]
     );
 
     private static string B2L3() => C(
@@ -1424,7 +1424,7 @@ public static class DataSeeder
         [("Direct: 'I love English.' → She said she loved English.", "Present → Past"), ("Direct: 'We are leaving.' → They said they were leaving.", "Continuous → Past Continuous"), ("Direct: 'I will call you.' → He said he would call me.", "Will → Would"), ("Direct: 'I can swim.' → She said she could swim.", "Can → Could")],
         "Think of a recent conversation. Report 5 things that were said using 'said that', 'told me that', 'mentioned that', or 'explained that'.",
         "'Said' is pronounced SED (rhymes with 'bed') — not 'sayd'. 'Told' is TOHLD. These are the most common reporting verbs — correct pronunciation matters.",
-        [("Reported Speech", "Papa English", null), ("Reported Speech in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 15 — Reported Statements", "YouTube: Search 'Essential Grammar in Use Unit 15'", null)]
+        [("Reported Speech", "Papa English", null), ("Reported Speech in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 15 — Reported Statements", "YouTube: Search 'Essential Grammar in Use Unit 15'", null)], ComplementaryResourcesMap["B2L3"]
     );
 
     private static string B2L4() => C(
@@ -1434,7 +1434,7 @@ public static class DataSeeder
         [("'Where do you work?' → He asked me where I worked.", "Wh- question reported"), ("'Are you coming?' → She asked if I was coming.", "Yes/No → 'if'"), ("'Do you speak Spanish?' → She wanted to know whether I spoke Spanish.", "Using 'whether'")],
         "Write 5 reported questions. Imagine someone asked you these things at a job interview or on a first date. Use different reporting phrases.",
         "'Whether' is pronounced WETH-er — exactly like 'weather'. They are homophones. In writing: 'whether' for reported questions, 'weather' for climate.",
-        [("Reported Questions", "Papa English", null), ("Reported Questions in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 16 — Reported Questions", "YouTube: Search 'Essential Grammar in Use Unit 16'", null)]
+        [("Reported Questions", "Papa English", null), ("Reported Questions in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 16 — Reported Questions", "YouTube: Search 'Essential Grammar in Use Unit 16'", null)], ComplementaryResourcesMap["B2L4"]
     );
 
     private static string B2L5() => C(
@@ -1444,7 +1444,7 @@ public static class DataSeeder
         [("I wish I were taller.", "Present unreal situation"), ("If only I had listened to my parents.", "Regret about past"), ("I wish I could go back in time.", "Impossible aspiration"), ("She wishes he would apologize.", "Wanting someone else to do something")],
         "Write 7 sentences using 'wish' and 'if only': 2 expressing present regrets, 2 about past regrets, 2 about future wishes, and 1 about someone else's action.",
         "'I wish I were' (subjunctive) is formal; 'I wish I was' is common in spoken English. Both are acceptable, but 'were' sounds more educated. In reporting: 'I wish I had known' — stress 'HAD' and 'KNOWN'.",
-        [("Wish and If Only English Grammar", "Papa English", null), ("Expressing Regrets with Wish", "Learn English with EnglishClass101.com", null), ("If Only and Wish Structures", "Cambridge English", null), ("Essential Grammar in Use Unit 17 — Wish and Regret", "YouTube: Search 'Essential Grammar in Use Unit 17'", null)]
+        [("Wish and If Only English Grammar", "Papa English", null), ("Expressing Regrets with Wish", "Learn English with EnglishClass101.com", null), ("If Only and Wish Structures", "Cambridge English", null), ("Essential Grammar in Use Unit 17 — Wish and Regret", "YouTube: Search 'Essential Grammar in Use Unit 17'", null)], ComplementaryResourcesMap["B2L5"]
     );
 
     private static string B2L6() => C(
@@ -1454,7 +1454,7 @@ public static class DataSeeder
         [("It was the internet that changed everything.", "Emphasis on cause"), ("What really matters is your health.", "Pseudo-cleft to emphasize value"), ("It was at the conference where I met him.", "Emphasis on location"), ("It is discipline, not talent, that leads to success.", "Contrastive emphasis")],
         "Rewrite 6 sentences using cleft structures to emphasize different parts: 2 'it was... who' sentences, 2 'what... is' sentences, and 2 contrasting clefts.",
         "The emphasis comes AFTER 'be': 'It WAS Sarah who won' or 'It was SARAH who won' — both are correct depending on what you want to emphasize. Stress shifts the focus.",
-        [("Cleft Sentences in English", "Papa English", null), ("It Cleft Sentences", "Learn English with EnglishClass101.com", null), ("Emphasis with Cleft Structures", "Cambridge English", null), ("Essential Grammar in Use Unit 18 — Cleft Sentences", "YouTube: Search 'Essential Grammar in Use Unit 18'", null)]
+        [("Cleft Sentences in English", "Papa English", null), ("It Cleft Sentences", "Learn English with EnglishClass101.com", null), ("Emphasis with Cleft Structures", "Cambridge English", null), ("Essential Grammar in Use Unit 18 — Cleft Sentences", "YouTube: Search 'Essential Grammar in Use Unit 18'", null)], ComplementaryResourcesMap["B2L6"]
     );
 
     private static string B2L7() => C(
@@ -1464,7 +1464,7 @@ public static class DataSeeder
         [("I had to carry out the project despite obstacles.", "Perform/execute"), ("The situation calls for cutting down on expenses.", "Reduce consumption"), ("He looked into the matter thoroughly.", "Investigate"), ("The scandal came out last week.", "Be revealed"), ("We need to face up to our mistakes.", "Acknowledge and accept")],
         "Write 8 sentences using different advanced phrasal verbs. Create a narrative about overcoming challenges or a business scenario.",
         "Stress in phrasal verbs: the PARTICLE typically gets the stress: 'PUT up WITH', 'COME a-CROSS', 'RUN IN-to'. This distinguishes them from regular verbs with prepositions.",
-        [("Advanced Phrasal Verbs", "Papa English", null), ("Phrasal Verbs in English", "Learn English with EnglishClass101.com", null), ("Phrasal Verbs for Upper Intermediate", "English Speeches", null), ("Essential Grammar in Use Unit 19 — Phrasal Verbs", "YouTube: Search 'Essential Grammar in Use Unit 19'", null)]
+        [("Advanced Phrasal Verbs", "Papa English", null), ("Phrasal Verbs in English", "Learn English with EnglishClass101.com", null), ("Phrasal Verbs for Upper Intermediate", "English Speeches", null), ("Essential Grammar in Use Unit 19 — Phrasal Verbs", "YouTube: Search 'Essential Grammar in Use Unit 19'", null)], ComplementaryResourcesMap["B2L7"]
     );
 
     private static string B2L8() => C(
@@ -1474,7 +1474,7 @@ public static class DataSeeder
         [("There are many opportunities in this field.", "Many with countable plural"), ("I have much respect for her work.", "Much with uncountable"), ("Some students prefer morning classes.", "Some in positive statement"), ("I don't want any sugar in my coffee.", "Any in negative"), ("The information provided was accurate.", "The with specific information")],
         "Write 8 sentences using quantifiers and articles correctly. Write about a topic of interest: travel, education, hobbies, or workplace.",
         "Quantifiers are often weak/unstressed: 'a few STUDENTS', 'much RESPect'. The noun after gets the stress. Articles are completely unstressed: 'ə BOOK', 'ðə BOOK'.",
-        [("Quantifiers and Determiners", "Learn English with Papa English", null), ("Articles A An The in English", "Cambridge English", null), ("Countable and Uncountable Nouns", "English Speeches", null), ("Essential Grammar in Use Unit 20 — Quantifiers and Articles", "YouTube: Search 'Essential Grammar in Use Unit 20'", null)]
+        [("Quantifiers and Determiners", "Learn English with Papa English", null), ("Articles A An The in English", "Cambridge English", null), ("Countable and Uncountable Nouns", "English Speeches", null), ("Essential Grammar in Use Unit 20 — Quantifiers and Articles", "YouTube: Search 'Essential Grammar in Use Unit 20'", null)], ComplementaryResourcesMap["B2L8"]
     );
 
     private static string B2L9() => C(
@@ -1484,7 +1484,7 @@ public static class DataSeeder
         [("I know someone who speaks five languages.", "Defining with who"), ("Sarah, who is my colleague, gave the presentation.", "Non-defining with who"), ("The book that I read was fascinating.", "Defining with that"), ("The restaurant, which is very popular, is fully booked.", "Non-defining with which"), ("The reason why they left is unclear.", "Relative adverb: why")],
         "Write 10 sentences: 5 with defining relative clauses and 5 with non-defining relative clauses. Mix different relative pronouns.",
         "In defining clauses, 'that' is stressed if it's important: 'THE PERSON THAT helped me...' In non-defining clauses with commas, the relative pronoun is lighter. Watch 'Essential Grammar in Use Unit 21' for more examples.",
-        [("Defining vs Non-defining Clauses", "Papa English", null), ("Relative Clauses in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 21 — Advanced Phrasal Verbs and Patterns", "YouTube: Search 'Essential Grammar in Use Unit 21'", null)]
+        [("Defining vs Non-defining Clauses", "Papa English", null), ("Relative Clauses in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 21 — Advanced Phrasal Verbs and Patterns", "YouTube: Search 'Essential Grammar in Use Unit 21'", null)], ComplementaryResourcesMap["B2L9"]
     );
 
     private static string B2L10() => C(
@@ -1494,7 +1494,7 @@ public static class DataSeeder
         [("She drives carefully.", "Adverb of manner at end"), ("I usually arrive early.", "Frequency adverb before verb"), ("This cake is extremely delicious.", "Adverb of degree before adjective"), ("He works hard.", "Adjective/adverb homonyms")],
         "Write 10 sentences using different types of adverbs: 3 of manner, 3 of frequency, 2 of degree, and 2 irregular adverbs.",
         "Adverb stress: -ly adverbs are usually unstressed: 'She walked QUICK-ly' — the root syllable gets main stress. Some adverbs have irregular stress: 'FREquent-ly' (stress 1st). Watch 'Essential Grammar in Use Unit 22' for more examples.",
-        [("Adverbs of Manner", "Papa English", null), ("Adverb Placement in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 22 — Adjectives and Modifiers", "YouTube: Search 'Essential Grammar in Use Unit 22'", null)]
+        [("Adverbs of Manner", "Papa English", null), ("Adverb Placement in English", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 22 — Adjectives and Modifiers", "YouTube: Search 'Essential Grammar in Use Unit 22'", null)], ComplementaryResourcesMap["B2L10"]
     );
 
     private static string B2L11() => C(
@@ -1504,7 +1504,7 @@ public static class DataSeeder
         [("She is smart, but she doesn't work hard.", "Coordinating: contrast"), ("Because it was raining, we stayed inside.", "Subordinating: reason"), ("I will wait here unless you tell me to leave.", "Subordinating: condition"), ("He studied hard; therefore, he passed.", "Conjunctive adverb: result")],
         "Write 8 sentences: 3 with coordinating conjunctions, 3 with subordinating conjunctions, and 2 with conjunctive adverbs.",
         "Conjunctions often carry little stress — they're 'glue' words. 'I'll go AND you'll stay' — 'and' is light. But 'although' in an introductory clause gets slight emphasis. Watch 'Essential Grammar in Use Unit 23' for more examples.",
-        [("Conjunctions in English Grammar", "Papa English", null), ("Subordinating and Coordinating Conjunctions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 23 — Adverb Formation and Placement", "YouTube: Search 'Essential Grammar in Use Unit 23'", null)]
+        [("Conjunctions in English Grammar", "Papa English", null), ("Subordinating and Coordinating Conjunctions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 23 — Adverb Formation and Placement", "YouTube: Search 'Essential Grammar in Use Unit 23'", null)], ComplementaryResourcesMap["B2L11"]
     );
 
     private static string B2L12() => C(
@@ -1514,7 +1514,7 @@ public static class DataSeeder
         [("She was sitting at the cafe.", "Place: at"), ("We'll meet on Friday at 3 PM.", "Time: on + at"), ("The cat jumped onto the table.", "Direction: onto"), ("Instead of complaining, take action.", "Alternative: instead of"), ("Apart from the cost, it's a great idea.", "Exclusion: apart from")],
         "Write 8 sentences using different prepositions of place, time, and direction. Then write 2 sentences using complex prepositions.",
         "Prepositions are usually unstressed: 'I'm IN the house' — 'in' is light. But in poetic or emphatic speech, you can stress them: 'It's IN the house, not ON it.' Watch 'Essential Grammar in Use Unit 24' for more examples.",
-        [("Prepositions of Time, Place, Movement", "Papa English", null), ("English Prepositions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 24 — Coordinating and Subordinating Conjunctions", "YouTube: Search 'Essential Grammar in Use Unit 24'", null)]
+        [("Prepositions of Time, Place, Movement", "Papa English", null), ("English Prepositions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 24 — Coordinating and Subordinating Conjunctions", "YouTube: Search 'Essential Grammar in Use Unit 24'", null)], ComplementaryResourcesMap["B2L12"]
     );
 
     private static string B2L13() => C(
@@ -1524,7 +1524,7 @@ public static class DataSeeder
         [("Despite his youth, he was very mature.", "Despite + noun"), ("In addition to English, she speaks French.", "Multi-word preposition with noun"), ("According to recent statistics, unemployment is falling.", "According to + authority"), ("In view of the evidence, we must reconsider.", "Formal preposition in writing"), ("She succeeded without any help.", "Preposition with -ing form")],
         "Write 10 sentences using advanced prepositions, particularly multi-word prepositions. Use contexts: academic writing, formal communication, news reports.",
         "Multi-word prepositions are typically unstressed: 'in SPITE of the rain' — the stress falls on the noun, not the preposition phrase. Watch 'Essential Grammar in Use Unit 25' for more examples.",
-        [("Advanced Prepositions in English", "Papa English", null), ("Multi-word Prepositions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 25 — Prepositions of Time and Place", "YouTube: Search 'Essential Grammar in Use Unit 25'", null)]
+        [("Advanced Prepositions in English", "Papa English", null), ("Multi-word Prepositions", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 25 — Prepositions of Time and Place", "YouTube: Search 'Essential Grammar in Use Unit 25'", null)], ComplementaryResourcesMap["B2L13"]
     );
 
     private static string B2L14() => C(
@@ -1534,7 +1534,7 @@ public static class DataSeeder
         [("I had to call off the meeting.", "Separate: call + off"), ("She's looking after her sister.", "Inseparable: look after"), ("I'm looking forward to the vacation.", "Three-word phrasal verb"), ("We came across some interesting research.", "Inseparable: come across"), ("He ran into his ex-girlfriend at the store.", "Inseparable: run into")],
         "Write 10 sentences using a variety of phrasal verbs: 3 separable, 3 inseparable, 2 transitive, and 2 three-word phrasal verbs. Create a coherent narrative about work or study.",
         "Stress in phrasal verbs: the PARTICLE gets the stress, not the verb: 'CARRY out' (not 'carry OUT'). This distinguishes them from regular verb + preposition. Watch 'Essential Grammar in Use Unit 26' for more examples.",
-        [("Phrasal Verbs List B2", "Papa English", null), ("Advanced Phrasal Verbs", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 26 — Complex Prepositions", "YouTube: Search 'Essential Grammar in Use Unit 26'", null)]
+        [("Phrasal Verbs List B2", "Papa English", null), ("Advanced Phrasal Verbs", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 26 — Complex Prepositions", "YouTube: Search 'Essential Grammar in Use Unit 26'", null)], ComplementaryResourcesMap["B2L14"]
     );
 
     private static string B2L15() => C(
@@ -1544,7 +1544,7 @@ public static class DataSeeder
         [("We reached a compromise after long discussions.", "Collocation: reach + compromise"), ("She is deeply committed to her work.", "Collocation: deeply + committed"), ("Making a hasty decision often leads to regret.", "Collocation: hasty + decision"), ("The policy faced strong opposition from the public.", "Collocation: strong + opposition"), ("I have a burning desire to travel the world.", "Collocation: burning + desire")],
         "Write a paragraph (8-10 sentences) using at least 8 different collocations. Choose a topic: a career goal, a personal achievement, or a difficult life decision.",
         "Collocations flow naturally as units: 'make-a-decision' sounds like one phrase. 'Do a decision' sounds wrong because it breaks the natural rhythm native speakers expect. Watch 'Essential Grammar in Use Unit 27' for more examples.",
-        [("Common English Collocations", "Papa English", null), ("Verb + Noun Collocations", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 27 — Advanced Prepositions", "YouTube: Search 'Essential Grammar in Use Unit 27'", null)]
+        [("Common English Collocations", "Papa English", null), ("Verb + Noun Collocations", "Learn English with EnglishClass101.com", null), ("Essential Grammar in Use Unit 27 — Advanced Prepositions", "YouTube: Search 'Essential Grammar in Use Unit 27'", null)], ComplementaryResourcesMap["B2L15"]
     );
 
     private static string B2L16() => C(
@@ -1554,7 +1554,7 @@ public static class DataSeeder
         [("Formal: 'I would like to express my gratitude.' / Informal: 'Thanks so much.'", "Register contrast"), ("This matter requires our urgent attention.", "Formal register in business"), ("The project aims to facilitate community development.", "Formal + nominalization"), ("Can you send me the files? — Yeah, sure.", "Informal register")],
         "Rewrite these informal sentences in formal register: 1) Hey, I want to ask about the job. 2) We can't do it because we don't have enough money. 3) The results show that our plan is good. 4) You gotta be careful with this stuff. 5) Basically, everyone thinks this is not a good idea.",
         "In formal speech, your pace should be measured and deliberate. Avoid 'um', 'uh', 'like', 'basically', 'you know'. Maintain full, clear vowel pronunciation. Watch 'Essential Grammar in Use Unit 28' for more examples.",
-        [("Formal vs Informal English", "Papa English", null), ("Register in English Communication", "Cambridge English", null), ("Essential Grammar in Use Unit 28 — Phrasal Verbs and Expressions", "YouTube: Search 'Essential Grammar in Use Unit 28'", null)]
+        [("Formal vs Informal English", "Papa English", null), ("Register in English Communication", "Cambridge English", null), ("Essential Grammar in Use Unit 28 — Phrasal Verbs and Expressions", "YouTube: Search 'Essential Grammar in Use Unit 28'", null)], ComplementaryResourcesMap["B2L16"]
     );
 
     private static string C1L1() => C(
@@ -1564,7 +1564,7 @@ public static class DataSeeder
         [("Never have I seen such dedication.", "Never + inversion"), ("Not only did she pass, but she got the highest score.", "Not only + inversion"), ("Hardly had I sat down when the phone rang.", "Hardly + had + inversion"), ("Rarely does the committee agree on anything.", "Rarely + does + inversion")],
         "Rewrite these 5 sentences using inversion for emphasis: 1) I have never worked so hard. 2) She rarely makes mistakes. 3) I had barely fallen asleep when the alarm went off. 4) He not only failed the test but also lost his scholarship. 5) You will only understand when you experience it yourself.",
         "Inversion creates a dramatic, authoritative tone in speech. Drop your pitch at the end rather than rising. 'Never HAVE I seen...' — stress the auxiliary. Watch 'Advanced Grammar in Use Unit 1 — Present Perfect Continuous'.",
-        [("Inversion for Emphasis", "Papa English", null), ("Advanced Inversion in English", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 1 — Present Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 1'", null)]
+        [("Inversion for Emphasis", "Papa English", null), ("Advanced Inversion in English", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 1 — Present Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 1'", null)], ComplementaryResourcesMap["C1L1"]
     );
 
     private static string C1L2() => C(
@@ -1574,7 +1574,7 @@ public static class DataSeeder
         [("If I had taken that job, I would be living in New York now.", "Past condition → present result"), ("If she were more patient, she would have handled it better.", "Present trait → past result"), ("He would be a millionaire now if he hadn't sold those shares.", "Inverted order")],
         "Write 4 mixed conditional sentences about your own life. Think about: a past choice and how it affects your present; or a character trait you have and how it affected a past situation.",
         "'Would have' in fast speech sounds like 'would've' (WOOD-uv) or 'woulda'. 'Should have' → 'should've' (SHUD-uv). Essential for listening comprehension. Watch 'Advanced Grammar in Use Unit 2 — Present Perfect Continuous questions'.",
-        [("Mixed Conditionals", "Papa English", null), ("Mixed Conditional Sentences", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 2 — Present Perfect Continuous questions", "YouTube: Search 'Advanced Grammar in Use Unit 2'", null)]
+        [("Mixed Conditionals", "Papa English", null), ("Mixed Conditional Sentences", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 2 — Present Perfect Continuous questions", "YouTube: Search 'Advanced Grammar in Use Unit 2'", null)], ComplementaryResourcesMap["C1L2"]
     );
 
     private static string C1L3() => C(
@@ -1584,7 +1584,7 @@ public static class DataSeeder
         [("The study demonstrates a significant correlation between diet and health.", "Formal verb 'demonstrates'"), ("The situation was further exacerbated by the lack of resources.", "Formal adjective + nominalization"), ("The analysis reveals several key findings.", "Nominalization: analyze → analysis"), ("It is worth noting that these results may not be generalizable.", "Hedging + formal vocabulary")],
         "Rewrite these informal sentences in formal style: 1) The problem got worse because of the weather. 2) We need to look at this more carefully. 3) The results show that our idea was right. 4) They're trying to make things better for poor people. 5) Nobody knows why this happens.",
         "In formal spoken English (presentations, interviews), avoid 'gonna', 'wanna', 'kinda'. Say 'going to', 'want to', 'kind of'. Formal speech is clearer and more deliberate. Watch 'Advanced Grammar in Use Unit 3 — Past Perfect'.",
-        [("Formal Academic English", "Papa English", null), ("Academic Vocabulary", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 3 — Past Perfect", "YouTube: Search 'Advanced Grammar in Use Unit 3'", null)]
+        [("Formal Academic English", "Papa English", null), ("Academic Vocabulary", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 3 — Past Perfect", "YouTube: Search 'Advanced Grammar in Use Unit 3'", null)], ComplementaryResourcesMap["C1L3"]
     );
 
     private static string C1L4() => C(
@@ -1594,7 +1594,7 @@ public static class DataSeeder
         [("She gave an outstanding presentation that left everyone speechless.", "Collocation: give a presentation"), ("He was beside himself with joy when he passed the exam.", "Idiom: beside yourself"), ("Losing the contract turned out to be a blessing in disguise.", "Idiom in context"), ("The committee reached a deadlock and adjourned the meeting.", "Collocation + formal vocabulary")],
         "Write a short paragraph (6–8 sentences) about a challenging situation. Use at least 3 collocations and 2 idioms from this lesson. The situation can be real or invented.",
         "Idioms are spoken as fixed chunks — 'blessing in disguise' flows as one unit: BLESS-ing-in-dis-GIZE. Do not pause between words. The rhythm is key. Watch 'Advanced Grammar in Use Unit 4 — Past Perfect Continuous'.",
-        [("English Collocations and Idioms", "Papa English", null), ("Common Idioms in English", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 4 — Past Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 4'", null)]
+        [("English Collocations and Idioms", "Papa English", null), ("Common Idioms in English", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 4 — Past Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 4'", null)], ComplementaryResourcesMap["C1L4"]
     );
 
     private static string C1L5() => C(
@@ -1604,7 +1604,7 @@ public static class DataSeeder
         [("Rather than: 'We discovered that the system was inefficient.' / Better: 'Our discovery revealed systemic inefficiency.'", "Nominalization for sophistication"), ("The development of new strategies led to improved outcomes.", "Development as nominalization"), ("His analysis of the problem demonstrated considerable insight.", "Possessive + nominalization"), ("The implementation of the policy faced significant resistance.", "Nominalization in formal context")],
         "Rewrite these sentences using nominalization: 1) The researchers examined the data carefully. 2) We developed three solutions. 3) The company transformed its approach. 4) The government approved the bill. 5) She contributed significantly to the project.",
         "Nominalizations shift stress: 'development' is DEV-elop-ment (stress 1st syllable). 'Discovery' is dis-KUV-er-ee. The stress often differs from the verb form. Watch 'Advanced Grammar in Use Unit 5 — Future Continuous'.",
-        [("Nominalization in Academic Writing", "Papa English", null), ("Transform Verbs to Nouns", "Learn English with EnglishClass101.com", null), ("Advanced Nominalizations", "Cambridge English", null), ("Advanced Grammar in Use Unit 5 — Future Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 5'", null)]
+        [("Nominalization in Academic Writing", "Papa English", null), ("Transform Verbs to Nouns", "Learn English with EnglishClass101.com", null), ("Advanced Nominalizations", "Cambridge English", null), ("Advanced Grammar in Use Unit 5 — Future Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 5'", null)], ComplementaryResourcesMap["C1L5"]
     );
 
     private static string C1L6() => C(
@@ -1614,7 +1614,7 @@ public static class DataSeeder
         [("The data are inconclusive; nevertheless, the trend is evident.", "Discourse marker: nevertheless"), ("Due to the recession, sales declined. Consequently, staff were reduced.", "Cause-effect link"), ("The evidence supports this view. Moreover, recent findings confirm it.", "Addition marker"), ("In the first case, investment was high. Conversely, returns were minimal.", "Contrast between cases")],
         "Write a 10-12 sentence paragraph on a topic of your choice. Use at least 6 different discourse markers to link your ideas logically. Aim for sophisticated connections.",
         "Discourse markers are typically unstressed: 'nev-ER-the-less' — 'nonetheless' flows as a bridge between ideas. 'Consequently' is CON-se-quent-ly — the emphasis is on the thought-connection, not the word. Watch 'Advanced Grammar in Use Unit 6 — Future Perfect Continuous'.",
-        [("Discourse Markers and Connectors", "Papa English", null), ("Advanced Linking Words and Phrases", "Cambridge English", null), ("Cohesion in Academic Writing", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 6 — Future Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 6'", null)]
+        [("Discourse Markers and Connectors", "Papa English", null), ("Advanced Linking Words and Phrases", "Cambridge English", null), ("Cohesion in Academic Writing", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 6 — Future Perfect Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 6'", null)], ComplementaryResourcesMap["C1L6"]
     );
 
     private static string C1L7() => C(
@@ -1624,7 +1624,7 @@ public static class DataSeeder
         [("'I like chocolate.' 'So do I.' (substitution)", "Do-substitution in agreement"), ("He visited three countries; she four.", "Ellipsis in comparative"), ("'Which office are you in?' / 'It's the one John is in.' (stranding)", "Preposition stranding"), ("Some students passed; others did not.", "Substitution with 'did'")],
         "Rewrite these sentences using ellipsis or substitution where appropriate: 1) John bought a car; Mary bought a car. 2) Do you want to join us? I want to join you. 3) She's more experienced than he is experienced. 4) Which research did you rely on? 5) Some agree with the policy; some don't agree.",
         "Ellipsis creates rhythm in speech: 'John went to Paris; Sarah to Rome.' The second clause is faster and lighter because words are omitted. This mirrors natural pauses. Watch 'Advanced Grammar in Use Unit 7 — Modal Deduction'.",
-        [("Ellipsis in English Grammar", "Papa English", null), ("Substitution and Ellipsis", "Cambridge English", null), ("Advanced Pronoun Substitution", "English Speeches", null), ("Advanced Grammar in Use Unit 7 — Modal Deduction", "YouTube: Search 'Advanced Grammar in Use Unit 7'", null)]
+        [("Ellipsis in English Grammar", "Papa English", null), ("Substitution and Ellipsis", "Cambridge English", null), ("Advanced Pronoun Substitution", "English Speeches", null), ("Advanced Grammar in Use Unit 7 — Modal Deduction", "YouTube: Search 'Advanced Grammar in Use Unit 7'", null)], ComplementaryResourcesMap["C1L7"]
     );
 
     private static string C1L8() => C(
@@ -1634,7 +1634,7 @@ public static class DataSeeder
         [("The company insists that all employees be trained thoroughly.", "Subjunctive in business context"), ("It is essential that these standards be maintained.", "Formal requirement"), ("He should have known better.", "Perfect modal: criticism"), ("She might have taken a different approach.", "Perfect modal: speculation"), ("I recommend that this policy be reconsidered.", "Subjunctive in formal proposal")],
         "Write 8 sentences: 4 using subjunctive (insist, recommend, it is essential that, it is vital that) and 4 using perfect modals (should have, could have, might have, may have) to express regret, criticism, or speculation.",
         "The subjunctive is often not pronounced differently from the indicative, but formal speech emphasizes the 'be': 'I insist that she BE present' — the 'be' sounds deliberate. Watch 'Advanced Grammar in Use Unit 8 — Modal Deduction Continuous'.",
-        [("Subjunctive Mood in English", "Papa English", null), ("Perfect Modal Verbs", "Cambridge English", null), ("Advanced Modal Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 8 — Modal Deduction Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 8'", null)]
+        [("Subjunctive Mood in English", "Papa English", null), ("Perfect Modal Verbs", "Cambridge English", null), ("Advanced Modal Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 8 — Modal Deduction Continuous", "YouTube: Search 'Advanced Grammar in Use Unit 8'", null)], ComplementaryResourcesMap["C1L8"]
     );
 
     private static string C1L9() => C(
@@ -1644,7 +1644,7 @@ public static class DataSeeder
         [("She said that she would attend the conference next month.", "Tense shift: present → conditional"), ("He asked me whether I had finished the report.", "Reported question with backshift"), ("The witness admitted that she had seen the suspect near the building.", "Reported admission with perfect"), ("The doctor told me to reduce my stress levels.", "Reported instruction"), ("They insisted that the proposal be reconsidered.", "Reported insistence with subjunctive")],
         "Convert 8 direct speech sentences into reported speech, including at least one reported question, one reported command, one reported negative statement, and one using a formal reporting verb (acknowledge, admitted, alleged, denied).",
         "In formal speech, 'he said' flows naturally, but in academic contexts, use varied reporting verbs: 'he argued', 'she proposed', 'they contended'. Reporting verbs signal your stance toward the information. Watch 'Advanced Grammar in Use Unit 9 — Had to and Could'.",
-        [("Reported Speech in English", "Papa English", null), ("Reporting Verbs and Advanced Structures", "Cambridge English", null), ("Indirect Speech Transformation", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 9 — Had to and Could", "YouTube: Search 'Advanced Grammar in Use Unit 9'", null)]
+        [("Reported Speech in English", "Papa English", null), ("Reporting Verbs and Advanced Structures", "Cambridge English", null), ("Indirect Speech Transformation", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 9 — Had to and Could", "YouTube: Search 'Advanced Grammar in Use Unit 9'", null)], ComplementaryResourcesMap["C1L9"]
     );
 
     private static string C1L10() => C(
@@ -1654,7 +1654,7 @@ public static class DataSeeder
         [("She said she had been waiting for hours.", "Backshift: continuous to perfect continuous"), ("He insists that students be given more time to complete the exam.", "Reported subjunctive"), ("The report suggested that if the trend continued, demand would triple.", "Reported conditional"), ("She wondered whether anyone would volunteer.", "Embedded question"), ("They asserted that the findings contradicted previous research.", "Formal reporting verb")],
         "Write a dialogue (6-8 exchanges) between two people discussing a disagreement. Then convert it into reported speech, using backshift, at least one reported subjunctive, and at least 5 different reporting verbs.",
         "When reporting, your intonation subtly expresses your stance: skeptical 'She claimed...' vs. neutral 'She said...' vs. endorsing 'She correctly noted...' Watch 'Advanced Grammar in Use Unit 10 — Semi-modals'.",
-        [("Advanced Reported Speech", "Cambridge English", null), ("Reported Subjunctive in Academic Writing", "Academic English", null), ("Tense Backshift Rules", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 10 — Semi-modals", "YouTube: Search 'Advanced Grammar in Use Unit 10'", null)]
+        [("Advanced Reported Speech", "Cambridge English", null), ("Reported Subjunctive in Academic Writing", "Academic English", null), ("Tense Backshift Rules", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 10 — Semi-modals", "YouTube: Search 'Advanced Grammar in Use Unit 10'", null)], ComplementaryResourcesMap["C1L10"]
     );
 
     private static string C1L11() => C(
@@ -1664,7 +1664,7 @@ public static class DataSeeder
         [("The student working on the project completed it on time.", "Participle clause replacing relative clause"), ("Having completed the analysis, she presented her findings.", "Perfect participle for temporal relationship"), ("The documents pertaining to the merger are confidential.", "Participle clause with preposition"), ("Pending final approval, the proposal will proceed.", "Adverbial participle clause"), ("Books published in the last decade show this trend.", "Past participle clause (passive)")],
         "Convert 10 sentences containing 'who/which is' or 'who/which was' into reduced participle clauses. Also write 3 sentences using perfect participles (having completed, having been informed, etc.).",
         "Participle clauses add sophistication: 'The woman standing near the door arrived yesterday' is more elegant than 'The woman who was standing near the door arrived yesterday.' Use them in formal writing. Watch 'Advanced Grammar in Use Unit 11 — Causative Structures'.",
-        [("Participle Clauses Explained", "Cambridge English", null), ("Reducing Relative Clauses", "Papa English", null), ("Advanced Sentence Structure", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 11 — Causative Structures", "YouTube: Search 'Advanced Grammar in Use Unit 11'", null)]
+        [("Participle Clauses Explained", "Cambridge English", null), ("Reducing Relative Clauses", "Papa English", null), ("Advanced Sentence Structure", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 11 — Causative Structures", "YouTube: Search 'Advanced Grammar in Use Unit 11'", null)], ComplementaryResourcesMap["C1L11"]
     );
 
     private static string C1L12() => C(
@@ -1674,7 +1674,7 @@ public static class DataSeeder
         [("The researchers to whom the grant was awarded began their work immediately.", "Preposition + which"), ("The reason why she left is still unclear.", "Adverbial relative clause with why"), ("The technique whereby rust is removed is highly effective.", "Defining relative with whereby"), ("The period during which the company expanded rapidly was very profitable.", "Adverbial relative clause"), ("The documents, whose copies were distributed, contained sensitive information.", "Possessive relative with non-defining clause")],
         "Write 10 complex sentences using: 4 with whose + noun, 3 with preposition + relative pronoun (to which, in which, for which, etc.), and 3 with adverbial relative clauses (when, where, why, during which).",
         "Non-defining relative clauses (set off by commas) need natural breath pauses in speech. Defining relative clauses flow without pauses. This rhythm helps you distinguish them when speaking. Watch 'Advanced Grammar in Use Unit 12 — Advanced Passive'.",
-        [("Advanced Relative Clauses", "Cambridge English", null), ("Whose vs Of Which in English", "Papa English", null), ("Formal Relative Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 12 — Advanced Passive", "YouTube: Search 'Advanced Grammar in Use Unit 12'", null)]
+        [("Advanced Relative Clauses", "Cambridge English", null), ("Whose vs Of Which in English", "Papa English", null), ("Formal Relative Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 12 — Advanced Passive", "YouTube: Search 'Advanced Grammar in Use Unit 12'", null)], ComplementaryResourcesMap["C1L12"]
     );
 
     private static string C1L13() => C(
@@ -1684,7 +1684,7 @@ public static class DataSeeder
         [("The situation is absolutely impossible.", "Ungradable: intensifier is 'absolutely'"), ("The presentation was very effective and quite persuasive.", "Gradable: multiple intensifiers"), ("This is a unique opportunity, not 'a very unique opportunity'.", "Ungradable corrected"), ("The data are entirely complete and ready for analysis.", "Ungradable: 'entirely' modifies the concept"), ("The solution is extremely simple but absolutely essential.", "Mix of gradable and ungradable")],
         "Identify which adjectives are gradable and which are ungradable in 15 given sentences. Then rewrite sentences containing incorrect intensifier use (e.g., 'very perfect', 'rather complete') with the correct intensifier choice.",
         "In speech, gradable intensifiers can be slightly reduced: 'vry good' (very good). Ungradable intensifiers remain fully pronounced: 'AB-so-LUTE-ly impossible' — the word carries weight. Watch 'Advanced Grammar in Use Unit 13 — Reporting Verbs'.",
-        [("Gradable vs Ungradable Adjectives", "Cambridge English", null), ("Intensifiers in English", "Papa English", null), ("Adjective Gradability", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 13 — Reporting Verbs", "YouTube: Search 'Advanced Grammar in Use Unit 13'", null)]
+        [("Gradable vs Ungradable Adjectives", "Cambridge English", null), ("Intensifiers in English", "Papa English", null), ("Adjective Gradability", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 13 — Reporting Verbs", "YouTube: Search 'Advanced Grammar in Use Unit 13'", null)], ComplementaryResourcesMap["C1L13"]
     );
 
     private static string C1L14() => C(
@@ -1694,7 +1694,7 @@ public static class DataSeeder
         [("Frankly, I don't agree with this approach.", "Comment adverb: sentence-initial"), ("She has undoubtedly made the right decision.", "Comment adverb: mid-position"), ("Regrettably, the project was cancelled.", "Comment adverb expressing speaker's attitude"), ("Only the CEO can authorize this expenditure.", "Focus adverb: change meaning with position"), ("The two concepts are inextricably linked.", "Manner adverb: end-position")],
         "Write 12 sentences: 4 using comment adverbs (frankly, undoubtedly, regrettably, fortunately), 4 with focus adverbs (only, even, just, still) showing position effects, and 4 with frequency/manner adverbs in correct positions.",
         "Comment adverbs signal your tone: 'Frankly, I disagree' (emphatic honesty), 'Arguably, the claim is weak' (academic distance). In speech, they often carry falling intonation. Watch 'Advanced Grammar in Use Unit 14 — Verb Patterns'.",
-        [("Adverb Position and Word Order", "Cambridge English", null), ("Comment Adverbs in English", "Papa English", null), ("Adverb Placement for Advanced Learners", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 14 — Verb Patterns", "YouTube: Search 'Advanced Grammar in Use Unit 14'", null)]
+        [("Adverb Position and Word Order", "Cambridge English", null), ("Comment Adverbs in English", "Papa English", null), ("Adverb Placement for Advanced Learners", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 14 — Verb Patterns", "YouTube: Search 'Advanced Grammar in Use Unit 14'", null)], ComplementaryResourcesMap["C1L14"]
     );
 
     private static string C1L15() => C(
@@ -1704,7 +1704,7 @@ public static class DataSeeder
         [("In accordance with the company policy, all employees must submit their reports.", "Complex preposition in formal context"), ("By virtue of his experience, he was chosen to lead the project.", "Formal appointment language"), ("In the light of recent developments, the committee has reconsidered its position.", "Preposition introducing revised information"), ("Notwithstanding the challenges, the team achieved all objectives.", "Concessive complex preposition"), ("Pursuant to the contract, payment is due within 30 days.", "Formal business language")],
         "Write 8 sentences incorporating: 2 with 'in accordance/accordance with', 2 with 'because of/due to' (show the difference), 2 with 'by virtue of/in virtue of', and 2 with other complex prepositions (notwithstanding, pursuant to, in the light of, in addition to).",
         "Complex prepositions carry formal weight in speech. Pronounce them clearly: 'in LIGHT of' (not 'inlightof'), 'PUR-suant TO' (not rushed). Clarity marks professionalism. Watch 'Advanced Grammar in Use Unit 15 — Inverted Conditionals'.",
-        [("Complex Prepositions in English", "Cambridge English", null), ("Prepositional Phrases and Nuance", "Papa English", null), ("Advanced Prepositions for Formal Writing", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 15 — Inverted Conditionals", "YouTube: Search 'Advanced Grammar in Use Unit 15'", null)]
+        [("Complex Prepositions in English", "Cambridge English", null), ("Prepositional Phrases and Nuance", "Papa English", null), ("Advanced Prepositions for Formal Writing", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 15 — Inverted Conditionals", "YouTube: Search 'Advanced Grammar in Use Unit 15'", null)], ComplementaryResourcesMap["C1L15"]
     );
 
     private static string C1L16() => C(
@@ -1714,7 +1714,7 @@ public static class DataSeeder
         [("Never have I encountered such compelling evidence.", "Inversion with negative for emphasis"), ("What they discovered was a fundamental flaw in the theory.", "Cleft with 'what'"), ("It is the budget constraints that limit our options.", "Cleft with 'it'"), ("So thorough was the investigation that no stone was left unturned.", "Inversion with 'so'"), ("Paramount to success is clear communication.", "Inverted copular structure")],
         "Write 10 sentences using inversion and cleft structures: 4 with negative inversion ('Never...', 'Seldom...'), 3 with 'it is...that' clefts, 2 with 'what...is' clefts, and 1 with pseudo-cleft. Then explain which elements are emphasized.",
         "In speech, inverted structures carry dramatic intonation. 'NEVER have I SEEN such...' — the never is stressed, then a falling pitch. Cleft sentences sound formal and deliberate: 'It IS the BUDGET that matters.' Watch 'Advanced Grammar in Use Unit 16 — Hypothetical Wish'.",
-        [("Inversion for Emphasis in English", "Cambridge English", null), ("Cleft Sentences Explained", "Papa English", null), ("Advanced Emphasis Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 16 — Hypothetical Wish", "YouTube: Search 'Advanced Grammar in Use Unit 16'", null)]
+        [("Inversion for Emphasis in English", "Cambridge English", null), ("Cleft Sentences Explained", "Papa English", null), ("Advanced Emphasis Structures", "Learn English with EnglishClass101.com", null), ("Advanced Grammar in Use Unit 16 — Hypothetical Wish", "YouTube: Search 'Advanced Grammar in Use Unit 16'", null)], ComplementaryResourcesMap["C1L16"]
     );
 
     private static string C2L1() => C(
@@ -1724,7 +1724,7 @@ public static class DataSeeder
         [("The book, which won three awards, is now out of print.", "Non-defining relative with which"), ("The laboratory in which this research was conducted is famous.", "Formal preposition + relative"), ("She studied medicine, which surprised no one.", "Sentential relative clause"), ("The period during which he served was transformative.", "Adverbial relative with during which")],
         "Write 8 sentences: 4 with non-defining relative clauses (with commas) and 4 with formal prepositions + relative pronouns (to which, in which, for which, during which).",
         "Non-defining relative clauses require natural pauses (commas) in speech. 'My brother, who is a doctor' flows with pauses; without commas, it sounds defining: 'My brother who is a doctor' (implying you have multiple brothers). Watch 'Advanced Grammar in Use Unit 17'.",
-        [("Non-defining Relative Clauses", "Cambridge English", null), ("Formal Relative Clause Structures", "Papa English", null), ("Advanced Relative Clauses in Academic English", "English Speeches", null), ("Advanced Grammar in Use Unit 17", "YouTube: Search 'Advanced Grammar in Use Unit 17'", null)]
+        [("Non-defining Relative Clauses", "Cambridge English", null), ("Formal Relative Clause Structures", "Papa English", null), ("Advanced Relative Clauses in Academic English", "English Speeches", null), ("Advanced Grammar in Use Unit 17", "YouTube: Search 'Advanced Grammar in Use Unit 17'", null)], ComplementaryResourcesMap["C2L1"]
     );
 
     private static string C2L2() => C(
@@ -1734,7 +1734,7 @@ public static class DataSeeder
         [("He announced his resignation, which shocked the team.", "Sentential relative clause"), ("The reason why she refused is still unclear.", "Relative adverb + antecedent"), ("The period during which we negotiated was tense.", "Sophisticated temporal relative"), ("A system whereby fairness is ensured appeals to everyone.", "Formal relative structure")],
         "Write 6 sentences: 3 with sentential which clauses and 3 with relative adverbs (why, where, when, how) + antecedents. Show causal and temporal relationships.",
         "'Sentential' is sen-TEN-shal (stress 2nd). 'Whereby' is where-BY (stress 2nd). 'Wherein' is where-IN (stress 2nd). These formal structures are pronounced with clear stress for emphasis and formality. Watch 'Advanced Grammar in Use Unit 18'.",
-        [("Sentential Relative Clauses", "Cambridge English", null), ("Relative Adverbs and Their Use", "Papa English", null), ("Advanced Relative Structures", "English Speeches", null), ("Advanced Grammar in Use Unit 18", "YouTube: Search 'Advanced Grammar in Use Unit 18'", null)]
+        [("Sentential Relative Clauses", "Cambridge English", null), ("Relative Adverbs and Their Use", "Papa English", null), ("Advanced Relative Structures", "English Speeches", null), ("Advanced Grammar in Use Unit 18", "YouTube: Search 'Advanced Grammar in Use Unit 18'", null)], ComplementaryResourcesMap["C2L2"]
     );
 
     private static string C2L3() => C(
@@ -1744,7 +1744,7 @@ public static class DataSeeder
         [("The student working on the project completed it early.", "Active participle clause"), ("Having received the promotion, she felt relieved.", "Perfect participle clause"), ("Matters pertaining to security are classified.", "Participle + preposition"), ("The documents submitted contain sensitive information.", "Passive participle clause"), ("The period during which... = The period during which the crisis escalated was difficult.", "Formal relative with adverbial participle")],
         "Convert 10 sentences containing full relative clauses ('who is', 'which was', etc.) into reduced participle clauses. Write 3 additional sentences using perfect participles (having completed, having been informed).",
         "Participle clauses flow smoothly: 'The woman standing at the entrance' reads as one unit. 'Pending' is PEN-ding (stress 1st). 'Pertaining' is per-TANE-ing (stress 2nd). Reduced clauses should sound concise, not clipped. Watch 'Advanced Grammar in Use Unit 19'.",
-        [("Participle Clauses and Reduction", "Cambridge English", null), ("Reduced Relative Clauses in Academic Writing", "Papa English", null), ("Elegant Sentence Structure with Participles", "English Speeches", null), ("Advanced Grammar in Use Unit 19", "YouTube: Search 'Advanced Grammar in Use Unit 19'", null)]
+        [("Participle Clauses and Reduction", "Cambridge English", null), ("Reduced Relative Clauses in Academic Writing", "Papa English", null), ("Elegant Sentence Structure with Participles", "English Speeches", null), ("Advanced Grammar in Use Unit 19", "YouTube: Search 'Advanced Grammar in Use Unit 19'", null)], ComplementaryResourcesMap["C2L3"]
     );
 
     private static string C2L4() => C(
@@ -1754,7 +1754,7 @@ public static class DataSeeder
         [("It is the data that supports our conclusion.", "It-cleft emphasizing 'data'"), ("What they need is better communication.", "Wh-cleft emphasizing 'communication'"), ("The problem is not lack of funding but poor management.", "Pseudo-cleft structure"), ("It was her persistence that led to success.", "Emphatic it-cleft")],
         "Write 12 sentences: 4 with it-clefts, 4 with wh-clefts, and 4 with pseudo-clefts. Vary what you emphasize to show rhetorical control.",
         "'Cleft' is KLEFT (1 syllable, stress 1st). 'It-cleft' emphasizes a word with slight stress increase: 'It IS the BUDGET that matters.' 'Wh-cleft' also shifts stress: 'WHAT matters is CLARITY.' These create rising-falling intonation for emphasis. Watch 'Advanced Grammar in Use Unit 20'.",
-        [("Cleft Sentences for Emphasis", "Cambridge English", null), ("It-Clefts and Wh-Clefts Explained", "Papa English", null), ("Rhetorical Emphasis in Advanced English", "English Speeches", null), ("Advanced Grammar in Use Unit 20", "YouTube: Search 'Advanced Grammar in Use Unit 20'", null)]
+        [("Cleft Sentences for Emphasis", "Cambridge English", null), ("It-Clefts and Wh-Clefts Explained", "Papa English", null), ("Rhetorical Emphasis in Advanced English", "English Speeches", null), ("Advanced Grammar in Use Unit 20", "YouTube: Search 'Advanced Grammar in Use Unit 20'", null)], ComplementaryResourcesMap["C2L4"]
     );
 
     private static string C2L5() => C(
@@ -1764,7 +1764,7 @@ public static class DataSeeder
         [("Rather than: 'We analyzed the data.' / Better: 'Our analysis of the data.'", "Nominalization for formality"), ("The development of these strategies led to success.", "Nominalization in formal context"), ("His ability to lead inspired confidence.", "Possessive + nominalization"), ("The implementation of reforms faced resistance.", "Nominalization in business writing")],
         "Rewrite these sentences using nominalization: 1) The team analyzed the results. 2) Companies must innovate to survive. 3) The government approved the policy. 4) Students demonstrated remarkable improvement. 5) She contributed significantly to the project.",
         "'Nominalization' is nom-i-nal-i-ZA-shun (stress 4th). 'Development' is de-VEL-up-ment (stress 2nd). Nominalizations are pronounced clearly to signal formality and abstraction. Watch 'Advanced Grammar in Use Unit 21'.",
-        [("Nominalization in Academic Writing", "Cambridge English", null), ("Transform Verbs to Nouns", "Papa English", null), ("Formal Style Through Nominalization", "English Speeches", null), ("Advanced Grammar in Use Unit 21", "YouTube: Search 'Advanced Grammar in Use Unit 21'", null)]
+        [("Nominalization in Academic Writing", "Cambridge English", null), ("Transform Verbs to Nouns", "Papa English", null), ("Formal Style Through Nominalization", "English Speeches", null), ("Advanced Grammar in Use Unit 21", "YouTube: Search 'Advanced Grammar in Use Unit 21'", null)], ComplementaryResourcesMap["C2L5"]
     );
 
     private static string C2L6() => C(
@@ -1774,7 +1774,7 @@ public static class DataSeeder
         [("Remarkable was her composure throughout the crisis.", "Fronted adjective"), ("Only after years of effort did she succeed.", "Fronted adverbial"), ("In the distance loomed the mountains.", "Fronted prepositional phrase"), ("Particularly concerning is the lack of transparency.", "Fronted adjectival phrase")],
         "Write 10 sentences using fronting: 3 with fronted adjectives, 3 with fronted adverbials, 2 with fronted prepositional phrases, and 2 with fronted objects or complements.",
         "'Fronting' is FRONT-ing (stress 1st). When you front elements, they receive primary stress: 'REMARKABLE was her COMPOSURE.' This stress pattern signals emphasis and draws listener attention. Watch 'Advanced Grammar in Use Unit 22'.",
-        [("Fronting for Emphasis and Style", "Cambridge English", null), ("Inversion and Fronting in English", "Papa English", null), ("Literary Use of Fronting", "English Speeches", null), ("Advanced Grammar in Use Unit 22", "YouTube: Search 'Advanced Grammar in Use Unit 22'", null)]
+        [("Fronting for Emphasis and Style", "Cambridge English", null), ("Inversion and Fronting in English", "Papa English", null), ("Literary Use of Fronting", "English Speeches", null), ("Advanced Grammar in Use Unit 22", "YouTube: Search 'Advanced Grammar in Use Unit 22'", null)], ComplementaryResourcesMap["C2L6"]
     );
 
     private static string C2L7() => C(
@@ -1784,7 +1784,7 @@ public static class DataSeeder
         [("Never have I encountered such evidence.", "Negative inversion with Never"), ("Hardly had the meeting begun when objections arose.", "Negative inversion with Hardly"), ("So thorough was the investigation that no stone was left unturned.", "Degree inversion with So"), ("Such significant advances have rarely been achieved.", "Degree inversion with Such")],
         "Write 12 sentences: 4 with negative inversion (Never, Hardly, Seldom, Rarely), 4 with So inversion, and 4 with Such inversion. Ensure grammatical accuracy and natural emphasis.",
         "Negative inversion is dramatic: 'NEV-er HAVE I seen...' — stress the never, then the auxiliary. Degree inversion: 'SO STRIK-ing WERE the RESULTS...' — falling intonation emphasizes the degree and creates formality. Watch 'Advanced Grammar in Use Unit 23'.",
-        [("Inversion in English: Negative and Degree", "Cambridge English", null), ("Emphasis Through Inversion", "Papa English", null), ("Literary Use of Inversion", "English Speeches", null), ("Advanced Grammar in Use Unit 23", "YouTube: Search 'Advanced Grammar in Use Unit 23'", null)]
+        [("Inversion in English: Negative and Degree", "Cambridge English", null), ("Emphasis Through Inversion", "Papa English", null), ("Literary Use of Inversion", "English Speeches", null), ("Advanced Grammar in Use Unit 23", "YouTube: Search 'Advanced Grammar in Use Unit 23'", null)], ComplementaryResourcesMap["C2L7"]
     );
 
     private static string C2L8() => C(
@@ -1794,7 +1794,7 @@ public static class DataSeeder
         [("Only she attended the meeting. (No one else)", "Only with narrow scope"), ("She only attended the meeting. (She merely attended, didn't participate)", "Only with wider scope"), ("Even he understood the concept. (Surprising)", "Even for contrast"), ("I've already finished. (Change of state before now)", "Already marking completion")],
         "Write 15 sentences showing how position of focus adverbs (only, even, just, still, already) changes meaning. Include at least 2 sentences for each adverb, showing different positions.",
         "Focus adverbs carry subtle stress: 'ONLY she knows' (no one else) vs. 'she ONLY knows' (merely knows). The stress position signals the meaning. In rapid speech, focus adverbs can be reduced but should remain clear. Watch 'Advanced Grammar in Use Unit 24'.",
-        [("Position of Focus Adverbs", "Cambridge English", null), ("Only and Its Meanings", "Papa English", null), ("Scope Ambiguity in Focus Adverbs", "English Speeches", null), ("Advanced Grammar in Use Unit 24", "YouTube: Search 'Advanced Grammar in Use Unit 24'", null)]
+        [("Position of Focus Adverbs", "Cambridge English", null), ("Only and Its Meanings", "Papa English", null), ("Scope Ambiguity in Focus Adverbs", "English Speeches", null), ("Advanced Grammar in Use Unit 24", "YouTube: Search 'Advanced Grammar in Use Unit 24'", null)], ComplementaryResourcesMap["C2L8"]
     );
 
     private static string C2L9() => C(
@@ -1804,7 +1804,7 @@ public static class DataSeeder
         [("The policy on education reform implemented by the government", "Complex post-modification"), ("The government's comprehensive education reform initiative", "Complex pre-modification"), ("The three-year study of climate patterns across five continents published last year", "Stacked pre- and post-modification"), ("Matters concerning administrative procedure and implementation responsibility", "Formal complex NP")],
         "Identify and analyze 5 complex noun phrases from academic or formal texts. Map their pre- and post-modification. Then write 8 sentences using complex NPs with at least 3 levels of modification each.",
         "Complex noun phrases should flow naturally: 'the comprehensive analysis OF the data BY experts FROM three countries.' Slight pauses help the listener parse meaning without losing naturalness. Watch 'Advanced Grammar in Use Unit 25'.",
-        [("Complex Noun Phrases in Academic Writing", "Cambridge English", null), ("Modification and Noun Phrase Structure", "Papa English", null), ("Information Density in English", "English Speeches", null), ("Advanced Grammar in Use Unit 25", "YouTube: Search 'Advanced Grammar in Use Unit 25'", null)]
+        [("Complex Noun Phrases in Academic Writing", "Cambridge English", null), ("Modification and Noun Phrase Structure", "Papa English", null), ("Information Density in English", "English Speeches", null), ("Advanced Grammar in Use Unit 25", "YouTube: Search 'Advanced Grammar in Use Unit 25'", null)], ComplementaryResourcesMap["C2L9"]
     );
 
     private static string C2L10() => C(
@@ -1814,7 +1814,7 @@ public static class DataSeeder
         [("The success of the project is at stake.", "Idiomatic at stake"), ("By means of careful planning, they avoided disaster.", "Idiomatic by means of"), ("In accordance with regulations, we must submit reports.", "Formal idiomatic in accordance with"), ("On the basis of available evidence, we conclude...", "Academic idiomatic on the basis of")],
         "Write 12 sentences using idiomatic fixed prepositions: 'at stake', 'at hand', 'by means of', 'by virtue of', 'in light of', 'in accordance with', 'on the basis of', 'on account of', 'on behalf of', plus 3 others from your knowledge.",
         "Idiomatic prepositions should flow smoothly as fixed chunks: 'in LIGHT of' (not in-LITE of), 'by VIRT-yoo' (not by-VIRT-yoo). These are pronounced as units, not word-by-word. Watch 'Advanced Grammar in Use Unit 26'.",
-        [("Idiomatic Prepositions and Fixed Expressions", "Cambridge English", null), ("Prepositional Collocations in English", "Papa English", null), ("Advanced Preposition Usage", "English Speeches", null), ("Advanced Grammar in Use Unit 26", "YouTube: Search 'Advanced Grammar in Use Unit 26'", null)]
+        [("Idiomatic Prepositions and Fixed Expressions", "Cambridge English", null), ("Prepositional Collocations in English", "Papa English", null), ("Advanced Preposition Usage", "English Speeches", null), ("Advanced Grammar in Use Unit 26", "YouTube: Search 'Advanced Grammar in Use Unit 26'", null)], ComplementaryResourcesMap["C2L10"]
     );
 
     private static string C2L11() => C(
@@ -1824,7 +1824,7 @@ public static class DataSeeder
         [("She turned down his proposal. / She turned his proposal down.", "Transitive separable"), ("He ran into an old friend yesterday.", "Transitive inseparable"), ("They ran up against unexpected difficulties.", "Three-word phrasal verb"), ("I'm looking forward to our meeting.", "Three-word with preposition")],
         "Write sentences using: 5 transitive separable phrasal verbs (show both orders), 5 transitive inseparable, 3 intransitive, and 3 multi-word phrasal verbs. Verify each pattern is correct.",
         "Phrasal verbs form tight units: 'turn DOWN the offer' — stress the particle. Multi-word: 'look FORWARD TO' — stress forward and to. Position changes meaning, but pronunciation rhythm stays consistent. Watch 'Advanced Grammar in Use Unit 27'.",
-        [("Phrasal Verbs: Patterns and Positions", "Cambridge English", null), ("Advanced Phrasal Verb Structures", "Papa English", null), ("Mastering Phrasal Verbs at C2", "English Speeches", null), ("Advanced Grammar in Use Unit 27", "YouTube: Search 'Advanced Grammar in Use Unit 27'", null)]
+        [("Phrasal Verbs: Patterns and Positions", "Cambridge English", null), ("Advanced Phrasal Verb Structures", "Papa English", null), ("Mastering Phrasal Verbs at C2", "English Speeches", null), ("Advanced Grammar in Use Unit 27", "YouTube: Search 'Advanced Grammar in Use Unit 27'", null)], ComplementaryResourcesMap["C2L11"]
     );
 
     private static string C2L12() => C(
@@ -1834,7 +1834,7 @@ public static class DataSeeder
         [("They reached an agreement after long negotiations.", "Standard collocation"), ("She made a remarkable discovery.", "Collocation: made + discovery"), ("He bent over backwards to help us.", "Idiomatic collocation"), ("The committee came to an unfortunate conclusion.", "Collocation: come to + conclusion")],
         "Find 15 strong collocations in English texts. For each, explain why the specific verb/adjective is used rather than alternatives. Then write 8 sentences using 8 different strong collocations naturally.",
         "Collocations should sound automatic, not constructed: 'make a DECISION' flows as one unit. 'Strong collocations' are pronounced without hesitation — they're automatic for native speakers. Watch 'Advanced Grammar in Use Unit 28'.",
-        [("English Collocations and Idioms", "Cambridge English", null), ("Verb-Noun Collocations", "Papa English", null), ("Idiomatic Expressions and Collocations", "English Speeches", null), ("Advanced Grammar in Use Unit 28", "YouTube: Search 'Advanced Grammar in Use Unit 28'", null)]
+        [("English Collocations and Idioms", "Cambridge English", null), ("Verb-Noun Collocations", "Papa English", null), ("Idiomatic Expressions and Collocations", "English Speeches", null), ("Advanced Grammar in Use Unit 28", "YouTube: Search 'Advanced Grammar in Use Unit 28'", null)], ComplementaryResourcesMap["C2L12"]
     );
 
     private static string C2L13() => C(
@@ -1844,7 +1844,7 @@ public static class DataSeeder
         [("The study was limited in scope. Furthermore, the sample size was small.", "Additive marker"), ("The evidence is mixed. Nevertheless, trends favor this conclusion.", "Contrastive marker"), ("The project was delayed. Consequently, the budget exceeded projections.", "Causal marker"), ("The initial phase was challenging. Subsequently, progress accelerated.", "Sequential marker")],
         "Write a 15-20 sentence paragraph on a topic of your choice using at least 8 different discourse markers to organize ideas logically. Label each marker and its function (additive, contrastive, causal, sequential).",
         "Discourse markers are typically unstressed bridges: 'Furthermore' — the rhythm emphasizes what follows, not the marker itself. 'Consequently' flows as the bridge between two ideas. Watch 'Advanced Grammar in Use Unit 29'.",
-        [("Discourse Markers and Cohesion", "Cambridge English", null), ("Linking Words for Advanced Writers", "Papa English", null), ("Organization Through Discourse Markers", "English Speeches", null), ("Advanced Grammar in Use Unit 29", "YouTube: Search 'Advanced Grammar in Use Unit 29'", null)]
+        [("Discourse Markers and Cohesion", "Cambridge English", null), ("Linking Words for Advanced Writers", "Papa English", null), ("Organization Through Discourse Markers", "English Speeches", null), ("Advanced Grammar in Use Unit 29", "YouTube: Search 'Advanced Grammar in Use Unit 29'", null)], ComplementaryResourcesMap["C2L13"]
     );
 
     private static string C2L14() => C(
@@ -1854,7 +1854,7 @@ public static class DataSeeder
         [("She arrived early. She was nervous.", "Reference: 'she' maintains cohesion"), ("'Will you attend?' 'Yes, I will.'", "Substitution: 'will' replaces 'attend'"), ("He studied hard. However, he failed the exam.", "Conjunction showing contrast"), ("Some students passed; others did not.", "Ellipsis: 'passed' understood in second clause")],
         "Analyze a 2-3 paragraph academic text. Map all cohesive devices (reference, substitution, ellipsis, conjunction). Show how thematic progression (given→new) creates flow. Then write a 10-sentence paragraph demonstrating strong cohesion through all four types of devices.",
         "Cohesive devices create rhythm: reference pronouns are usually unstressed ('She, she, she' flows naturally). Cohesion should be invisible — readers follow the argument without noticing the devices. Watch 'Advanced Grammar in Use Unit 30'.",
-        [("Cohesion in English Texts", "Cambridge English", null), ("Creating Coherence and Cohesion", "Papa English", null), ("Discourse Cohesion Strategies", "English Speeches", null), ("Advanced Grammar in Use Unit 30", "YouTube: Search 'Advanced Grammar in Use Unit 30'", null)]
+        [("Cohesion in English Texts", "Cambridge English", null), ("Creating Coherence and Cohesion", "Papa English", null), ("Discourse Cohesion Strategies", "English Speeches", null), ("Advanced Grammar in Use Unit 30", "YouTube: Search 'Advanced Grammar in Use Unit 30'", null)], ComplementaryResourcesMap["C2L14"]
     );
 
     private static string C2L15() => C(
@@ -1864,7 +1864,7 @@ public static class DataSeeder
         [("John bought a car; Mary, a truck.", "Nominal ellipsis of 'bought a'"), ("'Do you want to come?' 'I'd like to.' (ellipsis of verb + object)", "Verbal ellipsis"), ("'She's more experienced than he is.' → 'She's more experienced than he.' (ellipsis of 'is')", "Ellipsis in comparison"), ("'Which conference did you attend?' (stranding of preposition)", "Preposition stranding")],
         "Rewrite 12 sentences using ellipsis: 4 with verbal ellipsis, 4 with nominal ellipsis, 2 with comparative ellipsis, and 2 with stranded prepositions. Ensure they sound natural.",
         "Ellipsis creates rhythm and fluency: 'John went to Paris; Sarah to Rome.' The second clause is faster because words are omitted — this mirrors natural speech patterns. Watch 'Advanced Grammar in Use Unit 31'.",
-        [("Ellipsis in English Grammar", "Cambridge English", null), ("Omission and Ellipsis", "Papa English", null), ("Creating Fluency Through Ellipsis", "English Speeches", null), ("Advanced Grammar in Use Unit 31", "YouTube: Search 'Advanced Grammar in Use Unit 31'", null)]
+        [("Ellipsis in English Grammar", "Cambridge English", null), ("Omission and Ellipsis", "Papa English", null), ("Creating Fluency Through Ellipsis", "English Speeches", null), ("Advanced Grammar in Use Unit 31", "YouTube: Search 'Advanced Grammar in Use Unit 31'", null)], ComplementaryResourcesMap["C2L15"]
     );
 
     private static string C2L16() => C(
@@ -1874,10 +1874,357 @@ public static class DataSeeder
         [("'Do you like this?' 'Yes, I do.' (do = like this)", "Do-substitution"), ("'Is he aware of the issue?' 'I think so.' (so = he is aware)", "So-substitution"), ("'Will she attend?' 'I hope not.' (not = she won't attend)", "Not-substitution"), ("'They finished early. We haven't.' (have = finished)", "Auxiliary substitution")],
         "Write 20 short dialogues: 4 using do-substitution (various tenses), 4 using so-substitution, 4 using not-substitution, 4 using auxiliary substitution, and 4 mixing multiple types. Make them sound natural.",
         "Substitution is automatic in native speech: 'Yes, I DO' (slight stress on do), 'I HOPE so' (so is usually unstressed). Substitution flows naturally — it should sound unthinking and fluent. Watch 'Advanced Grammar in Use Unit 32'.",
-        [("Substitution and Ellipsis in English", "Cambridge English", null), ("Do-Support and Substitution", "Papa English", null), ("Native-Like Use of Substitution", "English Speeches", null), ("Advanced Grammar in Use Unit 32", "YouTube: Search 'Advanced Grammar in Use Unit 32'", null)]
+        [("Substitution and Ellipsis in English", "Cambridge English", null), ("Do-Support and Substitution", "Papa English", null), ("Native-Like Use of Substitution", "English Speeches", null), ("Advanced Grammar in Use Unit 32", "YouTube: Search 'Advanced Grammar in Use Unit 32'", null)], ComplementaryResourcesMap["C2L16"]
     );
 
     // ── Helpers ───────────────────────────────────────────────────────────────
+
+    // Perfect English Grammar & British Council Resource Mappings
+    private static readonly Dictionary<string, (string title, string url, string resource)[]> ComplementaryResourcesMap = new()
+    {
+        // A1 - Beginner
+        ["A1L1"] = new[] {
+            ("Basic Greetings and Introductions", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Greetings and Politeness", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L2"] = new[] {
+            ("English Numbers 1-20", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Beginner Numbers and Counting", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L3"] = new[] {
+            ("Adjectives: Colors and Descriptions", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Describing with Colors", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L4"] = new[] {
+            ("Articles: A, An, The", "https://www.perfect-english-grammar.com/articles/", "Perfect English Grammar"),
+            ("Articles in English", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L5"] = new[] {
+            ("Family Vocabulary and Relationships", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Family Members and Relations", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L6"] = new[] {
+            ("Personal Pronouns", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Pronouns and the Verb 'To Be'", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L7"] = new[] {
+            ("Days of the Week and Months", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Telling Time and Days", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        ["A1L8"] = new[] {
+            ("Food and Drinks Vocabulary", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Food and Meals Vocabulary", "https://learnenglish.britishcouncil.org/english/english-grammar/beginner", "British Council")
+        },
+        // A2 - Elementary
+        ["A2L1"] = new[] {
+            ("Past Simple Regular Verbs", "https://www.perfect-english-grammar.com/past-simple/", "Perfect English Grammar"),
+            ("Past Simple Tense", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L2"] = new[] {
+            ("Irregular Past Tense Verbs", "https://www.perfect-english-grammar.com/past-simple/", "Perfect English Grammar"),
+            ("Common Irregular Verbs", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L3"] = new[] {
+            ("Past Continuous Tense", "https://www.perfect-english-grammar.com/past-continuous/", "Perfect English Grammar"),
+            ("Past Continuous Actions", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L4"] = new[] {
+            ("Past Continuous Questions and Negatives", "https://www.perfect-english-grammar.com/past-continuous/", "Perfect English Grammar"),
+            ("Past Tense Structures", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L5"] = new[] {
+            ("Present Perfect Tense", "https://www.perfect-english-grammar.com/present-perfect/", "Perfect English Grammar"),
+            ("Have and Has with Present Perfect", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L6"] = new[] {
+            ("Present Perfect Continuous", "https://www.perfect-english-grammar.com/present-perfect-continuous/", "Perfect English Grammar"),
+            ("How Long Have You Been Doing?", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L7"] = new[] {
+            ("Present Simple vs Present Continuous", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Stative Verbs", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L8"] = new[] {
+            ("Modal Verbs: Can, Could, May", "https://www.perfect-english-grammar.com/modal-verbs/", "Perfect English Grammar"),
+            ("Ability and Permission with Can", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L9"] = new[] {
+            ("Modal Verbs: Should, Must, Have To", "https://www.perfect-english-grammar.com/modal-verbs/", "Perfect English Grammar"),
+            ("Obligation and Necessity", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L10"] = new[] {
+            ("Passive Voice Introduction", "https://www.perfect-english-grammar.com/passive/", "Perfect English Grammar"),
+            ("Active and Passive Voice", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L11"] = new[] {
+            ("Reported Speech", "https://www.perfect-english-grammar.com/reported-speech/", "Perfect English Grammar"),
+            ("Indirect Speech and Reporting", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L12"] = new[] {
+            ("Conditionals: If I...", "https://www.perfect-english-grammar.com/conditional/", "Perfect English Grammar"),
+            ("Zero and First Conditional", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L13"] = new[] {
+            ("Relative Clauses with Who and Which", "https://www.perfect-english-grammar.com/relative-clauses/", "Perfect English Grammar"),
+            ("Relative Pronouns and Clauses", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L14"] = new[] {
+            ("Prepositions: In, On, At", "https://www.perfect-english-grammar.com/prepositions/", "Perfect English Grammar"),
+            ("Prepositions of Time and Place", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L15"] = new[] {
+            ("Phrasal Verbs Introduction", "https://www.perfect-english-grammar.com/phrasal-verbs/", "Perfect English Grammar"),
+            ("Common Phrasal Verbs", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        ["A2L16"] = new[] {
+            ("Adjectives and Adverbs", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Word Order with Adjectives", "https://learnenglish.britishcouncil.org/english/english-grammar/elementary", "British Council")
+        },
+        // B1 - Intermediate (12 lessons)
+        ["B1L1"] = new[] {
+            ("Present Perfect Continuous", "https://www.perfect-english-grammar.com/present-perfect-continuous/", "Perfect English Grammar"),
+            ("Present Perfect for Recent Events", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L2"] = new[] {
+            ("Present Perfect Continuous Continued", "https://www.perfect-english-grammar.com/present-perfect-continuous/", "Perfect English Grammar"),
+            ("How Long Questions with Present Perfect", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L3"] = new[] {
+            ("Past Perfect Tense", "https://www.perfect-english-grammar.com/past-perfect/", "Perfect English Grammar"),
+            ("Past Perfect and Sequence of Events", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L4"] = new[] {
+            ("Past Perfect Continuous", "https://www.perfect-english-grammar.com/past-perfect-continuous/", "Perfect English Grammar"),
+            ("How Long in the Past", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L5"] = new[] {
+            ("Future Continuous Tense", "https://www.perfect-english-grammar.com/future-tense/", "Perfect English Grammar"),
+            ("Will Be Doing in the Future", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L6"] = new[] {
+            ("Future Continuous Questions", "https://www.perfect-english-grammar.com/future-tense/", "Perfect English Grammar"),
+            ("Future Plans and Arrangements", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L7"] = new[] {
+            ("Future Perfect Tense", "https://www.perfect-english-grammar.com/future-tense/", "Perfect English Grammar"),
+            ("Will Have Done by a Time", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L8"] = new[] {
+            ("Future Perfect Continuous", "https://www.perfect-english-grammar.com/future-tense/", "Perfect English Grammar"),
+            ("Will Have Been Doing", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L9"] = new[] {
+            ("Second Conditional: If I Were", "https://www.perfect-english-grammar.com/conditional/", "Perfect English Grammar"),
+            ("Unreal Situations and Wishes", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L10"] = new[] {
+            ("Third Conditional and Wish Clauses", "https://www.perfect-english-grammar.com/wish-sentences/", "Perfect English Grammar"),
+            ("Wishes About the Past", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L11"] = new[] {
+            ("Mixed Conditionals and Advanced Uses", "https://www.perfect-english-grammar.com/conditional/", "Perfect English Grammar"),
+            ("Conditional Sentences", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        ["B1L12"] = new[] {
+            ("Passive Voice Continued", "https://www.perfect-english-grammar.com/passive/", "Perfect English Grammar"),
+            ("Passives with Different Tenses", "https://learnenglish.britishcouncil.org/english/english-grammar/intermediate", "British Council")
+        },
+        // B2 - Upper Intermediate (16 lessons)
+        ["B2L1"] = new[] {
+            ("-ing Forms and Gerunds", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Gerunds and -ing Forms", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L2"] = new[] {
+            ("-ing After Prepositions and Verbs", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Verbs Followed by -ing", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L3"] = new[] {
+            ("Infinitive Uses and Purpose", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Infinitive after Verbs", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L4"] = new[] {
+            ("-ing vs Infinitive Distinctions", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Choosing Between -ing and Infinitive", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L5"] = new[] {
+            ("Articles: Detailed Rules", "https://www.perfect-english-grammar.com/articles/", "Perfect English Grammar"),
+            ("The Definite and Indefinite Articles", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L6"] = new[] {
+            ("Countable and Uncountable Nouns", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Singular and Plural Forms", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L7"] = new[] {
+            ("Pronoun Types and Functions", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Reflexive and Emphatic Pronouns", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L8"] = new[] {
+            ("Advanced Pronoun Uses", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Relative Pronouns Whom and Whose", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L9"] = new[] {
+            ("Defining and Non-defining Relative Clauses", "https://www.perfect-english-grammar.com/relative-clauses/", "Perfect English Grammar"),
+            ("Relative Clauses with Commas", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L10"] = new[] {
+            ("Adjective Order and Agreement", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Using Adjectives Correctly", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L11"] = new[] {
+            ("Adverb Formation and Placement", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Position of Adverbs", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L12"] = new[] {
+            ("Conjunctions and Sentence Linking", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Coordinating and Subordinating Conjunctions", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L13"] = new[] {
+            ("Prepositions: Complex and Phrasal", "https://www.perfect-english-grammar.com/prepositions/", "Perfect English Grammar"),
+            ("Prepositions of Movement and Direction", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L14"] = new[] {
+            ("Complex Prepositions and Phrases", "https://www.perfect-english-grammar.com/prepositions/", "Perfect English Grammar"),
+            ("Prepositional Phrases", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L15"] = new[] {
+            ("Advanced Preposition Uses", "https://www.perfect-english-grammar.com/prepositions/", "Perfect English Grammar"),
+            ("Idiomatic Prepositions", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        ["B2L16"] = new[] {
+            ("Phrasal Verbs: Advanced Patterns", "https://www.perfect-english-grammar.com/phrasal-verbs/", "Perfect English Grammar"),
+            ("Multi-word Verbs and Phrasal Verbs", "https://learnenglish.britishcouncil.org/english/english-grammar/upper-intermediate", "British Council")
+        },
+        // C1 - Advanced (16 lessons)
+        ["C1L1"] = new[] {
+            ("Inversion for Emphasis", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Advanced Word Order", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L2"] = new[] {
+            ("Cleft Sentences", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("It Was... That Sentences", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L3"] = new[] {
+            ("Reduced Clauses and Participles", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Participle Phrases", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L4"] = new[] {
+            ("Nominalization and Noun Phrases", "https://www.perfect-english-grammar.com/noun-clauses/", "Perfect English Grammar"),
+            ("Noun Clauses and Nominalization", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L5"] = new[] {
+            ("Advanced Passive Structures", "https://www.perfect-english-grammar.com/passive/", "Perfect English Grammar"),
+            ("Complex Passive Constructions", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L6"] = new[] {
+            ("Advanced Modal Uses", "https://www.perfect-english-grammar.com/modal-verbs/", "Perfect English Grammar"),
+            ("Modals for Deduction and Speculation", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L7"] = new[] {
+            ("Hedging and Softening Language", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Cautious Language Structures", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L8"] = new[] {
+            ("Advanced Conditionals", "https://www.perfect-english-grammar.com/conditional/", "Perfect English Grammar"),
+            ("Unreal Conditionals and Mixed Forms", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L9"] = new[] {
+            ("Reported Speech: Complex Forms", "https://www.perfect-english-grammar.com/reported-speech/", "Perfect English Grammar"),
+            ("Advanced Reporting Structures", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L10"] = new[] {
+            ("Argument Structure and Cohesion", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Linking Discourse", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L11"] = new[] {
+            ("Stylistic Variation and Register", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Formal and Informal English", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L12"] = new[] {
+            ("Advanced Relative Clauses", "https://www.perfect-english-grammar.com/relative-clauses/", "Perfect English Grammar"),
+            ("Non-restrictive and Reduced Relative Clauses", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L13"] = new[] {
+            ("Advanced Phrasal Verbs", "https://www.perfect-english-grammar.com/phrasal-verbs/", "Perfect English Grammar"),
+            ("Phrasal Verbs in Context", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L14"] = new[] {
+            ("Lexical Cohesion and Synonymy", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Verb Patterns and Synonyms", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L15"] = new[] {
+            ("Advanced Prepositions", "https://www.perfect-english-grammar.com/prepositions/", "Perfect English Grammar"),
+            ("Complex Prepositions in Context", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C1L16"] = new[] {
+            ("Substitution and Ellipsis", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Advanced Discourse Functions", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        // C2 - Proficient (16 lessons)
+        ["C2L1"] = new[] {
+            ("Pragmatics and Implicature", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Advanced Communication Strategies", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L2"] = new[] {
+            ("Register and Style in Writing", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Academic and Professional Writing", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L3"] = new[] {
+            ("Metadiscourse and Stance", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Express Views and Opinions", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L4"] = new[] {
+            ("Syntactic Complexity and Embedding", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Complex Sentence Structures", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L5"] = new[] {
+            ("Lexical Density and Precision", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Academic Vocabulary and Collocation", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L6"] = new[] {
+            ("Rhetorical Strategies", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Persuasive Language Techniques", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L7"] = new[] {
+            ("Critical Analysis of Discourse", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Analyze Language in Texts", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L8"] = new[] {
+            ("Linguistic Variation and Change", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("English Dialects and Varieties", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L9"] = new[] {
+            ("Semantic Nuance and Connotation", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Precise Word Choice", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L10"] = new[] {
+            ("Prosody and Pragmatic Force", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Emphasis and Stress in Speech", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L11"] = new[] {
+            ("Specialized Discourse Communities", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Professional and Technical English", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L12"] = new[] {
+            ("Code-switching and Multilingualism", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Language Learning and Transfer", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L13"] = new[] {
+            ("Linguistic Creativity and Innovation", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("New Words and Expressions", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L14"] = new[] {
+            ("Discourse Markers and Connectives", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Advanced Text Organization", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L15"] = new[] {
+            ("Coherence and Cohesion", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Linking Ideas in Extended Text", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        },
+        ["C2L16"] = new[] {
+            ("Substitution and Ellipsis", "https://www.perfect-english-grammar.com/", "Perfect English Grammar"),
+            ("Advanced Discourse Functions", "https://learnenglish.britishcouncil.org/english/english-grammar/advanced", "British Council")
+        }
+    };
 
     private static string C(
         string explanation,
@@ -1886,7 +2233,8 @@ public static class DataSeeder
         (string s, string n)[]? examples = null,
         string? writingPrompt = null,
         string? pronunciationTip = null,
-        (string title, string channel, string? videoId)[]? videos = null) =>
+        (string title, string channel, string? videoId)[]? videos = null,
+        (string title, string url, string resource)[]? complementaryResources = null) =>
         JsonSerializer.Serialize(new
         {
             explanation,
@@ -1895,7 +2243,8 @@ public static class DataSeeder
             examples = examples?.Select(e => new { sentence = e.s, note = e.n }).ToArray(),
             writingPrompt,
             pronunciationTip,
-            videos = videos?.Select(v => new { title = v.title, channel = v.channel, videoId = v.videoId }).ToArray()
+            videos = videos?.Select(v => new { title = v.title, channel = v.channel, videoId = v.videoId }).ToArray(),
+            complementaryResources = complementaryResources?.Select(r => new { title = r.title, url = r.url, resource = r.resource }).ToArray()
         });
 
     private static Level NewLevel(string id, string code, string name, int order, string? unlock = null) =>
