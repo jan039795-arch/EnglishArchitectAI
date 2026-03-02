@@ -17,8 +17,8 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiBaseU
 builder.Services.AddScoped<ApiService>();
 builder.Services.AddScoped<NotificationService>();
 
-// MudBlazor - Disabled for now to fix loading issues
-// builder.Services.AddMudServices();
+// MudBlazor
+builder.Services.AddMudServices();
 
 // Local Storage
 builder.Services.AddBlazoredLocalStorage();
