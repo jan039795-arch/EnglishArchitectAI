@@ -35,7 +35,12 @@
       "Bash(echo ==========================================:*)",
       "Bash(cat:*)",
       "Bash(kill:*)",
-      "Bash(dotnet add:*)"
+      "Bash(dotnet add:*)",
+      "Bash(lsof -i :5225)",
+      "Bash(xargs -r kill -9)",
+      "Bash(dotnet:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)"
     ]
   }
 }

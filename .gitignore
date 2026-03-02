@@ -6,6 +6,8 @@ obj/
 .vs/
 .vscode/
 *.swp
+wwwroot/
+**/wwwroot/
 
 ## Publish
 publish/
