@@ -1038,43 +1038,43 @@ public static class DataSeeder
     // ── LESSON CONTENT ────────────────────────────────────────────────────────
 
     private static string A1L1() => C(
-        "Greetings are the first words you use when meeting someone. In English, you choose different greetings depending on the time of day and how formal the situation is. British Council and Perfect English Grammar recommend practicing greetings with natural, conversational speed.",
+        "Greetings are the first words you use when meeting someone (Essential Grammar in Use Elementary, Unit 1). In English, you choose different greetings depending on the time of day and how formal the situation is. British Council and Perfect English Grammar recommend practicing greetings with natural, conversational speed. Watch the video 'Essential Grammar in Use Unit 1' for visual examples and pronunciation practice.",
         ["Use 'Good morning' before noon", "Use 'Good afternoon' from noon to 6 pm", "Use 'Good evening' after 6 pm", "'Hi' and 'Hey' are informal — use with friends only", "Reply to 'How are you?' with: 'Fine, thanks' or 'Great, and you?'"],
         [("Hello", "Hola", "Hello, my name is Ana."), ("Hi", "Hola (informal)", "Hi! How are you?"), ("Good morning", "Buenos días", "Good morning, teacher!"), ("Goodbye / Bye", "Adiós", "Goodbye! See you tomorrow."), ("How are you?", "¿Cómo estás?", "How are you? — Fine, thank you.")],
         [("Good morning! How are you?", "Greeting in the morning"), ("Fine, thank you. And you?", "Responding to 'How are you?'"), ("Nice to meet you!", "Meeting someone for the first time"), ("Goodbye! See you later.", "Saying farewell")],
-        "Write a short dialogue (4–6 lines) between two people meeting for the first time. Use at least 3 different greetings.",
-        "The 'h' in 'hello' and 'hi' is always pronounced. Say it with a clear breath — HEH-loh, not EH-loh.",
-        [("English Greetings for Beginners", "EnglishClass101", "ozT4MI_oHFc"), ("How to Greet People in English", "BBC Learning English", "oJx2iH0VJQA")]
+        "Write a short dialogue (4–6 lines) between two people meeting for the first time. Use at least 3 different greetings. Reference the video for authentic examples.",
+        "The 'h' in 'hello' and 'hi' is always pronounced. Say it with a clear breath — HEH-loh, not EH-loh. Listen to the video pronunciation module.",
+        [("English Greetings for Beginners", "EnglishClass101", "ozT4MI_oHFc"), ("How to Greet People in English", "BBC Learning English", "oJx2iH0VJQA"), ("Essential Grammar in Use Unit 1 — Greetings", "YouTube: Search 'Essential Grammar in Use Unit 1'", null)]
     );
 
     private static string A1L2() => C(
-        "Numbers 1–20 in English must be memorized. Numbers 13–19 follow a pattern ending in '-teen'. After 20, we combine 'twenty' with units (twenty-one, twenty-two…). Resources like Perfect English Grammar provide detailed breakdowns of this crucial foundation.",
+        "Numbers 1–20 in English must be memorized (Essential Grammar in Use Elementary, Unit 2). Numbers 13–19 follow a pattern ending in '-teen'. After 20, we combine 'twenty' with units (twenty-one, twenty-two…). Watch 'Essential Grammar in Use Unit 2' for clear pronunciation of numbers and practice with counting.",
         ["1–12 are unique words: one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve", "13–19 end in '-teen': thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen", "Watch out! 'thirteen' (13) vs 'thirty' (30) — stress the '-TEEN' ending", "'fifteen' comes from 'five' — spelling changes", "'twelve' is NOT 'twoten' — it is a unique word"],
         [("one / two / three", "uno / dos / tres", "I have two brothers."), ("eleven / twelve", "once / doce", "There are twelve months in a year."), ("thirteen / fifteen / nineteen", "trece / quince / diecinueve", "She is fifteen years old."), ("twenty", "veinte", "I have twenty dollars.")],
         [("I have three cats and two dogs.", "Using small numbers"), ("She is fifteen years old.", "Talking about age"), ("There are twelve students in the class.", "Counting people"), ("My phone number is five-five-three, two-one-four-zero.", "Reading phone numbers")],
-        "Write 5 sentences using different numbers: your age, people in your family, your address number, phone digits, and how many hours you sleep.",
-        "Stress the '-TEEN': thirTEEN, fourTEEN. Compare: THIRty, FOURty (stress on first syllable for the tens).",
-        [("English Numbers 1-20", "EnglishClass101", "5Fn4r0gMUFM"), ("Numbers 1-100 in English", "Learn English with Papa English", "92BdANvnwh4")]
+        "Write 5 sentences using different numbers: your age, people in your family, your address number, phone digits, and how many hours you sleep. Use the video to check pronunciation.",
+        "Stress the '-TEEN': thirTEEN, fourTEEN. Compare: THIRty, FOURty (stress on first syllable for the tens). Listen to the video multiple times.",
+        [("English Numbers 1-20", "EnglishClass101", "5Fn4r0gMUFM"), ("Numbers 1-100 in English", "Learn English with Papa English", "92BdANvnwh4"), ("Essential Grammar in Use Unit 2 — Numbers", "YouTube: Search 'Essential Grammar in Use Unit 2'", null)]
     );
 
     private static string A1L3() => C(
-        "Colors in English are adjectives. They always go BEFORE the noun, not after it — opposite to Spanish. In English: 'a red car', never 'a car red'. Perfect English Grammar provides detailed explanations on color usage.",
+        "Colors in English are adjectives (Essential Grammar in Use Elementary, Unit 3). They always go BEFORE the noun, not after it — opposite to Spanish. In English: 'a red car', never 'a car red'. Watch 'Essential Grammar in Use Unit 3' for visual examples and color vocabulary practice.",
         ["Color comes BEFORE the noun: 'a red car', 'the blue sky'", "Primary colors: red, blue, yellow", "Secondary: green (blue+yellow), orange (red+yellow), purple (red+blue)", "Neutral: black, white, grey, brown", "Light/dark: light blue, dark green"],
         [("red", "rojo", "I have a red bag."), ("blue", "azul", "The sky is blue."), ("green", "verde", "Grass is green."), ("yellow", "amarillo", "Bananas are yellow."), ("orange", "naranja", "She wears an orange shirt."), ("white / black", "blanco / negro", "Snow is white. His car is black.")],
         [("The sky is blue on a clear day.", "Describing nature"), ("I have a red umbrella.", "Color before noun"), ("She is wearing a green dress.", "Describing clothes"), ("What is your favorite color? — My favorite color is purple.", "Asking preferences")],
         "Look around you right now. Describe 6 objects using colors. Example: 'My notebook is blue. My pen is black.'",
         "'Orange' is pronounced OR-inj (two syllables). 'White' — the 'wh' sounds like a regular 'w' in modern English.",
-        [("Learn Colors in English", "Learn English Kids", "U_8dO7WcHUE"), ("English Vocabulary: Colors", "Papa English", "cKGPRrFT-zU")]
+        [("Learn Colors in English", "Learn English Kids", "U_8dO7WcHUE"), ("English Vocabulary: Colors", "Papa English", "cKGPRrFT-zU"), ("Essential Grammar in Use Unit 3 — Colors", "YouTube: Search 'Essential Grammar in Use Unit 3'", null)]
     );
 
     private static string A1L4() => C(
-        "Knowing the names of objects in your classroom or study space helps you communicate and follow instructions in English. We use 'a' before consonant sounds and 'an' before vowel sounds. The British Council emphasizes practical vocabulary for real-world communication.",
+        "Knowing the names of objects in your classroom or study space helps you communicate (Essential Grammar in Use Elementary, Unit 4). We use 'a' before consonant sounds and 'an' before vowel sounds. Watch 'Essential Grammar in Use Unit 4' for classroom object vocabulary and article practice.",
         ["Use 'a' before consonant sounds: a pen, a book, a chair", "Use 'an' before vowel sounds: an eraser, an umbrella", "Plural: add -s to most nouns (pen → pens, book → books)", "Add -es after -ch, -sh, -x, -s, -o: box → boxes", "Commands: 'Open your book', 'Close the door', 'Take a pencil'"],
         [("pen", "bolígrafo", "Write with a pen."), ("pencil", "lápiz", "Use a pencil for the test."), ("book", "libro", "Open your book to page 5."), ("desk", "escritorio", "Put the book on the desk."), ("chair", "silla", "Sit on the chair."), ("eraser", "goma de borrar", "I need an eraser.")],
         [("Take out a pen and a piece of paper.", "Following classroom instructions"), ("The book is on the desk.", "Describing location"), ("There are thirty chairs in the room.", "Counting classroom objects"), ("Open your book and go to page twelve.", "Teacher instruction")],
         "Describe your study area. Write 6 sentences: what objects are there, their colors, and how many. Example: 'I have two blue pens on my desk.'",
         "In American English: 'eraser'. In British English: 'rubber'. Both are correct — just know your context.",
-        [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI")]
+        [("School Objects English Vocabulary", "7 E S L", "j6LvKqGTkSg"), ("Classroom Vocabulary in English", "Learn English with EnglishClass101.com", "RPHJ81CJbMI"), ("Essential Grammar in Use Unit 4 — Articles & Objects", "YouTube: Search 'Essential Grammar in Use Unit 4'", null)]
     );
 
     private static string A1L5() => C(
